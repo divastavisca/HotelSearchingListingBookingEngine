@@ -2,35 +2,36 @@
 <html>
     <head>
         <title>Hotel Search</title>
+        <link rel="stylesheet"  href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" />
     </head>
     <body>
         <form>
             <label for="destination">Destination</label>
-            <input type="text" name="destination" required>
+            <input id="destination" type="text" name="destination" required>
             <label for="checkin">Check-In-Date</label>
-            <input type="date" name="checkin" required>
+            <input type="text" id="checkindate" name="checkin" placeholder='dd-mm-yyyy' required>
             <label for="checkout">Check-Out-Date</label>
-            <input type="date" name="checkout" required>
+            <input type="text" id="checkoutdate" name="checkout" placeholder='dd-mm-yyyy' required>
             <label for="childrencount">Children(Below 18)</label>
             <select required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
             <label for="adultcount">Adults(18+)</label>
             <select required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
             </select>
-            <label for="starrating">Star Rating</label>
+            <label for="star_rating">Star Rating</label>
             <select required>
                 <option>Any</option>
                 <option>2+ stars</option>
@@ -40,5 +41,8 @@
             </select>
             <button>Search Hotels</button>
         </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="scripts/script.js"></script>
     </body>
 </html>
