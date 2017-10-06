@@ -9,26 +9,16 @@ namespace SystemContracts.ConsumerContracts
 {
     public class MultiAvailHotelSearchRQ : IEngineServiceRQ
     {
-        public Destination SearchLocation { get; }
+        public Destination SearchLocation { get; set; }
 
-        public DateTime CheckInDate { get; }
+        public DateTime CheckInDate { get; set; }
 
-        public DateTime CheckOutDate { get; }
+        public DateTime CheckOutDate { get; set; }
 
-        public int AdultsCount { get; }
+        public int AdultsCount { get; set; }
 
-        public int ChildrensCount { get; }
+        public int ChildrensCount { get; set; }
 
-        public int[] ChildrenAges { get; }
-
-        public MultiAvailHotelSearchRQ(Destination searchLocation,DateTime checkInDate,DateTime checkOutDate,int adultsCount,int childrensCount,int[] childrenAges)
-        {
-            SearchLocation = searchLocation;
-            CheckInDate = checkInDate;
-            CheckOutDate = checkOutDate;
-            AdultsCount = adultsCount;
-            ChildrensCount = childrensCount;
-            ChildrenAges = childrenAges;
-        }
+        public int[] ChildrenAges { get; set; }
     }
 }

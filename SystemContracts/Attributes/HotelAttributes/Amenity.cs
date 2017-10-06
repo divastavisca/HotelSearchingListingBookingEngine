@@ -7,17 +7,11 @@ namespace SystemContracts.Attributes.HotelAttributes
 {
     public class Amenity
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public Media Media { get; }
+        public Media Media { get; set; }
 
-        public string Description { get; }
-
-        public Amenity(string name,Media media,string description)
-        {
-            Name = name;
-            Media = media;
-            Description = description;
-        }
+        public string Description { get; set; }
+        
     }
 }

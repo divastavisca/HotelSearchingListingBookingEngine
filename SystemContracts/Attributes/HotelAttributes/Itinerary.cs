@@ -6,29 +6,18 @@ namespace SystemContracts.Attributes.HotelAttributes
 {
     public class Itinerary
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public HotelAddress Address { get; }
+        public HotelAddress Address { get; set; }
 
-        public GeoCoordinates GeoCode { get; }
+        public GeoCoordinates GeoCode { get; set; }
 
-        public Amenity[] Amenities { get; }
+        public Amenity[] Amenities { get; set; }
 
-        public float StarRating { get; }
+        public float StarRating { get; set; }
 
-        public string Currency { get; }
+        public string Currency { get; set; }
 
-        public float MinimumPrice { get; }
-
-        public Itinerary(string name,HotelAddress address,GeoCoordinates geoCode,Amenity[] amenities,float starRating,string currency,float minimumPrice)
-        {
-            Name = name;
-            Address = address;
-            GeoCode = geoCode;
-            Amenities = amenities;
-            StarRating = starRating;
-            Currency = currency;
-            MinimumPrice = minimumPrice;
-        }
+        public float MinimumPrice { get; set; }
     }
 }

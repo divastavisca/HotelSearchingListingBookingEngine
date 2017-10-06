@@ -6,17 +6,10 @@ namespace SystemContracts.Attributes
 {
     public class Media
     {
-        public string Type { get; }
+        public string Type { get; set; }
 
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public string Url { get; }
-
-        public Media(string type,string name,string url)
-        {
-            Type = type;
-            Name = name;
-            Url = url;
-        }
+        public string Url { get; set; }
     }
 }

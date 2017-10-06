@@ -6,17 +6,10 @@ namespace SystemContracts.Attributes
 {
     public class Destination
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public string Type { get; }
+        public string Type { get; set; }
 
-        public GeoCoordinates GeoCode { get; }
-
-        public Destination(string name,string type,GeoCoordinates geoCode)
-        {
-            Name = name;
-            GeoCode = geoCode;
-            Type = type;
-        }
+        public GeoCoordinates GeoCode { get; set; }
     }
 }

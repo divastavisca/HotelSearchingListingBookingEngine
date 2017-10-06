@@ -6,26 +6,16 @@ namespace SystemContracts.Attributes.HotelAttributes
 {
     public class HotelAddress
     {
-        public string AddressLine1 { get; }
+        public string AddressLine1 { get; set; }
 
-        public string AddressLine2 { get; }
+        public string AddressLine2 { get; set; }
 
-        public string City { get; }
+        public string City { get; set; }
 
-        public string State { get; }
+        public string State { get; set; }
 
-        public string Country { get; }
+        public string Country { get; set; }
 
-        public string ZipCode { get; }
-
-        public HotelAddress(string addressLine1,string addressLine2,string city,string state,string country,string zipcode)
-        {
-            AddressLine1 = addressLine1;
-            AddressLine2 = addressLine2;
-            City = city;
-            State = state;
-            Country = country;
-            ZipCode = zipcode;
-        }
+        public string ZipCode { get; set; }
     }
 }

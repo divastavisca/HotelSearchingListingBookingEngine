@@ -6,14 +6,8 @@ namespace SystemContracts.Attributes
 {
     public class GeoCoordinates
     {
-        public float Latitude { get; }
+        public float Latitude { get; set; }
 
-        public float Longitude { get; }
-
-        public GeoCoordinates(float latitude,float longitude)
-        {
-            Latitude = latitude;
-            Longitude = longitude;
-        }
+        public float Longitude { get; set; }
     }
 }

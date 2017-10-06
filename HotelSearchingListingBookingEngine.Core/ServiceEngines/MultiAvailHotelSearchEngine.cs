@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.ServiceContracts;
 using ExternalServices.HotelSearchEngineConnecter;
+using HotelSearchingListingBookingEngine.Core.Parsers;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
@@ -12,8 +13,9 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
     {
         public async Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ searchRQ)
         {
-            IEngineServiceRS multiAvailSearchRS;
-            
+            HotelSearchRQ hotelSearchRQ = (new HotelSearchRQParser()).Parse((MultiAvailHotelSearchRQ)searchRQ);
+            HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
+            return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
         }
     }
 }
