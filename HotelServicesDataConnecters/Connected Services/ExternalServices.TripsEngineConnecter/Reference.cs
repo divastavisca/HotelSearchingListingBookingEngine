@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
+namespace ExternalServices.TripsEngineConnecter
 {
     using System.Runtime.Serialization;
     using System;
@@ -16,43 +16,43 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMapQueryRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLowFareSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFullScheduleSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareRulesRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateDetailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ReviewPendingRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SaveReviewStatusRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderDeleteRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderCancelRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderBookRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CompleteBookingRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderSaveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripProductPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SeatMapQueryRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirLowFareSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFullScheduleSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFareRulesRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarRateDetailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivitySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ReviewPendingRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SaveReviewStatusRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ResponseType ResultRequestedField;
+        private ExternalServices.TripsEngineConnecter.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -65,7 +65,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ResponseType ResultRequested
+        public ExternalServices.TripsEngineConnecter.ResponseType ResultRequested
         {
             get
             {
@@ -94,20 +94,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripProductCancellationDetailsRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
         private string ConfirmationNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSourceField;
+        private ExternalServices.TripsEngineConnecter.FareSource FareSourceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User OwnerField;
+        private ExternalServices.TripsEngineConnecter.User OwnerField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale POSField;
+        private ExternalServices.TripsEngineConnecter.PointOfSale POSField;
         
         private System.Guid TripFolderIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ConfirmationNumber
@@ -123,7 +123,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSource
+        public ExternalServices.TripsEngineConnecter.FareSource FareSource
         {
             get
             {
@@ -136,7 +136,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User Owner
+        public ExternalServices.TripsEngineConnecter.User Owner
         {
             get
             {
@@ -149,7 +149,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale POS
+        public ExternalServices.TripsEngineConnecter.PointOfSale POS
         {
             get
             {
@@ -175,7 +175,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -191,13 +191,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderDeleteRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -213,17 +213,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderCancelRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User OwnerField;
+        private ExternalServices.TripsEngineConnecter.User OwnerField;
         
         private System.Guid TripFolderIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User Owner
+        public ExternalServices.TripsEngineConnecter.User Owner
         {
             get
             {
@@ -249,7 +249,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -265,15 +265,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderBookRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -286,7 +286,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -302,17 +302,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRQ", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class CompleteBookingRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment ExternalPaymentField;
+        private ExternalServices.TripsEngineConnecter.Payment ExternalPaymentField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
+        private ExternalServices.TripsEngineConnecter.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
         
         private System.Guid TripFolderIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment ExternalPayment
+        public ExternalServices.TripsEngineConnecter.Payment ExternalPayment
         {
             get
             {
@@ -325,7 +325,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SecureAuthenticationRequest[] SecureAuthenticationRequests
+        public ExternalServices.TripsEngineConnecter.SecureAuthenticationRequest[] SecureAuthenticationRequests
         {
             get
             {
@@ -354,15 +354,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQWithPaging))]
-    public partial class TripFolderRetrieveRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQWithPaging))]
+    public partial class TripFolderRetrieveRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
         private bool ReturnLightWeightTripFoldersField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripRetrieveCriterion SearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.TripRetrieveCriterion SearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User TripOwnerField;
+        private ExternalServices.TripsEngineConnecter.User TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool ReturnLightWeightTripFolders
@@ -378,7 +378,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripRetrieveCriterion SearchCriterion
+        public ExternalServices.TripsEngineConnecter.TripRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -391,7 +391,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User TripOwner
+        public ExternalServices.TripsEngineConnecter.User TripOwner
         {
             get
             {
@@ -407,13 +407,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRQWithPaging : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQ
+    public partial class TripFolderRetrieveRQWithPaging : ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripRetrieveCriterionV2 TripSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.TripRetrieveCriterionV2 TripSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripRetrieveCriterionV2 TripSearchCriterion
+        public ExternalServices.TripsEngineConnecter.TripRetrieveCriterionV2 TripSearchCriterion
         {
             get
             {
@@ -429,15 +429,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderPriceRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -450,7 +450,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -466,15 +466,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderSaveRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -487,7 +487,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -503,13 +503,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripProductPriceRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct TripProductField;
+        private ExternalServices.TripsEngineConnecter.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct TripProduct
+        public ExternalServices.TripsEngineConnecter.TripProduct TripProduct
         {
             get
             {
@@ -525,17 +525,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRQ", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class SeatMapQueryRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMapSearchCriterion CriterionField;
+        private ExternalServices.TripsEngineConnecter.SeatMapSearchCriterion CriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSourceField;
+        private ExternalServices.TripsEngineConnecter.FareSource FareSourceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale PosField;
+        private ExternalServices.TripsEngineConnecter.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMapSearchCriterion Criterion
+        public ExternalServices.TripsEngineConnecter.SeatMapSearchCriterion Criterion
         {
             get
             {
@@ -548,7 +548,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSource
+        public ExternalServices.TripsEngineConnecter.FareSource FareSource
         {
             get
             {
@@ -561,7 +561,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale Pos
+        public ExternalServices.TripsEngineConnecter.PointOfSale Pos
         {
             get
             {
@@ -577,15 +577,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class AirLowFareSearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterion
+        public ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -598,7 +598,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -614,17 +614,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class AirFullScheduleSearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterionField;
         
         private int QueryLegRphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] SelectedLegsField;
+        private ExternalServices.TripsEngineConnecter.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterion
+        public ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -650,7 +650,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] SelectedLegs
+        public ExternalServices.TripsEngineConnecter.AirLeg[] SelectedLegs
         {
             get
             {
@@ -666,17 +666,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRQ", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class AirFareRulesRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSourcesField;
+        private ExternalServices.TripsEngineConnecter.AirFareSource[] FareSourcesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.AirItinerary ItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale PosField;
+        private ExternalServices.TripsEngineConnecter.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSources
+        public ExternalServices.TripsEngineConnecter.AirFareSource[] FareSources
         {
             get
             {
@@ -689,7 +689,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.AirItinerary Itinerary
         {
             get
             {
@@ -702,7 +702,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale Pos
+        public ExternalServices.TripsEngineConnecter.PointOfSale Pos
         {
             get
             {
@@ -718,21 +718,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRQ", Namespace="http://tavisca.com")]
-    public partial class AirPriceRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class AirPriceRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSourcesField;
+        private ExternalServices.TripsEngineConnecter.AirFareSource[] FareSourcesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypesField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypesField;
         
         private bool IsRepriceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.AirItinerary ItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion SearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.AirSearchCriterion SearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSources
+        public ExternalServices.TripsEngineConnecter.AirFareSource[] FareSources
         {
             get
             {
@@ -745,7 +745,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypes
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypes
         {
             get
             {
@@ -771,7 +771,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.AirItinerary Itinerary
         {
             get
             {
@@ -784,7 +784,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion SearchCriterion
+        public ExternalServices.TripsEngineConnecter.AirSearchCriterion SearchCriterion
         {
             get
             {
@@ -800,15 +800,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class HotelRoomAvailRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterion
+        public ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -821,7 +821,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary Itinerary
         {
             get
             {
@@ -837,15 +837,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class HotelRoomPriceRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterion
+        public ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -858,7 +858,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary Itinerary
         {
             get
             {
@@ -874,17 +874,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class HotelSearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFilter[] FiltersField;
+        private ExternalServices.TripsEngineConnecter.HotelFilter[] FiltersField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFilter[] Filters
+        public ExternalServices.TripsEngineConnecter.HotelFilter[] Filters
         {
             get
             {
@@ -897,7 +897,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterion
+        public ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -910,7 +910,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -926,7 +926,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -948,15 +948,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRQ", Namespace="http://tavisca.com")]
-    public partial class CarSearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class CarSearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterion
+        public ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -969,7 +969,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -985,15 +985,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRQ", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class CarRateDetailRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterion
+        public ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -1006,7 +1006,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.CarItinerary Itinerary
         {
             get
             {
@@ -1022,15 +1022,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class ActivityDetailsRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItineraryField;
+        private ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItinerary
+        public ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -1043,7 +1043,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterion
+        public ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1059,15 +1059,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRQ", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class ActivitySearchRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterion
+        public ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1080,7 +1080,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -1096,15 +1096,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class ReviewPendingRetrieveRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripCountRetrieveCriterion SearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.TripCountRetrieveCriterion SearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User1 TripOwnerField;
+        private ExternalServices.TripsEngineConnecter.User1 TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripCountRetrieveCriterion SearchCriterion
+        public ExternalServices.TripsEngineConnecter.TripCountRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -1117,7 +1117,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User1 TripOwner
+        public ExternalServices.TripsEngineConnecter.User1 TripOwner
         {
             get
             {
@@ -1133,7 +1133,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class SaveReviewStatusRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
         private System.Guid ProductIdField;
@@ -1155,17 +1155,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRQ : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRQ
+    public partial class TripFolderAssignSeatRQ : ExternalServices.TripsEngineConnecter.WebServiceRQ
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
+        private ExternalServices.TripsEngineConnecter.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
         
         private int TriProductRphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
+        public ExternalServices.TripsEngineConnecter.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
         {
             get
             {
@@ -1191,7 +1191,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -1259,42 +1259,42 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolder", Namespace="http://tavisca.com")]
-    public partial class TripFolder : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Folder
+    public partial class TripFolder : ExternalServices.TripsEngineConnecter.Folder
     {
         
         private string CitiesField;
         
         private string ConfirmationNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CustomData CustomDataField;
+        private ExternalServices.TripsEngineConnecter.CustomData CustomDataField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Passenger[] PassengersField;
+        private ExternalServices.TripsEngineConnecter.Passenger[] PassengersField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment[] PaymentsField;
+        private ExternalServices.TripsEngineConnecter.Payment[] PaymentsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRSegment[] PnrSegmentsField;
+        private ExternalServices.TripsEngineConnecter.PNRSegment[] PnrSegmentsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct[] ProductsField;
+        private ExternalServices.TripsEngineConnecter.TripProduct[] ProductsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Remark[] RemarksField;
+        private ExternalServices.TripsEngineConnecter.Remark[] RemarksField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatus ServiceStatusField;
+        private ExternalServices.TripsEngineConnecter.ServiceStatus ServiceStatusField;
         
         private System.DateTime StartDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus StatusField;
+        private ExternalServices.TripsEngineConnecter.TripStatus StatusField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource SupplierField;
+        private ExternalServices.TripsEngineConnecter.FareSource SupplierField;
         
         private string SupplierConfirmationNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] TicketingLinesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] TicketingLinesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Ticket[] TicketsField;
+        private ExternalServices.TripsEngineConnecter.Ticket[] TicketsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Cities
@@ -1323,7 +1323,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CustomData CustomData
+        public ExternalServices.TripsEngineConnecter.CustomData CustomData
         {
             get
             {
@@ -1349,7 +1349,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -1362,7 +1362,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Passenger[] Passengers
+        public ExternalServices.TripsEngineConnecter.Passenger[] Passengers
         {
             get
             {
@@ -1375,7 +1375,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment[] Payments
+        public ExternalServices.TripsEngineConnecter.Payment[] Payments
         {
             get
             {
@@ -1388,7 +1388,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRSegment[] PnrSegments
+        public ExternalServices.TripsEngineConnecter.PNRSegment[] PnrSegments
         {
             get
             {
@@ -1401,7 +1401,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct[] Products
+        public ExternalServices.TripsEngineConnecter.TripProduct[] Products
         {
             get
             {
@@ -1414,7 +1414,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Remark[] Remarks
+        public ExternalServices.TripsEngineConnecter.Remark[] Remarks
         {
             get
             {
@@ -1427,7 +1427,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatus ServiceStatus
+        public ExternalServices.TripsEngineConnecter.ServiceStatus ServiceStatus
         {
             get
             {
@@ -1453,7 +1453,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus Status
+        public ExternalServices.TripsEngineConnecter.TripStatus Status
         {
             get
             {
@@ -1466,7 +1466,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource Supplier
+        public ExternalServices.TripsEngineConnecter.FareSource Supplier
         {
             get
             {
@@ -1492,7 +1492,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] TicketingLines
+        public ExternalServices.TripsEngineConnecter.StateBag[] TicketingLines
         {
             get
             {
@@ -1505,7 +1505,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Ticket[] Tickets
+        public ExternalServices.TripsEngineConnecter.Ticket[] Tickets
         {
             get
             {
@@ -1603,11 +1603,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GenericFareSource))]
     public partial class FareSource : object
     {
         
@@ -1663,7 +1663,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class User : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string EmailField;
         
@@ -1684,7 +1684,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1820,16 +1820,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class PointOfSale : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company RequesterField;
+        private ExternalServices.TripsEngineConnecter.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1868,7 +1868,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company Requester
+        public ExternalServices.TripsEngineConnecter.Company Requester
         {
             get
             {
@@ -1921,32 +1921,32 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareSource", Namespace="http://tavisca.com")]
-    public partial class AirFareSource : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource
+    public partial class AirFareSource : ExternalServices.TripsEngineConnecter.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource
+    public partial class HotelFareSource : ExternalServices.TripsEngineConnecter.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFareSource", Namespace="http://tavisca.com")]
-    public partial class CarFareSource : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource
+    public partial class CarFareSource : ExternalServices.TripsEngineConnecter.FareSource
     {
         
         private string[] AirportCodesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCompany[] CarCompaniesField;
+        private ExternalServices.TripsEngineConnecter.CarCompany[] CarCompaniesField;
         
         private string[] CityCodesField;
         
         private bool IsGdsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode[] RateCodesField;
+        private ExternalServices.TripsEngineConnecter.CarDiscountCode[] RateCodesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] AirportCodes
@@ -1962,7 +1962,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCompany[] CarCompanies
+        public ExternalServices.TripsEngineConnecter.CarCompany[] CarCompanies
         {
             get
             {
@@ -2001,7 +2001,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode[] RateCodes
+        public ExternalServices.TripsEngineConnecter.CarDiscountCode[] RateCodes
         {
             get
             {
@@ -2017,21 +2017,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFareSource", Namespace="http://tavisca.com")]
-    public partial class ActivityFareSource : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource
+    public partial class ActivityFareSource : ExternalServices.TripsEngineConnecter.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFareSource", Namespace="http://tavisca.com")]
-    public partial class GenericFareSource : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource
+    public partial class GenericFareSource : ExternalServices.TripsEngineConnecter.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCompany", Namespace="http://tavisca.com")]
-    public partial class CarCompany : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company
+    public partial class CarCompany : ExternalServices.TripsEngineConnecter.Company
     {
     }
     
@@ -2041,14 +2041,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class CarDiscountCode : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountType DiscountTypeField;
+        private ExternalServices.TripsEngineConnecter.CarDiscountType DiscountTypeField;
         
         private string NumberField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountType DiscountType
+        public ExternalServices.TripsEngineConnecter.CarDiscountType DiscountType
         {
             get
             {
@@ -2090,18 +2090,18 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCompany))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Airline))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarCompany))]
     public partial class Company : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Agency AgencyField;
+        private ExternalServices.TripsEngineConnecter.Agency AgencyField;
         
         private string CodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyCodeContext CodeContextField;
+        private ExternalServices.TripsEngineConnecter.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2113,12 +2113,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int IDField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media LogoField;
+        private ExternalServices.TripsEngineConnecter.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Agency Agency
+        public ExternalServices.TripsEngineConnecter.Agency Agency
         {
             get
             {
@@ -2144,7 +2144,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyCodeContext CodeContext
+        public ExternalServices.TripsEngineConnecter.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2222,7 +2222,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Logo
+        public ExternalServices.TripsEngineConnecter.Media Logo
         {
             get
             {
@@ -2254,14 +2254,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Agency : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address AgencyAddressField;
+        private ExternalServices.TripsEngineConnecter.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address AgencyAddress
+        public ExternalServices.TripsEngineConnecter.Address AgencyAddress
         {
             get
             {
@@ -2306,16 +2306,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Media : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MediaCaptionType CaptionField;
+        private ExternalServices.TripsEngineConnecter.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MediaType TypeField;
+        private ExternalServices.TripsEngineConnecter.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MediaCaptionType Caption
+        public ExternalServices.TripsEngineConnecter.MediaCaptionType Caption
         {
             get
             {
@@ -2341,7 +2341,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MediaType Type
+        public ExternalServices.TripsEngineConnecter.MediaType Type
         {
             get
             {
@@ -2370,7 +2370,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airline", Namespace="http://tavisca.com")]
-    public partial class Airline : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company
+    public partial class Airline : ExternalServices.TripsEngineConnecter.Company
     {
         
         private bool IsNonArcCarrierField;
@@ -2392,20 +2392,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company
+    public partial class HotelChain : ExternalServices.TripsEngineConnecter.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Company
+    public partial class CompanyPreference : ExternalServices.TripsEngineConnecter.Company
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevelField;
+        private ExternalServices.TripsEngineConnecter.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevel
+        public ExternalServices.TripsEngineConnecter.PreferLevel PreferLevel
         {
             get
             {
@@ -2442,7 +2442,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location
+    public partial class Address : ExternalServices.TripsEngineConnecter.Location
     {
         
         private string AddressLine1Field;
@@ -2451,7 +2451,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string AddressSchemeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.City CityField;
+        private ExternalServices.TripsEngineConnecter.City CityField;
         
         private string CompleteAddressField;
         
@@ -2499,7 +2499,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.City City
+        public ExternalServices.TripsEngineConnecter.City City
         {
             get
             {
@@ -2554,17 +2554,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.LocationCodeContext CodeContextField;
+        private ExternalServices.TripsEngineConnecter.LocationCodeContext CodeContextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -2572,9 +2572,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance RadiusField;
+        private ExternalServices.TripsEngineConnecter.Distance RadiusField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -2590,7 +2590,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.LocationCodeContext CodeContext
+        public ExternalServices.TripsEngineConnecter.LocationCodeContext CodeContext
         {
             get
             {
@@ -2603,7 +2603,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode GeoCode
         {
             get
             {
@@ -2655,7 +2655,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Radius
+        public ExternalServices.TripsEngineConnecter.Distance Radius
         {
             get
             {
@@ -2668,7 +2668,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -2726,9 +2726,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private float AmountField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.LocationCodeContext FromField;
+        private ExternalServices.TripsEngineConnecter.LocationCodeContext FromField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DistanceUnit UnitField;
+        private ExternalServices.TripsEngineConnecter.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2744,7 +2744,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.LocationCodeContext From
+        public ExternalServices.TripsEngineConnecter.LocationCodeContext From
         {
             get
             {
@@ -2757,7 +2757,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DistanceUnit Unit
+        public ExternalServices.TripsEngineConnecter.DistanceUnit Unit
         {
             get
             {
@@ -2773,15 +2773,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location
+    public partial class Airport : ExternalServices.TripsEngineConnecter.Location
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirportType AirportTypeField;
+        private ExternalServices.TripsEngineConnecter.AirportType AirportTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.City CityField;
+        private ExternalServices.TripsEngineConnecter.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirportType AirportType
+        public ExternalServices.TripsEngineConnecter.AirportType AirportType
         {
             get
             {
@@ -2794,7 +2794,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.City City
+        public ExternalServices.TripsEngineConnecter.City City
         {
             get
             {
@@ -2810,7 +2810,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location
+    public partial class City : ExternalServices.TripsEngineConnecter.Location
     {
         
         private string CountryField;
@@ -3252,13 +3252,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Folder", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolder))]
     public partial class Folder : object
     {
         
         private System.DateTime CreatedDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User CreatorField;
+        private ExternalServices.TripsEngineConnecter.User CreatorField;
         
         private string FolderNameField;
         
@@ -3266,11 +3266,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime LastModifiedDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User OwnerField;
+        private ExternalServices.TripsEngineConnecter.User OwnerField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale PosField;
+        private ExternalServices.TripsEngineConnecter.PointOfSale PosField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderType TypeField;
+        private ExternalServices.TripsEngineConnecter.TripFolderType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CreatedDate
@@ -3286,7 +3286,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User Creator
+        public ExternalServices.TripsEngineConnecter.User Creator
         {
             get
             {
@@ -3338,7 +3338,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User Owner
+        public ExternalServices.TripsEngineConnecter.User Owner
         {
             get
             {
@@ -3351,7 +3351,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale Pos
+        public ExternalServices.TripsEngineConnecter.PointOfSale Pos
         {
             get
             {
@@ -3364,7 +3364,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderType Type
+        public ExternalServices.TripsEngineConnecter.TripFolderType Type
         {
             get
             {
@@ -3395,18 +3395,18 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class CustomData : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.dateTimeCustomFields DateFieldsField;
+        private ExternalServices.TripsEngineConnecter.dateTimeCustomFields DateFieldsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.decimalCustomFields DecimalFieldsField;
+        private ExternalServices.TripsEngineConnecter.decimalCustomFields DecimalFieldsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.intCustomFields IntFieldsField;
+        private ExternalServices.TripsEngineConnecter.intCustomFields IntFieldsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.stringCustomFields StringFieldsField;
+        private ExternalServices.TripsEngineConnecter.stringCustomFields StringFieldsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.stringCustomFields TextFieldsField;
+        private ExternalServices.TripsEngineConnecter.stringCustomFields TextFieldsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.dateTimeCustomFields DateFields
+        public ExternalServices.TripsEngineConnecter.dateTimeCustomFields DateFields
         {
             get
             {
@@ -3419,7 +3419,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.decimalCustomFields DecimalFields
+        public ExternalServices.TripsEngineConnecter.decimalCustomFields DecimalFields
         {
             get
             {
@@ -3432,7 +3432,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.intCustomFields IntFields
+        public ExternalServices.TripsEngineConnecter.intCustomFields IntFields
         {
             get
             {
@@ -3445,7 +3445,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.stringCustomFields StringFields
+        public ExternalServices.TripsEngineConnecter.stringCustomFields StringFields
         {
             get
             {
@@ -3458,7 +3458,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.stringCustomFields TextFields
+        public ExternalServices.TripsEngineConnecter.stringCustomFields TextFields
         {
             get
             {
@@ -3483,7 +3483,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string[] MissingItemsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatusType StatusField;
+        private ExternalServices.TripsEngineConnecter.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -3529,7 +3529,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatusType Status
+        public ExternalServices.TripsEngineConnecter.ServiceStatusType Status
         {
             get
             {
@@ -3576,7 +3576,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string ErrorCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorContext ErrorContextField;
+        private ExternalServices.TripsEngineConnecter.ErrorContext ErrorContextField;
         
         private string ErrorMessageField;
         
@@ -3596,7 +3596,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorContext ErrorContext
+        public ExternalServices.TripsEngineConnecter.ErrorContext ErrorContext
         {
             get
             {
@@ -3643,23 +3643,23 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int AgeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] AirMembershipsField;
+        private ExternalServices.TripsEngineConnecter.Membership[] AirMembershipsField;
         
         private System.DateTime BirthDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] CarMembershipsField;
+        private ExternalServices.TripsEngineConnecter.Membership[] CarMembershipsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] CustomFieldsField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] CustomFieldsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address DeliveryAddressField;
+        private ExternalServices.TripsEngineConnecter.Address DeliveryAddressField;
         
         private string EmailField;
         
         private string FirstNameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Gender GenderField;
+        private ExternalServices.TripsEngineConnecter.Gender GenderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] HotelMembershipsField;
+        private ExternalServices.TripsEngineConnecter.Membership[] HotelMembershipsField;
         
         private string KnownTravelerNumberField;
         
@@ -3669,9 +3669,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.Guid PassengerIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerTypeField;
+        private ExternalServices.TripsEngineConnecter.PassengerType PassengerTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Passport PassportField;
+        private ExternalServices.TripsEngineConnecter.Passport PassportField;
         
         private string PhoneNumberField;
         
@@ -3705,7 +3705,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] AirMemberships
+        public ExternalServices.TripsEngineConnecter.Membership[] AirMemberships
         {
             get
             {
@@ -3731,7 +3731,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] CarMemberships
+        public ExternalServices.TripsEngineConnecter.Membership[] CarMemberships
         {
             get
             {
@@ -3744,7 +3744,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] CustomFields
+        public ExternalServices.TripsEngineConnecter.StateBag[] CustomFields
         {
             get
             {
@@ -3757,7 +3757,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address DeliveryAddress
+        public ExternalServices.TripsEngineConnecter.Address DeliveryAddress
         {
             get
             {
@@ -3796,7 +3796,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Gender Gender
+        public ExternalServices.TripsEngineConnecter.Gender Gender
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Membership[] HotelMemberships
+        public ExternalServices.TripsEngineConnecter.Membership[] HotelMemberships
         {
             get
             {
@@ -3874,7 +3874,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerType
+        public ExternalServices.TripsEngineConnecter.PassengerType PassengerType
         {
             get
             {
@@ -3887,7 +3887,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Passport Passport
+        public ExternalServices.TripsEngineConnecter.Passport Passport
         {
             get
             {
@@ -4020,31 +4020,31 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Payment", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CreditCardPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SoftCashPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BankAccountPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ExternalPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CheckPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DeferredPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CreditCardPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SoftCashPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.BankAccountPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ExternalPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CheckPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.DeferredPayment))]
     public partial class Payment : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money AmountField;
+        private ExternalServices.TripsEngineConnecter.Money AmountField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address BillingAddressField;
+        private ExternalServices.TripsEngineConnecter.Address BillingAddressField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeTransaction[] ChargeTransactionsField;
+        private ExternalServices.TripsEngineConnecter.ChargeTransaction[] ChargeTransactionsField;
         
         private System.Guid IdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentType PaymentTypeField;
+        private ExternalServices.TripsEngineConnecter.PaymentType PaymentTypeField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money Amount
+        public ExternalServices.TripsEngineConnecter.Money Amount
         {
             get
             {
@@ -4057,7 +4057,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -4070,7 +4070,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address BillingAddress
+        public ExternalServices.TripsEngineConnecter.Address BillingAddress
         {
             get
             {
@@ -4083,7 +4083,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeTransaction[] ChargeTransactions
+        public ExternalServices.TripsEngineConnecter.ChargeTransaction[] ChargeTransactions
         {
             get
             {
@@ -4109,7 +4109,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentType PaymentType
+        public ExternalServices.TripsEngineConnecter.PaymentType PaymentType
         {
             get
             {
@@ -4280,23 +4280,23 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProduct", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GenericTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarTripProduct))]
     public partial class TripProduct : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment[] AgencyGeneratedPaymentsField;
+        private ExternalServices.TripsEngineConnecter.Payment[] AgencyGeneratedPaymentsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
         private int BookingSequenceNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationDetails CancellationDetailsField;
+        private ExternalServices.TripsEngineConnecter.CancellationDetails CancellationDetailsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
         private System.Guid IdField;
         
@@ -4304,20 +4304,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int LeadPassengerRphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User OwnerField;
+        private ExternalServices.TripsEngineConnecter.User OwnerField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSegment[] PassengerSegmentsField;
+        private ExternalServices.TripsEngineConnecter.PassengerSegment[] PassengerSegmentsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentBreakup[] PaymentBreakupsField;
+        private ExternalServices.TripsEngineConnecter.PaymentBreakup[] PaymentBreakupsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentType[] PaymentOptionsField;
+        private ExternalServices.TripsEngineConnecter.PaymentType[] PaymentOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary[] PreferredItinerariesField;
+        private ExternalServices.TripsEngineConnecter.TripItinerary[] PreferredItinerariesField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment[] AgencyGeneratedPayments
+        public ExternalServices.TripsEngineConnecter.Payment[] AgencyGeneratedPayments
         {
             get
             {
@@ -4330,7 +4330,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -4356,7 +4356,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationDetails CancellationDetails
+        public ExternalServices.TripsEngineConnecter.CancellationDetails CancellationDetails
         {
             get
             {
@@ -4369,7 +4369,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -4421,7 +4421,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.User Owner
+        public ExternalServices.TripsEngineConnecter.User Owner
         {
             get
             {
@@ -4434,7 +4434,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSegment[] PassengerSegments
+        public ExternalServices.TripsEngineConnecter.PassengerSegment[] PassengerSegments
         {
             get
             {
@@ -4447,7 +4447,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentBreakup[] PaymentBreakups
+        public ExternalServices.TripsEngineConnecter.PaymentBreakup[] PaymentBreakups
         {
             get
             {
@@ -4460,7 +4460,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaymentType[] PaymentOptions
+        public ExternalServices.TripsEngineConnecter.PaymentType[] PaymentOptions
         {
             get
             {
@@ -4473,7 +4473,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary[] PreferredItineraries
+        public ExternalServices.TripsEngineConnecter.TripItinerary[] PreferredItineraries
         {
             get
             {
@@ -4502,15 +4502,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Remark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SpecializedRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PNRRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SpecializedRemark))]
     public partial class Remark : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
         private string CategoryField;
         
@@ -4521,7 +4521,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -4624,11 +4624,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string RecordLocatorField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SegmentReference[] SegmentReferencesField;
+        private ExternalServices.TripsEngineConnecter.SegmentReference[] SegmentReferencesField;
         
         private string TicketNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketStatus TicketStatusField;
+        private ExternalServices.TripsEngineConnecter.TicketStatus TicketStatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string AirlineRecordLocator
@@ -4722,7 +4722,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SegmentReference[] SegmentReferences
+        public ExternalServices.TripsEngineConnecter.SegmentReference[] SegmentReferences
         {
             get
             {
@@ -4748,7 +4748,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketStatus TicketStatus
+        public ExternalServices.TripsEngineConnecter.TicketStatus TicketStatus
         {
             get
             {
@@ -5463,7 +5463,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string PlaceOfIssueField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Visa[] VisasField;
+        private ExternalServices.TripsEngineConnecter.Visa[] VisasField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int[] ApplicablePassengerRPHs
@@ -5570,7 +5570,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Visa[] Visas
+        public ExternalServices.TripsEngineConnecter.Visa[] Visas
         {
             get
             {
@@ -5789,16 +5789,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCharge))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceFee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarCharge))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ServiceFee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Tax))]
     public partial class Money : object
     {
         
@@ -5911,12 +5911,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CreditCardPayment", Namespace="http://tavisca.com")]
-    public partial class CreditCardPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class CreditCardPayment : ExternalServices.TripsEngineConnecter.Payment
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CreditCardMake CardMakeField;
+        private ExternalServices.TripsEngineConnecter.CreditCardMake CardMakeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CreditCardType CardTypeField;
+        private ExternalServices.TripsEngineConnecter.CreditCardType CardTypeField;
         
         private System.DateTime ExpiryMonthYearField;
         
@@ -5926,12 +5926,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SecureAuthenticationData SecureAuthenticationDataField;
+        private ExternalServices.TripsEngineConnecter.SecureAuthenticationData SecureAuthenticationDataField;
         
         private string SecurityCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CreditCardMake CardMake
+        public ExternalServices.TripsEngineConnecter.CreditCardMake CardMake
         {
             get
             {
@@ -5944,7 +5944,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CreditCardType CardType
+        public ExternalServices.TripsEngineConnecter.CreditCardType CardType
         {
             get
             {
@@ -6009,7 +6009,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SecureAuthenticationData SecureAuthenticationData
+        public ExternalServices.TripsEngineConnecter.SecureAuthenticationData SecureAuthenticationData
         {
             get
             {
@@ -6038,7 +6038,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SoftCashPayment", Namespace="http://tavisca.com")]
-    public partial class SoftCashPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class SoftCashPayment : ExternalServices.TripsEngineConnecter.Payment
     {
         
         private System.DateTime AddDateTimeField;
@@ -6075,7 +6075,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BankAccountPayment", Namespace="http://tavisca.com")]
-    public partial class BankAccountPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class BankAccountPayment : ExternalServices.TripsEngineConnecter.Payment
     {
         
         private string AccountHolderNameField;
@@ -6142,10 +6142,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ExternalPayment", Namespace="http://tavisca.com")]
-    public partial class ExternalPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class ExternalPayment : ExternalServices.TripsEngineConnecter.Payment
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeStatus ChargeStatusField;
+        private ExternalServices.TripsEngineConnecter.ChargeStatus ChargeStatusField;
         
         private decimal ChargedAmountField;
         
@@ -6154,7 +6154,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string ProviderNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeStatus ChargeStatus
+        public ExternalServices.TripsEngineConnecter.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6209,14 +6209,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CheckPayment", Namespace="http://tavisca.com")]
-    public partial class CheckPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class CheckPayment : ExternalServices.TripsEngineConnecter.Payment
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DeferredPayment", Namespace="http://tavisca.com")]
-    public partial class DeferredPayment : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Payment
+    public partial class DeferredPayment : ExternalServices.TripsEngineConnecter.Payment
     {
     }
     
@@ -6226,24 +6226,24 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ChargeTransaction : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private System.Guid AssociatedChargeTransactionIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeBreakup[] ChargeBreakupsField;
+        private ExternalServices.TripsEngineConnecter.ChargeBreakup[] ChargeBreakupsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeStatus ChargeStatusField;
+        private ExternalServices.TripsEngineConnecter.ChargeStatus ChargeStatusField;
         
         private System.Guid ChargeTransactionIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money ChargedAmountField;
+        private ExternalServices.TripsEngineConnecter.Money ChargedAmountField;
         
         private string ProviderTransactionIdField;
         
         private string TransactionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -6269,7 +6269,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeBreakup[] ChargeBreakups
+        public ExternalServices.TripsEngineConnecter.ChargeBreakup[] ChargeBreakups
         {
             get
             {
@@ -6282,7 +6282,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeStatus ChargeStatus
+        public ExternalServices.TripsEngineConnecter.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6308,7 +6308,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money ChargedAmount
+        public ExternalServices.TripsEngineConnecter.Money ChargedAmount
         {
             get
             {
@@ -6383,7 +6383,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class DailyRate : ExternalServices.TripsEngineConnecter.Money
     {
         
         private System.DateTime EndDateField;
@@ -6420,21 +6420,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCharge", Namespace="http://tavisca.com")]
-    public partial class CarCharge : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class CarCharge : ExternalServices.TripsEngineConnecter.Money
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeAssociation AssociationField;
+        private ExternalServices.TripsEngineConnecter.ChargeAssociation AssociationField;
         
         private string DescriptionField;
         
         private int QuantityField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeType TypeField;
+        private ExternalServices.TripsEngineConnecter.ChargeType TypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeUnit UnitField;
+        private ExternalServices.TripsEngineConnecter.ChargeUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeAssociation Association
+        public ExternalServices.TripsEngineConnecter.ChargeAssociation Association
         {
             get
             {
@@ -6473,7 +6473,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeType Type
+        public ExternalServices.TripsEngineConnecter.ChargeType Type
         {
             get
             {
@@ -6486,7 +6486,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ChargeUnit Unit
+        public ExternalServices.TripsEngineConnecter.ChargeUnit Unit
         {
             get
             {
@@ -6502,12 +6502,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ServiceFee", Namespace="http://tavisca.com")]
-    public partial class ServiceFee : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class ServiceFee : ExternalServices.TripsEngineConnecter.Money
     {
         
         private decimal PercentValueField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceFeeType ServiceFeeTypeField;
+        private ExternalServices.TripsEngineConnecter.ServiceFeeType ServiceFeeTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public decimal PercentValue
@@ -6523,7 +6523,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceFeeType ServiceFeeType
+        public ExternalServices.TripsEngineConnecter.ServiceFeeType ServiceFeeType
         {
             get
             {
@@ -6539,7 +6539,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class Fee : ExternalServices.TripsEngineConnecter.Money
     {
         
         private long IdField;
@@ -6606,7 +6606,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class Markup : ExternalServices.TripsEngineConnecter.Money
     {
         
         private long IdField;
@@ -6658,20 +6658,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRate))]
-    public partial class BaseFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarRate))]
+    public partial class BaseFare : ExternalServices.TripsEngineConnecter.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRate", Namespace="http://tavisca.com")]
-    public partial class CarRate : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BaseFare
+    public partial class CarRate : ExternalServices.TripsEngineConnecter.BaseFare
     {
         
         private int QuantityField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateType RateTypeField;
+        private ExternalServices.TripsEngineConnecter.CarRateType RateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Quantity
@@ -6687,7 +6687,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateType RateType
+        public ExternalServices.TripsEngineConnecter.CarRateType RateType
         {
             get
             {
@@ -6703,7 +6703,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class Commission : ExternalServices.TripsEngineConnecter.Money
     {
         
         private long IdField;
@@ -6755,7 +6755,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class Discount : ExternalServices.TripsEngineConnecter.Money
     {
         
         private long IdField;
@@ -6807,7 +6807,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money
+    public partial class Tax : ExternalServices.TripsEngineConnecter.Money
     {
         
         private string CodeField;
@@ -7072,7 +7072,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ChargeBreakup : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money ChargedAmountField;
+        private ExternalServices.TripsEngineConnecter.Money ChargedAmountField;
         
         private System.Guid IdField;
         
@@ -7081,7 +7081,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private int ProductRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money ChargedAmount
+        public ExternalServices.TripsEngineConnecter.Money ChargedAmount
         {
             get
             {
@@ -7214,7 +7214,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string ACSUrlField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -7234,7 +7234,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7299,7 +7299,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.Nullable<System.DateTime> AppliedOnField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule AppliedRuleField;
+        private ExternalServices.TripsEngineConnecter.CancellationRule AppliedRuleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> AppliedOn
@@ -7315,7 +7315,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule AppliedRule
+        public ExternalServices.TripsEngineConnecter.CancellationRule AppliedRule
         {
             get
             {
@@ -7331,15 +7331,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericTripProduct", Namespace="http://tavisca.com")]
-    public partial class GenericTripProduct : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct
+    public partial class GenericTripProduct : ExternalServices.TripsEngineConnecter.TripProduct
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericItinerary GenericItineraryField;
+        private ExternalServices.TripsEngineConnecter.GenericItinerary GenericItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericSearchCriterion GenericSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.GenericSearchCriterion GenericSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericItinerary GenericItinerary
+        public ExternalServices.TripsEngineConnecter.GenericItinerary GenericItinerary
         {
             get
             {
@@ -7352,7 +7352,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericSearchCriterion GenericSearchCriterion
+        public ExternalServices.TripsEngineConnecter.GenericSearchCriterion GenericSearchCriterion
         {
             get
             {
@@ -7368,15 +7368,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirTripProduct", Namespace="http://tavisca.com")]
-    public partial class AirTripProduct : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct
+    public partial class AirTripProduct : ExternalServices.TripsEngineConnecter.TripProduct
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary AirItineraryField;
+        private ExternalServices.TripsEngineConnecter.AirItinerary AirItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary AirItinerary
+        public ExternalServices.TripsEngineConnecter.AirItinerary AirItinerary
         {
             get
             {
@@ -7389,7 +7389,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion AirSearchCriterion
+        public ExternalServices.TripsEngineConnecter.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -7405,15 +7405,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityTripProduct", Namespace="http://tavisca.com")]
-    public partial class ActivityTripProduct : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct
+    public partial class ActivityTripProduct : ExternalServices.TripsEngineConnecter.TripProduct
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItineraryField;
+        private ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItinerary
+        public ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -7426,7 +7426,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion ActivitySearchCriterion
+        public ExternalServices.TripsEngineConnecter.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -7442,17 +7442,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTripProduct", Namespace="http://tavisca.com")]
-    public partial class HotelTripProduct : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct
+    public partial class HotelTripProduct : ExternalServices.TripsEngineConnecter.TripProduct
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary HotelItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary HotelItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary HotelItinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary HotelItinerary
         {
             get
             {
@@ -7465,7 +7465,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion HotelSearchCriterion
+        public ExternalServices.TripsEngineConnecter.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -7478,7 +7478,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -7494,15 +7494,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarTripProduct", Namespace="http://tavisca.com")]
-    public partial class CarTripProduct : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct
+    public partial class CarTripProduct : ExternalServices.TripsEngineConnecter.TripProduct
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary CarItineraryField;
+        private ExternalServices.TripsEngineConnecter.CarItinerary CarItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterionField;
+        private ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary CarItinerary
+        public ExternalServices.TripsEngineConnecter.CarItinerary CarItinerary
         {
             get
             {
@@ -7515,7 +7515,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion CarSearchCriterion
+        public ExternalServices.TripsEngineConnecter.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -7536,7 +7536,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string AgencyNotesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductStatus BookingStatusField;
+        private ExternalServices.TripsEngineConnecter.TripProductStatus BookingStatusField;
         
         private string CancellationNumberField;
         
@@ -7546,7 +7546,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int PassengerRphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PostBookingTripStatus PostBookingStatusField;
+        private ExternalServices.TripsEngineConnecter.PostBookingTripStatus PostBookingStatusField;
         
         private int RphField;
         
@@ -7568,7 +7568,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductStatus BookingStatus
+        public ExternalServices.TripsEngineConnecter.TripProductStatus BookingStatus
         {
             get
             {
@@ -7633,7 +7633,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PostBookingTripStatus PostBookingStatus
+        public ExternalServices.TripsEngineConnecter.PostBookingTripStatus PostBookingStatus
         {
             get
             {
@@ -7691,14 +7691,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class PaymentBreakup : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money AmountField;
+        private ExternalServices.TripsEngineConnecter.Money AmountField;
         
         private int PassengerRphField;
         
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money Amount
+        public ExternalServices.TripsEngineConnecter.Money Amount
         {
             get
             {
@@ -7740,32 +7740,32 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GenericItinerary))]
     public partial class TripItinerary : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformationField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn[] AvailableAddonsField;
+        private ExternalServices.TripsEngineConnecter.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ItineraryStatusType ItineraryStatusField;
+        private ExternalServices.TripsEngineConnecter.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn[] SelectedAddonsField;
+        private ExternalServices.TripsEngineConnecter.TripAddOn[] SelectedAddonsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformation
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformation
         {
             get
             {
@@ -7778,7 +7778,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn[] AvailableAddons
+        public ExternalServices.TripsEngineConnecter.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -7804,7 +7804,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ItineraryStatusType ItineraryStatus
+        public ExternalServices.TripsEngineConnecter.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -7843,7 +7843,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn[] SelectedAddons
+        public ExternalServices.TripsEngineConnecter.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -7856,7 +7856,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -7872,27 +7872,27 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty PenaltyField;
+        private ExternalServices.TripsEngineConnecter.Penalty PenaltyField;
         
         private int RphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ProviderCancellationRuleType TypeField;
+        private ExternalServices.TripsEngineConnecter.ProviderCancellationRuleType TypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan WindowField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7918,7 +7918,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty Penalty
+        public ExternalServices.TripsEngineConnecter.Penalty Penalty
         {
             get
             {
@@ -7944,7 +7944,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ProviderCancellationRuleType Type
+        public ExternalServices.TripsEngineConnecter.ProviderCancellationRuleType Type
         {
             get
             {
@@ -7957,7 +7957,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan Window
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan Window
         {
             get
             {
@@ -7973,25 +7973,25 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityPassengerPenalty))]
     public partial class Penalty : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BasePenaltyField;
+        private ExternalServices.TripsEngineConnecter.Money BasePenaltyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee[] FeesField;
+        private ExternalServices.TripsEngineConnecter.Fee[] FeesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Markup[] MarkupsField;
+        private ExternalServices.TripsEngineConnecter.Markup[] MarkupsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalPenaltyField;
+        private ExternalServices.TripsEngineConnecter.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BasePenalty
+        public ExternalServices.TripsEngineConnecter.Money BasePenalty
         {
             get
             {
@@ -8004,7 +8004,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee[] Fees
+        public ExternalServices.TripsEngineConnecter.Fee[] Fees
         {
             get
             {
@@ -8017,7 +8017,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Markup[] Markups
+        public ExternalServices.TripsEngineConnecter.Markup[] Markups
         {
             get
             {
@@ -8030,7 +8030,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalPenalty
+        public ExternalServices.TripsEngineConnecter.Money TotalPenalty
         {
             get
             {
@@ -8098,13 +8098,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule
+    public partial class HotelCancellationRule : ExternalServices.TripsEngineConnecter.CancellationRule
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private ExternalServices.TripsEngineConnecter.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPenalty HotelCancellationPenalty
+        public ExternalServices.TripsEngineConnecter.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8120,13 +8120,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationRule", Namespace="http://tavisca.com")]
-    public partial class AirCancellationRule : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule
+    public partial class AirCancellationRule : ExternalServices.TripsEngineConnecter.CancellationRule
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPenalty AirPenaltyField;
+        private ExternalServices.TripsEngineConnecter.AirCancellationPenalty AirPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPenalty AirPenalty
+        public ExternalServices.TripsEngineConnecter.AirCancellationPenalty AirPenalty
         {
             get
             {
@@ -8142,13 +8142,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationRule", Namespace="http://tavisca.com")]
-    public partial class CarCancellationRule : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule
+    public partial class CarCancellationRule : ExternalServices.TripsEngineConnecter.CancellationRule
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPenalty CarCancellationPenaltyField;
+        private ExternalServices.TripsEngineConnecter.CarCancellationPenalty CarCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPenalty CarCancellationPenalty
+        public ExternalServices.TripsEngineConnecter.CarCancellationPenalty CarCancellationPenalty
         {
             get
             {
@@ -8164,13 +8164,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationRule", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationRule : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule
+    public partial class ActivityCancellationRule : ExternalServices.TripsEngineConnecter.CancellationRule
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPenalty ActivityCancellationPenaltyField;
+        private ExternalServices.TripsEngineConnecter.ActivityCancellationPenalty ActivityCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPenalty ActivityCancellationPenalty
+        public ExternalServices.TripsEngineConnecter.ActivityCancellationPenalty ActivityCancellationPenalty
         {
             get
             {
@@ -8198,20 +8198,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class HotelCancellationPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class AirCancellationPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerPenalty[] PassengersPenaltiesField;
+        private ExternalServices.TripsEngineConnecter.PassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerPenalty[] PassengersPenalties
+        public ExternalServices.TripsEngineConnecter.PassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8227,15 +8227,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class PassengerPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class PassengerPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerTypeField;
+        private ExternalServices.TripsEngineConnecter.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerType
+        public ExternalServices.TripsEngineConnecter.PassengerType PassengerType
         {
             get
             {
@@ -8264,20 +8264,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class CarCancellationPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class ActivityCancellationPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerPenalty[] PassengersPenaltiesField;
+        private ExternalServices.TripsEngineConnecter.ActivityPassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerPenalty[] PassengersPenalties
+        public ExternalServices.TripsEngineConnecter.ActivityPassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8293,7 +8293,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerPenalty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Penalty
+    public partial class ActivityPassengerPenalty : ExternalServices.TripsEngineConnecter.Penalty
     {
         
         private string PassengerTypeField;
@@ -8378,35 +8378,35 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirItinerary", Namespace="http://tavisca.com")]
-    public partial class AirItinerary : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary
+    public partial class AirItinerary : ExternalServices.TripsEngineConnecter.TripItinerary
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPolicy AirCancellationPolicyField;
+        private ExternalServices.TripsEngineConnecter.AirCancellationPolicy AirCancellationPolicyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource AirFareSourceField;
+        private ExternalServices.TripsEngineConnecter.AirFareSource AirFareSourceField;
         
         private float BiasRatingField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DBAirContract ContractField;
+        private ExternalServices.TripsEngineConnecter.DBAirContract ContractField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFare FareField;
+        private ExternalServices.TripsEngineConnecter.AirFare FareField;
         
         private string IdentifierField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItineraryType ItineraryTypeField;
+        private ExternalServices.TripsEngineConnecter.AirItineraryType ItineraryTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] LegsField;
+        private ExternalServices.TripsEngineConnecter.AirLeg[] LegsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupPlan MarkupPlanField;
+        private ExternalServices.TripsEngineConnecter.MarkupPlan MarkupPlanField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirPolicy[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.AirPolicy[] PoliciesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketingInfo TicketingInfoField;
+        private ExternalServices.TripsEngineConnecter.TicketingInfo TicketingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPolicy AirCancellationPolicy
+        public ExternalServices.TripsEngineConnecter.AirCancellationPolicy AirCancellationPolicy
         {
             get
             {
@@ -8419,7 +8419,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource AirFareSource
+        public ExternalServices.TripsEngineConnecter.AirFareSource AirFareSource
         {
             get
             {
@@ -8445,7 +8445,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DBAirContract Contract
+        public ExternalServices.TripsEngineConnecter.DBAirContract Contract
         {
             get
             {
@@ -8458,7 +8458,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFare Fare
+        public ExternalServices.TripsEngineConnecter.AirFare Fare
         {
             get
             {
@@ -8484,7 +8484,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItineraryType ItineraryType
+        public ExternalServices.TripsEngineConnecter.AirItineraryType ItineraryType
         {
             get
             {
@@ -8497,7 +8497,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] Legs
+        public ExternalServices.TripsEngineConnecter.AirLeg[] Legs
         {
             get
             {
@@ -8510,7 +8510,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupPlan MarkupPlan
+        public ExternalServices.TripsEngineConnecter.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8523,7 +8523,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirPolicy[] Policies
+        public ExternalServices.TripsEngineConnecter.AirPolicy[] Policies
         {
             get
             {
@@ -8536,7 +8536,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -8549,7 +8549,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketingInfo TicketingInfo
+        public ExternalServices.TripsEngineConnecter.TicketingInfo TicketingInfo
         {
             get
             {
@@ -8565,59 +8565,59 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary
+    public partial class HotelItinerary : ExternalServices.TripsEngineConnecter.TripItinerary
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deposit[] AcceptableDepositsField;
+        private ExternalServices.TripsEngineConnecter.Deposit[] AcceptableDepositsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Guarantee[] AcceptableGuaranteesField;
+        private ExternalServices.TripsEngineConnecter.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedCountry[] AllowedCountriesField;
+        private ExternalServices.TripsEngineConnecter.AllowedCountry[] AllowedCountriesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelContract ContractField;
+        private ExternalServices.TripsEngineConnecter.HotelContract ContractField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal[] DealsField;
+        private ExternalServices.TripsEngineConnecter.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDiscountCode DiscountCodeField;
+        private ExternalServices.TripsEngineConnecter.HotelDiscountCode DiscountCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFare FareField;
+        private ExternalServices.TripsEngineConnecter.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPolicy HotelCancellationPolicyField;
+        private ExternalServices.TripsEngineConnecter.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PromotionalHotelDeal[] HotelDealsField;
+        private ExternalServices.TripsEngineConnecter.PromotionalHotelDeal[] HotelDealsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource HotelFareSourceField;
+        private ExternalServices.TripsEngineConnecter.HotelFareSource HotelFareSourceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty HotelPropertyField;
+        private ExternalServices.TripsEngineConnecter.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupPlan MarkupPlanField;
+        private ExternalServices.TripsEngineConnecter.MarkupPlan MarkupPlanField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPolicy[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.HotelPolicy[] PoliciesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Room[] RoomsField;
+        private ExternalServices.TripsEngineConnecter.Room[] RoomsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Season[] SeasonsField;
+        private ExternalServices.TripsEngineConnecter.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deposit[] AcceptableDeposits
+        public ExternalServices.TripsEngineConnecter.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -8630,7 +8630,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Guarantee[] AcceptableGuarantees
+        public ExternalServices.TripsEngineConnecter.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8656,7 +8656,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedCountry[] AllowedCountries
+        public ExternalServices.TripsEngineConnecter.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -8669,7 +8669,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelContract Contract
+        public ExternalServices.TripsEngineConnecter.HotelContract Contract
         {
             get
             {
@@ -8682,7 +8682,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal[] Deals
+        public ExternalServices.TripsEngineConnecter.Deal[] Deals
         {
             get
             {
@@ -8721,7 +8721,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDiscountCode DiscountCode
+        public ExternalServices.TripsEngineConnecter.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -8734,7 +8734,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFare Fare
+        public ExternalServices.TripsEngineConnecter.HotelFare Fare
         {
             get
             {
@@ -8773,7 +8773,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPolicy HotelCancellationPolicy
+        public ExternalServices.TripsEngineConnecter.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -8786,7 +8786,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PromotionalHotelDeal[] HotelDeals
+        public ExternalServices.TripsEngineConnecter.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -8799,7 +8799,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource HotelFareSource
+        public ExternalServices.TripsEngineConnecter.HotelFareSource HotelFareSource
         {
             get
             {
@@ -8812,7 +8812,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty HotelProperty
+        public ExternalServices.TripsEngineConnecter.HotelProperty HotelProperty
         {
             get
             {
@@ -8838,7 +8838,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupPlan MarkupPlan
+        public ExternalServices.TripsEngineConnecter.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8851,7 +8851,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPolicy[] Policies
+        public ExternalServices.TripsEngineConnecter.HotelPolicy[] Policies
         {
             get
             {
@@ -8864,7 +8864,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Room[] Rooms
+        public ExternalServices.TripsEngineConnecter.Room[] Rooms
         {
             get
             {
@@ -8877,7 +8877,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Season[] Seasons
+        public ExternalServices.TripsEngineConnecter.Season[] Seasons
         {
             get
             {
@@ -8916,7 +8916,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriod
         {
             get
             {
@@ -8932,47 +8932,47 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarItinerary", Namespace="http://tavisca.com")]
-    public partial class CarItinerary : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary
+    public partial class CarItinerary : ExternalServices.TripsEngineConnecter.TripItinerary
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Guarantee[] AcceptableGuaranteesField;
+        private ExternalServices.TripsEngineConnecter.Guarantee[] AcceptableGuaranteesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPolicy CarCancellationPolicyField;
+        private ExternalServices.TripsEngineConnecter.CarCancellationPolicy CarCancellationPolicyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCompany CarCompanyField;
+        private ExternalServices.TripsEngineConnecter.CarCompany CarCompanyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFareSource CarFareSourceField;
+        private ExternalServices.TripsEngineConnecter.CarFareSource CarFareSourceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode DiscountCodeField;
+        private ExternalServices.TripsEngineConnecter.CarDiscountCode DiscountCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationInfo DropOffInfoField;
+        private ExternalServices.TripsEngineConnecter.RentalLocationInfo DropOffInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DropOffLocationField;
+        private ExternalServices.TripsEngineConnecter.Location DropOffLocationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFare FareField;
+        private ExternalServices.TripsEngineConnecter.CarFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Mileage MileageField;
+        private ExternalServices.TripsEngineConnecter.Mileage MileageField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationInfo PickupInfoField;
+        private ExternalServices.TripsEngineConnecter.RentalLocationInfo PickupInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location PickupLocationField;
+        private ExternalServices.TripsEngineConnecter.Location PickupLocationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarPolicy[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.CarPolicy[] PoliciesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan RentalPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan RentalPeriodField;
         
         private string SegmentRefField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Vehicle VehicleField;
+        private ExternalServices.TripsEngineConnecter.Vehicle VehicleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Guarantee[] AcceptableGuarantees
+        public ExternalServices.TripsEngineConnecter.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8985,7 +8985,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPolicy CarCancellationPolicy
+        public ExternalServices.TripsEngineConnecter.CarCancellationPolicy CarCancellationPolicy
         {
             get
             {
@@ -8998,7 +8998,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCompany CarCompany
+        public ExternalServices.TripsEngineConnecter.CarCompany CarCompany
         {
             get
             {
@@ -9011,7 +9011,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFareSource CarFareSource
+        public ExternalServices.TripsEngineConnecter.CarFareSource CarFareSource
         {
             get
             {
@@ -9024,7 +9024,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode DiscountCode
+        public ExternalServices.TripsEngineConnecter.CarDiscountCode DiscountCode
         {
             get
             {
@@ -9037,7 +9037,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationInfo DropOffInfo
+        public ExternalServices.TripsEngineConnecter.RentalLocationInfo DropOffInfo
         {
             get
             {
@@ -9050,7 +9050,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DropOffLocation
+        public ExternalServices.TripsEngineConnecter.Location DropOffLocation
         {
             get
             {
@@ -9063,7 +9063,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFare Fare
+        public ExternalServices.TripsEngineConnecter.CarFare Fare
         {
             get
             {
@@ -9102,7 +9102,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Mileage Mileage
+        public ExternalServices.TripsEngineConnecter.Mileage Mileage
         {
             get
             {
@@ -9115,7 +9115,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationInfo PickupInfo
+        public ExternalServices.TripsEngineConnecter.RentalLocationInfo PickupInfo
         {
             get
             {
@@ -9128,7 +9128,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location PickupLocation
+        public ExternalServices.TripsEngineConnecter.Location PickupLocation
         {
             get
             {
@@ -9141,7 +9141,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarPolicy[] Policies
+        public ExternalServices.TripsEngineConnecter.CarPolicy[] Policies
         {
             get
             {
@@ -9154,7 +9154,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan RentalPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -9180,7 +9180,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -9193,7 +9193,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Vehicle Vehicle
+        public ExternalServices.TripsEngineConnecter.Vehicle Vehicle
         {
             get
             {
@@ -9209,69 +9209,69 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityItinerary", Namespace="http://tavisca.com")]
-    public partial class ActivityItinerary : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary
+    public partial class ActivityItinerary : ExternalServices.TripsEngineConnecter.TripItinerary
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPolicy ActivityCancellationPolicyField;
+        private ExternalServices.TripsEngineConnecter.ActivityCancellationPolicy ActivityCancellationPolicyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFareSource ActivityFareSourceField;
+        private ExternalServices.TripsEngineConnecter.ActivityFareSource ActivityFareSourceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityOption[] ActivityOptionsField;
+        private ExternalServices.TripsEngineConnecter.ActivityOption[] ActivityOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityReview[] ActivityReviewsField;
+        private ExternalServices.TripsEngineConnecter.ActivityReview[] ActivityReviewsField;
         
         private string AdditionalTextField;
         
         private double AverageRatingField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BookingAnswer[] BookingAnswersField;
+        private ExternalServices.TripsEngineConnecter.BookingAnswer[] BookingAnswersField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BookingQuestion[] BookingQuestionsField;
+        private ExternalServices.TripsEngineConnecter.BookingQuestion[] BookingQuestionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCategory CategoryField;
+        private ExternalServices.TripsEngineConnecter.ActivityCategory CategoryField;
         
         private string DescriptionField;
         
         private string DurationTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFare FareField;
+        private ExternalServices.TripsEngineConnecter.ActivityFare FareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode GeoCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media ImageField;
+        private ExternalServices.TripsEngineConnecter.Media ImageField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ImageInfo[] ImagesField;
+        private ExternalServices.TripsEngineConnecter.ImageInfo[] ImagesField;
         
         private string ItineraryTypeField;
         
         private string LegalTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location LocationField;
+        private ExternalServices.TripsEngineConnecter.Location LocationField;
         
         private string LongDescriptionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media MapField;
+        private ExternalServices.TripsEngineConnecter.Media MapField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Policy[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.Policy[] PoliciesField;
         
         private string ScheduleTextField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityOption SelectedOptionField;
+        private ExternalServices.TripsEngineConnecter.ActivityOption SelectedOptionField;
         
         private string SupplierItineraryIdField;
         
         private string SupplierItineraryTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media ThumbnailField;
+        private ExternalServices.TripsEngineConnecter.Media ThumbnailField;
         
         private string TitleField;
         
         private string VendorItineraryTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPolicy ActivityCancellationPolicy
+        public ExternalServices.TripsEngineConnecter.ActivityCancellationPolicy ActivityCancellationPolicy
         {
             get
             {
@@ -9284,7 +9284,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFareSource ActivityFareSource
+        public ExternalServices.TripsEngineConnecter.ActivityFareSource ActivityFareSource
         {
             get
             {
@@ -9297,7 +9297,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityOption[] ActivityOptions
+        public ExternalServices.TripsEngineConnecter.ActivityOption[] ActivityOptions
         {
             get
             {
@@ -9310,7 +9310,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityReview[] ActivityReviews
+        public ExternalServices.TripsEngineConnecter.ActivityReview[] ActivityReviews
         {
             get
             {
@@ -9349,7 +9349,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BookingAnswer[] BookingAnswers
+        public ExternalServices.TripsEngineConnecter.BookingAnswer[] BookingAnswers
         {
             get
             {
@@ -9362,7 +9362,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BookingQuestion[] BookingQuestions
+        public ExternalServices.TripsEngineConnecter.BookingQuestion[] BookingQuestions
         {
             get
             {
@@ -9375,7 +9375,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCategory Category
+        public ExternalServices.TripsEngineConnecter.ActivityCategory Category
         {
             get
             {
@@ -9414,7 +9414,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFare Fare
+        public ExternalServices.TripsEngineConnecter.ActivityFare Fare
         {
             get
             {
@@ -9427,7 +9427,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode GeoCode
         {
             get
             {
@@ -9440,7 +9440,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Image
+        public ExternalServices.TripsEngineConnecter.Media Image
         {
             get
             {
@@ -9453,7 +9453,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ImageInfo[] Images
+        public ExternalServices.TripsEngineConnecter.ImageInfo[] Images
         {
             get
             {
@@ -9492,7 +9492,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Location
+        public ExternalServices.TripsEngineConnecter.Location Location
         {
             get
             {
@@ -9518,7 +9518,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Map
+        public ExternalServices.TripsEngineConnecter.Media Map
         {
             get
             {
@@ -9544,7 +9544,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Policy[] Policies
+        public ExternalServices.TripsEngineConnecter.Policy[] Policies
         {
             get
             {
@@ -9570,7 +9570,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityOption SelectedOption
+        public ExternalServices.TripsEngineConnecter.ActivityOption SelectedOption
         {
             get
             {
@@ -9609,7 +9609,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Thumbnail
+        public ExternalServices.TripsEngineConnecter.Media Thumbnail
         {
             get
             {
@@ -9651,33 +9651,33 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericItinerary", Namespace="http://tavisca.com")]
-    public partial class GenericItinerary : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripItinerary
+    public partial class GenericItinerary : ExternalServices.TripsEngineConnecter.TripItinerary
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
         private string DescriptionField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFare FareField;
+        private ExternalServices.TripsEngineConnecter.GenericFare FareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFareSource GenericFareSourceField;
+        private ExternalServices.TripsEngineConnecter.GenericFareSource GenericFareSourceField;
         
         private string ImageUrlField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location LocationField;
+        private ExternalServices.TripsEngineConnecter.Location LocationField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PolicyInfo[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.PolicyInfo[] PoliciesField;
         
         private System.DateTime StartDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SupplierInfo SupplierInfoField;
+        private ExternalServices.TripsEngineConnecter.SupplierInfo SupplierInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -9716,7 +9716,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFare Fare
+        public ExternalServices.TripsEngineConnecter.GenericFare Fare
         {
             get
             {
@@ -9729,7 +9729,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFareSource GenericFareSource
+        public ExternalServices.TripsEngineConnecter.GenericFareSource GenericFareSource
         {
             get
             {
@@ -9755,7 +9755,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Location
+        public ExternalServices.TripsEngineConnecter.Location Location
         {
             get
             {
@@ -9781,7 +9781,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PolicyInfo[] Policies
+        public ExternalServices.TripsEngineConnecter.PolicyInfo[] Policies
         {
             get
             {
@@ -9807,7 +9807,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SupplierInfo SupplierInfo
+        public ExternalServices.TripsEngineConnecter.SupplierInfo SupplierInfo
         {
             get
             {
@@ -9823,21 +9823,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BaggageAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.BaggageAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformationField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AddOnBookingInfo BookingInformationField;
+        private ExternalServices.TripsEngineConnecter.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOnFare FareField;
+        private ExternalServices.TripsEngineConnecter.TripAddOnFare FareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSourceField;
+        private ExternalServices.TripsEngineConnecter.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -9848,7 +9848,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformation
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformation
         {
             get
             {
@@ -9861,7 +9861,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AddOnBookingInfo BookingInformation
+        public ExternalServices.TripsEngineConnecter.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -9887,7 +9887,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOnFare Fare
+        public ExternalServices.TripsEngineConnecter.TripAddOnFare Fare
         {
             get
             {
@@ -9900,7 +9900,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSource
+        public ExternalServices.TripsEngineConnecter.FareSource FareSource
         {
             get
             {
@@ -10038,7 +10038,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class AddOnBookingInfo : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AddOnBookingStatusType BookingStatusField;
+        private ExternalServices.TripsEngineConnecter.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -10047,7 +10047,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AddOnBookingStatusType BookingStatus
+        public ExternalServices.TripsEngineConnecter.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -10102,17 +10102,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class TripAddOnFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BaseTotalFareField;
+        private ExternalServices.TripsEngineConnecter.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BaseTotalFare
+        public ExternalServices.TripsEngineConnecter.Money BaseTotalFare
         {
             get
             {
@@ -10154,14 +10154,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaggageAddOn", Namespace="http://tavisca.com")]
-    public partial class BaggageAddOn : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn
+    public partial class BaggageAddOn : ExternalServices.TripsEngineConnecter.TripAddOn
     {
         
         private int AllowedWeightLimitField;
         
         private bool IsLimitSpecifiedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WeightUnit WeightUnitField;
+        private ExternalServices.TripsEngineConnecter.WeightUnit WeightUnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int AllowedWeightLimit
@@ -10190,7 +10190,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WeightUnit WeightUnit
+        public ExternalServices.TripsEngineConnecter.WeightUnit WeightUnit
         {
             get
             {
@@ -10206,8 +10206,8 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TransferAddOn))]
-    public partial class HotelAddOn : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TransferAddOn))]
+    public partial class HotelAddOn : ExternalServices.TripsEngineConnecter.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -10229,21 +10229,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelAddOn
+    public partial class TransferAddOn : ExternalServices.TripsEngineConnecter.HotelAddOn
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DestinationField;
+        private ExternalServices.TripsEngineConnecter.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location OriginField;
+        private ExternalServices.TripsEngineConnecter.Location OriginField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] PassengersField;
+        private ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Destination
+        public ExternalServices.TripsEngineConnecter.Location Destination
         {
             get
             {
@@ -10269,7 +10269,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Origin
+        public ExternalServices.TripsEngineConnecter.Location Origin
         {
             get
             {
@@ -10282,7 +10282,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] Passengers
+        public ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -10326,70 +10326,70 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityPassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GenericFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BaseFare BaseFareField;
+        private ExternalServices.TripsEngineConnecter.BaseFare BaseFareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Commission[] CommissionsField;
+        private ExternalServices.TripsEngineConnecter.Commission[] CommissionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee ConsolidatorFeeField;
+        private ExternalServices.TripsEngineConnecter.Fee ConsolidatorFeeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Discount[] DiscountsField;
+        private ExternalServices.TripsEngineConnecter.Discount[] DiscountsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money EstimatedCommissionField;
+        private ExternalServices.TripsEngineConnecter.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareRestrictionType[] FareRestrictionTypesField;
+        private ExternalServices.TripsEngineConnecter.FareRestrictionType[] FareRestrictionTypesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareTypeField;
+        private ExternalServices.TripsEngineConnecter.FareType FareTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee[] FeesField;
+        private ExternalServices.TripsEngineConnecter.Fee[] FeesField;
         
         private int IdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MarkupField;
+        private ExternalServices.TripsEngineConnecter.Money MarkupField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Markup[] MarkupsField;
+        private ExternalServices.TripsEngineConnecter.Markup[] MarkupsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee PartnerFeeField;
+        private ExternalServices.TripsEngineConnecter.Fee PartnerFeeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money PartnerMarkupField;
+        private ExternalServices.TripsEngineConnecter.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money SavingsIncludedField;
+        private ExternalServices.TripsEngineConnecter.Money SavingsIncludedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee ServiceFeeField;
+        private ExternalServices.TripsEngineConnecter.Fee ServiceFeeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tax[] TaxesField;
+        private ExternalServices.TripsEngineConnecter.Tax[] TaxesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Commission TotalCommissionField;
+        private ExternalServices.TripsEngineConnecter.Commission TotalCommissionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Discount TotalDiscountField;
+        private ExternalServices.TripsEngineConnecter.Discount TotalDiscountField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalFareField;
+        private ExternalServices.TripsEngineConnecter.Money TotalFareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee TotalFeeField;
+        private ExternalServices.TripsEngineConnecter.Fee TotalFeeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalTaxField;
+        private ExternalServices.TripsEngineConnecter.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.BaseFare BaseFare
+        public ExternalServices.TripsEngineConnecter.BaseFare BaseFare
         {
             get
             {
@@ -10402,7 +10402,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Commission[] Commissions
+        public ExternalServices.TripsEngineConnecter.Commission[] Commissions
         {
             get
             {
@@ -10415,7 +10415,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee ConsolidatorFee
+        public ExternalServices.TripsEngineConnecter.Fee ConsolidatorFee
         {
             get
             {
@@ -10428,7 +10428,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Discount[] Discounts
+        public ExternalServices.TripsEngineConnecter.Discount[] Discounts
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money EstimatedCommission
+        public ExternalServices.TripsEngineConnecter.Money EstimatedCommission
         {
             get
             {
@@ -10467,7 +10467,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareRestrictionType[] FareRestrictionTypes
+        public ExternalServices.TripsEngineConnecter.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -10480,7 +10480,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareType
+        public ExternalServices.TripsEngineConnecter.FareType FareType
         {
             get
             {
@@ -10493,7 +10493,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee[] Fees
+        public ExternalServices.TripsEngineConnecter.Fee[] Fees
         {
             get
             {
@@ -10519,7 +10519,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money Markup
+        public ExternalServices.TripsEngineConnecter.Money Markup
         {
             get
             {
@@ -10532,7 +10532,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Markup[] Markups
+        public ExternalServices.TripsEngineConnecter.Markup[] Markups
         {
             get
             {
@@ -10545,7 +10545,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee PartnerFee
+        public ExternalServices.TripsEngineConnecter.Fee PartnerFee
         {
             get
             {
@@ -10558,7 +10558,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money PartnerMarkup
+        public ExternalServices.TripsEngineConnecter.Money PartnerMarkup
         {
             get
             {
@@ -10597,7 +10597,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money SavingsIncluded
+        public ExternalServices.TripsEngineConnecter.Money SavingsIncluded
         {
             get
             {
@@ -10610,7 +10610,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee ServiceFee
+        public ExternalServices.TripsEngineConnecter.Fee ServiceFee
         {
             get
             {
@@ -10623,7 +10623,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -10636,7 +10636,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tax[] Taxes
+        public ExternalServices.TripsEngineConnecter.Tax[] Taxes
         {
             get
             {
@@ -10649,7 +10649,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Commission TotalCommission
+        public ExternalServices.TripsEngineConnecter.Commission TotalCommission
         {
             get
             {
@@ -10662,7 +10662,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Discount TotalDiscount
+        public ExternalServices.TripsEngineConnecter.Discount TotalDiscount
         {
             get
             {
@@ -10675,7 +10675,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalFare
+        public ExternalServices.TripsEngineConnecter.Money TotalFare
         {
             get
             {
@@ -10688,7 +10688,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fee TotalFee
+        public ExternalServices.TripsEngineConnecter.Fee TotalFee
         {
             get
             {
@@ -10701,7 +10701,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalTax
+        public ExternalServices.TripsEngineConnecter.Money TotalTax
         {
             get
             {
@@ -10717,12 +10717,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFare", Namespace="http://tavisca.com")]
-    public partial class AirFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class AirFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
         private string[] LegGroupsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerFare[] PassengerFaresField;
+        private ExternalServices.TripsEngineConnecter.PassengerFare[] PassengerFaresField;
         
         private string[] TagsField;
         
@@ -10740,7 +10740,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerFare[] PassengerFares
+        public ExternalServices.TripsEngineConnecter.PassengerFare[] PassengerFares
         {
             get
             {
@@ -10769,14 +10769,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerFare", Namespace="http://tavisca.com")]
-    public partial class PassengerFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class PassengerFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
         private int MaxAgeField;
         
         private int MinAgeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerTypeField;
+        private ExternalServices.TripsEngineConnecter.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -10809,7 +10809,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerType
+        public ExternalServices.TripsEngineConnecter.PassengerType PassengerType
         {
             get
             {
@@ -10851,14 +10851,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class RoomRate : ExternalServices.TripsEngineConnecter.Fare
     {
         
         private string BookingCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DailyRate[] DailyRatesField;
+        private ExternalServices.TripsEngineConnecter.DailyRate[] DailyRatesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateIndicatorType RateIndicatorTypeField;
+        private ExternalServices.TripsEngineConnecter.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -10886,7 +10886,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DailyRate[] DailyRates
+        public ExternalServices.TripsEngineConnecter.DailyRate[] DailyRates
         {
             get
             {
@@ -10899,7 +10899,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateIndicatorType RateIndicatorType
+        public ExternalServices.TripsEngineConnecter.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -10993,17 +10993,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class HotelFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money AvgDailyRateField;
+        private ExternalServices.TripsEngineConnecter.Money AvgDailyRateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MaxDailyRateField;
+        private ExternalServices.TripsEngineConnecter.Money MaxDailyRateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinDailyRateField;
+        private ExternalServices.TripsEngineConnecter.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money AvgDailyRate
+        public ExternalServices.TripsEngineConnecter.Money AvgDailyRate
         {
             get
             {
@@ -11016,7 +11016,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MaxDailyRate
+        public ExternalServices.TripsEngineConnecter.Money MaxDailyRate
         {
             get
             {
@@ -11029,7 +11029,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinDailyRate
+        public ExternalServices.TripsEngineConnecter.Money MinDailyRate
         {
             get
             {
@@ -11045,19 +11045,19 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFare", Namespace="http://tavisca.com")]
-    public partial class CarFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class CarFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRate BaseRateField;
+        private ExternalServices.TripsEngineConnecter.CarRate BaseRateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BaseTotalFareField;
+        private ExternalServices.TripsEngineConnecter.Money BaseTotalFareField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCharge[] ChargesField;
+        private ExternalServices.TripsEngineConnecter.CarCharge[] ChargesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalChargesField;
+        private ExternalServices.TripsEngineConnecter.Money TotalChargesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRate BaseRate
+        public ExternalServices.TripsEngineConnecter.CarRate BaseRate
         {
             get
             {
@@ -11070,7 +11070,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money BaseTotalFare
+        public ExternalServices.TripsEngineConnecter.Money BaseTotalFare
         {
             get
             {
@@ -11083,7 +11083,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCharge[] Charges
+        public ExternalServices.TripsEngineConnecter.CarCharge[] Charges
         {
             get
             {
@@ -11096,7 +11096,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money TotalCharges
+        public ExternalServices.TripsEngineConnecter.Money TotalCharges
         {
             get
             {
@@ -11112,7 +11112,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerFare", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class ActivityPassengerFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
         private int MaxAgeField;
@@ -11239,13 +11239,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFare", Namespace="http://tavisca.com")]
-    public partial class ActivityFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class ActivityFare : ExternalServices.TripsEngineConnecter.Fare
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinFareField;
+        private ExternalServices.TripsEngineConnecter.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinFare
+        public ExternalServices.TripsEngineConnecter.Money MinFare
         {
             get
             {
@@ -11261,7 +11261,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFare", Namespace="http://tavisca.com")]
-    public partial class GenericFare : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Fare
+    public partial class GenericFare : ExternalServices.TripsEngineConnecter.Fare
     {
     }
     
@@ -11405,7 +11405,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int[] AgesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerTypeField;
+        private ExternalServices.TripsEngineConnecter.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -11423,7 +11423,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerType
+        public ExternalServices.TripsEngineConnecter.PassengerType PassengerType
         {
             get
             {
@@ -11452,7 +11452,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationPolicy
+    public partial class AirCancellationPolicy : ExternalServices.TripsEngineConnecter.CancellationPolicy
     {
     }
     
@@ -11502,19 +11502,19 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int PreferenceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SpecialServiceRequest[] SSRsField;
+        private ExternalServices.TripsEngineConnecter.SpecialServiceRequest[] SSRsField;
         
         private long SearchAirFareSourceIdField;
         
         private string TicketDesignatorField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan TicketingPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan TicketingPeriodField;
         
         private string TourCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan TravelPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan TravelPeriodField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan ValidPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan ValidPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long AgencyId
@@ -11777,7 +11777,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SpecialServiceRequest[] SSRs
+        public ExternalServices.TripsEngineConnecter.SpecialServiceRequest[] SSRs
         {
             get
             {
@@ -11816,7 +11816,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan TicketingPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan TicketingPeriod
         {
             get
             {
@@ -11842,7 +11842,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan TravelPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan TravelPeriod
         {
             get
             {
@@ -11855,7 +11855,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan ValidPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan ValidPeriod
         {
             get
             {
@@ -11876,13 +11876,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool AllowDynamicField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupApplicationAmount ApplyOnAmountField;
+        private ExternalServices.TripsEngineConnecter.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupApplicationType MarkupApplicationTypeField;
+        private ExternalServices.TripsEngineConnecter.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -11904,7 +11904,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupApplicationAmount ApplyOnAmount
+        public ExternalServices.TripsEngineConnecter.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -11943,7 +11943,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MarkupApplicationType MarkupApplicationType
+        public ExternalServices.TripsEngineConnecter.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -12007,7 +12007,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string ETicketNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketType TypeField;
+        private ExternalServices.TripsEngineConnecter.TicketType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime BookingTimeLimit
@@ -12049,7 +12049,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TicketType Type
+        public ExternalServices.TripsEngineConnecter.TicketType Type
         {
             get
             {
@@ -12085,23 +12085,23 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string[] ContractReferencesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegment[] FlightSegmentsField;
+        private ExternalServices.TripsEngineConnecter.FlightSegment[] FlightSegmentsField;
         
         private int LegDurationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MileageField;
+        private ExternalServices.TripsEngineConnecter.Distance MileageField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateCodeInfo RateCodeInfoField;
+        private ExternalServices.TripsEngineConnecter.RateCodeInfo RateCodeInfoField;
         
         private int RphField;
         
         private int ScopeIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegmentStop[] StopDetailsField;
+        private ExternalServices.TripsEngineConnecter.FlightSegmentStop[] StopDetailsField;
         
         private int StopsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] ContractReferences
@@ -12117,7 +12117,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegment[] FlightSegments
+        public ExternalServices.TripsEngineConnecter.FlightSegment[] FlightSegments
         {
             get
             {
@@ -12143,7 +12143,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Mileage
+        public ExternalServices.TripsEngineConnecter.Distance Mileage
         {
             get
             {
@@ -12156,7 +12156,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateCodeInfo RateCodeInfo
+        public ExternalServices.TripsEngineConnecter.RateCodeInfo RateCodeInfo
         {
             get
             {
@@ -12195,7 +12195,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegmentStop[] StopDetails
+        public ExternalServices.TripsEngineConnecter.FlightSegmentStop[] StopDetails
         {
             get
             {
@@ -12221,7 +12221,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -12237,24 +12237,24 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPolicy", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Air.DataContracts")]
-    public partial class AirPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Policy
+    public partial class AirPolicy : ExternalServices.TripsEngineConnecter.Policy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule[] CancellationRulesField;
+        private ExternalServices.TripsEngineConnecter.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationRule[] CancellationRules
+        public ExternalServices.TripsEngineConnecter.CancellationRule[] CancellationRules
         {
             get
             {
@@ -12270,21 +12270,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationPolicy
+    public partial class HotelCancellationPolicy : ExternalServices.TripsEngineConnecter.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationPolicy
+    public partial class CarCancellationPolicy : ExternalServices.TripsEngineConnecter.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationPolicy
+    public partial class ActivityCancellationPolicy : ExternalServices.TripsEngineConnecter.CancellationPolicy
     {
     }
     
@@ -12294,7 +12294,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class SpecialServiceRequest : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string SSRAirlineField;
         
@@ -12303,7 +12303,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string SSRFreeFormField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -12363,7 +12363,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string RateCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string RateCode
@@ -12379,7 +12379,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -12398,17 +12398,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class FlightSegment : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Aircraft AirCraftField;
+        private ExternalServices.TripsEngineConnecter.Aircraft AirCraftField;
         
         private string AirlineRecordLocatorField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport ArrivalAirportField;
+        private ExternalServices.TripsEngineConnecter.Airport ArrivalAirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass CabinClassField;
+        private ExternalServices.TripsEngineConnecter.CabinClass CabinClassField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport DepartureAirportField;
+        private ExternalServices.TripsEngineConnecter.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateTimeField;
         
@@ -12416,7 +12416,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string FlightNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegmentStop[] FlightSegmentStopsField;
+        private ExternalServices.TripsEngineConnecter.FlightSegmentStop[] FlightSegmentStopsField;
         
         private bool IsETicketField;
         
@@ -12424,30 +12424,30 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int LayoverDurationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline MarketingAirlineField;
+        private ExternalServices.TripsEngineConnecter.Airline MarketingAirlineField;
         
         private string MarriageGroupCodeField;
         
         private string MealCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MileageField;
+        private ExternalServices.TripsEngineConnecter.Distance MileageField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline OperatingAirlineField;
+        private ExternalServices.TripsEngineConnecter.Airline OperatingAirlineField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSeat[] PassengerSeatField;
+        private ExternalServices.TripsEngineConnecter.PassengerSeat[] PassengerSeatField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SegmentQualifier[] QualifiersField;
+        private ExternalServices.TripsEngineConnecter.SegmentQualifier[] QualifiersField;
         
         private int RphField;
         
         private string SegmentRefField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SellStatus SellStatusField;
+        private ExternalServices.TripsEngineConnecter.SellStatus SellStatusField;
         
         private int StopsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Aircraft AirCraft
+        public ExternalServices.TripsEngineConnecter.Aircraft AirCraft
         {
             get
             {
@@ -12473,7 +12473,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport ArrivalAirport
+        public ExternalServices.TripsEngineConnecter.Airport ArrivalAirport
         {
             get
             {
@@ -12499,7 +12499,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass CabinClass
+        public ExternalServices.TripsEngineConnecter.CabinClass CabinClass
         {
             get
             {
@@ -12512,7 +12512,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport DepartureAirport
+        public ExternalServices.TripsEngineConnecter.Airport DepartureAirport
         {
             get
             {
@@ -12564,7 +12564,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightSegmentStop[] FlightSegmentStops
+        public ExternalServices.TripsEngineConnecter.FlightSegmentStop[] FlightSegmentStops
         {
             get
             {
@@ -12616,7 +12616,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline MarketingAirline
+        public ExternalServices.TripsEngineConnecter.Airline MarketingAirline
         {
             get
             {
@@ -12655,7 +12655,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Mileage
+        public ExternalServices.TripsEngineConnecter.Distance Mileage
         {
             get
             {
@@ -12668,7 +12668,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline OperatingAirline
+        public ExternalServices.TripsEngineConnecter.Airline OperatingAirline
         {
             get
             {
@@ -12681,7 +12681,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerSeat[] PassengerSeat
+        public ExternalServices.TripsEngineConnecter.PassengerSeat[] PassengerSeat
         {
             get
             {
@@ -12694,7 +12694,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SegmentQualifier[] Qualifiers
+        public ExternalServices.TripsEngineConnecter.SegmentQualifier[] Qualifiers
         {
             get
             {
@@ -12733,7 +12733,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SellStatus SellStatus
+        public ExternalServices.TripsEngineConnecter.SellStatus SellStatus
         {
             get
             {
@@ -12765,7 +12765,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class FlightSegmentStop : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport AirportField;
+        private ExternalServices.TripsEngineConnecter.Airport AirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
@@ -12780,7 +12780,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport Airport
+        public ExternalServices.TripsEngineConnecter.Airport Airport
         {
             get
             {
@@ -12991,11 +12991,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string FareBasisCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareTypeField;
+        private ExternalServices.TripsEngineConnecter.FareType FareTypeField;
         
         private string LineNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerTypeField;
+        private ExternalServices.TripsEngineConnecter.PassengerType PassengerTypeField;
         
         private string SegmentRefField;
         
@@ -13028,7 +13028,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareType
+        public ExternalServices.TripsEngineConnecter.FareType FareType
         {
             get
             {
@@ -13054,7 +13054,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerType PassengerType
+        public ExternalServices.TripsEngineConnecter.PassengerType PassengerType
         {
             get
             {
@@ -13153,8 +13153,8 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Policy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirPolicy))]
     public partial class Policy : object
     {
         
@@ -13192,7 +13192,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarPolicy", Namespace="http://tavisca.com")]
-    public partial class CarPolicy : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Policy
+    public partial class CarPolicy : ExternalServices.TripsEngineConnecter.Policy
     {
     }
     
@@ -13379,9 +13379,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string RateCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDiscountType TypeField;
+        private ExternalServices.TripsEngineConnecter.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -13436,7 +13436,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -13449,7 +13449,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDiscountType Type
+        public ExternalServices.TripsEngineConnecter.HotelDiscountType Type
         {
             get
             {
@@ -13465,41 +13465,41 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Activity[] ActivityOptionsField;
+        private ExternalServices.TripsEngineConnecter.Activity[] ActivityOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address AddressField;
+        private ExternalServices.TripsEngineConnecter.Address AddressField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Amenity[] AmenitiesField;
+        private ExternalServices.TripsEngineConnecter.Amenity[] AmenitiesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AreaAttraction[] AreaAttractionsField;
+        private ExternalServices.TripsEngineConnecter.AreaAttraction[] AreaAttractionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AvailabilityCalender AvailabilityCalenderField;
+        private ExternalServices.TripsEngineConnecter.AvailabilityCalender AvailabilityCalenderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TimeDetail[] CheckInOptionsField;
+        private ExternalServices.TripsEngineConnecter.TimeDetail[] CheckInOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TimeDetail[] CheckOutOptionsField;
+        private ExternalServices.TripsEngineConnecter.TimeDetail[] CheckOutOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDescription[] DescriptionsField;
+        private Tavisca.TravelNxt.Hotel.DataContracts.HotelDescription[] DescriptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance DistanceField;
+        private ExternalServices.TripsEngineConnecter.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode GeoCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelChain HotelChainField;
+        private ExternalServices.TripsEngineConnecter.HotelChain HotelChainField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelMultimedia HotelMultiMediaField;
+        private ExternalServices.TripsEngineConnecter.HotelMultimedia HotelMultiMediaField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRating HotelRatingField;
+        private ExternalServices.TripsEngineConnecter.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media[] MediaContentField;
+        private ExternalServices.TripsEngineConnecter.Media[] MediaContentField;
         
         private string NameField;
         
@@ -13507,20 +13507,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string PhoneNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Review[] ReviewsField;
+        private ExternalServices.TripsEngineConnecter.Review[] ReviewsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] StateBagField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media ThumbnailField;
+        private ExternalServices.TripsEngineConnecter.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Activity[] ActivityOptions
+        public ExternalServices.TripsEngineConnecter.Activity[] ActivityOptions
         {
             get
             {
@@ -13533,7 +13533,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Address Address
+        public ExternalServices.TripsEngineConnecter.Address Address
         {
             get
             {
@@ -13546,7 +13546,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Amenity[] Amenities
+        public ExternalServices.TripsEngineConnecter.Amenity[] Amenities
         {
             get
             {
@@ -13559,7 +13559,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AreaAttraction[] AreaAttractions
+        public ExternalServices.TripsEngineConnecter.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -13572,7 +13572,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AvailabilityCalender AvailabilityCalender
+        public ExternalServices.TripsEngineConnecter.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -13585,7 +13585,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TimeDetail[] CheckInOptions
+        public ExternalServices.TripsEngineConnecter.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -13598,7 +13598,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TimeDetail[] CheckOutOptions
+        public ExternalServices.TripsEngineConnecter.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -13611,7 +13611,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDescription[] Descriptions
+        public Tavisca.TravelNxt.Hotel.DataContracts.HotelDescription[] Descriptions
         {
             get
             {
@@ -13624,7 +13624,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Distance
+        public ExternalServices.TripsEngineConnecter.Distance Distance
         {
             get
             {
@@ -13650,7 +13650,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode GeoCode
         {
             get
             {
@@ -13663,7 +13663,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelChain HotelChain
+        public ExternalServices.TripsEngineConnecter.HotelChain HotelChain
         {
             get
             {
@@ -13676,7 +13676,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelMultimedia HotelMultiMedia
+        public ExternalServices.TripsEngineConnecter.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -13689,7 +13689,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRating HotelRating
+        public ExternalServices.TripsEngineConnecter.HotelRating HotelRating
         {
             get
             {
@@ -13715,7 +13715,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media[] MediaContent
+        public ExternalServices.TripsEngineConnecter.Media[] MediaContent
         {
             get
             {
@@ -13767,7 +13767,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Review[] Reviews
+        public ExternalServices.TripsEngineConnecter.Review[] Reviews
         {
             get
             {
@@ -13780,7 +13780,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] StateBag
+        public ExternalServices.TripsEngineConnecter.StateBag[] StateBag
         {
             get
             {
@@ -13806,7 +13806,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -13819,7 +13819,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Thumbnail
+        public ExternalServices.TripsEngineConnecter.Media Thumbnail
         {
             get
             {
@@ -13855,7 +13855,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DepositType TypeField;
+        private ExternalServices.TripsEngineConnecter.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13884,7 +13884,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DepositType Type
+        public ExternalServices.TripsEngineConnecter.DepositType Type
         {
             get
             {
@@ -13907,7 +13907,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GuaranteeType TypeField;
+        private ExternalServices.TripsEngineConnecter.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13936,7 +13936,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GuaranteeType Type
+        public ExternalServices.TripsEngineConnecter.GuaranteeType Type
         {
             get
             {
@@ -13955,14 +13955,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class AllowedCountry : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedState[] AllowedStatesField;
+        private ExternalServices.TripsEngineConnecter.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedState[] AllowedStates
+        public ExternalServices.TripsEngineConnecter.AllowedState[] AllowedStates
         {
             get
             {
@@ -14004,20 +14004,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DealStatus DealStatusField;
+        private ExternalServices.TripsEngineConnecter.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media ImageField;
+        private ExternalServices.TripsEngineConnecter.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -14031,7 +14031,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime StartDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
         private string TitleField;
         
@@ -14040,7 +14040,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DealStatus DealStatus
+        public ExternalServices.TripsEngineConnecter.DealStatus DealStatus
         {
             get
             {
@@ -14079,7 +14079,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Media Image
+        public ExternalServices.TripsEngineConnecter.Media Image
         {
             get
             {
@@ -14170,7 +14170,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -14230,21 +14230,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime AddDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DealStatus DealStatusField;
+        private ExternalServices.TripsEngineConnecter.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSourceField;
+        private ExternalServices.TripsEngineConnecter.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty HotelPropertyField;
+        private ExternalServices.TripsEngineConnecter.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinFareField;
+        private ExternalServices.TripsEngineConnecter.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -14266,7 +14266,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DealStatus DealStatus
+        public ExternalServices.TripsEngineConnecter.DealStatus DealStatus
         {
             get
             {
@@ -14305,7 +14305,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareSource FareSource
+        public ExternalServices.TripsEngineConnecter.FareSource FareSource
         {
             get
             {
@@ -14331,7 +14331,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty HotelProperty
+        public ExternalServices.TripsEngineConnecter.HotelProperty HotelProperty
         {
             get
             {
@@ -14357,7 +14357,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinFare
+        public ExternalServices.TripsEngineConnecter.Money MinFare
         {
             get
             {
@@ -14452,11 +14452,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Room : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformationField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AgeRestriction AgeRestrictionField;
+        private ExternalServices.TripsEngineConnecter.AgeRestriction AgeRestrictionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedCreditCard[] AllowedCreditCardsField;
+        private ExternalServices.TripsEngineConnecter.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -14464,7 +14464,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool DepositRequiredField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomRate DisplayRoomRateField;
+        private ExternalServices.TripsEngineConnecter.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -14472,7 +14472,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int GuestCountField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource HotelFareSourceField;
+        private ExternalServices.TripsEngineConnecter.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -14488,7 +14488,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int[] PassengerRphsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPolicy[] PoliciesField;
+        private ExternalServices.TripsEngineConnecter.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -14504,12 +14504,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string RoomTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriodField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomRate StdRoomRateField;
+        private ExternalServices.TripsEngineConnecter.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInformation
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInformation
         {
             get
             {
@@ -14522,7 +14522,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AgeRestriction AgeRestriction
+        public ExternalServices.TripsEngineConnecter.AgeRestriction AgeRestriction
         {
             get
             {
@@ -14535,7 +14535,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AllowedCreditCard[] AllowedCreditCards
+        public ExternalServices.TripsEngineConnecter.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -14587,7 +14587,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomRate DisplayRoomRate
+        public ExternalServices.TripsEngineConnecter.RoomRate DisplayRoomRate
         {
             get
             {
@@ -14639,7 +14639,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource HotelFareSource
+        public ExternalServices.TripsEngineConnecter.HotelFareSource HotelFareSource
         {
             get
             {
@@ -14743,7 +14743,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPolicy[] Policies
+        public ExternalServices.TripsEngineConnecter.HotelPolicy[] Policies
         {
             get
             {
@@ -14847,7 +14847,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriod
         {
             get
             {
@@ -14860,7 +14860,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomRate StdRoomRate
+        public ExternalServices.TripsEngineConnecter.RoomRate StdRoomRate
         {
             get
             {
@@ -14883,7 +14883,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string StartField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeasonType TypeField;
+        private ExternalServices.TripsEngineConnecter.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -14912,7 +14912,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeasonType Type
+        public ExternalServices.TripsEngineConnecter.SeasonType Type
         {
             get
             {
@@ -15010,7 +15010,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal
+    public partial class PaystayDeal : ExternalServices.TripsEngineConnecter.Deal
     {
         
         private int FreeNightsField;
@@ -15047,7 +15047,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal
+    public partial class PercentageDiscountDeal : ExternalServices.TripsEngineConnecter.Deal
     {
         
         private string ApplyOnField;
@@ -15084,22 +15084,22 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal
+    public partial class OpaqueDeal : ExternalServices.TripsEngineConnecter.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Deal
+    public partial class DiscountDeal : ExternalServices.TripsEngineConnecter.Deal
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money AmountField;
+        private ExternalServices.TripsEngineConnecter.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money Amount
+        public ExternalServices.TripsEngineConnecter.Money Amount
         {
             get
             {
@@ -15164,12 +15164,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class AvailabilityCalender : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AvailabilityStatus AvailabilityStatusField;
+        private ExternalServices.TripsEngineConnecter.AvailabilityStatus AvailabilityStatusField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateRange[] TimeSpansField;
+        private ExternalServices.TripsEngineConnecter.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AvailabilityStatus AvailabilityStatus
+        public ExternalServices.TripsEngineConnecter.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -15182,7 +15182,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateRange[] TimeSpans
+        public ExternalServices.TripsEngineConnecter.DateRange[] TimeSpans
         {
             get
             {
@@ -15375,7 +15375,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private float RatingField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RatingType RatingTypeField;
+        private ExternalServices.TripsEngineConnecter.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -15391,7 +15391,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RatingType RatingType
+        public ExternalServices.TripsEngineConnecter.RatingType RatingType
         {
             get
             {
@@ -15407,7 +15407,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty
+    public partial class VacationRentalProperty : ExternalServices.TripsEngineConnecter.HotelProperty
     {
         
         private int BathroomsField;
@@ -15418,11 +15418,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int MaxOccupancyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PropertyOwner OwnerField;
+        private ExternalServices.TripsEngineConnecter.PropertyOwner OwnerField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Area PropertyAreaField;
+        private ExternalServices.TripsEngineConnecter.Area PropertyAreaField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeasonalRate[] SeasonalRatesField;
+        private ExternalServices.TripsEngineConnecter.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -15477,7 +15477,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PropertyOwner Owner
+        public ExternalServices.TripsEngineConnecter.PropertyOwner Owner
         {
             get
             {
@@ -15490,7 +15490,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Area PropertyArea
+        public ExternalServices.TripsEngineConnecter.Area PropertyArea
         {
             get
             {
@@ -15503,7 +15503,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeasonalRate[] SeasonalRates
+        public ExternalServices.TripsEngineConnecter.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -15526,13 +15526,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string DescriptionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance DistanceField;
+        private ExternalServices.TripsEngineConnecter.Distance DistanceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
         private string TypeField;
         
@@ -15563,7 +15563,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Distance
+        public ExternalServices.TripsEngineConnecter.Distance Distance
         {
             get
             {
@@ -15576,7 +15576,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode GeoCode
         {
             get
             {
@@ -15602,7 +15602,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -15631,7 +15631,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -15766,11 +15766,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string DescriptionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -15799,7 +15799,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode GeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode GeoCode
         {
             get
             {
@@ -15825,7 +15825,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -15846,7 +15846,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime BeginDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Day DayField;
+        private ExternalServices.TripsEngineConnecter.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -15866,7 +15866,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Day Day
+        public ExternalServices.TripsEngineConnecter.Day Day
         {
             get
             {
@@ -15907,61 +15907,24 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HotelDescription", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Hotel.DataContracts")]
-    public partial class HotelDescription : object
-    {
-        
-        private string DescriptionField;
-        
-        private string TypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Type
-        {
-            get
-            {
-                return this.TypeField;
-            }
-            set
-            {
-                this.TypeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Review", Namespace="http://tavisca.com")]
     public partial class Review : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HelpfulVotes HelpfulVotesField;
+        private ExternalServices.TripsEngineConnecter.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ReviewRating[] RatingsField;
+        private ExternalServices.TripsEngineConnecter.ReviewRating[] RatingsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Reviewer ReviewerField;
+        private ExternalServices.TripsEngineConnecter.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HelpfulVotes HelpfulVotes
+        public ExternalServices.TripsEngineConnecter.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -15987,7 +15950,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ReviewRating[] Ratings
+        public ExternalServices.TripsEngineConnecter.ReviewRating[] Ratings
         {
             get
             {
@@ -16000,7 +15963,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Reviewer Reviewer
+        public ExternalServices.TripsEngineConnecter.Reviewer Reviewer
         {
             get
             {
@@ -16042,13 +16005,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Amenity
+    public partial class AmenityPreference : ExternalServices.TripsEngineConnecter.Amenity
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevelField;
+        private ExternalServices.TripsEngineConnecter.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevel
+        public ExternalServices.TripsEngineConnecter.PreferLevel PreferLevel
         {
             get
             {
@@ -16201,7 +16164,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Person
+    public partial class Reviewer : ExternalServices.TripsEngineConnecter.Person
     {
         
         private System.DateTime StayDateField;
@@ -16260,8 +16223,8 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.Reviewer))]
     public partial class Person : object
     {
         
@@ -16329,7 +16292,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Person
+    public partial class PropertyOwner : ExternalServices.TripsEngineConnecter.Person
     {
     }
     
@@ -16380,11 +16343,11 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime EndDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StayDuration MinimumStayField;
+        private ExternalServices.TripsEngineConnecter.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money RateField;
+        private ExternalServices.TripsEngineConnecter.Money RateField;
         
         private string RateTypeField;
         
@@ -16415,7 +16378,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StayDuration MinimumStay
+        public ExternalServices.TripsEngineConnecter.StayDuration MinimumStay
         {
             get
             {
@@ -16441,7 +16404,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money Rate
+        public ExternalServices.TripsEngineConnecter.Money Rate
         {
             get
             {
@@ -16646,13 +16609,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool AtAirportField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HoursOfOperation[] HoursField;
+        private ExternalServices.TripsEngineConnecter.HoursOfOperation[] HoursField;
         
         private bool InTerminalField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ShuttleInfo ShuttleInfoField;
+        private ExternalServices.TripsEngineConnecter.ShuttleInfo ShuttleInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationType TypeField;
+        private ExternalServices.TripsEngineConnecter.RentalLocationType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool AtAirport
@@ -16668,7 +16631,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HoursOfOperation[] Hours
+        public ExternalServices.TripsEngineConnecter.HoursOfOperation[] Hours
         {
             get
             {
@@ -16694,7 +16657,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ShuttleInfo ShuttleInfo
+        public ExternalServices.TripsEngineConnecter.ShuttleInfo ShuttleInfo
         {
             get
             {
@@ -16707,7 +16670,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RentalLocationType Type
+        public ExternalServices.TripsEngineConnecter.RentalLocationType Type
         {
             get
             {
@@ -16726,16 +16689,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Mileage : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance AllowedUnitsField;
+        private ExternalServices.TripsEngineConnecter.Distance AllowedUnitsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCharge[] ExtraMileageChargesField;
+        private ExternalServices.TripsEngineConnecter.CarCharge[] ExtraMileageChargesField;
         
         private bool IsUnlimitedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateType MileageRateTypeField;
+        private ExternalServices.TripsEngineConnecter.CarRateType MileageRateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance AllowedUnits
+        public ExternalServices.TripsEngineConnecter.Distance AllowedUnits
         {
             get
             {
@@ -16748,7 +16711,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCharge[] ExtraMileageCharges
+        public ExternalServices.TripsEngineConnecter.CarCharge[] ExtraMileageCharges
         {
             get
             {
@@ -16774,7 +16737,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateType MileageRateType
+        public ExternalServices.TripsEngineConnecter.CarRateType MileageRateType
         {
             get
             {
@@ -16793,19 +16756,19 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Vehicle : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarAirConditioning AirConditioningField;
+        private ExternalServices.TripsEngineConnecter.CarAirConditioning AirConditioningField;
         
         private int BaggageField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerCapacity CapacityField;
+        private ExternalServices.TripsEngineConnecter.PassengerCapacity CapacityField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCategory CategoryField;
+        private ExternalServices.TripsEngineConnecter.CarCategory CategoryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Doors DoorsField;
+        private ExternalServices.TripsEngineConnecter.Doors DoorsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDrive DriveField;
+        private ExternalServices.TripsEngineConnecter.CarDrive DriveField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFuel FuelField;
+        private ExternalServices.TripsEngineConnecter.CarFuel FuelField;
         
         private string ImageField;
         
@@ -16813,14 +16776,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string SippCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideDataField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideDataField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarTransmission TransmissionField;
+        private ExternalServices.TripsEngineConnecter.CarTransmission TransmissionField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarType TypeField;
+        private ExternalServices.TripsEngineConnecter.CarType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarAirConditioning AirConditioning
+        public ExternalServices.TripsEngineConnecter.CarAirConditioning AirConditioning
         {
             get
             {
@@ -16846,7 +16809,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerCapacity Capacity
+        public ExternalServices.TripsEngineConnecter.PassengerCapacity Capacity
         {
             get
             {
@@ -16859,7 +16822,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCategory Category
+        public ExternalServices.TripsEngineConnecter.CarCategory Category
         {
             get
             {
@@ -16872,7 +16835,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Doors Doors
+        public ExternalServices.TripsEngineConnecter.Doors Doors
         {
             get
             {
@@ -16885,7 +16848,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDrive Drive
+        public ExternalServices.TripsEngineConnecter.CarDrive Drive
         {
             get
             {
@@ -16898,7 +16861,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFuel Fuel
+        public ExternalServices.TripsEngineConnecter.CarFuel Fuel
         {
             get
             {
@@ -16950,7 +16913,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] SupplierSideData
+        public ExternalServices.TripsEngineConnecter.StateBag[] SupplierSideData
         {
             get
             {
@@ -16963,7 +16926,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarTransmission Transmission
+        public ExternalServices.TripsEngineConnecter.CarTransmission Transmission
         {
             get
             {
@@ -16976,7 +16939,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarType Type
+        public ExternalServices.TripsEngineConnecter.CarType Type
         {
             get
             {
@@ -16995,14 +16958,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class HoursOfOperation : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WeekDay DayOfWeekField;
+        private ExternalServices.TripsEngineConnecter.WeekDay DayOfWeekField;
         
         private string EndTimeField;
         
         private string StartTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WeekDay DayOfWeek
+        public ExternalServices.TripsEngineConnecter.WeekDay DayOfWeek
         {
             get
             {
@@ -17416,7 +17379,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ActivityCategory : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCategoryType CategoryTypeField;
+        private ExternalServices.TripsEngineConnecter.ActivityCategoryType CategoryTypeField;
         
         private string IdField;
         
@@ -17425,7 +17388,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private string SupplierCategoryIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityCategoryType CategoryType
+        public ExternalServices.TripsEngineConnecter.ActivityCategoryType CategoryType
         {
             get
             {
@@ -17483,7 +17446,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ActivityOption : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Date[] AvailableOnField;
+        private ExternalServices.TripsEngineConnecter.Date[] AvailableOnField;
         
         private string DescriptionField;
         
@@ -17493,12 +17456,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerFare[] PassengerFaresField;
+        private ExternalServices.TripsEngineConnecter.ActivityPassengerFare[] PassengerFaresField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Date SelectedDateTimeField;
+        private ExternalServices.TripsEngineConnecter.Date SelectedDateTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Date[] AvailableOn
+        public ExternalServices.TripsEngineConnecter.Date[] AvailableOn
         {
             get
             {
@@ -17563,7 +17526,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityPassengerFare[] PassengerFares
+        public ExternalServices.TripsEngineConnecter.ActivityPassengerFare[] PassengerFares
         {
             get
             {
@@ -17576,7 +17539,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Date SelectedDateTime
+        public ExternalServices.TripsEngineConnecter.Date SelectedDateTime
         {
             get
             {
@@ -18028,19 +17991,19 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class GenericSearchCriterion : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripSearchCriterion
+    public partial class GenericSearchCriterion : ExternalServices.TripsEngineConnecter.TripSearchCriterion
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan DurationField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan DurationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravellerInfo[] GuestsField;
+        private ExternalServices.TripsEngineConnecter.TravellerInfo[] GuestsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location LocationField;
+        private ExternalServices.TripsEngineConnecter.Location LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan Duration
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan Duration
         {
             get
             {
@@ -18053,7 +18016,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravellerInfo[] Guests
+        public ExternalServices.TripsEngineConnecter.TravellerInfo[] Guests
         {
             get
             {
@@ -18066,7 +18029,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Location
+        public ExternalServices.TripsEngineConnecter.Location Location
         {
             get
             {
@@ -18095,26 +18058,26 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GenericSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivitySearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GenericSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale PosField;
+        private ExternalServices.TripsEngineConnecter.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -18153,7 +18116,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PointOfSale Pos
+        public ExternalServices.TripsEngineConnecter.PointOfSale Pos
         {
             get
             {
@@ -18182,39 +18145,39 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripSearchCriterion
+    public partial class HotelSearchCriterion : ExternalServices.TripsEngineConnecter.TripSearchCriterion
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] GuestsField;
+        private ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location LocationField;
+        private ExternalServices.TripsEngineConnecter.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchProcessingInfo ProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty[] PropertiesToSearchField;
+        private ExternalServices.TripsEngineConnecter.HotelProperty[] PropertiesToSearchField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchType SearchTypeField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchType SearchTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriodField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] TagsField;
+        private ExternalServices.TripsEngineConnecter.Tag[] TagsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchPreference TravelPreferenceField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] Guests
+        public ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -18240,7 +18203,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Location
+        public ExternalServices.TripsEngineConnecter.Location Location
         {
             get
             {
@@ -18279,7 +18242,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchProcessingInfo ProcessingInfo
+        public ExternalServices.TripsEngineConnecter.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18292,7 +18255,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelProperty[] PropertiesToSearch
+        public ExternalServices.TripsEngineConnecter.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -18305,7 +18268,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -18344,7 +18307,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchType SearchType
+        public ExternalServices.TripsEngineConnecter.HotelSearchType SearchType
         {
             get
             {
@@ -18357,7 +18320,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan StayPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan StayPeriod
         {
             get
             {
@@ -18370,7 +18333,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Tag[] Tags
+        public ExternalServices.TripsEngineConnecter.Tag[] Tags
         {
             get
             {
@@ -18383,7 +18346,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchPreference TravelPreference
+        public ExternalServices.TripsEngineConnecter.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -18399,19 +18362,19 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class AirSearchCriterion : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripSearchCriterion
+    public partial class AirSearchCriterion : ExternalServices.TripsEngineConnecter.TripSearchCriterion
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] PassengerInfoSummaryField;
+        private ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] PassengerInfoSummaryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchProcessingInfo ProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.AirSearchProcessingInfo ProcessingInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OriginDestinationInformation[] SearchSegmentsField;
+        private ExternalServices.TripsEngineConnecter.OriginDestinationInformation[] SearchSegmentsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchPreference TravelPreferenceField;
+        private ExternalServices.TripsEngineConnecter.AirSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] PassengerInfoSummary
+        public ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] PassengerInfoSummary
         {
             get
             {
@@ -18424,7 +18387,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchProcessingInfo ProcessingInfo
+        public ExternalServices.TripsEngineConnecter.AirSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18437,7 +18400,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OriginDestinationInformation[] SearchSegments
+        public ExternalServices.TripsEngineConnecter.OriginDestinationInformation[] SearchSegments
         {
             get
             {
@@ -18450,7 +18413,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchPreference TravelPreference
+        public ExternalServices.TripsEngineConnecter.AirSearchPreference TravelPreference
         {
             get
             {
@@ -18466,23 +18429,23 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class CarSearchCriterion : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripSearchCriterion
+    public partial class CarSearchCriterion : ExternalServices.TripsEngineConnecter.TripSearchCriterion
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchPreference CarPreferenceField;
+        private ExternalServices.TripsEngineConnecter.CarSearchPreference CarPreferenceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode[] DiscountCodesField;
+        private ExternalServices.TripsEngineConnecter.CarDiscountCode[] DiscountCodesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DropOffLocationField;
+        private ExternalServices.TripsEngineConnecter.Location DropOffLocationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location PickupLocationField;
+        private ExternalServices.TripsEngineConnecter.Location PickupLocationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchProcessingInfo ProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.CarSearchProcessingInfo ProcessingInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan RentalPeriodField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan RentalPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchPreference CarPreference
+        public ExternalServices.TripsEngineConnecter.CarSearchPreference CarPreference
         {
             get
             {
@@ -18495,7 +18458,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDiscountCode[] DiscountCodes
+        public ExternalServices.TripsEngineConnecter.CarDiscountCode[] DiscountCodes
         {
             get
             {
@@ -18508,7 +18471,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DropOffLocation
+        public ExternalServices.TripsEngineConnecter.Location DropOffLocation
         {
             get
             {
@@ -18521,7 +18484,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location PickupLocation
+        public ExternalServices.TripsEngineConnecter.Location PickupLocation
         {
             get
             {
@@ -18534,7 +18497,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchProcessingInfo ProcessingInfo
+        public ExternalServices.TripsEngineConnecter.CarSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18547,7 +18510,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan RentalPeriod
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -18563,17 +18526,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchCriterion", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchCriterion : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripSearchCriterion
+    public partial class ActivitySearchCriterion : ExternalServices.TripsEngineConnecter.TripSearchCriterion
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DestinationField;
+        private ExternalServices.TripsEngineConnecter.Location DestinationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan DurationField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan DurationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchProcessingInfo ProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.ActivitySearchProcessingInfo ProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location Destination
+        public ExternalServices.TripsEngineConnecter.Location Destination
         {
             get
             {
@@ -18586,7 +18549,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan Duration
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan Duration
         {
             get
             {
@@ -18599,7 +18562,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchProcessingInfo ProcessingInfo
+        public ExternalServices.TripsEngineConnecter.ActivitySearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18620,7 +18583,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private int AgeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PurchaseType TypeField;
+        private ExternalServices.TripsEngineConnecter.PurchaseType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Age
@@ -18636,7 +18599,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PurchaseType Type
+        public ExternalServices.TripsEngineConnecter.PurchaseType Type
         {
             get
             {
@@ -18655,22 +18618,22 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDisplayOrder DisplayOrderField;
+        private ExternalServices.TripsEngineConnecter.HotelDisplayOrder DisplayOrderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource[] FareSourcesField;
+        private ExternalServices.TripsEngineConnecter.HotelFareSource[] FareSourcesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypesField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelContentPreference[] HotelContentPreferencesField;
+        private ExternalServices.TripsEngineConnecter.HotelContentPreference[] HotelContentPreferencesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private ExternalServices.TripsEngineConnecter.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode POIGeoCodeField;
+        private ExternalServices.TripsEngineConnecter.GeoCode POIGeoCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private ExternalServices.TripsEngineConnecter.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelDisplayOrder DisplayOrder
+        public ExternalServices.TripsEngineConnecter.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -18683,7 +18646,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelFareSource[] FareSources
+        public ExternalServices.TripsEngineConnecter.HotelFareSource[] FareSources
         {
             get
             {
@@ -18696,7 +18659,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypes
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypes
         {
             get
             {
@@ -18709,7 +18672,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelContentPreference[] HotelContentPreferences
+        public ExternalServices.TripsEngineConnecter.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -18722,7 +18685,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchNearByDates HotelSearchNearByDates
+        public ExternalServices.TripsEngineConnecter.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -18735,7 +18698,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeoCode POIGeoCode
+        public ExternalServices.TripsEngineConnecter.GeoCode POIGeoCode
         {
             get
             {
@@ -18748,7 +18711,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferenceSortInfo[] PreferenceSortInfoList
+        public ExternalServices.TripsEngineConnecter.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -18764,41 +18727,41 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravelPreference
+    public partial class HotelSearchPreference : ExternalServices.TripsEngineConnecter.TravelPreference
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AmenityPreference[] AmenitiesField;
+        private ExternalServices.TripsEngineConnecter.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeListField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypeListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyPreference[] HotelChainsField;
+        private ExternalServices.TripsEngineConnecter.CompanyPreference[] HotelChainsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelNamePreference HotelNamePreferenceField;
+        private ExternalServices.TripsEngineConnecter.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MaxDistanceField;
+        private ExternalServices.TripsEngineConnecter.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MinDistanceField;
+        private ExternalServices.TripsEngineConnecter.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPaymentType[] PaymentTypesField;
+        private ExternalServices.TripsEngineConnecter.HotelPaymentType[] PaymentTypesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreferenceField;
+        private ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreferenceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRating[] RatingListField;
+        private ExternalServices.TripsEngineConnecter.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AmenityPreference[] Amenities
+        public ExternalServices.TripsEngineConnecter.AmenityPreference[] Amenities
         {
             get
             {
@@ -18824,7 +18787,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeList
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypeList
         {
             get
             {
@@ -18837,7 +18800,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyPreference[] HotelChains
+        public ExternalServices.TripsEngineConnecter.CompanyPreference[] HotelChains
         {
             get
             {
@@ -18850,7 +18813,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelNamePreference HotelNamePreference
+        public ExternalServices.TripsEngineConnecter.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -18876,7 +18839,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MaxDistance
+        public ExternalServices.TripsEngineConnecter.Distance MaxDistance
         {
             get
             {
@@ -18915,7 +18878,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance MinDistance
+        public ExternalServices.TripsEngineConnecter.Distance MinDistance
         {
             get
             {
@@ -18954,7 +18917,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelPaymentType[] PaymentTypes
+        public ExternalServices.TripsEngineConnecter.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -18967,7 +18930,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreference
+        public ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreference
         {
             get
             {
@@ -18980,7 +18943,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRating[] RatingList
+        public ExternalServices.TripsEngineConnecter.HotelRating[] RatingList
         {
             get
             {
@@ -19001,7 +18964,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string OccupancyCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] PaxQuantitiesField;
+        private ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -19017,7 +18980,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PassengerTypeQuantity[] PaxQuantities
+        public ExternalServices.TripsEngineConnecter.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -19205,14 +19168,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class PreferenceSortInfo : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareTypeField;
+        private ExternalServices.TripsEngineConnecter.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType FareType
+        public ExternalServices.TripsEngineConnecter.FareType FareType
         {
             get
             {
@@ -19254,15 +19217,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyPreference[] VendorPreferencesField;
+        private ExternalServices.TripsEngineConnecter.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -19278,7 +19241,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompanyPreference[] VendorPreferences
+        public ExternalServices.TripsEngineConnecter.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -19294,18 +19257,18 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchPreference", Namespace="http://tavisca.com")]
-    public partial class AirSearchPreference : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravelPreference
+    public partial class AirSearchPreference : ExternalServices.TripsEngineConnecter.TravelPreference
     {
         
         private bool AllowMixedAirlinesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan ArrivalTimeRangeField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan ArrivalTimeRangeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass[] CabinClassesPreferredField;
+        private ExternalServices.TripsEngineConnecter.CabinClass[] CabinClassesPreferredField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location ConnectionCityField;
+        private ExternalServices.TripsEngineConnecter.Location ConnectionCityField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan DepartureTimeRangeField;
+        private ExternalServices.TripsEngineConnecter.DateTimeSpan DepartureTimeRangeField;
         
         private bool DirectConnectField;
         
@@ -19313,7 +19276,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool ETicketOnlyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeListField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypeListField;
         
         private string[] ItineraryRphListToFilterField;
         
@@ -19325,15 +19288,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool MaxStopsQuantitySpecifiedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MealType MealPreferenceField;
+        private ExternalServices.TripsEngineConnecter.MealType MealPreferenceField;
         
         private int[] NoOfStopsListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreferenceField;
+        private ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreferenceField;
         
         private bool RefundableFareOnlyField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatType SeatingPreferenceField;
+        private ExternalServices.TripsEngineConnecter.SeatType SeatingPreferenceField;
         
         private bool UnRestrictedFareField;
         
@@ -19351,7 +19314,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan ArrivalTimeRange
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan ArrivalTimeRange
         {
             get
             {
@@ -19364,7 +19327,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass[] CabinClassesPreferred
+        public ExternalServices.TripsEngineConnecter.CabinClass[] CabinClassesPreferred
         {
             get
             {
@@ -19377,7 +19340,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location ConnectionCity
+        public ExternalServices.TripsEngineConnecter.Location ConnectionCity
         {
             get
             {
@@ -19390,7 +19353,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.DateTimeSpan DepartureTimeRange
+        public ExternalServices.TripsEngineConnecter.DateTimeSpan DepartureTimeRange
         {
             get
             {
@@ -19442,7 +19405,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeList
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypeList
         {
             get
             {
@@ -19520,7 +19483,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.MealType MealPreference
+        public ExternalServices.TripsEngineConnecter.MealType MealPreference
         {
             get
             {
@@ -19546,7 +19509,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreference
+        public ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19572,7 +19535,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatType SeatingPreference
+        public ExternalServices.TripsEngineConnecter.SeatType SeatingPreference
         {
             get
             {
@@ -19601,25 +19564,25 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchPreference", Namespace="http://tavisca.com")]
-    public partial class CarSearchPreference : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravelPreference
+    public partial class CarSearchPreference : ExternalServices.TripsEngineConnecter.TravelPreference
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarAirConditioning ACPreferenceField;
+        private ExternalServices.TripsEngineConnecter.CarAirConditioning ACPreferenceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCategory[] CarClassListField;
+        private ExternalServices.TripsEngineConnecter.CarCategory[] CarClassListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarType[] CarTypeListField;
+        private ExternalServices.TripsEngineConnecter.CarType[] CarTypeListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeListField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypeListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreferenceField;
+        private ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreferenceField;
         
         private string SippCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarTransmission TransmissionField;
+        private ExternalServices.TripsEngineConnecter.CarTransmission TransmissionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarAirConditioning ACPreference
+        public ExternalServices.TripsEngineConnecter.CarAirConditioning ACPreference
         {
             get
             {
@@ -19632,7 +19595,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarCategory[] CarClassList
+        public ExternalServices.TripsEngineConnecter.CarCategory[] CarClassList
         {
             get
             {
@@ -19645,7 +19608,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarType[] CarTypeList
+        public ExternalServices.TripsEngineConnecter.CarType[] CarTypeList
         {
             get
             {
@@ -19658,7 +19621,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypeList
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypeList
         {
             get
             {
@@ -19671,7 +19634,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RateRangePreference RateRangePreference
+        public ExternalServices.TripsEngineConnecter.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19697,7 +19660,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarTransmission Transmission
+        public ExternalServices.TripsEngineConnecter.CarTransmission Transmission
         {
             get
             {
@@ -19718,7 +19681,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevelField;
+        private ExternalServices.TripsEngineConnecter.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -19734,7 +19697,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevel
+        public ExternalServices.TripsEngineConnecter.PreferLevel PreferLevel
         {
             get
             {
@@ -19753,14 +19716,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class RateRangePreference : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MaxRateField;
+        private ExternalServices.TripsEngineConnecter.Money MaxRateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinRateField;
+        private ExternalServices.TripsEngineConnecter.Money MinRateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevelField;
+        private ExternalServices.TripsEngineConnecter.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MaxRate
+        public ExternalServices.TripsEngineConnecter.Money MaxRate
         {
             get
             {
@@ -19773,7 +19736,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Money MinRate
+        public ExternalServices.TripsEngineConnecter.Money MinRate
         {
             get
             {
@@ -19786,7 +19749,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferLevel PreferLevel
+        public ExternalServices.TripsEngineConnecter.PreferLevel PreferLevel
         {
             get
             {
@@ -19849,15 +19812,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool CompressResultsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirDisplayOrder DisplayOrderField;
+        private ExternalServices.TripsEngineConnecter.AirDisplayOrder DisplayOrderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSourcesField;
+        private ExternalServices.TripsEngineConnecter.AirFareSource[] FareSourcesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypesField;
+        private ExternalServices.TripsEngineConnecter.FareType[] FareTypesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItineraryType ItineraryTypeField;
+        private ExternalServices.TripsEngineConnecter.AirItineraryType ItineraryTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private ExternalServices.TripsEngineConnecter.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool CompressResults
@@ -19873,7 +19836,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirDisplayOrder DisplayOrder
+        public ExternalServices.TripsEngineConnecter.AirDisplayOrder DisplayOrder
         {
             get
             {
@@ -19886,7 +19849,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareSource[] FareSources
+        public ExternalServices.TripsEngineConnecter.AirFareSource[] FareSources
         {
             get
             {
@@ -19899,7 +19862,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] FareTypes
+        public ExternalServices.TripsEngineConnecter.FareType[] FareTypes
         {
             get
             {
@@ -19912,7 +19875,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItineraryType ItineraryType
+        public ExternalServices.TripsEngineConnecter.AirItineraryType ItineraryType
         {
             get
             {
@@ -19925,7 +19888,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PreferenceSortInfo[] PreferenceSortInfoList
+        public ExternalServices.TripsEngineConnecter.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -19944,26 +19907,26 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class OriginDestinationInformation : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravelDateTime DepartureDateTimeField;
+        private ExternalServices.TripsEngineConnecter.TravelDateTime DepartureDateTimeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AlternateAirportInfo DestAltArptsInfoField;
+        private ExternalServices.TripsEngineConnecter.AlternateAirportInfo DestAltArptsInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DestinationLocationField;
+        private ExternalServices.TripsEngineConnecter.Location DestinationLocationField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location[] ExcludeConnectionCityField;
+        private ExternalServices.TripsEngineConnecter.Location[] ExcludeConnectionCityField;
         
         private string[] ExcludeServiceClassField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location[] IncludeConnectionCityField;
+        private ExternalServices.TripsEngineConnecter.Location[] IncludeConnectionCityField;
         
         private string[] IncludeServiceClassField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AlternateAirportInfo OriginAltArptsInfoField;
+        private ExternalServices.TripsEngineConnecter.AlternateAirportInfo OriginAltArptsInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location OriginLocationField;
+        private ExternalServices.TripsEngineConnecter.Location OriginLocationField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TravelDateTime DepartureDateTime
+        public ExternalServices.TripsEngineConnecter.TravelDateTime DepartureDateTime
         {
             get
             {
@@ -19976,7 +19939,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AlternateAirportInfo DestAltArptsInfo
+        public ExternalServices.TripsEngineConnecter.AlternateAirportInfo DestAltArptsInfo
         {
             get
             {
@@ -19989,7 +19952,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location DestinationLocation
+        public ExternalServices.TripsEngineConnecter.Location DestinationLocation
         {
             get
             {
@@ -20002,7 +19965,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location[] ExcludeConnectionCity
+        public ExternalServices.TripsEngineConnecter.Location[] ExcludeConnectionCity
         {
             get
             {
@@ -20028,7 +19991,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location[] IncludeConnectionCity
+        public ExternalServices.TripsEngineConnecter.Location[] IncludeConnectionCity
         {
             get
             {
@@ -20054,7 +20017,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AlternateAirportInfo OriginAltArptsInfo
+        public ExternalServices.TripsEngineConnecter.AlternateAirportInfo OriginAltArptsInfo
         {
             get
             {
@@ -20067,7 +20030,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Location OriginLocation
+        public ExternalServices.TripsEngineConnecter.Location OriginLocation
         {
             get
             {
@@ -20201,7 +20164,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool EnabledField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance RadiusField;
+        private ExternalServices.TripsEngineConnecter.Distance RadiusField;
         
         private bool RadiusSpecifiedField;
         
@@ -20245,7 +20208,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Distance Radius
+        public ExternalServices.TripsEngineConnecter.Distance Radius
         {
             get
             {
@@ -20277,14 +20240,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class CarSearchProcessingInfo : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDisplayOrder CarDisplayOrderField;
+        private ExternalServices.TripsEngineConnecter.CarDisplayOrder CarDisplayOrderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFareSource[] CarFareSourcesField;
+        private ExternalServices.TripsEngineConnecter.CarFareSource[] CarFareSourcesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] CarFareTypesField;
+        private ExternalServices.TripsEngineConnecter.FareType[] CarFareTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarDisplayOrder CarDisplayOrder
+        public ExternalServices.TripsEngineConnecter.CarDisplayOrder CarDisplayOrder
         {
             get
             {
@@ -20297,7 +20260,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarFareSource[] CarFareSources
+        public ExternalServices.TripsEngineConnecter.CarFareSource[] CarFareSources
         {
             get
             {
@@ -20310,7 +20273,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FareType[] CarFareTypes
+        public ExternalServices.TripsEngineConnecter.FareType[] CarFareTypes
         {
             get
             {
@@ -20359,14 +20322,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ActivitySearchProcessingInfo : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityDisplayOrder DisplayOrderField;
+        private ExternalServices.TripsEngineConnecter.ActivityDisplayOrder DisplayOrderField;
         
         private bool IncludeActivityPhotosField;
         
         private bool IncludeActivityReviewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityDisplayOrder DisplayOrder
+        public ExternalServices.TripsEngineConnecter.ActivityDisplayOrder DisplayOrder
         {
             get
             {
@@ -20453,7 +20416,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripRemark", Namespace="http://tavisca.com")]
-    public partial class TripRemark : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Remark
+    public partial class TripRemark : ExternalServices.TripsEngineConnecter.Remark
     {
         
         private string AddedByField;
@@ -20490,10 +20453,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PNRRemark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SpecializedRemark))]
-    public partial class PNRRemark : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Remark
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SpecializedRemark))]
+    public partial class PNRRemark : ExternalServices.TripsEngineConnecter.Remark
     {
         
         private int LineNumberField;
@@ -20545,14 +20508,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GeneralRemark", Namespace="http://tavisca.com")]
-    public partial class GeneralRemark : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRRemark
+    public partial class GeneralRemark : ExternalServices.TripsEngineConnecter.PNRRemark
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OSIRemark", Namespace="http://tavisca.com")]
-    public partial class OSIRemark : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRRemark
+    public partial class OSIRemark : ExternalServices.TripsEngineConnecter.PNRRemark
     {
         
         private string AirlineCodeField;
@@ -20574,7 +20537,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SpecializedRemark", Namespace="http://tavisca.com")]
-    public partial class SpecializedRemark : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PNRRemark
+    public partial class SpecializedRemark : ExternalServices.TripsEngineConnecter.PNRRemark
     {
         
         private string AlphabetField;
@@ -20705,7 +20668,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class SecureAuthenticationRequest : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfoField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -20714,7 +20677,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AdditionalInfo
+        public ExternalServices.TripsEngineConnecter.StateBag[] AdditionalInfo
         {
             get
             {
@@ -20772,12 +20735,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class TripRetrieveCriterion : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AggregateMatchPreference AggregateMatchPreferenceField;
+        private ExternalServices.TripsEngineConnecter.AggregateMatchPreference AggregateMatchPreferenceField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SingleMatchPreference SingleMatchPreferenceField;
+        private ExternalServices.TripsEngineConnecter.SingleMatchPreference SingleMatchPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AggregateMatchPreference AggregateMatchPreference
+        public ExternalServices.TripsEngineConnecter.AggregateMatchPreference AggregateMatchPreference
         {
             get
             {
@@ -20790,7 +20753,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SingleMatchPreference SingleMatchPreference
+        public ExternalServices.TripsEngineConnecter.SingleMatchPreference SingleMatchPreference
         {
             get
             {
@@ -20813,9 +20776,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime BeforeDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompareDate CompareAfterDateField;
+        private ExternalServices.TripsEngineConnecter.CompareDate CompareAfterDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompareDate CompareBeforeDateField;
+        private ExternalServices.TripsEngineConnecter.CompareDate CompareBeforeDateField;
         
         private string DealerIdField;
         
@@ -20837,7 +20800,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private long PassengerIDField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus StatusField;
+        private ExternalServices.TripsEngineConnecter.TripStatus StatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime AfterDate
@@ -20866,7 +20829,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompareDate CompareAfterDate
+        public ExternalServices.TripsEngineConnecter.CompareDate CompareAfterDate
         {
             get
             {
@@ -20879,7 +20842,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompareDate CompareBeforeDate
+        public ExternalServices.TripsEngineConnecter.CompareDate CompareBeforeDate
         {
             get
             {
@@ -21022,7 +20985,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus Status
+        public ExternalServices.TripsEngineConnecter.TripStatus Status
         {
             get
             {
@@ -21130,21 +21093,21 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private bool IsStatusPresentField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
+        private ExternalServices.TripsEngineConnecter.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
         
         private string OwnerNameField;
         
         private long PackageCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingDetail PagingDetailsField;
+        private ExternalServices.TripsEngineConnecter.PagingDetail PagingDetailsField;
         
         private string PassengerFirstNameField;
         
         private string PassengerLastNameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ProductType ProductTypeField;
+        private ExternalServices.TripsEngineConnecter.ProductType ProductTypeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SortTripFolderBy SortTripFolderByField;
+        private ExternalServices.TripsEngineConnecter.SortTripFolderBy SortTripFolderByField;
         
         private string SupplierConfirmationNumberField;
         
@@ -21154,7 +21117,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private System.DateTime TripStartDateField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus[] TripStatusesField;
+        private ExternalServices.TripsEngineConnecter.TripStatus[] TripStatusesField;
         
         private string VendorConfirmationNumberField;
         
@@ -21224,7 +21187,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
+        public ExternalServices.TripsEngineConnecter.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
         {
             get
             {
@@ -21263,7 +21226,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingDetail PagingDetails
+        public ExternalServices.TripsEngineConnecter.PagingDetail PagingDetails
         {
             get
             {
@@ -21302,7 +21265,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ProductType ProductType
+        public ExternalServices.TripsEngineConnecter.ProductType ProductType
         {
             get
             {
@@ -21315,7 +21278,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SortTripFolderBy SortTripFolderBy
+        public ExternalServices.TripsEngineConnecter.SortTripFolderBy SortTripFolderBy
         {
             get
             {
@@ -21380,7 +21343,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripStatus[] TripStatuses
+        public ExternalServices.TripsEngineConnecter.TripStatus[] TripStatuses
         {
             get
             {
@@ -21535,9 +21498,9 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         
         private string AirlineCodeField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] AttributesField;
+        private ExternalServices.TripsEngineConnecter.StateBag[] AttributesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass CabinClassField;
+        private ExternalServices.TripsEngineConnecter.CabinClass CabinClassField;
         
         private string ClassOfServiceField;
         
@@ -21565,7 +21528,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.StateBag[] Attributes
+        public ExternalServices.TripsEngineConnecter.StateBag[] Attributes
         {
             get
             {
@@ -21578,7 +21541,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CabinClass CabinClass
+        public ExternalServices.TripsEngineConnecter.CabinClass CabinClass
         {
             get
             {
@@ -21925,40 +21888,40 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRSWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMapQueryRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLowFareSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFullScheduleSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareRulesRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarRateDetailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivitySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ReviewPendingRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SaveReviewStatusRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderBookRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CompleteBookingRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRSWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderSaveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripProductPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderDeleteRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderCancelRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SeatMapQueryRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirLowFareSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFullScheduleSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirFareRulesRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.AirPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.CarRateDetailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivitySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ActivityDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.ReviewPendingRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.SaveReviewStatusRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ResponseType ResponseRecievedField;
+        private ExternalServices.TripsEngineConnecter.ResponseType ResponseRecievedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatus ServiceStatusField;
+        private ExternalServices.TripsEngineConnecter.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -21976,7 +21939,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ResponseType ResponseRecieved
+        public ExternalServices.TripsEngineConnecter.ResponseType ResponseRecieved
         {
             get
             {
@@ -21989,7 +21952,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ServiceStatus ServiceStatus
+        public ExternalServices.TripsEngineConnecter.ServiceStatus ServiceStatus
         {
             get
             {
@@ -22018,15 +21981,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRS", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripProductCancellationDetailsRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationDetails CancellationDetailsField;
+        private ExternalServices.TripsEngineConnecter.CancellationDetails CancellationDetailsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CancellationDetails CancellationDetails
+        public ExternalServices.TripsEngineConnecter.CancellationDetails CancellationDetails
         {
             get
             {
@@ -22039,7 +22002,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22055,15 +22018,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderBookRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22076,7 +22039,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22092,15 +22055,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRS", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class CompleteBookingRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22113,7 +22076,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22129,14 +22092,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRSWithPaging))]
-    public partial class TripFolderRetrieveRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRSWithPaging))]
+    public partial class TripFolderRetrieveRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder[] TripFoldersField;
+        private ExternalServices.TripsEngineConnecter.TripFolder[] TripFoldersField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder[] TripFolders
+        public ExternalServices.TripsEngineConnecter.TripFolder[] TripFolders
         {
             get
             {
@@ -22152,13 +22115,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRSWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRSWithPaging : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRS
+    public partial class TripFolderRetrieveRSWithPaging : ExternalServices.TripsEngineConnecter.TripFolderRetrieveRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingDetail PagingDetailField;
+        private ExternalServices.TripsEngineConnecter.PagingDetail PagingDetailField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingDetail PagingDetail
+        public ExternalServices.TripsEngineConnecter.PagingDetail PagingDetail
         {
             get
             {
@@ -22174,17 +22137,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderPriceRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfoField;
+        private ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22197,7 +22160,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22210,7 +22173,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProcessingInfo TripProcessingInfo
+        public ExternalServices.TripsEngineConnecter.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -22226,13 +22189,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderSaveRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22248,15 +22211,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripProductPriceRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct TripProductField;
+        private ExternalServices.TripsEngineConnecter.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22269,7 +22232,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProduct TripProduct
+        public ExternalServices.TripsEngineConnecter.TripProduct TripProduct
         {
             get
             {
@@ -22285,7 +22248,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderDeleteRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
         private bool SuccessField;
@@ -22307,15 +22270,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderCancelRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoListField;
+        private ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoListField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ErrorInfo[] ErrorInfoList
+        public ExternalServices.TripsEngineConnecter.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22328,7 +22291,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22344,13 +22307,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRS", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class SeatMapQueryRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMap SeatMapField;
+        private ExternalServices.TripsEngineConnecter.SeatMap SeatMapField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatMap SeatMap
+        public ExternalServices.TripsEngineConnecter.SeatMap SeatMap
         {
             get
             {
@@ -22366,16 +22329,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class AirLowFareSearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
         private byte[] CompressedItinerariesField;
         
         private bool IsCompressedField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary[] ItinerariesField;
+        private ExternalServices.TripsEngineConnecter.AirItinerary[] ItinerariesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] CompressedItineraries
@@ -22404,7 +22367,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary[] Itineraries
+        public ExternalServices.TripsEngineConnecter.AirItinerary[] Itineraries
         {
             get
             {
@@ -22417,7 +22380,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -22433,17 +22396,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class AirFullScheduleSearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFare[] LegOptionFaresField;
+        private ExternalServices.TripsEngineConnecter.AirFare[] LegOptionFaresField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] LegOptionsField;
+        private ExternalServices.TripsEngineConnecter.AirLeg[] LegOptionsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] SelectedLegsField;
+        private ExternalServices.TripsEngineConnecter.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFare[] LegOptionFares
+        public ExternalServices.TripsEngineConnecter.AirFare[] LegOptionFares
         {
             get
             {
@@ -22456,7 +22419,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] LegOptions
+        public ExternalServices.TripsEngineConnecter.AirLeg[] LegOptions
         {
             get
             {
@@ -22469,7 +22432,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirLeg[] SelectedLegs
+        public ExternalServices.TripsEngineConnecter.AirLeg[] SelectedLegs
         {
             get
             {
@@ -22485,13 +22448,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRS", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class AirFareRulesRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareRules RulesField;
+        private ExternalServices.TripsEngineConnecter.AirFareRules RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirFareRules Rules
+        public ExternalServices.TripsEngineConnecter.AirFareRules Rules
         {
             get
             {
@@ -22507,13 +22470,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRS", Namespace="http://tavisca.com")]
-    public partial class AirPriceRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class AirPriceRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.AirItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.AirItinerary Itinerary
         {
             get
             {
@@ -22529,15 +22492,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class HotelRoomAvailRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary ItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary Itinerary
         {
             get
             {
@@ -22550,7 +22513,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22566,15 +22529,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class HotelRoomPriceRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary ItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary Itinerary
         {
             get
             {
@@ -22587,7 +22550,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22603,17 +22566,17 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class HotelSearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary[] ItinerariesField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary[] ItinerariesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary[] Itineraries
+        public ExternalServices.TripsEngineConnecter.HotelItinerary[] Itineraries
         {
             get
             {
@@ -22626,7 +22589,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -22639,7 +22602,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22655,15 +22618,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class HotelItinerarySearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.HotelItinerary ItineraryField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypesField;
+        private ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.HotelItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.HotelItinerary Itinerary
         {
             get
             {
@@ -22676,7 +22639,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RoomOccupancyType[] RoomOccupancyTypes
+        public ExternalServices.TripsEngineConnecter.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22692,15 +22655,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRS", Namespace="http://tavisca.com")]
-    public partial class CarSearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class CarSearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary[] ItinerariesField;
+        private ExternalServices.TripsEngineConnecter.CarItinerary[] ItinerariesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary[] Itineraries
+        public ExternalServices.TripsEngineConnecter.CarItinerary[] Itineraries
         {
             get
             {
@@ -22713,7 +22676,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -22729,13 +22692,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRS", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class CarRateDetailRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary ItineraryField;
+        private ExternalServices.TripsEngineConnecter.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CarItinerary Itinerary
+        public ExternalServices.TripsEngineConnecter.CarItinerary Itinerary
         {
             get
             {
@@ -22751,15 +22714,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRS", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class ActivitySearchRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary[] ActivityItinerariesField;
+        private ExternalServices.TripsEngineConnecter.ActivityItinerary[] ActivityItinerariesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfoField;
+        private ExternalServices.TripsEngineConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary[] ActivityItineraries
+        public ExternalServices.TripsEngineConnecter.ActivityItinerary[] ActivityItineraries
         {
             get
             {
@@ -22772,7 +22735,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.PagingInfo PagingInfo
+        public ExternalServices.TripsEngineConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -22788,13 +22751,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRS", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class ActivityDetailsRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItineraryField;
+        private ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ActivityItinerary ActivityItinerary
+        public ExternalServices.TripsEngineConnecter.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -22810,7 +22773,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class ReviewPendingRetrieveRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
         private int PendingReviewsCountField;
@@ -22832,7 +22795,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class SaveReviewStatusRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
         private bool StatusField;
@@ -22854,13 +22817,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRS : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.WebServiceRS
+    public partial class TripFolderAssignSeatRS : ExternalServices.TripsEngineConnecter.WebServiceRS
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolderField;
+        private ExternalServices.TripsEngineConnecter.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolder TripFolder
+        public ExternalServices.TripsEngineConnecter.TripFolder TripFolder
         {
             get
             {
@@ -22879,10 +22842,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class SeatMap : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ClassOfServiceDetail[] ClassesOfServiceField;
+        private ExternalServices.TripsEngineConnecter.ClassOfServiceDetail[] ClassesOfServiceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ClassOfServiceDetail[] ClassesOfService
+        public ExternalServices.TripsEngineConnecter.ClassOfServiceDetail[] ClassesOfService
         {
             get
             {
@@ -22901,20 +22864,20 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class ClassOfServiceDetail : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Column[] ColumnsField;
+        private ExternalServices.TripsEngineConnecter.Column[] ColumnsField;
         
         private int EndRowNumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ArrayOfCabinFeature FeaturesField;
+        private ExternalServices.TripsEngineConnecter.ArrayOfCabinFeature FeaturesField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Row[] RowsField;
+        private ExternalServices.TripsEngineConnecter.Row[] RowsField;
         
         private int StartRowNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Column[] Columns
+        public ExternalServices.TripsEngineConnecter.Column[] Columns
         {
             get
             {
@@ -22940,7 +22903,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ArrayOfCabinFeature Features
+        public ExternalServices.TripsEngineConnecter.ArrayOfCabinFeature Features
         {
             get
             {
@@ -22966,7 +22929,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Row[] Rows
+        public ExternalServices.TripsEngineConnecter.Row[] Rows
         {
             get
             {
@@ -22998,14 +22961,14 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Column : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ColumnCharacterstics CharacteristicsField;
+        private ExternalServices.TripsEngineConnecter.ColumnCharacterstics CharacteristicsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ColumnLocation LocationField;
+        private ExternalServices.TripsEngineConnecter.ColumnLocation LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ColumnCharacterstics Characteristics
+        public ExternalServices.TripsEngineConnecter.ColumnCharacterstics Characteristics
         {
             get
             {
@@ -23018,7 +22981,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.ColumnLocation Location
+        public ExternalServices.TripsEngineConnecter.ColumnLocation Location
         {
             get
             {
@@ -23057,16 +23020,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Row : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RowCharacterstics CharactersticsField;
+        private ExternalServices.TripsEngineConnecter.RowCharacterstics CharactersticsField;
         
         private int NumberField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Seat[] SeatsField;
+        private ExternalServices.TripsEngineConnecter.Seat[] SeatsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RowType TypeField;
+        private ExternalServices.TripsEngineConnecter.RowType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RowCharacterstics Characterstics
+        public ExternalServices.TripsEngineConnecter.RowCharacterstics Characterstics
         {
             get
             {
@@ -23092,7 +23055,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Seat[] Seats
+        public ExternalServices.TripsEngineConnecter.Seat[] Seats
         {
             get
             {
@@ -23105,7 +23068,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RowType Type
+        public ExternalServices.TripsEngineConnecter.RowType Type
         {
             get
             {
@@ -23168,16 +23131,16 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class Seat : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatCharacterstics CharactersticsField;
+        private ExternalServices.TripsEngineConnecter.SeatCharacterstics CharactersticsField;
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatOccupationStatus StatusField;
+        private ExternalServices.TripsEngineConnecter.SeatOccupationStatus StatusField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSeatType TypeField;
+        private ExternalServices.TripsEngineConnecter.AirSeatType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatCharacterstics Characterstics
+        public ExternalServices.TripsEngineConnecter.SeatCharacterstics Characterstics
         {
             get
             {
@@ -23203,7 +23166,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.SeatOccupationStatus Status
+        public ExternalServices.TripsEngineConnecter.SeatOccupationStatus Status
         {
             get
             {
@@ -23216,7 +23179,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.AirSeatType Type
+        public ExternalServices.TripsEngineConnecter.AirSeatType Type
         {
             get
             {
@@ -23314,10 +23277,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class AirFareRules : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightFareRule[] FlightRulesField;
+        private ExternalServices.TripsEngineConnecter.FlightFareRule[] FlightRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.FlightFareRule[] FlightRules
+        public ExternalServices.TripsEngineConnecter.FlightFareRule[] FlightRules
         {
             get
             {
@@ -23336,22 +23299,22 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     public partial class FlightFareRule : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline AirlineField;
+        private ExternalServices.TripsEngineConnecter.Airline AirlineField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport ArrivalAirportField;
+        private ExternalServices.TripsEngineConnecter.Airport ArrivalAirportField;
         
         private string BookingClassField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport DepartureAirportField;
+        private ExternalServices.TripsEngineConnecter.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateField;
         
         private string[] FareBasisCodesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RuleInfo[] RulesField;
+        private ExternalServices.TripsEngineConnecter.RuleInfo[] RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airline Airline
+        public ExternalServices.TripsEngineConnecter.Airline Airline
         {
             get
             {
@@ -23364,7 +23327,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport ArrivalAirport
+        public ExternalServices.TripsEngineConnecter.Airport ArrivalAirport
         {
             get
             {
@@ -23390,7 +23353,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.Airport DepartureAirport
+        public ExternalServices.TripsEngineConnecter.Airport DepartureAirport
         {
             get
             {
@@ -23429,7 +23392,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.TripsEngine.RuleInfo[] Rules
+        public ExternalServices.TripsEngineConnecter.RuleInfo[] Rules
         {
             get
             {
@@ -23480,52 +23443,52 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripsEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="ExternalServices.TripsEngineConnecter.TripsEngine")]
     public interface TripsEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/AssignAirSeats", ReplyAction="http://tavisca.com/TripsEngine/AssignAirSeatsResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRS> AssignAirSeatsAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRS> AssignAirSeatsAsync(ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/BookTripFolder", ReplyAction="http://tavisca.com/TripsEngine/BookTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRS> BookTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderBookRS> BookTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderBookRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CompleteBooking", ReplyAction="http://tavisca.com/TripsEngine/CompleteBookingResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRS> CompleteBookingAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.CompleteBookingRS> CompleteBookingAsync(ExternalServices.TripsEngineConnecter.CompleteBookingRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CancelTripFolder", ReplyAction="http://tavisca.com/TripsEngine/CancelTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRS> CancelTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderCancelRS> CancelTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderCancelRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/DeleteTripFolder", ReplyAction="http://tavisca.com/TripsEngine/DeleteTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRS> DeleteTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderDeleteRS> DeleteTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderDeleteRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/GetProductCancellationDetails", ReplyAction="http://tavisca.com/TripsEngine/GetProductCancellationDetailsResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripFolder", ReplyAction="http://tavisca.com/TripsEngine/PriceTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRS> PriceTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderPriceRS> PriceTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripProduct", ReplyAction="http://tavisca.com/TripsEngine/PriceTripProductResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRS> PriceTripProductAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripProductPriceRS> PriceTripProductAsync(ExternalServices.TripsEngineConnecter.TripProductPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFolders", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRS> RetrieveTripFoldersAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderRetrieveRS> RetrieveTripFoldersAsync(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPaging", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPagingResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQWithPaging req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQWithPaging req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/SaveTripFolder", ReplyAction="http://tavisca.com/TripsEngine/SaveTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRS> SaveTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRQ req);
+        System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderSaveRS> SaveTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderSaveRQ req);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface TripsEngineChannel : HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripsEngine, System.ServiceModel.IClientChannel
+    public interface TripsEngineChannel : ExternalServices.TripsEngineConnecter.TripsEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class TripsEngineClient : System.ServiceModel.ClientBase<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripsEngine>, HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripsEngine
+    public partial class TripsEngineClient : System.ServiceModel.ClientBase<ExternalServices.TripsEngineConnecter.TripsEngine>, ExternalServices.TripsEngineConnecter.TripsEngine
     {
         
     /// <summary>
@@ -23568,57 +23531,57 @@ namespace HotelSearchingListingBookingEngine.Suppliers.TripsEngine
         {
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRS> AssignAirSeatsAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderAssignSeatRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRS> AssignAirSeatsAsync(ExternalServices.TripsEngineConnecter.TripFolderAssignSeatRQ req)
         {
             return base.Channel.AssignAirSeatsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRS> BookTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderBookRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderBookRS> BookTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderBookRQ req)
         {
             return base.Channel.BookTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRS> CompleteBookingAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.CompleteBookingRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.CompleteBookingRS> CompleteBookingAsync(ExternalServices.TripsEngineConnecter.CompleteBookingRQ req)
         {
             return base.Channel.CompleteBookingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRS> CancelTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderCancelRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderCancelRS> CancelTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderCancelRQ req)
         {
             return base.Channel.CancelTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRS> DeleteTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderDeleteRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderDeleteRS> DeleteTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderDeleteRQ req)
         {
             return base.Channel.DeleteTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductCancellationDetailsRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(ExternalServices.TripsEngineConnecter.TripProductCancellationDetailsRQ req)
         {
             return base.Channel.GetProductCancellationDetailsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRS> PriceTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderPriceRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderPriceRS> PriceTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderPriceRQ req)
         {
             return base.Channel.PriceTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRS> PriceTripProductAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripProductPriceRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripProductPriceRS> PriceTripProductAsync(ExternalServices.TripsEngineConnecter.TripProductPriceRQ req)
         {
             return base.Channel.PriceTripProductAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRS> RetrieveTripFoldersAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderRetrieveRS> RetrieveTripFoldersAsync(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQ req)
         {
             return base.Channel.RetrieveTripFoldersAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderRetrieveRQWithPaging req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(ExternalServices.TripsEngineConnecter.TripFolderRetrieveRQWithPaging req)
         {
             return base.Channel.RetrieveTripFoldersWithPagingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRS> SaveTripFolderAsync(HotelSearchingListingBookingEngine.Suppliers.TripsEngine.TripFolderSaveRQ req)
+        public System.Threading.Tasks.Task<ExternalServices.TripsEngineConnecter.TripFolderSaveRS> SaveTripFolderAsync(ExternalServices.TripsEngineConnecter.TripFolderSaveRQ req)
         {
             return base.Channel.SaveTripFolderAsync(req);
         }

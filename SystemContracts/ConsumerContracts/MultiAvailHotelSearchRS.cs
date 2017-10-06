@@ -7,12 +7,15 @@ namespace SystemContracts.ConsumerContracts
 {
     public class MultiAvailHotelSearchRS
     {
+        public string CallerSessionId { get; }
+
         public int ResultsCount { get; }
 
         public HotelItinerary[] Itineraries { get; }
 
-        public MultiAvailHotelSearchRS(int resultsCount,HotelItinerary[] itineraries)
+        public MultiAvailHotelSearchRS(string callerSessionId,int resultsCount,HotelItinerary[] itineraries)
         {
+            CallerSessionId = callerSessionId;
             ResultsCount = resultsCount;
             Itineraries = itineraries;
         }

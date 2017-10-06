@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace HotelSearchingListingBookingEngine.API
+namespace HotelServicesConnecters.API
 {
     public class Startup
     {

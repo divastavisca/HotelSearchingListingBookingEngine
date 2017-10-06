@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
+namespace NotificationServicesConnecter
 {
     using System.Runtime.Serialization;
     
@@ -19,12 +19,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     public partial class ApplicationContext : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] AdditionalDataField;
+        private NotificationServicesConnecter.KeyValuePair[] AdditionalDataField;
         
         private string ApplicationNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] AdditionalData
+        public NotificationServicesConnecter.KeyValuePair[] AdditionalData
         {
             get
             {
@@ -91,8 +91,8 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Message", Namespace="http://Tavisca.NotificationService.DataContracts/2007/11")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.MailMessage))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(NotificationServicesConnecter.MailMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(NotificationServicesConnecter.TemplateMessage))]
     public partial class Message : object
     {
         
@@ -108,13 +108,13 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         
         private string SubjectField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus StatusField;
+        private NotificationServicesConnecter.DeliveryStatus StatusField;
         
         private System.DateTime SentDateField;
         
         private string[] TagsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.Attachment[] AttachmentsField;
+        private NotificationServicesConnecter.Attachment[] AttachmentsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Guid Id
@@ -195,7 +195,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus Status
+        public NotificationServicesConnecter.DeliveryStatus Status
         {
             get
             {
@@ -234,7 +234,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.Attachment[] Attachments
+        public NotificationServicesConnecter.Attachment[] Attachments
         {
             get
             {
@@ -250,7 +250,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MailMessage", Namespace="http://Tavisca.NotificationService.DataContracts/2007/11")]
-    public partial class MailMessage : HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message
+    public partial class MailMessage : NotificationServicesConnecter.Message
     {
         
         private string BodyField;
@@ -288,15 +288,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TemplateMessage", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.NotificationService.DataContracts" +
         "")]
-    public partial class TemplateMessage : HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message
+    public partial class TemplateMessage : NotificationServicesConnecter.Message
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] TemplateAttributesField;
+        private NotificationServicesConnecter.KeyValuePair[] TemplateAttributesField;
         
         private string TemplateNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] TemplateAttributes
+        public NotificationServicesConnecter.KeyValuePair[] TemplateAttributes
         {
             get
             {
@@ -474,15 +474,15 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         
         private System.Guid[] MessageIdField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.PageDetail PageDetailField;
+        private NotificationServicesConnecter.PageDetail PageDetailField;
         
         private string[] TagsField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.TagOperation TagOperationField;
+        private NotificationServicesConnecter.TagOperation TagOperationField;
         
         private bool ApplyTagFilterField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus StatusField;
+        private NotificationServicesConnecter.DeliveryStatus StatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool DatesSpecified
@@ -615,7 +615,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=10)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.PageDetail PageDetail
+        public NotificationServicesConnecter.PageDetail PageDetail
         {
             get
             {
@@ -641,7 +641,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=12)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.TagOperation TagOperation
+        public NotificationServicesConnecter.TagOperation TagOperation
         {
             get
             {
@@ -667,7 +667,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=14)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus Status
+        public NotificationServicesConnecter.DeliveryStatus Status
         {
             get
             {
@@ -737,12 +737,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     public partial class MessageList : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message[] MessagesField;
+        private NotificationServicesConnecter.Message[] MessagesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.PagingInfo PagingInfoField;
+        private NotificationServicesConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message[] Messages
+        public NotificationServicesConnecter.Message[] Messages
         {
             get
             {
@@ -755,7 +755,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.PagingInfo PagingInfo
+        public NotificationServicesConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -827,12 +827,12 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     public partial class MessageInfoList : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageInfo[] MessagesField;
+        private NotificationServicesConnecter.MessageInfo[] MessagesField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.PagingInfo PagingInfoField;
+        private NotificationServicesConnecter.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageInfo[] Messages
+        public NotificationServicesConnecter.MessageInfo[] Messages
         {
             get
             {
@@ -845,7 +845,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.PagingInfo PagingInfo
+        public NotificationServicesConnecter.PagingInfo PagingInfo
         {
             get
             {
@@ -876,7 +876,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         
         private string SubjectField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus StatusField;
+        private NotificationServicesConnecter.DeliveryStatus StatusField;
         
         private System.DateTime SentDateField;
         
@@ -961,7 +961,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.DeliveryStatus Status
+        public NotificationServicesConnecter.DeliveryStatus Status
         {
             get
             {
@@ -1030,7 +1030,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     public partial class Template : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] AdditionalDataField;
+        private NotificationServicesConnecter.KeyValuePair[] AdditionalDataField;
         
         private string BodyField;
         
@@ -1040,10 +1040,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         
         private string NameField;
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateTag[] TagsField;
+        private NotificationServicesConnecter.TemplateTag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.KeyValuePair[] AdditionalData
+        public NotificationServicesConnecter.KeyValuePair[] AdditionalData
         {
             get
             {
@@ -1108,7 +1108,7 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateTag[] Tags
+        public NotificationServicesConnecter.TemplateTag[] Tags
         {
             get
             {
@@ -1166,10 +1166,10 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     public partial class TemplateList : object
     {
         
-        private HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateInfo[] TemplatesField;
+        private NotificationServicesConnecter.TemplateInfo[] TemplatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateInfo[] Templates
+        public NotificationServicesConnecter.TemplateInfo[] Templates
         {
             get
             {
@@ -1251,85 +1251,85 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Tavisca.NotificationService.ServiceContracts/2007/11", ConfigurationName="HotelSearchingListingBookingEngine.Suppliers.NotificationService.IMail")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Tavisca.NotificationService.ServiceContracts/2007/11", ConfigurationName="NotificationServicesConnecter.IMail")]
     public interface IMail
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="SendMail", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/SendMailRespons" +
             "e")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/SendMailDefault" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/SendMailDefault" +
             "FaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<System.Guid> SendMailAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message message);
+        System.Threading.Tasks.Task<System.Guid> SendMailAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Message message);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetMails", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsRespons" +
             "e")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsDefault" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsDefault" +
             "FaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageList> GetMailsAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Criteria criteria);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.MessageList> GetMailsAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Criteria criteria);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetMailsInfo", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsInfoRes" +
             "ponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsInfoDef" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetMailsInfoDef" +
             "aultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageInfoList> GetMailsInfoAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Criteria criteria);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.MessageInfoList> GetMailsInfoAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Criteria criteria);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetTags", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTagsResponse" +
             "")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTagsDefaultF" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTagsDefaultF" +
             "aultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.TagList> GetTagsAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.TagList> GetTagsAsync(NotificationServicesConnecter.ApplicationContext applicationContext);
         
         [System.ServiceModel.OperationContractAttribute(Action="ResendMail", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/ResendMailRespo" +
             "nse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/ResendMailDefau" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/ResendMailDefau" +
             "ltFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task ResendMailAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, System.Guid id);
+        System.Threading.Tasks.Task ResendMailAsync(NotificationServicesConnecter.ApplicationContext applicationContext, System.Guid id);
         
         [System.ServiceModel.OperationContractAttribute(Action="CreateTemplate", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/CreateTemplateR" +
             "esponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/CreateTemplateD" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/CreateTemplateD" +
             "efaultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task CreateTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template template);
+        System.Threading.Tasks.Task CreateTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Template template);
         
         [System.ServiceModel.OperationContractAttribute(Action="DeleteTemplate", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/DeleteTemplateR" +
             "esponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/DeleteTemplateD" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/DeleteTemplateD" +
             "efaultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task DeleteTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName);
+        System.Threading.Tasks.Task DeleteTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName);
         
         [System.ServiceModel.OperationContractAttribute(Action="UpdateTemplate", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/UpdateTemplateR" +
             "esponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/UpdateTemplateD" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/UpdateTemplateD" +
             "efaultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task UpdateTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template template);
+        System.Threading.Tasks.Task UpdateTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName, NotificationServicesConnecter.Template template);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetTemplate", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplateResp" +
             "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplateDefa" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplateDefa" +
             "ultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template> GetTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.Template> GetTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetTemplates", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplatesRes" +
             "ponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplatesDef" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetTemplatesDef" +
             "aultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateList> GetTemplatesAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.TemplateList> GetTemplatesAsync(NotificationServicesConnecter.ApplicationContext applicationContext);
         
         [System.ServiceModel.OperationContractAttribute(Action="GetResolvedMessage", ReplyAction="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetResolvedMess" +
             "ageResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(HotelSearchingListingBookingEngine.Suppliers.NotificationService.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetResolvedMess" +
+        [System.ServiceModel.FaultContractAttribute(typeof(NotificationServicesConnecter.DefaultFaultContract), Action="http://Tavisca.NotificationService.ServiceContracts/2007/11/IMail/GetResolvedMess" +
             "ageDefaultFaultContractFault", Name="DefaultFaultContract", Namespace="http://Tavisca.NotificationService.FaultContracts/2007/11")]
-        System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MailMessage> GetResolvedMessageAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateMessage templateMessage);
+        System.Threading.Tasks.Task<NotificationServicesConnecter.MailMessage> GetResolvedMessageAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.TemplateMessage templateMessage);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface IMailChannel : HotelSearchingListingBookingEngine.Suppliers.NotificationService.IMail, System.ServiceModel.IClientChannel
+    public interface IMailChannel : NotificationServicesConnecter.IMail, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class MailClient : System.ServiceModel.ClientBase<HotelSearchingListingBookingEngine.Suppliers.NotificationService.IMail>, HotelSearchingListingBookingEngine.Suppliers.NotificationService.IMail
+    public partial class MailClient : System.ServiceModel.ClientBase<NotificationServicesConnecter.IMail>, NotificationServicesConnecter.IMail
     {
         
     /// <summary>
@@ -1372,57 +1372,57 @@ namespace HotelSearchingListingBookingEngine.Suppliers.NotificationService
         {
         }
         
-        public System.Threading.Tasks.Task<System.Guid> SendMailAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Message message)
+        public System.Threading.Tasks.Task<System.Guid> SendMailAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Message message)
         {
             return base.Channel.SendMailAsync(applicationContext, message);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageList> GetMailsAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Criteria criteria)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.MessageList> GetMailsAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Criteria criteria)
         {
             return base.Channel.GetMailsAsync(applicationContext, criteria);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MessageInfoList> GetMailsInfoAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Criteria criteria)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.MessageInfoList> GetMailsInfoAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Criteria criteria)
         {
             return base.Channel.GetMailsInfoAsync(applicationContext, criteria);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.TagList> GetTagsAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.TagList> GetTagsAsync(NotificationServicesConnecter.ApplicationContext applicationContext)
         {
             return base.Channel.GetTagsAsync(applicationContext);
         }
         
-        public System.Threading.Tasks.Task ResendMailAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, System.Guid id)
+        public System.Threading.Tasks.Task ResendMailAsync(NotificationServicesConnecter.ApplicationContext applicationContext, System.Guid id)
         {
             return base.Channel.ResendMailAsync(applicationContext, id);
         }
         
-        public System.Threading.Tasks.Task CreateTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template template)
+        public System.Threading.Tasks.Task CreateTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.Template template)
         {
             return base.Channel.CreateTemplateAsync(applicationContext, template);
         }
         
-        public System.Threading.Tasks.Task DeleteTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName)
+        public System.Threading.Tasks.Task DeleteTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName)
         {
             return base.Channel.DeleteTemplateAsync(applicationContext, templateName);
         }
         
-        public System.Threading.Tasks.Task UpdateTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName, HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template template)
+        public System.Threading.Tasks.Task UpdateTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName, NotificationServicesConnecter.Template template)
         {
             return base.Channel.UpdateTemplateAsync(applicationContext, templateName, template);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.Template> GetTemplateAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, string templateName)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.Template> GetTemplateAsync(NotificationServicesConnecter.ApplicationContext applicationContext, string templateName)
         {
             return base.Channel.GetTemplateAsync(applicationContext, templateName);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateList> GetTemplatesAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.TemplateList> GetTemplatesAsync(NotificationServicesConnecter.ApplicationContext applicationContext)
         {
             return base.Channel.GetTemplatesAsync(applicationContext);
         }
         
-        public System.Threading.Tasks.Task<HotelSearchingListingBookingEngine.Suppliers.NotificationService.MailMessage> GetResolvedMessageAsync(HotelSearchingListingBookingEngine.Suppliers.NotificationService.ApplicationContext applicationContext, HotelSearchingListingBookingEngine.Suppliers.NotificationService.TemplateMessage templateMessage)
+        public System.Threading.Tasks.Task<NotificationServicesConnecter.MailMessage> GetResolvedMessageAsync(NotificationServicesConnecter.ApplicationContext applicationContext, NotificationServicesConnecter.TemplateMessage templateMessage)
         {
             return base.Channel.GetResolvedMessageAsync(applicationContext, templateMessage);
         }
