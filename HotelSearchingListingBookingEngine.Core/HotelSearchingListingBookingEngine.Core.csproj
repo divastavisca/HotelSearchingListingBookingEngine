@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <WCFMetadata Include="Connected Services" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Connected Services\" />
+    <ProjectReference Include="..\HotelServicesDataConnecters\HotelServicesDataConnecters.csproj" />
+    <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
   </ItemGroup>
 
 </Project>

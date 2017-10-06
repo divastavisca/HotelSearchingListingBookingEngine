@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SystemContracts.Attributes
+namespace SystemContracts.Attributes.HotelAttributes
 {
-    public class Address
+    public class HotelAddress
     {
         public string AddressLine1 { get; }
 
@@ -18,7 +18,7 @@ namespace SystemContracts.Attributes
 
         public string ZipCode { get; }
 
-        public Address(string addressLine1,string addressLine2,string city,string state,string country,string zipcode)
+        public HotelAddress(string addressLine1,string addressLine2,string city,string state,string country,string zipcode)
         {
             AddressLine1 = addressLine1;
             AddressLine2 = addressLine2;

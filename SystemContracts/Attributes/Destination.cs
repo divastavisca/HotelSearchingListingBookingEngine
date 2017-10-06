@@ -8,12 +8,15 @@ namespace SystemContracts.Attributes
     {
         public string Name { get; }
 
+        public string Type { get; }
+
         public GeoCoordinates GeoCode { get; }
 
-        public Destination(string name,GeoCoordinates geoCode)
+        public Destination(string name,string type,GeoCoordinates geoCode)
         {
             Name = name;
             GeoCode = geoCode;
+            Type = type;
         }
     }
 }

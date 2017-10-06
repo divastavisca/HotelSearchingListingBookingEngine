@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using SystemContracts.Attributes;
 using SystemContracts.ConsumerContracts;
+using SystemContracts.ServiceContracts;
 
 namespace SystemContracts.ConsumerContracts
 {
-    public class MultiAvailHotelSearchRQ
+    public class MultiAvailHotelSearchRQ : IEngineServiceRQ
     {
         public Destination SearchLocation { get; }
 
