@@ -2,6 +2,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HotelSearchingListingBookingEngine.Core.Parsers;
 using SystemContracts.ConsumerContracts;
 using System;
+using HotelSearchingListingBookingEngine.Core.ServiceEngines;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CoreEngine.Tests
 {
@@ -10,6 +13,7 @@ namespace CoreEngine.Tests
     {
         HotelSearchRQParser parser;
         MultiAvailHotelSearchRQ request;
+        MultiAvailHotelSearchEngine engine;
 
         public HotelSearchRQParserTests()
         {
@@ -32,12 +36,15 @@ namespace CoreEngine.Tests
                     Type = "GeoCode"
                 }
             };
+            engine = new MultiAvailHotelSearchEngine();
         }
 
         [TestMethod]
-        public void Valid_Search_Request_Parsing()
+        public async Task Valid_Search_Request_Parsing()
         {
-            var req = parser.Parse(request);
+            var response = await engine.SearchAsync(request);
+            var response2 = await engine.SearchAsync(request);
+            Thread.Sleep(10000000);
         }
     }
 }

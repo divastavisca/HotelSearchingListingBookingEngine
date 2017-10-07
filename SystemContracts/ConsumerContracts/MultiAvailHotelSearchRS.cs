@@ -12,6 +12,6 @@ namespace SystemContracts.ConsumerContracts
 
         public int ResultsCount { get; set; }
 
-        public Itinerary[] Itineraries { get; set; }
+        public ItinerarySummary[] Itineraries { get; set; }
     }
 }

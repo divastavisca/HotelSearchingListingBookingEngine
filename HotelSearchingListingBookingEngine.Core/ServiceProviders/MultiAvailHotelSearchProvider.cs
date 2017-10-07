@@ -4,7 +4,7 @@ using System.Text;
 using SystemContracts.ServiceContracts;
 using SystemContracts.Attributes.HotelAttributes;
 using SystemContracts.Attributes;
-using ExternalServices.HotelSearchEngineConnecter;
+using ExternalServices.HotelSearchEngine;
 using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 using System.Threading.Tasks;
 

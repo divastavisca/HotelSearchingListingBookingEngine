@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ExternalServices.HotelSearchEngineConnecter;
+using ExternalServices.HotelSearchEngine;
 using SystemContracts.ServiceContracts;
 using SystemContracts.Attributes;
 using SystemContracts.Attributes.HotelAttributes;
@@ -15,7 +15,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
     public class HotelSearchRQParser
     {
         private readonly bool _returnOnlyAvailableItineraries = true;
-        private readonly string _stateBagObjHscAttributes = "SBObject.txt";
+        private readonly string _stateBagObjHscAttributes = @"D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\StateBagData\StateBagObjectData1.txt";
         private readonly int _maxResults = 1500;
         private readonly bool _matrixResults = true;
         private readonly int _defaultPosId = 101;
@@ -71,7 +71,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 }
             };
             parsedRQ.HotelSearchCriterion = new HotelSearchCriterion();
-            parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
+            parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes) ;
             parsedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
             parsedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
             parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
@@ -180,7 +180,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             byte[] fileData;
             try
             {
-                fileData = File.ReadAllBytes(Path.GetFullPath(fileName));
+                fileData = File.ReadAllBytes(fileName);
             }
             catch (IOException ioException)
             {
@@ -194,7 +194,9 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
             try
             {
-                return JsonConvert.DeserializeObject<StateBag[]>(ASCIIEncoding.ASCII.GetString(fileData));
+                string data = ASCIIEncoding.ASCII.GetString(fileData);
+                data=data.TrimStart('?');
+                return (JsonConvert.DeserializeObject<StateBag[]>(data));
             }
             catch (Exception baseException)
             {

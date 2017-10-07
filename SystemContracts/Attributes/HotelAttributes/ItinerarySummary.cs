@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SystemContracts.Attributes.HotelAttributes
 {
-    public class Itinerary
+    public class ItinerarySummary
     {
         public string Name { get; set; }
 
@@ -12,7 +12,9 @@ namespace SystemContracts.Attributes.HotelAttributes
 
         public GeoCoordinates GeoCode { get; set; }
 
-        public Amenity[] Amenities { get; set; }
+        public string[] Amenities { get; set; }
+
+        public string ImageUrl { get; set; }
 
         public float StarRating { get; set; }
 

@@ -9,8 +9,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelServicesDataConnecters\HotelServicesDataConnecters.csproj" />
+    <ProjectReference Include="..\HotelDataServicesConnecters\HotelDataServicesConnecters.csproj" />
     <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.server.kestrel.transport.libuv\2.0.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

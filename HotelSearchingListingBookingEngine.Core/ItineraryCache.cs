@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ExternalServices.HotelSearchEngineConnecter;
+using ExternalServices.HotelSearchEngine;
 
 namespace HotelSearchingListingBookingEngine.Core
 {
     public class ItineraryCache
     {
-        private static Dictionary<string, HotelItinerary> _cache;
+        private static Dictionary<string, HotelItinerary[]> _cache;
+
+        static ItineraryCache()
+        {
+            _cache = new Dictionary<string, HotelItinerary[]>();
+        }
 
         public static bool IsPresent(string sessionId)
         {
             return _cache.ContainsKey(sessionId);
         }
 
-        public static void AddToCache(string sessionId, HotelItinerary searchResponse)
+        public static void AddToCache(string sessionId, HotelItinerary[] searchResponse)
         {
             _cache.Add(sessionId, searchResponse);
         }
@@ -25,7 +30,7 @@ namespace HotelSearchingListingBookingEngine.Core
                 _cache.Remove(sessionId);
         }
 
-        public static HotelItinerary GetResponse(string sessionId)
+        public static HotelItinerary[] GetResponse(string sessionId)
         {
             return IsPresent(sessionId) ? _cache[sessionId] : null;
         }
