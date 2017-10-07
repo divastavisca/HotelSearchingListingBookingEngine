@@ -5,7 +5,7 @@ using SystemContracts.Attributes;
 
 namespace SystemContracts.Attributes.HotelAttributes
 {
-    public class Amenity
+    public class HotelAmenity
     {
         public string Name { get; set; }
 

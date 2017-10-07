@@ -61,58 +61,96 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         public HotelSearchRQ Parse(MultiAvailHotelSearchRQ request)
         {
             HotelSearchRQ parsedRQ = new HotelSearchRQ();
-            parsedRQ.ResultRequested = ResponseType.Complete;
-            parsedRQ.SessionId = Guid.NewGuid().ToString();
-            parsedRQ.Filters = new AvailabilityFilter[1]
+            try
             {
+                parsedRQ.ResultRequested = ResponseType.Complete;
+                parsedRQ.SessionId = Guid.NewGuid().ToString();
+                parsedRQ.Filters = new AvailabilityFilter[1]
+                {
                 new AvailabilityFilter()
                 {
                     ReturnOnlyAvailableItineraries = _returnOnlyAvailableItineraries
                 }
-            };
-            parsedRQ.HotelSearchCriterion = new HotelSearchCriterion();
-            parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes) ;
-            parsedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
-            parsedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
-            parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
-            parsedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
-            parsedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
-            parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
-            parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges);
-            parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
-            parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Length);
-            parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
-            {
-                DisplayOrder = HotelDisplayOrder.ByRelevanceScoreDescending
-            };
-            parsedRQ.HotelSearchCriterion.RoomOccupancyTypes = new RoomOccupancyType[1]
-            {
+                };
+                parsedRQ.HotelSearchCriterion = new HotelSearchCriterion();
+                parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
+                if (parsedRQ.HotelSearchCriterion.Attributes == null)
+                    throw new Exception("Failed to Initialize state bags");
+                parsedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
+                parsedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
+                parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
+                parsedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
+                parsedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
+                if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
+                    throw new Exception("Failed to Initialize requester");
+                parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
+                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges);
+                if (parsedRQ.HotelSearchCriterion.Guests == null)
+                    throw new Exception("Failed to Initilize guests objects");
+                parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
+                if (parsedRQ.HotelSearchCriterion.Location == null)
+                    throw new Exception("Failed to initilize Location object");
+                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Length);
+                if (parsedRQ.HotelSearchCriterion.NoOfRooms <= 0)
+                    throw new Exception("Invalid no of rooms recorded");
+                parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
+                {
+                    DisplayOrder = HotelDisplayOrder.ByRelevanceScoreDescending
+                };
+                parsedRQ.HotelSearchCriterion.RoomOccupancyTypes = new RoomOccupancyType[1]
+                {
                 new RoomOccupancyType()
                 {
                     PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
                 }
-            };
-            parsedRQ.HotelSearchCriterion.SearchType = _hotelSearchTypeResolver[request.SearchLocation.Type];
-            parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate,request.CheckOutDate);
-            parsedRQ.PagingInfo = new PagingInfo()
+                };
+                parsedRQ.HotelSearchCriterion.SearchType = _hotelSearchTypeResolver[request.SearchLocation.Type];
+                parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
+                if (parsedRQ.HotelSearchCriterion.StayPeriod == null)
+                    throw new Exception("Failed to initialize Stay period");
+                parsedRQ.PagingInfo = new PagingInfo()
+                {
+                    Enabled = true,
+                    StartNumber = _defaultPagingInfoStartNumber,
+                    EndNumber = _defaultPagingInfoEndNumber,
+                    TotalRecordsBeforeFiltering = _defaultTotalRecordsBeforeFiltering,
+                    TotalResults = _defaultTotalResults
+                };
+            }
+            catch(NullReferenceException nullRefException)
             {
-                Enabled = true,
-                StartNumber = _defaultPagingInfoStartNumber,
-                EndNumber = _defaultPagingInfoEndNumber,
-                TotalRecordsBeforeFiltering = _defaultTotalRecordsBeforeFiltering,
-                TotalResults = _defaultTotalResults
-            };
+                Logger.LogException(nullRefException.ToString(),nullRefException.StackTrace);
+                return null;
+            }
+            catch(InvalidOperationException invalidOpExcep)
+            {
+                Logger.LogException(invalidOpExcep.ToString(),invalidOpExcep.StackTrace);
+                return null;
+            }
+            catch(Exception baseExcep)
+            {
+                Logger.LogException(baseExcep.ToString(),baseExcep.StackTrace);
+                return null;
+            }
             return parsedRQ;
         }
 
         private DateTimeSpan getStayPeriod(DateTime checkInDate, DateTime checkOutDate)
         {
-            return new DateTimeSpan()
+            try
             {
-                Start = checkInDate,
-                End = checkOutDate,
-                Duration = 0
-            };
+                return new DateTimeSpan()
+                {
+                    Start = checkInDate,
+                    End = checkOutDate,
+                    Duration = 0
+                };
+            }
+            catch(Exception excep)
+            {
+                Logger.LogException(excep.ToString(), excep.StackTrace);
+                return null;
+            }
         }
 
         private int getMinimumRoomsRequired(int adultsCount, int childrensCount)
@@ -122,57 +160,91 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 
         private Location getLocation(string name, string type, GeoCoordinates geoCode)
         {
-            return new Location()
+            try
             {
-                CodeContext = _locationTypeResolver[type],
-                Radius = new Distance()
+                return new Location()
                 {
-                    Amount = _deafultSearchRadius,
-                    From = _locationTypeResolver[type],
-                    Unit = DistanceUnit.mi
-                },
-                GeoCode = JsonConvert.DeserializeObject<GeoCode>(JsonConvert.SerializeObject(geoCode))
-            };
+                    CodeContext = _locationTypeResolver[type],
+                    Radius = new Distance()
+                    {
+                        Amount = _deafultSearchRadius,
+                        From = _locationTypeResolver[type],
+                        Unit = DistanceUnit.mi
+                    },
+                    GeoCode = JsonConvert.DeserializeObject<GeoCode>(JsonConvert.SerializeObject(geoCode))
+                };
+            }
+            catch(NullReferenceException nullRefExcep)
+            {
+                Logger.LogException(nullRefExcep.ToString(),nullRefExcep.StackTrace);
+                return null;
+            }
+            catch(Exception excep)
+            {
+                Logger.LogException(excep.ToString(),excep.StackTrace);
+                return null;
+            }
         }
 
         private PassengerTypeQuantity[] getGuestsDetails(int adultsCount, int[] childrenAges)
         {
-            PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[2];
-            PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
-            adultPassengers.PassengerType = PassengerType.Adult;
-            adultPassengers.Quantity = adultsCount;
-            PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
-            childPassengers.PassengerType = PassengerType.Child;
-            childPassengers.Quantity = childrenAges.Length;
-            childPassengers.Ages = childrenAges;
-            passengerTypeQuantity[0] = adultPassengers;
-            passengerTypeQuantity[1] = childPassengers;
-            return passengerTypeQuantity;
+            try
+            {
+                PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[2];
+                PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
+                adultPassengers.PassengerType = PassengerType.Adult;
+                adultPassengers.Quantity = adultsCount;
+                PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
+                childPassengers.PassengerType = PassengerType.Child;
+                childPassengers.Quantity = childrenAges.Length;
+                childPassengers.Ages = childrenAges;
+                passengerTypeQuantity[0] = adultPassengers;
+                passengerTypeQuantity[1] = childPassengers;
+                return passengerTypeQuantity;
+            }
+            catch(NullReferenceException nullRefExcep)
+            {
+                Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
+                return null;
+            }
         }
 
         private Company getDefaultRequester()
         {
-            Company company = new Company();
-            Agency agency = new Agency();
-            Address address = new Address();
-            address.CodeContext = _defaultLocationCodeContext;
-            address.GmtOffsetMinutes = _deafaultGmtOffsetMinutes;
-            address.Id = _defaultAddressId;
-            address.AddressLine1 = _defaultAddressLine1;
-            address.AddressLine2 = _defaultAddressLine2;
-            City city = new City();
-            city.CodeContext = LocationCodeContext.City;
-            city.GmtOffsetMinutes = _deafaultGmtOffsetMinutes;
-            city.Id = _defaultAddressId;
-            address.City = city;
-            agency.AgencyId = 0;
-            agency.AgencyName = _defaultAgencyName;
-            company.Code = _defaultCompanyCode;
-            company.CodeContext = _defaultCompanyCodeContext;
-            company.DK = _defaultCompanyDk;
-            company.FullName = _defaultCompanyName;
-            company.ID = _defaultCompanyId;
-            return company;
+            try
+            {
+                Company company = new Company();
+                Agency agency = new Agency();
+                Address address = new Address();
+                address.CodeContext = _defaultLocationCodeContext;
+                address.GmtOffsetMinutes = _deafaultGmtOffsetMinutes;
+                address.Id = _defaultAddressId;
+                address.AddressLine1 = _defaultAddressLine1;
+                address.AddressLine2 = _defaultAddressLine2;
+                City city = new City();
+                city.CodeContext = LocationCodeContext.City;
+                city.GmtOffsetMinutes = _deafaultGmtOffsetMinutes;
+                city.Id = _defaultAddressId;
+                address.City = city;
+                agency.AgencyId = 0;
+                agency.AgencyName = _defaultAgencyName;
+                company.Code = _defaultCompanyCode;
+                company.CodeContext = _defaultCompanyCodeContext;
+                company.DK = _defaultCompanyDk;
+                company.FullName = _defaultCompanyName;
+                company.ID = _defaultCompanyId;
+                return company;
+            }
+            catch(NullReferenceException nullRefExcep)
+            {
+                Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
+                return null;
+            }
+            catch(Exception baseExcep)
+            {
+                Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
+                return null;
+            }
         }
 
         private StateBag[] getStateBags(string fileName)
