@@ -21,9 +21,9 @@ namespace CoreEngine.Tests
             request = new MultiAvailHotelSearchRQ()
             {
                 AdultsCount = 1,
-                CheckInDate = DateTime.Parse("10-10-2017"),
-                CheckOutDate = DateTime.Parse("12-10-2017"),
-                ChildrenAges = new int[2] { 12, 12 },
+                CheckInDate = DateTime.Parse("2017-10-19"),
+                CheckOutDate = DateTime.Parse("2017-10-21"),
+                ChildrenAges = new System.Collections.Generic.List<int>() { 12,12},
                 ChildrensCount = 2,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
@@ -44,7 +44,6 @@ namespace CoreEngine.Tests
         {
             var response = await engine.SearchAsync(request);
             var response2 = await engine.SearchAsync(request);
-            Thread.Sleep(10000000);
         }
     }
 }

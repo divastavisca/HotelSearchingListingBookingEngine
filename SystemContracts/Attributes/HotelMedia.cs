@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SystemContracts.Attributes
 {
-    public class Media
+    public class HotelMedia
     {
         public string Type { get; set; }
 

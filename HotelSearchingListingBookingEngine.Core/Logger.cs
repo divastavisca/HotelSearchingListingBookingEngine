@@ -50,6 +50,7 @@ namespace HotelSearchingListingBookingEngine.Core
                 logText.Append("Stack Trace: ");
                 logText.Append(stackTrace);
             }
+            logText.AppendLine();
             return logText.ToString();
         }
 

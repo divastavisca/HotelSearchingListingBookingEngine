@@ -13,25 +13,55 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
     {
         public MultiAvailHotelSearchRS Parse(HotelSearchRS hotelSearchRS)
         {
-            MultiAvailHotelSearchRS multiAvailHotelSearchRS = new MultiAvailHotelSearchRS()
+            try
             {
-                CallerSessionId = hotelSearchRS.SessionId,
-                ResultsCount = hotelSearchRS.Itineraries.Length
-            };
-            multiAvailHotelSearchRS.Itineraries = parseItineraries(hotelSearchRS.Itineraries);
-            return multiAvailHotelSearchRS;
+                MultiAvailHotelSearchRS multiAvailHotelSearchRS = new MultiAvailHotelSearchRS()
+                {
+                    CallerSessionId = hotelSearchRS.SessionId,
+                    ResultsCount = hotelSearchRS.Itineraries.Length
+                };
+                multiAvailHotelSearchRS.Itineraries = parseItineraries(hotelSearchRS.Itineraries);
+                return multiAvailHotelSearchRS;
+            }
+            catch (NullReferenceException nullRefExcep)
+            {
+                Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
+                Logger.StoreLog(_exceptionMap[0]);
+                return null;
+            }
+            catch (Exception baseExcep)
+            {
+                Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
+                Logger.StoreLog(_exceptionMap[0]);
+                return null;
+            }
         }
 
         private ItinerarySummary[] parseItineraries(HotelItinerary[] itineraries)
         {
-            List<ItinerarySummary> fetchedItineraries = new List<ItinerarySummary>();
-            foreach (HotelItinerary hotelItinerary in itineraries)
+            try
             {
-                ItinerarySummary uniqueItinerary;
-                if (tryParseItinerary(hotelItinerary,out uniqueItinerary))
-                    fetchedItineraries.Add(uniqueItinerary);
+                List<ItinerarySummary> fetchedItineraries = new List<ItinerarySummary>();
+                foreach (HotelItinerary hotelItinerary in itineraries)
+                {
+                    ItinerarySummary uniqueItinerary;
+                    if (tryParseItinerary(hotelItinerary, out uniqueItinerary) && uniqueItinerary != null)
+                        fetchedItineraries.Add(uniqueItinerary);
+                }
+                return fetchedItineraries.Count > 0 ? fetchedItineraries.ToArray() : null;
             }
-            return fetchedItineraries.Count > 0 ? fetchedItineraries.ToArray() : null;
+            catch (NullReferenceException nullRefExcep)
+            {
+                Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
+                Logger.StoreLog(_exceptionMap[1]);
+                return null;
+            }
+            catch (Exception baseExcep)
+            {
+                Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
+                Logger.StoreLog(_exceptionMap[1]);
+                return null;
+            }
         }
 
         private bool tryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary)
@@ -53,16 +83,47 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 List<string> uniqueAmenities = new List<string>();
                 foreach (Amenity hotelAmenity in hotelItinerary.HotelProperty.Amenities)
                 {
-                    uniqueAmenities.Add(hotelAmenity.Name);
+                    if (hotelAmenity != null)
+                        uniqueAmenities.Add(hotelAmenity.Name);
                 }
                 uniqueItinerary.Amenities = uniqueAmenities.ToArray();
-
+                List<string> imageUrls = new List<string>();
+                foreach (Media mediaInfo in hotelItinerary.HotelProperty.MediaContent)
+                {
+                    if (imageUrls.Count >= 3)
+                        break;
+                    if (mediaInfo.Type == MediaType.Photo && mediaInfo.Url != null)
+                    {
+                        imageUrls.Add(mediaInfo.Url);
+                        break;
+                    }
+                }
+                uniqueItinerary.ImageUrl = imageUrls.Count > 0 ? imageUrls.ToArray() : null;
+                uniqueItinerary.StarRating = hotelItinerary.HotelProperty.HotelRating.Rating;
+                uniqueItinerary.Currency = hotelItinerary.Fare.BaseFare.Currency;
+                uniqueItinerary.MinimumPrice = hotelItinerary.Fare.BaseFare.Amount;
+                return true;
             }
-            catch(Exception baseException)
+            catch (NullReferenceException nullRefExcep)
             {
-
+                Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
+                Logger.StoreLog(_exceptionMap[2]);
+                return false;
+            }
+            catch (Exception baseExcep)
+            {
+                Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
+                Logger.StoreLog(_exceptionMap[2]);
+                return false;
             }
             return true;
         }
+
+        private readonly Dictionary<int, string> _exceptionMap = new Dictionary<int, string>()
+        {
+            {0, "Unable to parse Response object" },
+            {1, "Unable to parse Itineraries object" },
+            {2, "Unable to parse unique Itinerary object"}
+        };
     }
 }

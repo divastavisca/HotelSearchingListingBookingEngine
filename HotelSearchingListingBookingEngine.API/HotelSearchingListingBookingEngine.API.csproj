@@ -16,4 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSearchingListingBookingEngine.Core\HotelSearchingListingBookingEngine.Core.csproj" />
+    <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
+  </ItemGroup>
+
 </Project>

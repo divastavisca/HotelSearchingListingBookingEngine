@@ -84,13 +84,13 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
                     throw new Exception("Failed to Initialize requester");
                 parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
-                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges);
+                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges.ToArray());
                 if (parsedRQ.HotelSearchCriterion.Guests == null)
                     throw new Exception("Failed to Initilize guests objects");
                 parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
                 if (parsedRQ.HotelSearchCriterion.Location == null)
                     throw new Exception("Failed to initilize Location object");
-                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Length);
+                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Count);
                 if (parsedRQ.HotelSearchCriterion.NoOfRooms <= 0)
                     throw new Exception("Invalid no of rooms recorded");
                 parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()

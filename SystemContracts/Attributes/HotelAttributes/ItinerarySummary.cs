@@ -14,12 +14,12 @@ namespace SystemContracts.Attributes.HotelAttributes
 
         public string[] Amenities { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string[] ImageUrl { get; set; }
 
         public float StarRating { get; set; }
 
         public string Currency { get; set; }
 
-        public float MinimumPrice { get; set; }
+        public decimal MinimumPrice { get; set; }
     }
 }
