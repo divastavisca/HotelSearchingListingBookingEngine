@@ -1,6 +1,10 @@
 $(document).ready(
-function(){
+function (){
     var placeSuggestions;var suggestionArray=new Array();
+    for(var index=1;index<18;index++)
+    {
+                window.childAgeList+="<option value="+index+">"+index+"</option>";
+            }
     $("#location").autocomplete({source:suggestionArray});
     $("#location").on('input propertychange',function(){$("#secondaryElementsContainer").css("display","block")});
     $("#location").on('keyup input propertychange',function(){
@@ -15,6 +19,7 @@ function(){
                     success:function(json){
                         if(json!=null)
                         {
+                            window.jsonResponseData=json;
                             for(var counter=0;counter<json.length;counter++)
                             {
                             var itemsList =json[counter].ItemList;
@@ -22,12 +27,12 @@ function(){
                                 {
                                     if(counter==0&&innercounter==0)
                                         {
-                                            placeSuggestions=itemsList[innercounter].Name+' '+itemsList[innercounter].CityName+' '+itemsList[innercounter].Id.toString()+',';
+                                           placeSuggestions=itemsList[innercounter].Name+'|'+itemsList[innercounter].CityName+'|'+itemsList[innercounter].Id+'|'+itemsList[innercounter].SearchType+',';
                                         }
                                     else
-                                    {
-                                        placeSuggestions+=itemsList[innercounter].Name+' '+itemsList[innercounter].CityName+' '+itemsList[innercounter].Id.toString()+',';
-                                    }
+                                        {
+                                           placeSuggestions+=itemsList[innercounter].Name+'|'+itemsList[innercounter].CityName+'|'+itemsList[innercounter].Id+'|'+itemsList[innercounter].SearchType+',';
+                                        }
                                     
                                 }
                             }
@@ -58,10 +63,63 @@ function(){
             mincheckoutdate.setDate(mincheckoutdate.getDate()+1);
             $("#checkoutdate").datepicker("option","minDate",mincheckoutdate);
             
-    }});
-    
+    }});        
+    $("#childrencount").change(function(){
+        var count=$("#childrencount").val();
+        var childrenAgeHtml="";
+        $("#children-age-container").empty();
+        for(var counter=0;counter<count;counter++)
+            {
+                childrenAgeHtml+="<label>Child "+counter+" Age</label>"
+                childrenAgeHtml+="<select id='child"+counter+"age'>"
+                +childAgeList+
+                    "</select>";
+            }
+        $("#children-age-container").append(childrenAgeHtml);
     });
-
-
-}
-);
+    $("#search-hotels-button").click(function(){
+        var locationParts=($("#location").val().split('|'));
+        var locationId=locationParts[2];
+        var locationType=locationParts[locationParts.length-1];
+        var childrenAgeArray=new Array();
+        childrenAgeArray.pop();
+        for(var index=0;index<$("#childrencount").val();index++)
+            {
+                var childAgeDivId="#child"+index+"age";
+                childrenAgeArray.push($(childAgeDivId).val());
+            }
+        for(var counter=0;counter<(jsonResponseData.length);counter++)
+            {
+//                if((jsonResponseData[counter].SearchType==locationType)||(jsonResponseData[counter].SearchType=="POI"))
+                    {
+                        for(var innerCounter=0;innerCounter<(jsonResponseData[counter].ItemList.length);innerCounter++)
+                            {
+                                if(jsonResponseData[counter].ItemList[innerCounter].Id==locationId)
+                                   {
+                                       var jsonLocationObject= jsonResponseData[counter].ItemList[innerCounter];
+                                        var multiAvailRQ = {
+                                                                "SearchLocation":{
+                                                                                    "Name":jsonLocationObject.Name,
+                                                                                    "Type":jsonLocationObject.SearchType,
+                                                                                    "GeoCode":
+                                                                                        {
+                                                                                           "Latitude":jsonLocationObject.Latitude,
+                                                                                           "Longitude":jsonLocationObject.Longitude
+                                                                                        },
+                                                                                    
+                                                                                },
+                                                                "CheckInDate":$("#checkindate").val(),
+                                                                "CheckOutDate":$("#checkoutdate").val(),
+                                                                "AdultsCount":parseInt($("#adultcount").val()),
+                                                                "ChildrenCount":parseInt($("#childrencount").val()),
+                                                                "ChildrenAges":childrenAgeArray
+                                                            }
+                                   }
+                                else{
+                                    continue;
+                                }
+                            }
+                    }
+            }
+        });    
+});

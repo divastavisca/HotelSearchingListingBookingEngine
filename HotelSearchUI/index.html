@@ -14,8 +14,8 @@
             <span></span>
         </header>
         <section>
-            <form>
-                <fieldset>
+            <form id="hotel-search-form">
+            <fieldset>
             <label for="location">Location</label>
             <input id="location" type="text" name="location" required>
             </fieldset>
@@ -25,7 +25,7 @@
             <label for="checkout">Check-Out-Date</label>
             <input type="text" id="checkoutdate" name="checkout" placeholder='dd-mm-yyyy' required>
             <label for="childrencount">Children(Below 18)</label>
-            <select required>
+            <select required id="childrencount">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -34,7 +34,7 @@
                 <option value="6">6</option>
             </select>
             <label for="adultcount">Adults(18+)</label>
-            <select required>
+            <select required id="adultcount">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -43,6 +43,8 @@
                 <option value="6">6</option>
                 <option value="7">7</option>
             </select>
+                    <div id="children-age-container">
+                    </div>
             <label for="star_rating">Star Rating</label>
             <select required>
                 <option>Any</option>
@@ -52,7 +54,7 @@
                 <option>5 stars</option>
             </select>
             <button id="search-hotels-button">Search Hotels</button>
-            </fieldset>
+                </fieldset>
             </form>
         </section>
         <main id="hotels-list-container">
