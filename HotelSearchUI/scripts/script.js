@@ -88,6 +88,7 @@ function (){
                 var childAgeDivId="#child"+index+"age";
                 childrenAgeArray.push($(childAgeDivId).val());
             }
+        window.isMultiAvailObjectFound=false;
         for(var counter=0;counter<(jsonResponseData.length);counter++)
             {
 //                if((jsonResponseData[counter].SearchType==locationType)||(jsonResponseData[counter].SearchType=="POI"))
@@ -97,7 +98,7 @@ function (){
                                 if(jsonResponseData[counter].ItemList[innerCounter].Id==locationId)
                                    {
                                        var jsonLocationObject= jsonResponseData[counter].ItemList[innerCounter];
-                                        var multiAvailRQ = {
+                                       window.multiAvailRQ = {
                                                                 "SearchLocation":{
                                                                                     "Name":jsonLocationObject.Name,
                                                                                     "Type":jsonLocationObject.SearchType,
@@ -113,13 +114,23 @@ function (){
                                                                 "AdultsCount":parseInt($("#adultcount").val()),
                                                                 "ChildrenCount":parseInt($("#childrencount").val()),
                                                                 "ChildrenAges":childrenAgeArray
-                                                            }
+                                                            };
+                                       isMultiAvailObjectFound=true;
+                                       break;
                                    }
-                                else{
-                                    continue;
-                                }
+                                    else {continue;}
                             }
                     }
+            if(isMultiAvailObjectFound){break;}
             }
+        var multiAvailUrl="http://localhost:51264/padharojanab/value";
+        $.ajax({
+            url:multiAvailUrl,
+            data:multiAvailRQ,
+            method:"POST",
+            crossDomain:true,
+            success:function(data){console.log(JSON.stringify(data));}
+        });
+        
         });    
 });
