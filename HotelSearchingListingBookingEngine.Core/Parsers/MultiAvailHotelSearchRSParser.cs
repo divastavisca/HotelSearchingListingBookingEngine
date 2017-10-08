@@ -95,7 +95,6 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     if (mediaInfo.Type == MediaType.Photo && mediaInfo.Url != null)
                     {
                         imageUrls.Add(mediaInfo.Url);
-                        break;
                     }
                 }
                 uniqueItinerary.ImageUrl = imageUrls.Count > 0 ? imageUrls.ToArray() : null;
@@ -116,7 +115,6 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 Logger.StoreLog(_exceptionMap[2]);
                 return false;
             }
-            return true;
         }
 
         private readonly Dictionary<int, string> _exceptionMap = new Dictionary<int, string>()

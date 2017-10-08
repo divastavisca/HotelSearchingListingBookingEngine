@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSearchingListingBookingEngine.API", "HotelSearchingListingBookingEngine.API\HotelSearchingListingBookingEngine.API.csproj", "{2DB61932-EEE0-4C45-BB25-4352A87A75F8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemContracts", "SystemContracts\SystemContracts.csproj", "{3069869F-0DE2-4757-8573-4FCB7E0A2AEA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSearchingListingBookingEngine.Core", "HotelSearchingListingBookingEngine.Core\HotelSearchingListingBookingEngine.Core.csproj", "{BC8B6519-DB2A-4E96-8A04-67BA9E5681F2}"
@@ -15,16 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreEngine.Tests", "CoreEng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelDataServicesConnecters", "HotelDataServicesConnecters\HotelDataServicesConnecters.csproj", "{A13AC200-1C98-4EBD-B84D-3500D569314E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSearchingListingBooking.API", "HotelSearchingListingBooking.API\HotelSearchingListingBooking.API.csproj", "{0A1BAB64-798B-4F6B-B2D4-47EA9A398B17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DB61932-EEE0-4C45-BB25-4352A87A75F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DB61932-EEE0-4C45-BB25-4352A87A75F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DB61932-EEE0-4C45-BB25-4352A87A75F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DB61932-EEE0-4C45-BB25-4352A87A75F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3069869F-0DE2-4757-8573-4FCB7E0A2AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3069869F-0DE2-4757-8573-4FCB7E0A2AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3069869F-0DE2-4757-8573-4FCB7E0A2AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{A13AC200-1C98-4EBD-B84D-3500D569314E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13AC200-1C98-4EBD-B84D-3500D569314E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13AC200-1C98-4EBD-B84D-3500D569314E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1BAB64-798B-4F6B-B2D4-47EA9A398B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1BAB64-798B-4F6B-B2D4-47EA9A398B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1BAB64-798B-4F6B-B2D4-47EA9A398B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1BAB64-798B-4F6B-B2D4-47EA9A398B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

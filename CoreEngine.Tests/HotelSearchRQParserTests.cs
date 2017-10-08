@@ -20,11 +20,11 @@ namespace CoreEngine.Tests
             parser = new HotelSearchRQParser();
             request = new MultiAvailHotelSearchRQ()
             {
-                AdultsCount = 1,
-                CheckInDate = DateTime.Parse("2017-10-19"),
-                CheckOutDate = DateTime.Parse("2017-10-21"),
-                ChildrenAges = new System.Collections.Generic.List<int>() { 12,12},
-                ChildrensCount = 2,
+                AdultsCount = 2,
+                CheckInDate = DateTime.Parse("2017-10-10"),
+                CheckOutDate = DateTime.Parse("2017-10-12"),
+                ChildrenAges = new System.Collections.Generic.List<int>() { 12,12,12},
+                ChildrensCount = 3,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
                     GeoCode = new SystemContracts.Attributes.GeoCoordinates()

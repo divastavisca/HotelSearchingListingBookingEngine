@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelDataServicesConnecters\HotelDataServicesConnecters.csproj" />
     <ProjectReference Include="..\HotelSearchingListingBookingEngine.Core\HotelSearchingListingBookingEngine.Core.csproj" />
     <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
   </ItemGroup>

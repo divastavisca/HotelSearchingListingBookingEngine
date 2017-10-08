@@ -1,0 +1,49 @@
+Log ID: 6d09562e-73bd-4f98-a0de-8dbb5f8ce093
+Timestamp: 10/8/2017 5:10:51 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 87
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 87
+Log ID: 8fc2a2fd-2c84-4bed-83d1-2d8e676de8e8
+Timestamp: 10/8/2017 5:10:52 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Log ID: 7d03c7ac-81af-4fa0-9273-22b3ca993f5c
+Timestamp: 10/8/2017 5:13:18 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 87
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 87
+Log ID: 6c8ccd44-8dbd-4fd2-96c0-b8a61e797fee
+Timestamp: 10/8/2017 5:13:19 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Log ID: fb3b2641-eb96-4d9b-855f-26d1c4bdf35d
+Timestamp: 10/8/2017 5:31:39 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.AddToCache(String sessionId, HotelItinerary[] searchResponse) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 24
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+Stack Trace:    at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.AddToCache(String sessionId, HotelItinerary[] searchResponse) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 24
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
