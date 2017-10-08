@@ -1,10 +1,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core;
 using SystemContracts.ConsumerContracts;
 using System;
 using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 using System.Threading;
 using System.Threading.Tasks;
+using ExternalServices.HotelSearchEngine;
 
 namespace CoreEngine.Tests
 {
@@ -43,7 +45,15 @@ namespace CoreEngine.Tests
         public async Task Valid_Search_Request_Parsing()
         {
             var response = await engine.SearchAsync(request);
-            var response2 = await engine.SearchAsync(request);
+            var itinerary = ItineraryCache.GetResponse(((MultiAvailHotelSearchRS)response).CallerSessionId);
+            var hotelroomavail = new HotelRoomAvailRQ();
+            hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
+            hotelroomavail.Itinerary = ItineraryCache.GetResponse(((MultiAvailHotelSearchRS)response).CallerSessionId)[0];
+            hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
+            hotelroomavail.ResultRequested = ResponseType.Complete;
+            HotelEngineClient client = new HotelEngineClient();
+            var res = await client.HotelRoomAvailAsync(hotelroomavail);
+
         }
     }
 }

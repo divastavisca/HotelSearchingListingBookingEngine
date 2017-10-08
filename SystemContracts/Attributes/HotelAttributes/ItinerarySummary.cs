@@ -6,6 +6,8 @@ namespace SystemContracts.Attributes.HotelAttributes
 {
     public class ItinerarySummary
     {
+        public string ItineraryId { get; set; }
+
         public string Name { get; set; }
 
         public HotelAddress Address { get; set; }

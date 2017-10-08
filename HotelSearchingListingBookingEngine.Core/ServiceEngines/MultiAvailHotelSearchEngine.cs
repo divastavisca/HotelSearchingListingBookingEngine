@@ -10,7 +10,7 @@ using HotelSearchingListingBookingEngine.Core;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
-    public class MultiAvailHotelSearchEngine
+    public class MultiAvailHotelSearchEngine : ISearchEngine
     {
         public async Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ searchRQ)
         {
@@ -19,11 +19,16 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 HotelSearchRQ hotelSearchRQ = (new HotelSearchRQParser()).Parse((MultiAvailHotelSearchRQ)searchRQ);
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (ItineraryCache.IsPresent(hotelSearchRS.SessionId) == false)
+                {
                     ItineraryCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRS.Itineraries);
+                    SearchCriterionCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion);
+                }
                 else
                 {
                     ItineraryCache.Remove(hotelSearchRS.SessionId);
                     ItineraryCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRS.Itineraries);
+                    SearchCriterionCache.Remove(hotelSearchRS.SessionId);
+                    SearchCriterionCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion);
                 }
                 return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
             }

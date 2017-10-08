@@ -276,6 +276,5 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 return null;
             }
         }
-
     }
 }

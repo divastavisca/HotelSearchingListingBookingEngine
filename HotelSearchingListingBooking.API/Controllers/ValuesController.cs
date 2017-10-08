@@ -20,5 +20,11 @@ namespace HotelSearchingListingBooking.API.Controllers
             var response=await engineServiceProvider.GetServiceRS(value);
             return Ok(response);
         }
+
+        [HttpGet]
+        public async Task Get(string value)
+        {
+
+        }
     }
 }

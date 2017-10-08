@@ -69,6 +69,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             uniqueItinerary = new ItinerarySummary();
             try
             {
+                uniqueItinerary.ItineraryId = hotelItinerary.HotelProperty.SupplierHotelId;
                 uniqueItinerary.Name = hotelItinerary.HotelProperty.Name;
                 uniqueItinerary.Address = new HotelAddress()
                 {
