@@ -3,24 +3,42 @@ body{
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: stretch;
-    }
+    background-image: url("../resources/Night-City-4K-Wallpaper.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin:0px;
+}
 header{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    background: white;
 }
 header>a{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Crete Round',serif;
     text-decoration: none;
     display: block;
     color: black;
     font-size: 2em;
     background: grey;
-    background:linear-gradient(to right,black,white);
-    border: 5px outset white;
+    background:linear-gradient(to right,rgb(96,119,139),white);
     padding:5px;
     box-sizing: border-box;
+}
+#location{
+background-image:url('http://i47.tinypic.com/r02vbq.png');
+background-repeat:no-repeat;
+background-position:right center;outline:0;
+line-height: 25px;
+}
+#tag_line{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color:rgb(211,211,211);
+    font-size:30px;
+    font-weight: bolder;
 }
 header>a>span{
     color:white !Important;
@@ -30,36 +48,53 @@ body>section{
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgba(0,0,0,0.6);
     background-repeat: no-repeat; 
+    padding: 50px;
 }
 body>section>form{
-    background: rgba(242,242,242,0.6);
+    background: rgba(96,125,139,0.17);
     border-radius:8px;
     display: flex;
     flex-flow: column wrap;
-    align-content: stretch;
+    align-items: stretch;
     justify-content: space-around;
+    width: 80%;
 }
 fieldset{
     border: 0px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: center;
 }
-#location,#secondaryElementsContainer
+fieldset>.row-items
 {
+    display: flex;
+    flex-flow: row wrap;
+    align-items : center;
+    justify-content: space-between;
+}
+#secondaryElementsContainer{
     border: 0px;
     display: none;
 }
-#location{
-    display: block;
-}
-.culturedText
-{
+.culturedText{
     vertical-align: sub;
     color: lightgrey;
     margin-left: 8px;
     font-style: italic;
-    
 }
 .hiddenText{
     display: none;
+}
+#childcount {
+	display: block;
+}
+adultcount {
+	display: block;
+}
+#hotel-search-form {
+    background: rgba(211,211,211,0.8);
+	padding: 10px;
 }

@@ -1,78 +1,116 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>Hotel Search</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico|Stalinist+One" rel="stylesheet"/>
-    </head>
-    <body>
-        <header>
-            <a href="index.html"><span>PADHAARO</span>JANAAB</a>
-            <span></span>
-        </header>
-        <section>
-            <form id="hotel-search-form">
+
+<head>
+    <title>Hotel Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <a href="index.html"><span>Stayzilla</span>.com</a>
+        <span></span>
+
+    </header>
+    
+    <section>
+        <span id="tag_line">
+                Where hospitality meets bay...
+        </span>
+        <form id="hotel-search-form">
             <fieldset>
-            <label for="location">Location</label>
-            <input id="location" type="text" name="location" required>
+                <div>
+                    <label for="location">Location</label>
+                    <input id="location" type="text" name="location" size=80 required>
+                </div>
             </fieldset>
-                <fieldset id="secondaryElementsContainer">
-            <label for="checkin">Check-In-Date</label>
-            <input type="text" id="checkindate" name="checkin" placeholder='dd-mm-yyyy' required>
-            <label for="checkout">Check-Out-Date</label>
-            <input type="text" id="checkoutdate" name="checkout" placeholder='dd-mm-yyyy' required>
-            <label for="childrencount">Children(Below 18)</label>
-            <select required id="childrencount">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-            <label for="adultcount">Adults(18+)</label>
-            <select required id="adultcount">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
-                    <div id="children-age-container">
+            <fieldset id="secondaryElementsContainer">
+                <div class="row-items">
+                    <div>
+                    <label for="checkin">Check-In-Date</label>
+                    <input class="date" type="text" id="checkindate" name="checkin" placeholder='dd-mm-yyyy' required>
                     </div>
-            <label for="star_rating">Star Rating</label>
-            <select required>
-                <option>Any</option>
-                <option>2+ stars</option>
-                <option>3+ stars</option>
-                <option>4+ stars</option>
-                <option>5 stars</option>
-            </select>
-            <button type="button" id="search-hotels-button">Search Hotels</button>
-                </fieldset>
-            </form>
-        </section>
-        <main id="hotels-list-container">
-            <table>
-            </table>
-        </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="scripts/script.js"></script>
-        <script type="text/x-handlebars-template">
-            <tr>
+                    <div>
+                    <label for="checkout">Check-Out-Date</label>
+                    <input class="date" type="text" id="checkoutdate" name="checkout" placeholder='dd-mm-yyyy' required>
+                    </div>
+                </div>
+                <div>
+                    <label id="childcount"for="childrencount">Children(Below 18)</label>
+                    <select required id="childrencount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="adultcount">Adults(18+)</label>
+                    <select required id="adultcount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>    
+                <div id="children-age-container">
+                </div>
+                <button id="search-hotels-button">Search Hotels</button>
+            </fieldset>
+        </form>
+    </section>
+    <main>
+        <table id="hotels-list-container">
+
+        </table>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="scripts/script.js"></script>
+    <script id="hotel-list-template" type="text/x-handlebars-template">
+        {{#each multiAvailHotelSearchRS.Itineraries }}
+        <tr>
+            <td><input type="hidden" value={{GeoCode.Latitude}}>
+                <input type="hidden" value={{GeoCode.Longitude}}>
+                <button>Show On Map</button>
+            </td>
+            <td>
+                <h3>{{Name}}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><img src={{ImageUrl[0]}}></td>
+            <td>
                 <tr>
-                    
+                    <td>Rating:{{StarRating}}</td>
                 </tr>
                 <tr>
-                    
+                    <td>Amenities:{{#each Amenities}}{{this}}{{/each}}</td>
                 </tr>
-            </tr>
-        </script>
-    </body>
+            </td>
+            <td>
+                Address:{{Address.AddressLine1}}{{Address.AddressLine2}}{{Address.City}}{{Address.State}}{{Address.ZipCode}}
+            </td>
+            <td>
+                <tr>
+                    <td>Price:{{Currency}}{{MinimumPrice}}</td>
+                </tr>
+                <tr>
+                    <td><button>Book Now</button></td>
+                </tr>
+            </td>
+        </tr>
+    </script>
+</body>
+
 </html>
