@@ -156,7 +156,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 
         private int getMinimumRoomsRequired(int adultsCount, int childrensCount)
         {
-            return (adultsCount / 2 + childrensCount / 2);
+            return (adultsCount / 2 + childrensCount / 2 + 1);
         }
 
         private Location getLocation(string name, string type, GeoCoordinates geoCode)

@@ -12,7 +12,7 @@ namespace HotelSearchingListingBooking.API.Models
         private static readonly Dictionary<string, Type> _serviceRequestMap = new Dictionary<string, Type>()
         {
             {"MultiAvail", typeof(MultiAvailHotelSearchRQ)},
-            {"SingleAvail", typeof(SingleAvailRoomSearchRQ) }
+            {"SingleAvail", typeof(SingleAvailRoomSearchRQ)}
         };
 
         public static Type GetServiceType(ServiceRequest serviceRequest)
