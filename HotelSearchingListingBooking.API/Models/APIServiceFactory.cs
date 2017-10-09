@@ -11,15 +11,22 @@ namespace HotelSearchingListingBooking.API.Models
 {
     public class APIServiceFactory
     {
-        private readonly Dictionary<Type, Type> _serviceProviderMap = new Dictionary<Type, Type>()
+        private static readonly Dictionary<Type, Type> _serviceProviderMap = new Dictionary<Type, Type>()
         {
             {typeof(MultiAvailHotelSearchRQ) ,typeof(MultiAvailHotelSearchProvider)},
             {typeof(SingleAvailRoomSearchRQ) , typeof(SingleAvailRoomSearchProvider)}
         };
         
-        public IEngineServiceProvider GetServiceProvider(Type serviceRequestType)
+        public static IEngineServiceProvider GetServiceProvider(Type serviceRequestType)
         {
-            return (IEngineServiceProvider)Activator.CreateInstance(serviceRequestType);
+            return
+           (
+                _serviceProviderMap.ContainsKey(serviceRequestType)
+                ?
+                (IEngineServiceProvider) Activator.CreateInstance(_serviceProviderMap[serviceRequestType])
+                :
+                null
+           );
         }
     }
 }
