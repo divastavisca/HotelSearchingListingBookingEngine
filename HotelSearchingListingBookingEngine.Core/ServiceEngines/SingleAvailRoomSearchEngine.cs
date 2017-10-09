@@ -20,11 +20,13 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 {
                     HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQParser()).Parse(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
-                        throw new Exception("Unable to parse single avail request");
+                        throw new NullReferenceException("Unable to parse single avail request");
                     HotelRoomAvailRS hotelRoomSearchRS = await (new HotelEngineClient()).HotelRoomAvailAsync(parsedSingleAvailRQ);
                     if (hotelRoomSearchRS == null)
-                        throw new Exception("Unable to fetch room data");
+                        throw new NullReferenceException("Unable to fetch room data");
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
+                    if (engineSearchRS == null)
+                        throw new NullReferenceException("Unable to parse response");
                     return engineSearchRS;
                 }
                 else return null;
