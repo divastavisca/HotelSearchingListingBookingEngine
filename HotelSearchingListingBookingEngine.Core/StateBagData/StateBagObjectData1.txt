@@ -1,0 +1,1 @@
+﻿[{"Name":"FareType","Value":"BaseFare"},{"Name":"ResetFiltersIfNoResults","Value":"true"},{"Name":"ReturnRestrictedRelevanceProperties","Value":"true"},{"Name":"MaxHideawayRelevancePropertiesToDisplay","Value":"5"},{"Name":"MaxHotelRelevancePropertiesToDisplay","Value":"10"}]
