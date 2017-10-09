@@ -13,7 +13,6 @@ namespace API.Tests
         {
             recievedRequest = new ServiceRequest()
             {
-                ServiceName = "MultiAvail",
                 JsonRequest = null
             };
         }
@@ -21,7 +20,15 @@ namespace API.Tests
         [TestMethod]
         public void Get_Type_Should_Return_Type_As_Requested()
         {
+            recievedRequest.ServiceName = "MultiAvail";
             Assert.IsTrue(ServiceRequestResolver.GetServiceType(recievedRequest) == typeof(MultiAvailHotelSearchRQ));
+        }
+
+        [TestMethod]
+        public void Get_Type_Should_Return_Only_Valid_Request_Type()
+        {
+            recievedRequest.ServiceName = "NoService";
+            Assert.IsNull(ServiceRequestResolver.GetServiceType(recievedRequest));
         }
     }
 }
