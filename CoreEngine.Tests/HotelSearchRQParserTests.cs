@@ -45,10 +45,10 @@ namespace CoreEngine.Tests
         public async Task Valid_Search_Request_Parsing()
         {
             var response = await engine.SearchAsync(request);
-            var itinerary = ItineraryCache.GetResponse(((MultiAvailHotelSearchRS)response).CallerSessionId);
+            var itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId);
             var hotelroomavail = new HotelRoomAvailRQ();
             hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
-            hotelroomavail.Itinerary = ItineraryCache.GetResponse(((MultiAvailHotelSearchRS)response).CallerSessionId)[0];
+            hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[0];
             hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
             hotelroomavail.ResultRequested = ResponseType.Complete;
             HotelEngineClient client = new HotelEngineClient();

@@ -119,7 +119,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
             catch(NullReferenceException nullRefException)
             {
-                Logger.LogException(nullRefException.ToString(),nullRefException.StackTrace);
+                Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
+
                 return null;
             }
             catch(InvalidOperationException invalidOpExcep)

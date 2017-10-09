@@ -30,7 +30,7 @@ namespace HotelSearchingListingBookingEngine.Core
                 _cache.Remove(sessionId);
         }
 
-        public static HotelItinerary[] GetResponse(string sessionId)
+        public static HotelItinerary[] GetItineraries(string sessionId)
         {
             return IsPresent(sessionId) ? _cache[sessionId] : null;
         }

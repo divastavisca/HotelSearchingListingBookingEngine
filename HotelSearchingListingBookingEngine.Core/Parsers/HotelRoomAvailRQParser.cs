@@ -19,6 +19,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(singleAvailRoomSearchRQ.CallerSessionId)
                 };
                 parsedRQ.Itinerary = getRequiredItinerary(singleAvailRoomSearchRQ.CallerSessionId, singleAvailRoomSearchRQ.ItineraryId);
+                if (parsedRQ.Itinerary == null)
+                    throw new Exception("Cannot identify required itinerary");
                 return parsedRQ;
             }
             catch(NullReferenceException nullRefExcep)
@@ -37,7 +39,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         {
             try
             {
-                var storedResults = ItineraryCache.GetResponse(callerSessionId);
+                var storedResults = ItineraryCache.GetItineraries(callerSessionId);
                 foreach (HotelItinerary hotelItinerary in storedResults)
                 {
                     if (hotelItinerary.HotelProperty.SupplierHotelId == requiredItineraryId)

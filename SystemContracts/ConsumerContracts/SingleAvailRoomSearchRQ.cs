@@ -11,7 +11,5 @@ namespace SystemContracts.ConsumerContracts
         public string CallerSessionId { get; set; }
 
         public string ItineraryId { get; set; }
-
-        public GeoCoordinates GeoCode { get; set; }
     }
 }

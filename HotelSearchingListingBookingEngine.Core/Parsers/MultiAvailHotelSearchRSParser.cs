@@ -45,7 +45,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 foreach (HotelItinerary hotelItinerary in itineraries)
                 {
                     ItinerarySummary uniqueItinerary;
-                    if (tryParseItinerary(hotelItinerary, out uniqueItinerary) && uniqueItinerary != null)
+                    if (TryParseItinerary(hotelItinerary, out uniqueItinerary,3) && uniqueItinerary != null)
                         fetchedItineraries.Add(uniqueItinerary);
                 }
                 return fetchedItineraries.Count > 0 ? fetchedItineraries.ToArray() : null;
@@ -64,7 +64,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
         }
 
-        private bool tryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary)
+        public bool TryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary,int MaxImageCount)
         {
             uniqueItinerary = new ItinerarySummary();
             try
@@ -91,7 +91,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 List<string> imageUrls = new List<string>();
                 foreach (Media mediaInfo in hotelItinerary.HotelProperty.MediaContent)
                 {
-                    if (imageUrls.Count >= 3)
+                    if (imageUrls.Count >= MaxImageCount)
                         break;
                     if (mediaInfo.Type == MediaType.Photo && mediaInfo.Url != null)
                     {

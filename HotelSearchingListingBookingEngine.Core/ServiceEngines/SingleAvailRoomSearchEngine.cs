@@ -11,7 +11,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
     public class SingleAvailRoomSearchEngine : ISearchEngine
     {
-        public Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ serviceRequest)
+        public async Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ serviceRequest)
         {
             try
             {
@@ -21,10 +21,11 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQParser()).Parse(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
                         throw new Exception("Unable to parse single avail request");
-                    Task<HotelRoomAvailRS> hotelRoomSearchRS = (new HotelEngineClient()).HotelRoomAvailAsync(parsedSingleAvailRQ);
+                    HotelRoomAvailRS hotelRoomSearchRS = await (new HotelEngineClient()).HotelRoomAvailAsync(parsedSingleAvailRQ);
                     if (hotelRoomSearchRS == null)
                         throw new Exception("Unable to fetch room data");
-
+                    SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
+                    return engineSearchRS;
                 }
                 else return null;
             }

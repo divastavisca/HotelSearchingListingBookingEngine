@@ -24,6 +24,7 @@ namespace HotelSearchingListingBooking.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,8 +34,10 @@ namespace HotelSearchingListingBooking.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(builder =>
+            builder.WithOrigins("http://localhost:51264/padharojanab/value"));
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }

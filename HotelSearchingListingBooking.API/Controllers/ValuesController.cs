@@ -12,19 +12,6 @@ namespace HotelSearchingListingBooking.API.Controllers
     [Route("padharojanab")]
     public class ValuesController : Controller
     {
-        // POST api/values
-        [HttpPost("value")]
-        public async Task<IActionResult> Post([FromBody]MultiAvailHotelSearchRQ value)
-        {
-            IEngineServiceProvider engineServiceProvider = new MultiAvailHotelSearchProvider();
-            var response=await engineServiceProvider.GetServiceRS(value);
-            return Ok(response);
-        }
-
-        [HttpGet]
-        public async Task Get(string value)
-        {
-
-        }
+        
     }
 }

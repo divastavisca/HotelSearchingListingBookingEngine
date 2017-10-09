@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SystemContracts.Attributes;
 
 namespace SystemContracts.Attributes.HotelAttributes
 {
-    public class HotelAmenity
+    public class Room
     {
-        public string Name { get; set; }
-
-        public HotelMedia Media { get; set; }
+        public string HotelId { get; set; }
 
         public string Description { get; set; }
-        
+
+        public List<string> OccupancyTypes { get; set; }
+
+        public List<int> OccupancyCount { get; set; }
     }
 }
