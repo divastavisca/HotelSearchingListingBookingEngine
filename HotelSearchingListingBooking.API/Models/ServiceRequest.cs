@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SystemContracts.ConsumerContracts
+namespace HotelSearchingListingBooking.API.Models
 {
     public class ServiceRequest
     {
