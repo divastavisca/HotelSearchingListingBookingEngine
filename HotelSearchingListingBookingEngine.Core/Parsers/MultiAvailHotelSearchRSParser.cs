@@ -71,15 +71,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 uniqueItinerary.ItineraryId = hotelItinerary.HotelProperty.SupplierHotelId;
                 uniqueItinerary.Name = hotelItinerary.HotelProperty.Name;
-                uniqueItinerary.Address = new HotelAddress()
-                {
-                    AddressLine1 = hotelItinerary.HotelProperty.Address.AddressLine1,
-                    AddressLine2 = hotelItinerary.HotelProperty.Address.AddressLine2,
-                    City = hotelItinerary.HotelProperty.Address.City.Name,
-                    State = hotelItinerary.HotelProperty.Address.City.State,
-                    Country = hotelItinerary.HotelProperty.Address.City.Country,
-                    ZipCode = hotelItinerary.HotelProperty.Address.ZipCode
-                };
+                uniqueItinerary.Address = hotelItinerary.HotelProperty.Address.CompleteAddress;
                 uniqueItinerary.GeoCode = JsonConvert.DeserializeObject<GeoCoordinates>(JsonConvert.SerializeObject(hotelItinerary.HotelProperty.GeoCode));
                 List<string> uniqueAmenities = new List<string>();
                 foreach (Amenity hotelAmenity in hotelItinerary.HotelProperty.Amenities)
