@@ -36,7 +36,8 @@ namespace HotelSearchingListingBookingEngine.Core
         private static string getLogText(string log,bool isException,string stackTrace)
         {
             StringBuilder logText = new StringBuilder();
-            logText.Append("Log ID: ");
+            logText.Append("-------------------------");
+            logText.Append("Log ID:");
             logText.Append(Guid.NewGuid().ToString());
             logText.AppendLine();
             logText.Append("Timestamp: ");
@@ -51,6 +52,7 @@ namespace HotelSearchingListingBookingEngine.Core
                 logText.Append(stackTrace);
             }
             logText.AppendLine();
+            logText.Append("-------------------------");
             return logText.ToString();
         }
 

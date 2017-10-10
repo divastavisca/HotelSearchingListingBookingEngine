@@ -1021,3 +1021,19 @@ Timestamp: 10/10/2017 2:42:09 AM
 Log Description: System.Exception: Unable to generate response
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
 Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+-------------------------Log ID:3e0efdbe-27e5-46d2-9457-8dd2658d9050
+Timestamp: 10/10/2017 1:38:29 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:12013bc9-b68a-4e9c-8efe-a2c8e8f9f700
+Timestamp: 10/10/2017 1:40:58 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:6ed35ce1-c1b9-4be2-ae37-f58ecbdf36de
+Timestamp: 10/10/2017 1:42:53 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+-------------------------
