@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
+using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
 {
@@ -10,7 +11,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
     {
         public async Task<IEngineServiceRS> GetServiceRS(IEngineServiceRQ serviceRQ)
         {
-            return await (new SingleAvailRoomSearchProvider()).GetServiceRS(serviceRQ);
+            return await (new SingleAvailRoomSearchEngine()).SearchAsync(serviceRQ);
         }
     }
 }

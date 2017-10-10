@@ -10,7 +10,7 @@ namespace SystemContracts.Attributes.HotelAttributes
 
         public string Name { get; set; }
 
-        public HotelAddress Address { get; set; }
+        public string Address { get; set; }
 
         public GeoCoordinates GeoCode { get; set; }
 

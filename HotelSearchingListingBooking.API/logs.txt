@@ -636,3 +636,404 @@ Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgume
    at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
    at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Log ID: 91445e32-fceb-42a4-b771-7d412aef8ec2
+Timestamp: 10/9/2017 6:48:48 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 66f9fd1a-b0b4-4370-baaf-daded580dfcf
+Timestamp: 10/9/2017 6:49:09 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 0aec2388-cb60-40f1-a914-13a308d8037f
+Timestamp: 10/9/2017 6:49:26 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 1d5b6b81-e40c-44ae-8bb5-1e1a62fd17d1
+Timestamp: 10/9/2017 6:59:55 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: f29ea0fe-a1a5-4952-8be1-27632fe974b5
+Timestamp: 10/9/2017 7:11:54 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 979eaa9e-d20c-4bde-b03e-69cf78ebff04
+Timestamp: 10/9/2017 7:11:54 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 5e3c35f0-af07-4c96-9a59-7f21f446433e
+Timestamp: 10/9/2017 7:13:46 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: 18103e94-8088-4d6e-8940-2536ec7a5a52
+Timestamp: 10/9/2017 7:20:35 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: e3dc0933-3b37-420a-b783-83261c5ebb4d
+Timestamp: 10/9/2017 7:20:35 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: afc9bbd4-33f1-4c36-930c-f2c3ab61abb7
+Timestamp: 10/9/2017 7:21:03 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: f1c3e6e8-cc2e-4e08-a828-2ad4a156ab23
+Timestamp: 10/9/2017 7:26:06 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: e47ae6f1-508a-4f2c-8034-03f3101cebb3
+Timestamp: 10/9/2017 7:26:09 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 23
+Log ID: ed7a95ea-fb90-4969-9230-4abe3ef4b861
+Timestamp: 10/9/2017 7:30:16 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.APIRequestServiceAction(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.APIRequestServiceAction(ServiceRequest serviceRequest) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Log ID: 5a850e80-2d52-4921-892d-877f052b6e04
+Timestamp: 10/10/2017 1:48:17 AM
+Log Description: System.Exception: Error in filling itinerary reviews
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Log ID: bafae0f9-4b33-44ef-aafe-20f904d13bda
+Timestamp: 10/10/2017 1:50:46 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: 92081457-0de2-4ab4-aed7-20c4f2dde045
+Timestamp: 10/10/2017 1:51:34 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 0f8b1ff7-e7da-43d5-b729-a6e24d11465d
+Timestamp: 10/10/2017 1:51:52 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 0e5ac389-b4b3-4e3c-8a6e-f127a0d5f1c4
+Timestamp: 10/10/2017 1:57:00 AM
+Log Description: System.Exception: Error in filling itinerary reviews
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Log ID: 2152b66a-421e-4788-ab8f-cfde5a77a5a7
+Timestamp: 10/10/2017 1:57:04 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: f86b7158-8f45-47a5-9af3-97eb0e3aa7d7
+Timestamp: 10/10/2017 1:57:09 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 1b38707c-2ff0-49b7-9a18-23052b61786f
+Timestamp: 10/10/2017 1:57:15 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 4b3af65f-f7b5-400d-bfcf-1b1776806342
+Timestamp: 10/10/2017 2:09:52 AM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.tryFillRoomsSummary(String supplierHotelId, Room[] hotelRooms, List`1& roomsItinerarySummary) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 117
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.tryFillRoomsSummary(String supplierHotelId, Room[] hotelRooms, List`1& roomsItinerarySummary) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 117
+Log ID: 99b428c0-d03a-4b96-91b5-bda61d003c76
+Timestamp: 10/10/2017 2:10:29 AM
+Log Description: System.Exception: Error in filling rooms summary itinerary
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 59
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 59
+Log ID: 433fe951-2524-4186-b0d0-a5cf32c0c1c6
+Timestamp: 10/10/2017 2:10:46 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: 1064dd4f-3d69-4b24-a824-b5ecddc44f26
+Timestamp: 10/10/2017 2:11:34 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 99ad1633-3006-42ed-9b75-518f7c568cba
+Timestamp: 10/10/2017 2:11:45 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: e33f045d-6783-42c9-a633-7856c3918987
+Timestamp: 10/10/2017 2:14:43 AM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.tryFillRoomsSummary(String supplierHotelId, Room[] hotelRooms, List`1& roomsItinerarySummary) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 117
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.tryFillRoomsSummary(String supplierHotelId, Room[] hotelRooms, List`1& roomsItinerarySummary) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 117
+Log ID: 85c0d579-0aeb-44b5-bde4-5a836a4708ce
+Timestamp: 10/10/2017 2:14:43 AM
+Log Description: System.Exception: Error in filling rooms summary itinerary
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 59
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 59
+Log ID: 3c679dad-6090-45ba-8ece-ca78f99f471e
+Timestamp: 10/10/2017 2:14:43 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: 4b2780ea-1b30-4b36-9f59-f497c3422850
+Timestamp: 10/10/2017 2:14:43 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 8d8d4e2d-860d-41dc-8489-dd4761c4f04f
+Timestamp: 10/10/2017 2:14:43 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 51f88f57-fafd-4ea2-a728-354c9930c0aa
+Timestamp: 10/10/2017 2:18:35 AM
+Log Description: System.Exception: Error in filling itinerary reviews
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Log ID: 7f22543d-4ccc-409b-8b6a-a2a305a28d50
+Timestamp: 10/10/2017 2:18:35 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: 5a9c4ee4-0aef-45ea-96b7-c82937059537
+Timestamp: 10/10/2017 2:18:35 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: c04921e9-950f-4a4f-a797-b5698f385f6a
+Timestamp: 10/10/2017 2:18:35 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 2467c077-fa25-4571-85ff-cf51c7753a71
+Timestamp: 10/10/2017 2:19:08 AM
+Log Description: System.Exception: Error in filling itinerary reviews
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Log ID: e53210e7-f60b-4136-a5f0-9d47bec02f2d
+Timestamp: 10/10/2017 2:19:08 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: 308b9373-0aff-4f44-b710-f7e37f3aba2f
+Timestamp: 10/10/2017 2:19:08 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 25fcc9cf-68e3-4d9e-b0be-c0c52724efa7
+Timestamp: 10/10/2017 2:19:08 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 093daa8f-fbb9-4aa4-9c3c-41cc91ffe8e3
+Timestamp: 10/10/2017 2:22:22 AM
+Log Description: System.Exception: Error in filling itinerary reviews
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 63
+Log ID: 0f96da4c-bccf-4f4c-a6e3-8208a8a7d0f7
+Timestamp: 10/10/2017 2:22:22 AM
+Log Description: System.Exception: Unable to fill itinerary for single avail request
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 27
+Log ID: d3662172-39b5-44f1-b59d-989ac56c9be4
+Timestamp: 10/10/2017 2:22:22 AM
+Log Description: System.NullReferenceException: Unable to parse response
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 30
+Log ID: 12361597-a8a3-43af-8942-cf44d4f24f9e
+Timestamp: 10/10/2017 2:22:22 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: 12573ce2-d3d4-46a8-b2b0-72971d34764f
+Timestamp: 10/10/2017 2:27:16 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: e15c8ae3-3564-44ba-9d12-4f9897ab7d21
+Timestamp: 10/10/2017 2:41:28 AM
+Log Description: System.Exception: Invalid no of rooms recorded
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 96
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 96
+Log ID: 5a982e1e-3cf7-4eba-963c-890de883e80c
+Timestamp: 10/10/2017 2:41:29 AM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Log ID: 7f849b3b-a2b4-4611-a457-953ac85485d6
+Timestamp: 10/10/2017 2:41:29 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Log ID: e8adfb0a-04ee-46d2-a1d9-c0391fd4402c
+Timestamp: 10/10/2017 2:42:09 AM
+Log Description: System.Exception: Invalid no of rooms recorded
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 96
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 96
+Log ID: d83d451e-40b8-462a-9118-ffb554c88ab3
+Timestamp: 10/10/2017 2:42:09 AM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBookingEngine.Core.ItineraryCache.IsPresent(String sessionId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ItineraryCache.cs:line 19
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Log ID: 0e01bf7f-ab17-460c-add7-554bf23578ff
+Timestamp: 10/10/2017 2:42:09 AM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIRequestServiceAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+-------------------------Log ID:3e0efdbe-27e5-46d2-9457-8dd2658d9050
+Timestamp: 10/10/2017 1:38:29 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:12013bc9-b68a-4e9c-8efe-a2c8e8f9f700
+Timestamp: 10/10/2017 1:40:58 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:6ed35ce1-c1b9-4be2-ae37-f58ecbdf36de
+Timestamp: 10/10/2017 1:42:53 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+-------------------------

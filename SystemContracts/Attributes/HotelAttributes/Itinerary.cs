@@ -17,9 +17,7 @@ namespace SystemContracts.Attributes.HotelAttributes
         public int ChildrensCount { get; set; }
 
         public List<string> Reviews { get; set; }
-        
-        public float Fare { get; set; }
 
-        public List<Room> Rooms { get; set; }
+        public List<RoomSummary> Rooms { get; set; }
     }
 }

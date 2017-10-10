@@ -12,4 +12,9 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSearchingListingBooking.API\HotelSearchingListingBooking.API.csproj" />
+    <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
+  </ItemGroup>
+
 </Project>

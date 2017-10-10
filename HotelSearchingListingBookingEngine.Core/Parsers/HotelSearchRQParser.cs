@@ -154,9 +154,24 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
         }
 
-        private int getMinimumRoomsRequired(int adultsCount, int childrensCount)
+        private int getMinimumRoomsRequired(int adultsCount, int childrensCount) //2 adults + 1 children in a single room or 4 childrens in one room
         {
-            return (adultsCount / 2 + childrensCount / 2);
+            int roomsRequired = 0;
+            roomsRequired = adultsCount / 2;
+            if (roomsRequired < childrensCount)
+            {
+                childrensCount = childrensCount - roomsRequired;
+                int addititionalRooms = childrensCount / 4;
+                roomsRequired += addititionalRooms;
+                if (adultsCount % 2 != 0)
+                {
+                    if (childrensCount % 4 == 0)
+                        roomsRequired++;
+                }
+            }
+            if (adultsCount == 1)
+                roomsRequired++;
+            return roomsRequired;
         }
 
         private Location getLocation(string name, string type, GeoCoordinates geoCode)

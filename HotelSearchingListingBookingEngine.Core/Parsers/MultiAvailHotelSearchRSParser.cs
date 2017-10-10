@@ -64,22 +64,14 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
         }
 
-        public bool TryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary,int MaxImageCount)
+        public bool TryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary,int maxImagesCount)
         {
             uniqueItinerary = new ItinerarySummary();
             try
             {
                 uniqueItinerary.ItineraryId = hotelItinerary.HotelProperty.SupplierHotelId;
                 uniqueItinerary.Name = hotelItinerary.HotelProperty.Name;
-                uniqueItinerary.Address = new HotelAddress()
-                {
-                    AddressLine1 = hotelItinerary.HotelProperty.Address.AddressLine1,
-                    AddressLine2 = hotelItinerary.HotelProperty.Address.AddressLine2,
-                    City = hotelItinerary.HotelProperty.Address.City.Name,
-                    State = hotelItinerary.HotelProperty.Address.City.State,
-                    Country = hotelItinerary.HotelProperty.Address.City.Country,
-                    ZipCode = hotelItinerary.HotelProperty.Address.ZipCode
-                };
+                uniqueItinerary.Address = hotelItinerary.HotelProperty.Address.CompleteAddress;
                 uniqueItinerary.GeoCode = JsonConvert.DeserializeObject<GeoCoordinates>(JsonConvert.SerializeObject(hotelItinerary.HotelProperty.GeoCode));
                 List<string> uniqueAmenities = new List<string>();
                 foreach (Amenity hotelAmenity in hotelItinerary.HotelProperty.Amenities)
@@ -91,7 +83,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 List<string> imageUrls = new List<string>();
                 foreach (Media mediaInfo in hotelItinerary.HotelProperty.MediaContent)
                 {
-                    if (imageUrls.Count >= MaxImageCount)
+                    if (imageUrls.Count >= maxImagesCount)
                         break;
                     if (mediaInfo.Type == MediaType.Photo && mediaInfo.Url != null)
                     {
