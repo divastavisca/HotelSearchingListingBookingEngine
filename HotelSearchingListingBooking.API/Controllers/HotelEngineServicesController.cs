@@ -15,7 +15,7 @@ namespace HotelSearchingListingBooking.API.Controllers
     public class HotelEngineServicesController : Controller
     {        
         [HttpPost("value")]
-        public async Task<IActionResult> APIRequestServiceAction([FromBody]ServiceRequest serviceRequest)
+        public async Task<IActionResult> APIServiceRequestAction([FromBody]ServiceRequest serviceRequest)
         {
             try
             {
