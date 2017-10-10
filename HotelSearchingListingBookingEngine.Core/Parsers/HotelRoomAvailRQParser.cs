@@ -30,7 +30,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
@@ -38,7 +38,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = nullRefExcep.Source
                 };
@@ -46,7 +46,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = baseException.Source
                 };

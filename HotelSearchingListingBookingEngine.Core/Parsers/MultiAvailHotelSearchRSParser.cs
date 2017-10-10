@@ -28,7 +28,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 Logger.StoreLog(_exceptionMap[0]);
-                throw new ResponseParserException()
+                throw new ServiceResponseParserException()
                 {
                     Source = nullRefExcep.Source
                 };
@@ -37,7 +37,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
                 Logger.StoreLog(_exceptionMap[0]);
-                throw new ResponseParserException()
+                throw new ServiceResponseParserException()
                 {
                     Source = baseExcep.Source
                 };

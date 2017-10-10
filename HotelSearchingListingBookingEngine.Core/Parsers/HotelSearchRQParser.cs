@@ -139,7 +139,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(ObjectInitializationException objectInitialisationException)
             {
                 Logger.LogException(objectInitialisationException.ToString(), objectInitialisationException.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = objectInitialisationException.Source
                 };
@@ -147,7 +147,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(InvalidValueInitializationException invalidValueInitializationException)
             {
                 Logger.LogException(invalidValueInitializationException.ToString(), invalidValueInitializationException.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = invalidValueInitializationException.Source
                 };
@@ -155,7 +155,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = nullRefException.Source
                 };
@@ -163,7 +163,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(InvalidOperationException invalidOpExcep)
             {
                 Logger.LogException(invalidOpExcep.ToString(),invalidOpExcep.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = invalidOpExcep.Source
                 };
@@ -171,7 +171,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(),baseExcep.StackTrace);
-                throw new RequestParserException()
+                throw new ServiceRequestParserException()
                 {
                     Source = baseExcep.Source
                 };

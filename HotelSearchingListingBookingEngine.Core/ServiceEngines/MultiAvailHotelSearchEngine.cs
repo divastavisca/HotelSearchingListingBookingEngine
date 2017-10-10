@@ -35,7 +35,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 }
                 return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
             }
-            catch(RequestParserException requestParserException)
+            catch(ServiceRequestParserException requestParserException)
             {
                 Logger.LogException(requestParserException.ToString(), requestParserException.StackTrace);
                 throw new SearchEngineException()
