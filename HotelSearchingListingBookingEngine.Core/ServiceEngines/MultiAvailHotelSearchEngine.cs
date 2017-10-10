@@ -7,6 +7,7 @@ using SystemContracts.ServiceContracts;
 using ExternalServices.HotelSearchEngine;
 using HotelSearchingListingBookingEngine.Core.Parsers;
 using HotelSearchingListingBookingEngine.Core;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
@@ -18,6 +19,8 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
             {
                 HotelSearchRQ hotelSearchRQ = (new HotelSearchRQParser()).Parse((MultiAvailHotelSearchRQ)searchRQ);
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
+                if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
+                    throw new NoResultsFoundException();
                 if (ItineraryCache.IsPresent(hotelSearchRS.SessionId) == false)
                 {
                     ItineraryCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRS.Itineraries);
@@ -32,15 +35,37 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 }
                 return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
             }
-            catch(NullReferenceException nullRefExcep)
+            catch(RequestParserException requestParserException)
+            {
+                Logger.LogException(requestParserException.ToString(), requestParserException.StackTrace);
+                throw new SearchEngineException()
+                {
+                    Source = requestParserException.Source
+                };
+            }
+            catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new SearchEngineException()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
-            catch(Exception baseException)
+            catch (NoResultsFoundException noResultsFoundExcetion)
+            {
+                Logger.StoreLog(noResultsFoundExcetion.ToString());
+                throw new SearchEngineException()
+                {
+                    Source = noResultsFoundExcetion.Source
+                };
+            }
+            catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                return null;
+                throw new SearchEngineException()
+                {
+                    Source = baseException.Source
+                };
             }
         }
     }

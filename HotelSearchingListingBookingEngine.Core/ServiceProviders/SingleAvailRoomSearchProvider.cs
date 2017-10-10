@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
 using HotelSearchingListingBookingEngine.Core.ServiceEngines;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
 {
@@ -11,7 +12,26 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
     {
         public async Task<IEngineServiceRS> GetServiceRS(IEngineServiceRQ serviceRQ)
         {
-            return await (new SingleAvailRoomSearchEngine()).SearchAsync(serviceRQ);
+            try
+            {
+                return await (new SingleAvailRoomSearchEngine()).SearchAsync(serviceRQ);
+            }
+            catch (SearchEngineException searchEngineException)
+            {
+                Logger.LogException(searchEngineException.ToString(), searchEngineException.StackTrace);
+                throw new ServiceProviderException()
+                {
+                    Source = searchEngineException.Source
+                };
+            }
+            catch (Exception baseException)
+            {
+                Logger.LogException(baseException.ToString(), baseException.StackTrace);
+                throw new ServiceProviderException()
+                {
+                    Source = baseException.Source
+                };
+            }
         }
     }
 }

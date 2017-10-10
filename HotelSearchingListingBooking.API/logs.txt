@@ -1036,4 +1036,249 @@ Timestamp: 10/10/2017 1:42:53 PM
 Log Description: System.Exception: Unable to generate response
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
 Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:79ae416f-4b11-4c18-9343-6f3556c45b68
+Timestamp: 10/10/2017 4:51:52 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:9e492fbb-56e5-4165-a4da-952ce8528d8f
+Timestamp: 10/10/2017 5:02:10 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:f91aacff-1660-4f9c-9505-f4f145f7456e
+Timestamp: 10/10/2017 5:02:17 PM
+Log Description: System.Exception: Unable to generate response
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:11b0ee31-536c-460c-8512-6a014756133c
+Timestamp: 10/10/2017 7:07:04 PM
+Log Description: System.NotSupportedException: Method HotelAvailAsync is not supported on this proxy, this can happen if the method is not marked with OperationContractAttribute or if the interface type is not marked with ServiceContractAttribute.
+   at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:719baef9-273f-4254-9c71-9b1645fd0a09
+Timestamp: 10/10/2017 7:07:36 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:7cc2e4d1-f293-475c-bac9-b948eb6550ec
+Timestamp: 10/10/2017 7:09:21 PM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:dcd9b501-4133-4fa3-ba5b-63fe3ab09053
+Timestamp: 10/10/2017 7:18:50 PM
+Log Description: System.NotSupportedException: Method HotelAvailAsync is not supported on this proxy, this can happen if the method is not marked with OperationContractAttribute or if the interface type is not marked with ServiceContractAttribute.
+   at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:e9cf05d3-9b99-420c-b6a5-b58814c578aa
+Timestamp: 10/10/2017 7:18:50 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:1a66329a-0dbb-4fa1-b48c-65b5e1a61f6c
+Timestamp: 10/10/2017 7:18:50 PM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:18e34ef6-1c5c-4abc-8b18-cefe5226ed89
+Timestamp: 10/10/2017 7:19:13 PM
+Log Description: System.NotSupportedException: Method HotelAvailAsync is not supported on this proxy, this can happen if the method is not marked with OperationContractAttribute or if the interface type is not marked with ServiceContractAttribute.
+   at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:1812c486-7622-4956-a2c7-c00270a8266f
+Timestamp: 10/10/2017 7:19:14 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:4ca173d2-4fb9-4611-a8da-85c5c13cdefb
+Timestamp: 10/10/2017 7:19:14 PM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:a53bdaf7-266b-491b-a704-6603ecb8afc3
+Timestamp: 10/10/2017 7:22:37 PM
+Log Description: System.NotSupportedException: Method HotelAvailAsync is not supported on this proxy, this can happen if the method is not marked with OperationContractAttribute or if the interface type is not marked with ServiceContractAttribute.
+   at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+Stack Trace:    at System.ServiceModel.Channels.ServiceChannelProxy.GetMethodData(MethodCall methodCall)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(MethodInfo targetMethod, Object[] args)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Reflection.DispatchProxyGenerator.Invoke(Object[] args)
+   at generatedProxy_1.HotelAvailAsync(HotelSearchRQ )
+   at ExternalServices.HotelSearchEngine.HotelEngineClient.HotelAvailAsync(HotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelDataServicesConnecters\Connected Services\ExternalServices.HotelSearchEngine\Reference.cs:line 10611
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:36182e7d-5027-4245-b3b9-13a4c097d545
+Timestamp: 10/10/2017 7:22:37 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:5d7bf377-962d-4c49-9367-bd44eb875c77
+Timestamp: 10/10/2017 7:22:37 PM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:9b5fda8e-dfdb-49cf-a700-72f03319e81c
+Timestamp: 10/10/2017 7:48:36 PM
+Log Description: System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getLocation(String name, String type, GeoCoordinates geoCode) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 224
+Stack Trace:    at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getLocation(String name, String type, GeoCoordinates geoCode) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 224
+--------------------------------------------------Log ID:d40d8da4-28c2-4a32-b197-52cd229fbd18
+Timestamp: 10/10/2017 7:48:53 PM
+Log Description: System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getLocation(String name, String type, GeoCoordinates geoCode) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 249
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 100
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getLocation(String name, String type, GeoCoordinates geoCode) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 249
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 100
+--------------------------------------------------Log ID:e1d012a1-d26b-4084-a78a-05a59489e894
+Timestamp: 10/10/2017 7:49:08 PM
+Log Description: Error in parsing Request
+Exception at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 174
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 20
+--------------------------------------------------Log ID:d9e22a9a-1c19-445a-ab6b-571fe1faae69
+Timestamp: 10/10/2017 7:49:21 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:e448d011-84b7-4c5e-89cc-61b5965e0372
+Timestamp: 10/10/2017 7:49:51 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:f864986e-bbbb-4e3f-ad79-a86a07030219
+Timestamp: 10/10/2017 7:51:00 PM
+Log Description: No Results were discovered or some exception occured at supplier end
+--------------------------------------------------Log ID:9d321c59-4f14-419b-a290-2248ba6c5f15
+Timestamp: 10/10/2017 7:51:00 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:74aa84a1-58b7-4f9d-a0f4-b50e08c53652
+Timestamp: 10/10/2017 7:51:00 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:4af62f20-6412-418f-9923-748adc707163
+Timestamp: 10/10/2017 7:51:55 PM
+Log Description: No Results were discovered or some exception occured at supplier end
+--------------------------------------------------Log ID:7615a7f2-022f-4266-a13b-1892faaedc61
+Timestamp: 10/10/2017 7:51:58 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:62763bd9-66e1-47ec-bee9-f810de399768
+Timestamp: 10/10/2017 7:52:08 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
 -------------------------

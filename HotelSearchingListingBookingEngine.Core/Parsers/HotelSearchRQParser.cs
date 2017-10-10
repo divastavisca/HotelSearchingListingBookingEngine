@@ -9,6 +9,7 @@ using SystemContracts.ConsumerContracts;
 using HotelSearchingListingBookingEngine.Core;
 using Newtonsoft.Json;
 using System.IO;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
@@ -67,47 +68,65 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 parsedRQ.SessionId = Guid.NewGuid().ToString();
                 parsedRQ.Filters = new AvailabilityFilter[1]
                 {
-                new AvailabilityFilter()
-                {
-                    ReturnOnlyAvailableItineraries = _returnOnlyAvailableItineraries
-                }
+                    new AvailabilityFilter()
+                    {
+                       ReturnOnlyAvailableItineraries = _returnOnlyAvailableItineraries
+                    }
                 };
                 parsedRQ.HotelSearchCriterion = new HotelSearchCriterion();
                 parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
                 if (parsedRQ.HotelSearchCriterion.Attributes == null)
-                    throw new Exception("Failed to Initialize state bags");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.Attributes.GetType().Name
+                    };
                 parsedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
                 parsedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
                 parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
                 parsedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
                 parsedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
                 if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
-                    throw new Exception("Failed to Initialize requester");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.Pos.Requester.GetType().Name
+                    };
                 parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
                 parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges.ToArray());
                 if (parsedRQ.HotelSearchCriterion.Guests == null)
-                    throw new Exception("Failed to Initilize guests objects");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.Guests.GetType().Name
+                    };
                 parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
                 if (parsedRQ.HotelSearchCriterion.Location == null)
-                    throw new Exception("Failed to initilize Location object");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.Location.GetType().Name
+                    };
                 parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Count);
                 if (parsedRQ.HotelSearchCriterion.NoOfRooms <= 0)
-                    throw new Exception("Invalid no of rooms recorded");
+                    throw new InvalidValueInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.NoOfRooms.GetType().Name
+                    };
                 parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
                 {
                     DisplayOrder = HotelDisplayOrder.ByRelevanceScoreDescending
                 };
                 parsedRQ.HotelSearchCriterion.RoomOccupancyTypes = new RoomOccupancyType[1]
                 {
-                new RoomOccupancyType()
-                {
-                    PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
-                }
+                    new RoomOccupancyType()
+                    {
+                         PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
+                    }
                 };
                 parsedRQ.HotelSearchCriterion.SearchType = _hotelSearchTypeResolver[request.SearchLocation.Type];
                 parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
                 if (parsedRQ.HotelSearchCriterion.StayPeriod == null)
-                    throw new Exception("Failed to initialize Stay period");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = parsedRQ.HotelSearchCriterion.StayPeriod.GetType().Name
+                    };
                 parsedRQ.PagingInfo = new PagingInfo()
                 {
                     Enabled = true,
@@ -117,21 +136,45 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     TotalResults = _defaultTotalResults
                 };
             }
+            catch(ObjectInitializationException objectInitialisationException)
+            {
+                Logger.LogException(objectInitialisationException.ToString(), objectInitialisationException.StackTrace);
+                throw new RequestParserException()
+                {
+                    Source = objectInitialisationException.Source
+                };
+            }
+            catch(InvalidValueInitializationException invalidValueInitializationException)
+            {
+                Logger.LogException(invalidValueInitializationException.ToString(), invalidValueInitializationException.StackTrace);
+                throw new RequestParserException()
+                {
+                    Source = invalidValueInitializationException.Source
+                };
+            }
             catch(NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
-
-                return null;
+                throw new RequestParserException()
+                {
+                    Source = nullRefException.Source
+                };
             }
             catch(InvalidOperationException invalidOpExcep)
             {
                 Logger.LogException(invalidOpExcep.ToString(),invalidOpExcep.StackTrace);
-                return null;
+                throw new RequestParserException()
+                {
+                    Source = invalidOpExcep.Source
+                };
             }
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(),baseExcep.StackTrace);
-                return null;
+                throw new RequestParserException()
+                {
+                    Source = baseExcep.Source
+                };
             }
             return parsedRQ;
         }
@@ -150,7 +193,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(Exception excep)
             {
                 Logger.LogException(excep.ToString(), excep.StackTrace);
-                return null;
+                throw new Exception();
             }
         }
 
@@ -190,15 +233,20 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     GeoCode = JsonConvert.DeserializeObject<GeoCode>(JsonConvert.SerializeObject(geoCode))
                 };
             }
+            catch(JsonException jsonException)
+            {
+                Logger.LogException(jsonException.ToString(), jsonException.StackTrace);
+                throw new Exception();
+            }
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(),nullRefExcep.StackTrace);
-                return null;
+                throw new Exception();
             }
             catch(Exception excep)
             {
                 Logger.LogException(excep.ToString(),excep.StackTrace);
-                return null;
+                throw new Exception();
             }
         }
 
@@ -221,7 +269,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new Exception();
             }
         }
 
@@ -254,12 +302,12 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new Exception();
             }
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                return null;
+                throw new Exception();
             }
         }
 
@@ -273,12 +321,12 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch (IOException ioException)
             {
                 Logger.StoreLog(ioException.ToString());
-                return null;
+                throw new Exception();
             }
             catch (Exception exception)
             {
                 Logger.StoreLog(exception.ToString());
-                return null;
+                throw new Exception();
             }
             try
             {
@@ -289,7 +337,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch (Exception baseException)
             {
                 Logger.StoreLog(baseException.ToString());
-                return null;
+                throw new Exception();
             }
         }
     }

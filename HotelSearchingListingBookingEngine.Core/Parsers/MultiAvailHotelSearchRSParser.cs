@@ -6,6 +6,7 @@ using ExternalServices.HotelSearchEngine;
 using SystemContracts.Attributes.HotelAttributes;
 using Newtonsoft.Json;
 using SystemContracts.Attributes;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
@@ -27,13 +28,19 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 Logger.StoreLog(_exceptionMap[0]);
-                return null;
+                throw new ResponseParserException()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
                 Logger.StoreLog(_exceptionMap[0]);
-                return null;
+                throw new ResponseParserException()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
@@ -54,13 +61,19 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 Logger.StoreLog(_exceptionMap[1]);
-                return null;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
                 Logger.StoreLog(_exceptionMap[1]);
-                return null;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
@@ -96,17 +109,31 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 uniqueItinerary.MinimumPrice = hotelItinerary.Fare.BaseFare.Amount;
                 return true;
             }
+            catch(JsonException jsonException)
+            {
+                Logger.LogException(jsonException.ToString(), jsonException.StackTrace);
+                throw new Exception()
+                {
+                    Source = jsonException.Source
+                };
+            }
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 Logger.StoreLog(_exceptionMap[2]);
-                return false;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
                 Logger.StoreLog(_exceptionMap[2]);
-                return false;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
