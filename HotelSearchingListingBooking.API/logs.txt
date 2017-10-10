@@ -1036,4 +1036,137 @@ Timestamp: 10/10/2017 1:42:53 PM
 Log Description: System.Exception: Unable to generate response
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
 Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 34
+--------------------------------------------------Log ID:98973e14-a200-431f-9db8-d6eb1b1cb7c2
+Timestamp: 10/10/2017 9:47:50 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:3b2282ef-d3cb-4884-8ae3-6da34eb42e03
+Timestamp: 10/10/2017 10:05:17 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:dff7f9c9-6bf1-4b09-a33b-88387f077273
+Timestamp: 10/10/2017 10:26:12 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:a2073fef-2a97-47c4-aeb5-2bed44dc100d
+Timestamp: 10/10/2017 10:26:12 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:fd263bb5-c4e9-4c19-b79f-92da31ed378b
+Timestamp: 10/10/2017 10:31:13 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:ff27e986-5b45-477d-9bb2-43f8f523f38e
+Timestamp: 10/10/2017 10:34:33 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:3b2f2dd8-934a-46e0-aec7-bee774321c6f
+Timestamp: 10/10/2017 10:34:33 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:dd406c91-e839-42ce-b49d-0a4bec657445
+Timestamp: 10/10/2017 10:37:00 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:420bfde7-242a-4e3a-95c2-020bddd99ddf
+Timestamp: 10/10/2017 10:37:00 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:21e92118-9436-4271-882e-0626595fab78
+Timestamp: 10/10/2017 10:37:51 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:3825c6e7-0164-4673-82a5-86b5561ab9f3
+Timestamp: 10/10/2017 10:38:48 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:6a3d03fa-e313-47a5-80e7-85342f7f9b91
+Timestamp: 10/10/2017 10:41:45 PM
+Log Description: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:700ac2a5-cb28-45cc-a74d-f2609fa632e0
+Timestamp: 10/10/2017 10:50:01 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:16859720-a9ad-43d0-b37e-221f139a0b17
+Timestamp: 10/10/2017 10:50:08 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:c0f5143a-b3a0-4229-a9c3-c80000fb5cc9
+Timestamp: 10/10/2017 10:57:10 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:c332e7b2-8586-46dd-bf20-52a6b6473bc3
+Timestamp: 10/10/2017 10:57:12 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:501e5630-90ff-4bc0-ab7f-8fc884827236
+Timestamp: 10/10/2017 10:59:41 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+--------------------------------------------------Log ID:8e0ba32b-4718-4b38-a22f-7a5b6381f1ee
+Timestamp: 10/10/2017 11:00:10 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
+Stack Trace:    at HotelSearchingListingBooking.API.Models.ServiceRequestResolver.GetServiceType(ServiceRequest serviceRequest) in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Models\ServiceRequestResolver.cs:line 20
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\sacharya\Desktop\Hotel 9-10-17\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 22
 -------------------------

@@ -49,5 +49,6 @@ namespace HotelSearchingListingBooking.API.Controllers
                 return BadRequest();
             }
         }
+               
     }
 }
