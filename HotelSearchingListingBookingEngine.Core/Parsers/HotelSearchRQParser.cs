@@ -32,27 +32,6 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         private readonly int _defaultCompanyId = 0;
         private readonly string _defaultPriceCurrencyCode = "INR";
         private readonly float _deafultSearchRadius = 30;
-        private readonly Dictionary<string, LocationCodeContext> _locationTypeResolver = new Dictionary<string, LocationCodeContext>()
-        {
-            {"Address",LocationCodeContext.Address },
-            {"Airport",LocationCodeContext.Airport },
-            {"City",LocationCodeContext.City },
-            {"GeoCode",LocationCodeContext.GeoCode },
-            {"PointOfInterest",LocationCodeContext.PointOfInterest},
-            {"RentalLocation",LocationCodeContext.RentalLocation },
-            {"ZipCode", LocationCodeContext.ZipCode }
-        };
-        private readonly Dictionary<string, HotelSearchType> _hotelSearchTypeResolver = new Dictionary<string, HotelSearchType>()
-        {
-            {"Address",HotelSearchType.Address },
-            {"Airport",HotelSearchType.Airport },
-            {"City",HotelSearchType.City },
-            {"GeoCode",HotelSearchType.GeoCode },
-            {"PointOfInterest",HotelSearchType.PointOfInterest},
-            {"ZipCode", HotelSearchType.ZipCode },
-            {"IdList",HotelSearchType.IdList },
-            {"Tags",HotelSearchType.Tags }
-        };
         private readonly int _defaultPagingInfoStartNumber = 100;
         private readonly int _defaultPagingInfoEndNumber = 120;
         private readonly int _defaultTotalRecordsBeforeFiltering = 0;
@@ -84,13 +63,13 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
                     throw new Exception("Failed to Initialize requester");
                 parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
-                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAges.ToArray());
+                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAge.ToArray());
                 if (parsedRQ.HotelSearchCriterion.Guests == null)
                     throw new Exception("Failed to Initilize guests objects");
                 parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
                 if (parsedRQ.HotelSearchCriterion.Location == null)
                     throw new Exception("Failed to initilize Location object");
-                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAges.Count);
+                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAge.Count);
                 if (parsedRQ.HotelSearchCriterion.NoOfRooms <= 0)
                     throw new Exception("Invalid no of rooms recorded");
                 parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
@@ -104,7 +83,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
                 }
                 };
-                parsedRQ.HotelSearchCriterion.SearchType = _hotelSearchTypeResolver[request.SearchLocation.Type];
+                parsedRQ.HotelSearchCriterion.SearchType = HotelSearchType.GeoCode;
                 parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
                 if (parsedRQ.HotelSearchCriterion.StayPeriod == null)
                     throw new Exception("Failed to initialize Stay period");
@@ -180,11 +159,11 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 return new Location()
                 {
-                    CodeContext = _locationTypeResolver[type],
+                    CodeContext = LocationCodeContext.GeoCode,
                     Radius = new Distance()
                     {
                         Amount = _deafultSearchRadius,
-                        From = _locationTypeResolver[type],
+                        From = LocationCodeContext.GeoCode,
                         Unit = DistanceUnit.mi
                     },
                     GeoCode = JsonConvert.DeserializeObject<GeoCode>(JsonConvert.SerializeObject(geoCode))

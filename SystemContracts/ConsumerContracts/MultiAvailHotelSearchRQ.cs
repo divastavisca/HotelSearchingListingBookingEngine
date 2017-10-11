@@ -17,9 +17,9 @@ namespace SystemContracts.ConsumerContracts
 
         public int AdultsCount { get; set; }
 
-        public int ChildrensCount { get; set; }
+        public int ChildrenCount { get; set; }
 
-        public List<int> ChildrenAges { get; set; }
+        public List<int> ChildrenAge { get; set; }
 
         //public MultiAvailHotelSearchRQ(Destination searchLocation,DateTime checkInDate,DateTime checkOutDate,int adultsCount,int childrenCount,List<int> childrenAges)
         //{
