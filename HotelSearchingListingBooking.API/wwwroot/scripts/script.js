@@ -99,7 +99,7 @@ function (){
                             ]
     };
     listHotels(multiAvailHotelSearchRS);
-    var placeSuggestions; var suggestionArray = new Array(); var multiAvailHotelSearchRS; var childrenAgeArray;
+    var placeSuggestions;var suggestionArray=new Array();var multiAvailHotelSearchRS;
     {for(var index=1;index<18;index++)
         {
             window.childAgeList+="<option value="+index+">"+index+"</option>";
@@ -114,8 +114,8 @@ function (){
     {
         $("#location").on('input propertychange',function(){$("#secondaryElementsContainer").css("display","block")});
     }//binding function to location input field-on input secondary elements show
-    $("#location").on('keyup input propertychange',function()
-            {
+    $("#location").on('keyup input propertychange',function(){
+        
                 var locationtext=$("#location").val();
                 var autoSuggestRequestUrl="http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=city|airport|poi&query="+locationtext;
                 $.ajax({
@@ -158,7 +158,11 @@ function (){
         minDate:2,
         maxDate:'+10m',
         onSelect:function(selectedDate){
-        $("#checkindate").datepicker("option","maxDate",selectedDate);
+            var dateParts=selectedDate.split("-");
+            var date=dateParts[1]+"-"+dateParts[0]+"-"+dateParts[2];
+            var newdate=new Date(date);
+            newdate.setDate(newdate.getDate()-1);
+            $("#checkindate").datepicker("option","maxDate",newdate);
     }});
     $("#checkindate").datepicker({
         dateFormat:'dd-mm-yy',
@@ -167,9 +171,13 @@ function (){
         maxDate:'+10m',
         onSelect:function(selectedDate){
             var dateParts=selectedDate.split("-");
-            var mincheckoutdate=new Date(dateParts[2],dateParts[1],dateParts[0]);
-            mincheckoutdate.setDate(mincheckoutdate.getDate()+1);
-            $("#checkoutdate").datepicker("option","minDate",mincheckoutdate);
+            var date=dateParts[1]+"-"+dateParts[0]+"-"+dateParts[2];
+            //var mincheckoutdate=new Date(dateParts[2],dateParts[1],dateParts[0]);
+            //mincheckoutdate.setDate(mincheckoutdate.getDate()+1);
+            //$("#checkoutdate").datepicker("option","minDate",mincheckoutdate);
+            var newdate=new Date(date);
+            newdate.setDate(newdate.getDate()+1);
+            $("#checkoutdate").datepicker("option","minDate",newdate);
             
     }});        
     $("#childrencount").change(function(){
@@ -189,7 +197,7 @@ function (){
         var locationParts=($("#location").val().split('|'));
         var locationId=locationParts[2];
         var locationType=locationParts[locationParts.length-1];
-        childrenAgeArray=new Array();
+        var childrenAgeArray=new Array();
         childrenAgeArray.pop();
         for(var index=0;index<$("#childrencount").val();index++)
             {
@@ -198,63 +206,42 @@ function (){
             }
         for(var counter=0;counter<(jsonResponseData.length);counter++)
             {
-                    {
                         for(var innerCounter=0;innerCounter<(jsonResponseData[counter].ItemList.length);innerCounter++)
                             {
                                 if(jsonResponseData[counter].ItemList[innerCounter].Id==locationId)
                                    {
-                                       var Date=($('#checkindate').val()).split("-");
-                                       var year=Date[2];
-                                       Date[2]=Date[0];
-                                       Date[0]=year;
-                                       var checkInDate=Date;
-                                       Date=($('#checkoutdate').val()).split("-");
-                                       year=Date[2];
-                                       Date[2]=Date[0];
-                                       Date[0]=year;
-                                       var checkOutDate=Date;
                                        var jsonLocationObject= jsonResponseData[counter].ItemList[innerCounter];
                                        var multiAvailRQ = {
                                                                 "SearchLocation":{
-                                                                                    'Name':jsonLocationObject.Name,
-                                                                                    'Type':jsonLocationObject.SearchType,
-                                                                                    'GeoCode':
+                                                                                    "Name":jsonLocationObject.Name,
+                                                                                    "Type":jsonLocationObject.SearchType,
+                                                                                    "GeoCode":
                                                                                         {
-                                                                                            'Latitude':jsonLocationObject.Latitude,
-                                                                                           'Longitude':jsonLocationObject.Longitude
+                                                                                           "Latitude":jsonLocationObject.Latitude,
+                                                                                           "Longitude":jsonLocationObject.Longitude
                                                                                         },
                                                                                     
                                                                                 },
-                                                                "CheckInDate":checkInDate[0]+'-'+checkInDate[1]+'-'+checkInDate[2],
-                                                                "CheckOutDate":checkOutDate[0]+'-'+checkOutDate[1]+'-'+checkOutDate[2],
-                                                                "AdultsCount":parseInt($('#adultcount').val()),
-                                                                "ChildrenCount":parseInt($('#childrencount').val()),
-                                                                "ChildrenAge":childrenAgeArray
+                                                                "CheckInDate":$("#checkindate").val(),
+                                                                "CheckOutDate":$("#checkoutdate").val(),
+                                                                "AdultsCount":parseInt($("#adultcount").val()),
+                                                                "ChildrenCount":parseInt($("#childrencount").val()),
+                                                                "ChildrenAges":childrenAgeArray
                                                             };
                                        var multiAvailRQString=JSON.stringify(multiAvailRQ);
-                                      // multiAvailRQString=multiAvailRQString.replace('"',"'");
-                                       var IEngineServiceRQ=
-                                       {
-                                            "ServiceName":"MultiAvail",
-                                           "JsonRequest":multiAvailRQString
-                                       };
-//                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"JsonRequest\":'+multiAvailRQString+'};';
-//                                       
+                                       multiAvailRQString=multiAvailRQString.replace('"','\"');
+                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"multiAvailRQ\":'+multiAvailRQString+'};';
                                        $.ajax({
                                                type:'post',
-                                               headers:
-                                                {
-                                                    "Content-Type": "application/json"
-                                                },
-                                               url:"../padharojanab/value",
-                                               data:JSON.stringify(IEngineServiceRQ),
+                                               url:'..padharojanab/value',
+                                               data:IEngineServiceRQ,
                                                success:function(response){console.log(response);},
                                                error:function(response){console.log(response);},
-                                               
+                                               contentType:'text/plain'
                                            });
                                    }
                             }
-                    }
             }
-        });    
+        });
 });
+;

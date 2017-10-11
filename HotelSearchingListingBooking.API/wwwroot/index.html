@@ -23,14 +23,14 @@
                 Where hospitality meets bay...
         </span>
         <form id="hotel-search-form">
-            <fieldset id="location-details">
-                <div class="column-items">
+            <fieldset>
+                <div>
                     <label for="location">Location</label>
-                    <input id="location" type="text" name="location" size=60 required>
+                    <input id="location" type="text" name="location" size=80 required>
                 </div>
             </fieldset>
             <fieldset id="secondaryElementsContainer">
-                 <div class="row-items">
+                <div class="row-items">
                     <div>
                     <label for="checkin">Check-In-Date</label>
                     <input class="date" type="text" id="checkindate" name="checkin" placeholder='dd-mm-yyyy' required>
@@ -41,9 +41,7 @@
                     </div>
                 </div>
                 <div>
-                     
-        
-                <label for="childrencount">Children(Below 18)</label>
+                    <label id="childcount"for="childrencount">Children(Below 18)</label>
                     <select required id="childrencount">
                         <option value="0">0</option>
                         <option value="1">1</option>
@@ -53,9 +51,6 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                <div id="children-age-container">
-                    
-                </div>
                     <label for="adultcount">Adults(18+)</label>
                     <select required id="adultcount">
                         <option value="1">1</option>
@@ -67,12 +62,12 @@
                         <option value="7">7</option>
                     </select>
                 </div>    
-                
-                <button type="button" id="search-hotels-button">Search Hotels</button>
+                <div id="children-age-container">
+                </div>
+                <button id="search-hotels-button">Search Hotels</button>
             </fieldset>
         </form>
     </section>
-    
     <main>
         <table id="hotels-list-container">
 
@@ -82,29 +77,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script src="scripts/script.js"></script>
-<!--
     <script id="hotel-list-template" type="text/x-handlebars-template">
-        {{#each multiAvailHotelSearchRS.itineraries }}
-        <h2>{{name}}</h2>
-    </script>
-
+        {{#each multiAvailHotelSearchRS.Itineraries }}
         <tr>
             <td><input type="hidden" value={{GeoCode.Latitude}}>
                 <input type="hidden" value={{GeoCode.Longitude}}>
                 <button>Show On Map</button>
             </td>
             <td>
-                <h3>{{name}}</h3>
+                <h3>{{Name}}</h3>
             </td>
         </tr>
         <tr>
-            <td><img src={{imageUrl[0]}}></td>
+            <td><img src={{ImageUrl[0]}}></td>
             <td>
                 <tr>
-                    <td>Rating:{{starRating}}</td>
+                    <td>Rating:{{StarRating}}</td>
                 </tr>
                 <tr>
-                    <td>Amenities:{{#each amenities}}{{this}}{{/each}}</td>
+                    <td>Amenities:{{#each Amenities}}{{this}}{{/each}}</td>
                 </tr>
             </td>
             <td>
@@ -119,7 +110,7 @@
                 </tr>
             </td>
         </tr>
+    </script>
+</body>
 
-    </body>
--->
 </html>
