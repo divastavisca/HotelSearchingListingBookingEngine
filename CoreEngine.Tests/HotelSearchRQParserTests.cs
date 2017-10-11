@@ -7,6 +7,7 @@ using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 using System.Threading;
 using System.Threading.Tasks;
 using ExternalServices.HotelSearchEngine;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace CoreEngine.Tests
 {
@@ -25,7 +26,7 @@ namespace CoreEngine.Tests
                 AdultsCount = 2,
                 CheckInDate = DateTime.Parse("2017-10-15"),
                 CheckOutDate = DateTime.Parse("2017-10-16"),
-                ChildrenAge = new System.Collections.Generic.List<int>() { 12,12,12},
+                ChildrenAge = new System.Collections.Generic.List<int>() {12,12,12},
                 ChildrensCount = 3,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
@@ -53,7 +54,6 @@ namespace CoreEngine.Tests
             hotelroomavail.ResultRequested = ResponseType.Complete;
             HotelEngineClient client = new HotelEngineClient();
             var res = await client.HotelRoomAvailAsync(hotelroomavail);
-
         }
     }
 }

@@ -8,6 +8,7 @@ using ExternalServices.HotelSearchEngine;
 using HotelSearchingListingBookingEngine.Core.Parsers;
 using HotelSearchingListingBookingEngine.Core;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {

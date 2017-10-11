@@ -6,6 +6,7 @@ using ExternalServices.HotelSearchEngine;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.Attributes.HotelAttributes;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
