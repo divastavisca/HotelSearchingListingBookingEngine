@@ -17,7 +17,7 @@ namespace SystemContracts.ConsumerContracts
 
         public int AdultsCount { get; set; }
 
-        public int ChildrensCount { get; set; }
+        public int ChildrenCount { get; set; }
 
         public List<int> ChildrenAge { get; set; }
     }

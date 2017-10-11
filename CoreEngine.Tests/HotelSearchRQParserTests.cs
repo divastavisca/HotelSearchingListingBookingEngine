@@ -27,7 +27,7 @@ namespace CoreEngine.Tests
                 CheckInDate = DateTime.Parse("2017-10-15"),
                 CheckOutDate = DateTime.Parse("2017-10-16"),
                 ChildrenAge = new System.Collections.Generic.List<int>() {12,12,12},
-                ChildrensCount = 3,
+                ChildrenCount = 3,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
                     GeoCode = new SystemContracts.Attributes.GeoCoordinates()
