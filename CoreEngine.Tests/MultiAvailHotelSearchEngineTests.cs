@@ -19,13 +19,6 @@ namespace CoreEngine.Tests
         public MultiAvailHotelSearchEngineTests()
         {
             engine = new MultiAvailHotelSearchEngine();
-            searchRq = 
-        }
-
-        [TestMethod]
-        public async Task Engine_Should_Throw_An_Exception_When_Invalid_Request_Is_Passed()
-        {
-
         }
     }
 }
