@@ -6,6 +6,7 @@ using SystemContracts.ServiceContracts;
 using HotelSearchingListingBookingEngine.Core.Parsers;
 using SystemContracts.ConsumerContracts;
 using ExternalServices.HotelSearchEngine;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
@@ -20,26 +21,57 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 {
                     HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQParser()).Parse(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
-                        throw new NullReferenceException("Unable to parse single avail request");
+                        throw new ParseException()
+                        {
+                            Source = parsedSingleAvailRQ.GetType().Name
+                        };
                     HotelRoomAvailRS hotelRoomSearchRS = await (new HotelEngineClient()).HotelRoomAvailAsync(parsedSingleAvailRQ);
                     if (hotelRoomSearchRS == null)
-                        throw new NullReferenceException("Unable to fetch room data");
+                        throw new ObjectFetchException()
+                        {
+                            Source = hotelRoomSearchRS.GetType().Name
+                        };
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
                     if (engineSearchRS == null)
-                        throw new NullReferenceException("Unable to parse response");
+                        throw new ParseException()
+                        {
+                            Source = engineSearchRS.GetType().Name
+                        };
                     return engineSearchRS;
                 }
                 else return null;
             }
+            catch(ObjectFetchException objectFetchException)
+            {
+                Logger.LogException(objectFetchException.ToString(), objectFetchException.StackTrace);
+                throw new SearchEngineException()
+                {
+                    Source = objectFetchException.Source
+                };
+            }
+            catch(ParseException parseException)
+            {
+                Logger.LogException(parseException.ToString(), parseException.StackTrace);
+                throw new SearchEngineException()
+                {
+                    Source = parseException.Source
+                };
+            }
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new SearchEngineException()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                return null;
+                throw new SearchEngineException()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
     }
