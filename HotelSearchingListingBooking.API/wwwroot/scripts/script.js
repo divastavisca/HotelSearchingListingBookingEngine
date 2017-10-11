@@ -99,7 +99,7 @@ function (){
                             ]
     };
     listHotels(multiAvailHotelSearchRS);
-    var placeSuggestions;var suggestionArray=new Array();var multiAvailHotelSearchRS;
+    var placeSuggestions; var suggestionArray = new Array(); var multiAvailHotelSearchRS; var childrenAgeArray;
     {for(var index=1;index<18;index++)
         {
             window.childAgeList+="<option value="+index+">"+index+"</option>";
@@ -189,7 +189,7 @@ function (){
         var locationParts=($("#location").val().split('|'));
         var locationId=locationParts[2];
         var locationType=locationParts[locationParts.length-1];
-        var childrenAgeArray=new Array();
+        childrenAgeArray=new Array();
         childrenAgeArray.pop();
         for(var index=0;index<$("#childrencount").val();index++)
             {
@@ -203,35 +203,44 @@ function (){
                             {
                                 if(jsonResponseData[counter].ItemList[innerCounter].Id==locationId)
                                    {
+                                       var Date=($('#checkindate').val()).split("-");
+                                       var year=Date[2];
+                                       Date[2]=Date[0];
+                                       Date[0]=year;
+                                       var checkInDate=Date;
+                                       Date=($('#checkoutdate').val()).split("-");
+                                       year=Date[2];
+                                       Date[2]=Date[0];
+                                       Date[0]=year;
+                                       var checkOutDate=Date;
                                        var jsonLocationObject= jsonResponseData[counter].ItemList[innerCounter];
                                        var multiAvailRQ = {
-                                                                'SearchLocation':{
+                                                                "SearchLocation":{
                                                                                     'Name':jsonLocationObject.Name,
                                                                                     'Type':jsonLocationObject.SearchType,
                                                                                     'GeoCode':
                                                                                         {
-                                                                                           'Latitude':jsonLocationObject.Latitude,
+                                                                                            'Latitude':jsonLocationObject.Latitude,
                                                                                            'Longitude':jsonLocationObject.Longitude
                                                                                         },
                                                                                     
                                                                                 },
-                                                                'CheckInDate':$('#checkindate').val(),
-                                                                'CheckOutDate':$('#checkoutdate').val(),
-                                                                'AdultsCount':parseInt($('#adultcount').val()),
-                                                                'ChildrenCount':parseInt($('#childrencount').val()),
-                                                                'ChildrenAges':childrenAgeArray
+                                                                "CheckInDate":checkInDate[0]+'-'+checkInDate[1]+'-'+checkInDate[2],
+                                                                "CheckOutDate":checkOutDate[0]+'-'+checkOutDate[1]+'-'+checkOutDate[2],
+                                                                "AdultsCount":parseInt($('#adultcount').val()),
+                                                                "ChildrenCount":parseInt($('#childrencount').val()),
+                                                                "ChildrenAge":childrenAgeArray
                                                             };
                                        var multiAvailRQString=JSON.stringify(multiAvailRQ);
-                                       multiAvailRQString=multiAvailRQString.replace('"',"'");
+                                      // multiAvailRQString=multiAvailRQString.replace('"',"'");
                                        var IEngineServiceRQ=
-                                        {
+                                       {
                                             "ServiceName":"MultiAvail",
-                                           "JsonRequest":multiAvailRQ
+                                           "JsonRequest":multiAvailRQString
                                        };
 //                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"JsonRequest\":'+multiAvailRQString+'};';
 //                                       
-                                       $.ajax(
-                                           {
+                                       $.ajax({
                                                type:'post',
                                                headers:
                                                 {
