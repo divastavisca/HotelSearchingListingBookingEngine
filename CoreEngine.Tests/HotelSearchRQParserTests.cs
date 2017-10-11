@@ -7,6 +7,7 @@ using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 using System.Threading;
 using System.Threading.Tasks;
 using ExternalServices.HotelSearchEngine;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace CoreEngine.Tests
 {
@@ -53,7 +54,6 @@ namespace CoreEngine.Tests
             hotelroomavail.ResultRequested = ResponseType.Complete;
             HotelEngineClient client = new HotelEngineClient();
             var res = await client.HotelRoomAvailAsync(hotelroomavail);
-
         }
     }
 }
