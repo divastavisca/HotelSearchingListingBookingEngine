@@ -16,7 +16,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
     public class HotelSearchRQParser
     {
         private readonly bool _returnOnlyAvailableItineraries = true;
-        private readonly string _stateBagObjHscAttributes = @"D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\StateBagData\StateBagObjectData1.txt";
+        private readonly string _stateBagObjHscAttributes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"StateBagData","StateBagObjectData1.txt");
         private readonly int _maxResults = 1500;
         private readonly bool _matrixResults = true;
         private readonly int _defaultPosId = 101;
