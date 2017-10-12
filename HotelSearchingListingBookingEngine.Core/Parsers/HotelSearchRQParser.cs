@@ -10,13 +10,15 @@ using HotelSearchingListingBookingEngine.Core;
 using Newtonsoft.Json;
 using System.IO;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class HotelSearchRQParser
     {
         private readonly bool _returnOnlyAvailableItineraries = true;
-        private readonly string _stateBagObjHscAttributes = @"D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\StateBagData\StateBagObjectData1.txt";
+        private readonly string _stateBagObjHscAttributes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "StateBagData", "StateBagObjectData1.txt");
+        private readonly string _stateBagObjAdditionalInfo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "StateBagData", "StateBagAdditionalAttributesObject.txt");
         private readonly int _maxResults = 1500;
         private readonly bool _matrixResults = true;
         private readonly int _defaultPosId = 101;
@@ -64,6 +66,15 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
                 parsedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
                 parsedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
+                parsedRQ.HotelSearchCriterion.Pos.AdditionalInfo = getStateBags(_stateBagObjAdditionalInfo);
+                foreach (StateBag stateBag in parsedRQ.HotelSearchCriterion.Pos.AdditionalInfo)
+                {
+                    if (stateBag.Name == "API_SESSION_ID")
+                    {
+                        stateBag.Value = parsedRQ.SessionId;
+                        break;
+                    }
+                }
                 if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
                     throw new ObjectInitializationException()
                     {
@@ -99,7 +110,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                          PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
                     }
                 };
-                parsedRQ.HotelSearchCriterion.SearchType = HotelSearchType.GeoCode;
+                parsedRQ.HotelSearchCriterion.SearchType = HotelSearchType.City;
                 parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
                 if (parsedRQ.HotelSearchCriterion.StayPeriod == null)
                     throw new ObjectInitializationException()
@@ -113,6 +124,14 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     EndNumber = _defaultPagingInfoEndNumber,
                     TotalRecordsBeforeFiltering = _defaultTotalRecordsBeforeFiltering,
                     TotalResults = _defaultTotalResults
+                };
+            }
+            catch(FilePathResolverError filePathResolverError)
+            {
+                Logger.LogException(filePathResolverError.ToString(), filePathResolverError.StackTrace);
+                throw new ServiceRequestParserException()
+                {
+                    Source = filePathResolverError.Source
                 };
             }
             catch(ObjectInitializationException objectInitialisationException)

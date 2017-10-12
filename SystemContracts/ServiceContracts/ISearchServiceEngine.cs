@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SystemContracts.ServiceContracts
 {
-    public interface ISearchEngine
+    public interface ISearchServiceEngine
     {
         Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ serviceRequest);
     }
