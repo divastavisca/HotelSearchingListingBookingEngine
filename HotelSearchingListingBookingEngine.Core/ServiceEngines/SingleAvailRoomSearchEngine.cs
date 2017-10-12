@@ -32,6 +32,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                         {
                             Source = hotelRoomSearchRS.GetType().Name
                         };
+                    if (hotelRoomSearchRS.Itinerary == null)
+                        throw new InvalidObjectRequestException()
+                        {
+                            Source = hotelRoomSearchRS.Itinerary.GetType().Name
+                        };
+                    if (SelectedItineraryCache.IsPresent(hotelRoomSearchRS.SessionId))
+                        SelectedItineraryCache.Remove(hotelRoomSearchRS.SessionId);
+                    SelectedItineraryCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary);
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
                     if (engineSearchRS == null)
                         throw new ParseException()
@@ -48,6 +56,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 throw new SearchEngineException()
                 {
                     Source = objectFetchException.Source
+                };
+            }
+            catch(InvalidObjectRequestException invalidObjectRequestException)
+            {
+                Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
+                throw new SearchEngineException()
+                {
+                    Source = invalidObjectRequestException.Source
                 };
             }
             catch(ParseException parseException)
