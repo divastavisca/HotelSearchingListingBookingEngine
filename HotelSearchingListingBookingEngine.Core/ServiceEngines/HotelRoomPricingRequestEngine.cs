@@ -18,7 +18,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
         {
             try
             {
-                
+                throw new NotImplementedException();
             }
             catch(ServiceRequestParserException serviceRequestParserException)
             {

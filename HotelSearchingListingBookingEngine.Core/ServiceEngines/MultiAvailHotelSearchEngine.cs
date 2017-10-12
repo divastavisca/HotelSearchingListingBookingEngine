@@ -22,18 +22,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
                     throw new NoResultsFoundException();
-                if (ItineraryCache.IsPresent(hotelSearchRS.SessionId) == false)
-                {
-                    ItineraryCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRS.Itineraries);
-                    SearchCriterionCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion);
-                }
-                else
-                {
-                    ItineraryCache.Remove(hotelSearchRS.SessionId);
-                    ItineraryCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRS.Itineraries);
-                    SearchCriterionCache.Remove(hotelSearchRS.SessionId);
-                    SearchCriterionCache.AddToCache(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion);
-                }
+                updateCaches(hotelSearchRS.SessionId,hotelSearchRQ.HotelSearchCriterion,hotelSearchRS.Itineraries);
                 return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
             }
             catch(ServiceRequestParserException requestParserException)
@@ -67,6 +56,28 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 {
                     Source = baseException.Source
                 };
+            }
+        }
+
+        private void updateCaches(string sessionId,HotelSearchCriterion hotelSearchCriterion, HotelItinerary[] itineraries)
+        {
+            if (ItineraryCache.IsPresent(sessionId))
+            {
+                ItineraryCache.Remove(sessionId);
+                SearchCriterionCache.Remove(sessionId);
+                if (SelectedItineraryCache.IsPresent(sessionId))
+                {
+                    SelectedItineraryCache.Remove(sessionId);
+                    if (PricingRequestCache.IsPresent(sessionId))
+                    {
+                        PricingRequestCache.Remove(sessionId);
+                    }
+                }
+            }
+            else
+            {
+                ItineraryCache.AddToCache(sessionId, itineraries);
+                SearchCriterionCache.AddToCache(sessionId,hotelSearchCriterion);
             }
         }
     }

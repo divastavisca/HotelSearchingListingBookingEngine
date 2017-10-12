@@ -41,6 +41,10 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                         return parsedResponse;
                     }
                 }
+                throw new Exception()
+                {
+                    Source = "Itinerary not found"
+                };
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {

@@ -38,7 +38,11 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                             Source = hotelRoomSearchRS.Itinerary.GetType().Name
                         };
                     if (SelectedItineraryCache.IsPresent(hotelRoomSearchRS.SessionId))
+                    {
                         SelectedItineraryCache.Remove(hotelRoomSearchRS.SessionId);
+                        if (PricingRequestCache.IsPresent(hotelRoomSearchRS.SessionId))
+                            PricingRequestCache.Remove(hotelRoomSearchRS.SessionId);
+                    }
                     SelectedItineraryCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary);
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
                     if (engineSearchRS == null)
