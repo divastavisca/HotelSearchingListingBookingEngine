@@ -26,6 +26,9 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     {
                         Source = parsedRQ.Itinerary.GetType().Name
                     };
+                if (SelectedItineraryCache.IsPresent(parsedRQ.SessionId))
+                    SelectedItineraryCache.Remove(parsedRQ.SessionId);
+                SelectedItineraryCache.AddToCache(parsedRQ.SessionId, parsedRQ.Itinerary);
                 return parsedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
