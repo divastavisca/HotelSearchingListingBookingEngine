@@ -29,7 +29,7 @@ namespace HotelSearchingListingBookingEngine.Core.Caches
                 _cache.Remove(sessionId);
         }
 
-        public static string GetItineraries(string sessionId)
+        public static string GetSelectedRoomId(string sessionId)
         {
             return IsPresent(sessionId) ? _cache[sessionId] : null;
         }

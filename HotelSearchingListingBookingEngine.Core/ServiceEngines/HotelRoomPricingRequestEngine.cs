@@ -14,11 +14,18 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
     public class HotelRoomPricingRequestEngine : IRequestServiceEngine
     {
-        public Task<IEngineServiceRS> RequestAsync(IEngineServiceRQ engineServiceRQ)
+        public async Task<IEngineServiceRS> RequestAsync(IEngineServiceRQ engineServiceRQ)
         {
             try
             {
-                throw new NotImplementedException();
+                HotelRoomPriceRQ hotelRoomPriceRQ = (new HotelRoomPriceRQParser()).Parse((RoomPricingRQ)engineServiceRQ);
+                HotelRoomPriceRS hotelRoomPriceRS = await (new HotelEngineClient()).HotelRoomPriceAsync(hotelRoomPriceRQ);
+                if (hotelRoomPriceRS.Itinerary == null)
+                    throw new NoResultsFoundException()
+                    {
+                        Source = hotelRoomPriceRS.Itinerary.GetType().Name
+                    };
+                
             }
             catch(ServiceRequestParserException serviceRequestParserException)
             {
@@ -26,6 +33,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 throw new PricingRequestEngineException()
                 {
                     Source = serviceRequestParserException.Source
+                };
+            }
+            catch(NoResultsFoundException noResultsFoundException)
+            {
+                Logger.LogException(noResultsFoundException.ToString(), noResultsFoundException.StackTrace);
+                throw new PricingRequestEngineException()
+                {
+                    Source = noResultsFoundException.Source
                 };
             }
         }
