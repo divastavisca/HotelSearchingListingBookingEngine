@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hotel Search</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <link rel="icon" href="resources/favicon.png" sizes="16x16 type="image/png">
+</head>
+
+<body>
+    <div id="logo-container">
+    <a href="index.html"><img src="resources/HQlogo.png"/> </a>
+    </div>
+    
+    
+    <header>
+
+        <span id="tag_line">
+         Where hospitality meets bay...
+        </span>
+    </header>
+    
+    <section>
+      
+        <form id="hotel-search-form">
+            <fieldset>
+                <div>
+                    <label for="location">Location</label>
+                    <input id="location" type="text" name="location" size=80 required>
+                </div>
+            </fieldset>
+            <fieldset id="secondaryElementsContainer">
+                <div class="row-items" id="dates-container">
+                    <div>
+                    <label for="checkin">Check-In-Date</label>
+                    <input class="date" type="text" id="checkindate" name="checkin" placeholder='dd-mm-yyyy' required>
+                    </div>
+                    <div>
+                    <label for="checkout">Check-Out-Date</label>
+                    <input class="date" type="text" id="checkoutdate" name="checkout" placeholder='dd-mm-yyyy' required>
+                    </div>
+                </div>
+                <div>
+                    <div id="children-count">
+                    <label for="childrencount">Children(Below 18)</label>
+                    <select required id="childrencount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                         <div id="children-age-container">
+                </div>
+                    </div>
+                    <div id="adult-count">
+                    <label for="adultcount">Adults(18+)</label>
+                    <select required id="adultcount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                    </div>
+                </div>    
+<!--
+               
+-->
+                <button type="button" id="search-hotels-button">Search Hotels</button>
+            </fieldset>
+        </form>
+    </section>
+    <main>
+        <table id="hotels-list-container">
+
+        </table>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="scripts/script.js"></script>
+    <script id="hotel-list-template" type="text/x-handlebars-template">
+        {{#each this.itineraries }}
+        <tr class='itinerary'><td> Name :{{name}} </td>;
+                    <td> <img class='hero-image' src={{imageUrl[0]}}></td>;
+                    <td> ItineraryID :{{itineraryId}}</td>;
+                    <td> Latitude :{{geoCode.latitude}}</td>;
+                    <td> Longitude :{{geoCode.longitude}}</td>;
+                    <td> Star Rating {{starRating}}</td>;
+                    <td> Currency :{{currentItineraries.currency}}</td>;
+                    <td> Starting From :{{currentItineraries.minimumPrice}}</td></tr>
+    </script>
+</body>
+
+</html>
