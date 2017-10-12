@@ -17,36 +17,25 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
             try
             {
-                var userSearchResults = ItineraryCache.GetItineraries(hotelRoomSearchRS.SessionId);
-                foreach (HotelItinerary itinerary in userSearchResults)
-                {
-                    if (itinerary.HotelProperty.SupplierHotelId == hotelRoomSearchRS.Itinerary.HotelProperty.SupplierHotelId)
+                parsedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
+                if (parsedResponse.Itinerary == null)
+                    throw new InvalidObjectRequestException()
                     {
-                        parsedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
-                        if (parsedResponse.Itinerary == null)
-                            throw new InvalidObjectRequestException()
-                            {
-                                Source = parsedResponse.Itinerary.GetType().Name
-                            };
-                        ItinerarySummary summary;
-                        (new MultiAvailHotelSearchRSParser()).TryParseItinerary(itinerary, out summary, 10);
-                        parsedResponse.Itinerary.ItinerarySummary = 
-                            summary 
-                            ?? 
-                            throw new ParseException()
-                            {
-                                Source = parsedResponse.Itinerary.ItinerarySummary.GetType().Name
-                            };
-                        parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
-                        return parsedResponse;
-                    }
-                }
-                throw new Exception()
-                {
-                    Source = "Itinerary not found"
-                };
+                        Source = parsedResponse.Itinerary.GetType().Name
+                    };
+                ItinerarySummary summary;
+                (new MultiAvailHotelSearchRSParser()).TryParseItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
+                parsedResponse.Itinerary.ItinerarySummary =
+                    summary
+                    ??
+                    throw new ParseException()
+                    {
+                        Source = parsedResponse.Itinerary.ItinerarySummary.GetType().Name
+                    };
+                parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
+                return parsedResponse;
             }
-            catch(InvalidObjectRequestException invalidObjectRequestException)
+            catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
                 throw new ServiceResponseParserException()
@@ -54,7 +43,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     Source = invalidObjectRequestException.Source
                 };
             }
-            catch(ParseException parseException)
+            catch (ParseException parseException)
             {
                 Logger.LogException(parseException.ToString(), parseException.StackTrace);
                 throw new ServiceResponseParserException()
@@ -114,7 +103,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 }
                 return itinerary;
             }
-            catch(ObjectInitializationException objectInitializationException)
+            catch (ObjectInitializationException objectInitializationException)
             {
                 Logger.LogException(objectInitializationException.ToString(), objectInitializationException.StackTrace);
                 throw new Exception()

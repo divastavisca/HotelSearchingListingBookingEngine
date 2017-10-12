@@ -28,6 +28,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     {
                         Source = parsedRQ.HotelSearchCriterion.GetType().Name
                     };
+                parsedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
                 parsedRQ.Itinerary = userSelectedItinerary;
                 parsedRQ.ResultRequested = ResponseType.Complete;
                 if (PricingRequestCache.IsPresent(parsedRQ.SessionId))
