@@ -16,7 +16,18 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
     {
         public Task<IEngineServiceRS> RequestAsync(IEngineServiceRQ engineServiceRQ)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+            }
+            catch(ServiceRequestParserException serviceRequestParserException)
+            {
+                Logger.LogException(serviceRequestParserException.ToString(), serviceRequestParserException.StackTrace);
+                throw new PricingRequestEngineException()
+                {
+                    Source = serviceRequestParserException.Source
+                };
+            }
         }
     }
 }
