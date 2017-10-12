@@ -11,7 +11,7 @@ using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
-    public class SingleAvailRoomSearchEngine : ISearchEngine
+    public class SingleAvailRoomSearchEngine : ISearchServiceEngine
     {
         public async Task<IEngineServiceRS> SearchAsync(IEngineServiceRQ serviceRequest)
         {
