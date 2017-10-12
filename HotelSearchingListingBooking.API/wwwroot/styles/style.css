@@ -1,4 +1,4 @@
-body{
+/*body{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -60,7 +60,8 @@ body>section>form{
     flex-flow: column wrap;
     align-items: stretch;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
+    min-height: 200px;
 }
 fieldset{
     border: 0px;
@@ -84,10 +85,6 @@ fieldset>.column-items
     align-items : flex-start;
     justify-content: space-around;
 }
-#secondaryElementsContainer{
-    border: 0px;
-   display: none;
-}
 .culturedText{
     vertical-align: sub;
     color: lightgrey;
@@ -101,50 +98,178 @@ fieldset>.column-items
     background: rgba(211,211,211,0.8);
 	padding: 10px;
 }
-main,#hotels-list-container{
-     
+
+*/
+main, #hotels-list-container {
     display: flex;
     flex-flow: column wrap;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
 }
-.itinerary{
+
+.itinerary {
     background: rgba(211,211,211,0.8);
     margin-bottom: 10px;
     margin-top: 10px;
     width: 60%;
     min-height: 250px;
-	display: flex;
+    display: flex;
     flex-flow: row wrap;
     align-content: stretch;
-    justify-content:space-between;
+    justify-content: space-between;
     border-radius: 5px;
     -webkit-transition: all 0.2s ease-in;
-    -webkit-transform: scale(1); 
+    -webkit-transform: scale(1);
     -ms-transition: all 0.2s ease-in;
-    -ms-transform: scale(1); 
+    -ms-transform: scale(1);
     -moz-transition: all 0.2s ease-in;
     -moz-transform: scale(1);
     transition: all 0.2s ease-in;
-    transform: scale(1);   
+    transform: scale(1);
+}
 
-}
-.itinerary>td{
-    flex: 1;
-}
-.itinerary:hover{
-    box-shadow: rgb(66, 73, 73) 5px 5px 3px;
-    -webkit-transition: all 0.2s ease-in;
-    -webkit-transform: scale(0.5,0,5);
-    -ms-transition: all 0.2s ease-in;
-    -ms-transform: scale(0.5,0,5);   
-    -moz-transition: all 0.2s ease-in;
-    -moz-transform: scale(0.5,0,5);
-    transition: all .2s ;
-    transform: scale(0.5,0,5);
-    
-}
-.hero-image{
+    .itinerary > td {
+        flex: 1;
+    }
+
+    .itinerary:hover {
+        box-shadow: rgb(66, 73, 73) 5px 5px 3px;
+        -webkit-transition: all 0.2s ease-in;
+        -webkit-transform: scale(0.5,0,5);
+        -ms-transition: all 0.2s ease-in;
+        -ms-transform: scale(0.5,0,5);
+        -moz-transition: all 0.2s ease-in;
+        -moz-transform: scale(0.5,0,5);
+        transition: all .2s;
+        transform: scale(0.5,0,5);
+    }
+
+.hero-image {
     max-width: 100%;
     max-height: 100%;
-    }
+}
+#secondaryElementsContainer{
+    border: 0px;
+   display: none;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+section
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-image:  url("../resources/city_scape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+#tag_line {
+	margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color:#37454d;
+    font-size:30px;
+    font-weight: bolder;
+}
+
+#logo-container
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    border-bottom: cadetblue 1px solid;
+    box-shadow: #37454d 0px 1px 1px;
+    align-items: center;
+    min-height: 55px;
+}
+#logo-container img{
+height: 50px;
+    width:250px;
+}
+#location{
+background-image:url('http://i47.tinypic.com/r02vbq.png');
+background-repeat:no-repeat;
+background-position:right center;outline:0;
+line-height: 25px;
+    width: 80%;
+}
+#dates-container
+{
+    display: flex;
+    flex-flow: row wrap !important;
+ margin-top: 40px;
+    justify-content: space-between;
+}
+
+#dates-container>div{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#checkindate
+{
+    display: block;
+}
+#checkoutdate {
+	display: block;
+}
+#adult-count
+{
+    margin-top: 20px;
+}
+#children-count {
+	margin-top: 20px
+}
+#search-hotels-button {
+    margin-top: 25px;
+	  display: inline-block;
+      padding: 5px 10px;
+      cursor: pointer;
+     text-align: center;
+     outline: none;
+     border: none;
+    background-color: darkgoldenrod;
+    
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+    
+}
+#hotel-search-form {
+    background: rgba(211,211,211,0.8);
+    align-self: center;
+    width: 80%;
+    border-radius:8px; 
+	padding: 10px;
+ 
+}
+.button:hover {background-color:dimgray}
+.button:active
+{
+background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+   
+}
+fieldset{
+    border:0px;
+}
+fieldset>div{
+    display: flex;
+    flex-flow: column wrap;
+}

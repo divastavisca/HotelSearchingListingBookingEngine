@@ -7,121 +7,69 @@ function listHotels(jsonObject) {
             var htmlToAppend =
                 "<tr class='itinerary'><td> Name :" + currentItineraries['name'] + "</td>";
             htmlToAppend += "<td> <img class='hero-image' src=" + currentItineraries['imageUrl'][0] + "></td>";
-            htmlToAppend += "<td> ItineraryID :" + currentItineraries['itineraryId'] + "</td>";
-            htmlToAppend += "<td> Latitude :" + currentItineraries['geoCode']['latitude'] + "</td>";
-            htmlToAppend += "<td> Longitude :" + currentItineraries['geoCode']['longitude'] + "</td>";
-            htmlToAppend += "<td> Star Rating :" + currentItineraries['starRating'] + "</td>";
-            htmlToAppend += "<td> Currency :" + currentItineraries['currency'] + "</td>";
-            htmlToAppend += "<td> Starting From :" + currentItineraries['minimumPrice'] + "</td></tr>";
+            htmlToAppend +=
+                "<td> <input type='hidden' value='"
+                + currentItineraries['itineraryId'] +
+                "' id='itinerary" +
+                currentItineraries['itineraryId'] +
+                "'></td>";
+            //htmlToAppend +=
+            //    "<td><input type='hidden' value='" + currentItineraries['geoCode']['latitude'] + "' id='itinerary" + currentItineraries['itineraryId']+"latitude'</td>";
+            //htmlToAppend +=
+            //    "<td><input type='hidden' value='" + currentItineraries['geoCode']['longitude'] + "' id='itinerary" + currentItineraries['itineraryId'] + "longitude'</td>";
+            htmlToAppend += "<td>Address:<p>" + currentItineraries['address'] + "</p></td>";
+            htmlToAppend +=
+                "<td><button type='button' onclick='showOnMap(" +
+                currentItineraries['geoCode']['latitude'] +
+                "," +
+                currentItineraries['geoCode']['longitude'] +
+                ")' >View On Map</button></td>";
+            htmlToAppend +=
+                "<td>Rating :" + currentItineraries['starRating'] + " Stars</td>";
+            htmlToAppend += "<td> Starting From :" + currentItineraries['minimumPrice'] + currentItineraries['currency'] + "</td></tr>";
             $("#hotels-list-container").append(htmlToAppend);
         }
     }
 }
+//function showLoadingImage()
+//{
+//    var loadingImageHtml='<img src="../resources/loading1.gif">';
+//    $("#hotels-list-container").attr('min-height','120px');
+//    $("#hotels-list-container").html(loadingImageHtml);
+//}
+function hideLoadingImage() {
+    $("#hotels-list-container").empty();
+}
+
 //function listHotels(jsonObject)
 //{
 //    var hotelListTemplate=$("#hotel-list-template").html();
-//    var hotelList
+//    var hotelList=Handlebars.compile(hotelListTemplate);
+//    var htmlToBeAppended=hotelList(jsonObject);
+//    $("#hotels-list-container").html(htmlToBeAppended);
 //}
 $(document).ready(
     function () {
-        var multiAvailHotelSearchRS = {
-            "callerSessionId": "e3612fa3-d3a4-4b01-a721-dbdaa8940279",
-            "resultsCount": 1,
-            "itineraries": [
-                {
-                    "itineraryId": "686292",
-                    "name": "Hotel Ashish Palace",
-                    "address": {
-                        "addressLine1": "Tourist Complex Area, Fatehabad Road",
-                        "addressLine2": "",
-                        "city": "Agra",
-                        "state": "",
-                        "country": "IN",
-                        "zipCode": "282001"
-                    },
-                    "geoCode": {
-                        "latitude": 27.16237,
-                        "longitude": 78.03633
-                    },
-                    "amenities": [
-                        "Dry cleaning/laundry service",
-                        "Air conditioning",
-                        "Coffee/tea maker",
-                        "Laundry facilities",
-                        "24-hour front desk",
-                        "Premium TV channels",
-                        "Refrigerator",
-                        "Flat-panel TV",
-                        "Daily housekeeping",
-                        "Free self parking",
-                        "Cable TV service",
-                        "Free newspapers in lobby",
-                        "Free WiFi",
-                        "Free newspaper",
-                        "Phone",
-                        "Desk",
-                        "Safe-deposit box at front desk",
-                        "24-hour business center",
-                        "Private bathroom",
-                        "Restaurant",
-                        "Pay movies",
-                        "Breakfast available (surcharge)",
-                        "Coffee shop or café",
-                        "Shower only",
-                        "Free bottled water",
-                        "Separate sitting area",
-                        "One meeting room",
-                        "Spa services on site",
-                        "Airport transportation (surcharge)",
-                        "In-room safe",
-                        "Tours/ticket assistance",
-                        "Ceiling fan",
-                        "Luggage storage",
-                        "Minibar",
-                        "Free toiletries",
-                        "Iron/ironing board (on request)",
-                        "Concierge services",
-                        "Room service (24 hours)",
-                        "Rooftop terrace",
-                        "Separate dining area",
-                        "Separate living room",
-                        "Rollaway/extra beds (surcharge)",
-                        "Fireplace",
-                        "In-room climate control (air conditioning)",
-                        "Accessible bathroom",
-                        "In-room accessibility"
-                    ],
-                    "imageUrl": [
-                        "https://assets.wvholdings.com/2/IMAGES/HotelImagesV3/250000/241601/ff32d7e8_b.jpg",
-                        "https://assets.wvholdings.com/2/IMAGES/HotelImagesV3/250000/241601/e4114df6_b.jpg",
-                        "https://assets.wvholdings.com/2/IMAGES/HotelImagesV3/250000/241601/f7f74a7e_b.jpg"
-                    ],
-                    "starRating": 3,
-                    "currency": "INR",
-                    "minimumPrice": 7000
-                }
-            ]
-        };
-        //    listHotels(multiAvailHotelSearchRS);
-        var placeSuggestions; var suggestionArray = new Array(); var multiAvailHotelSearchRS; var childrenAgeArray;
-        {
-            for (var index = 1; index < 18; index++) {
-                window.childAgeList += "<option value=" + index + ">" + index + "</option>";
-            }
-        }//generating 17 options for child age
+        var jsonResponseData;
+        var placeSuggestions;
+        var suggestionArray = new Array();
+        var multiAvailHotelSearchRS;
+        var childrenAgeArray;
+        var currentAutoCompleteRequest = $.ajax("", {});
+        var currentMultiAvailRequest = $.ajax("", {});
         {
             $("#location").autocomplete(
                 {
                     source: suggestionArray
                 });
         }//initialising autocomplete widget to location
-        {
-            $("#location").on('input propertychange', function () { $("#secondaryElementsContainer").css("display", "block") });
-        }//binding function to location input field-on input secondary elements show
+
         $("#location").on('keyup input propertychange', function () {
+            currentAutoCompleteRequest.abort();
+            $("#secondaryElementsContainer").css("display", "block");
             var locationtext = $("#location").val();
             var autoSuggestRequestUrl = "http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=city|airport|poi&query=" + locationtext;
-            $.ajax({
+            currentAutoCompleteRequest = $.ajax({
                 url: autoSuggestRequestUrl,
                 method: 'get',
                 data: null,
@@ -129,7 +77,7 @@ $(document).ready(
                 dataType: 'jsonp',
                 success: function (json) {
                     if (json != null) {
-                        window.jsonResponseData = json;
+                        jsonResponseData = json;
                         for (var counter = 0; counter < json.length; counter++) {
                             var itemsList = json[counter].ItemList;
                             for (var innercounter = 0; innercounter < itemsList.length; innercounter++) {
@@ -180,23 +128,42 @@ $(document).ready(
         $("#childrencount").change(function () {
             var count = $("#childrencount").val();
             var childrenAgeHtml = "";
+            var childAgeOptions =
+                '<option value="1">1</option>' +
+                '<option value="2">2</option>' +
+                '<option value="3">3</option>' +
+                '<option value="4">4</option>' +
+                '<option value="5">5</option>' +
+                '<option value="6">6</option>' +
+                '<option value="7">7</option>' +
+                '<option value="8">8</option>' +
+                '<option value="9">9</option>' +
+                '<option value="10">10</option>' +
+                '<option value="11">11</option>' +
+                '<option value="12">12</option>' +
+                '<option value="13">13</option>' +
+                '<option value="14">14</option>' +
+                '<option value="15">15</option>' +
+                '<option value="16">16</option>' +
+                '<option value="17">17</option>';
+
             $("#children-age-container").empty();
             for (var counter = 0; counter < count; counter++) {
-                childrenAgeHtml += "<label>Child " + counter + " Age</label>"
+                childrenAgeHtml += "<label>Child " + (counter + 1) + " Age</label>"
                 childrenAgeHtml += "<select id='child" + counter + "age'>"
-                    + childAgeList +
+                    + childAgeOptions +
                     "</select>";
             }
             $("#children-age-container").append(childrenAgeHtml);
         });
-        $("#search-hotels-button").on("click", function () {
+        $("#search-hotels-button").on('click', function () {
             var locationParts = ($("#location").val().split('|'));
             var locationId = locationParts[2];
             var locationType = locationParts[locationParts.length - 1];
             childrenAgeArray = new Array();
             childrenAgeArray.pop();
             for (var index = 0; index < $("#childrencount").val(); index++) {
-                var childAgeDivId = "#child" + index + "age";
+                var childAgeDivId = "#child" + (index) + "age";
                 childrenAgeArray.push($(childAgeDivId).val());
             }
             for (var counter = 0; counter < (jsonResponseData.length); counter++) {
@@ -240,7 +207,8 @@ $(document).ready(
                                 };
                             //                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"JsonRequest\":'+multiAvailRQString+'};';
                             //                                       
-                            $.ajax({
+                            //currentMultiAvailRequest.abort();
+                            currentMultiAvailRequest = $.ajax({
                                 type: 'post',
                                 headers:
                                 {
@@ -249,9 +217,9 @@ $(document).ready(
                                 url: "../padharojanab/value",
                                 cache: false,
                                 data: JSON.stringify(IEngineServiceRQ),
-                                success: function (response) { console.log(response); listHotels(response); },
-                                error: function (response) { console.log(response); },
-
+                                success: function (response) { listHotels(response); },
+                                //error:function(response){console.log(response);},
+                                //complete:function(jqXHR,textStatus){console.log("multi avail request status:"+jqXHR.getResponseHeader());}
                             });
                         }
                     }

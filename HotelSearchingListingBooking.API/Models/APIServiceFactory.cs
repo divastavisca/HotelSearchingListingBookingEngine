@@ -14,7 +14,8 @@ namespace HotelSearchingListingBooking.API.Models
         private static readonly Dictionary<Type, Type> _serviceProviderMap = new Dictionary<Type, Type>()
         {
             {typeof(MultiAvailHotelSearchRQ) ,typeof(MultiAvailHotelSearchProvider)},
-            {typeof(SingleAvailRoomSearchRQ) , typeof(SingleAvailRoomSearchProvider)}
+            {typeof(SingleAvailRoomSearchRQ) , typeof(SingleAvailRoomSearchProvider)},
+            {typeof(RoomPricingRQ), typeof(HotelRoomPricingRequestProvider)}
         };
         
         public static IEngineServiceProvider GetServiceProvider(Type serviceRequestType)
