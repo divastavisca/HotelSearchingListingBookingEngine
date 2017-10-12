@@ -64,7 +64,7 @@
                 </div>    
                 <div id="children-age-container">
                 </div>
-                <button id="search-hotels-button">Search Hotels</button>
+                <button type="button" id="search-hotels-button">Search Hotels</button>
             </fieldset>
         </form>
     </section>
@@ -78,38 +78,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script src="scripts/script.js"></script>
     <script id="hotel-list-template" type="text/x-handlebars-template">
-        {{#each multiAvailHotelSearchRS.Itineraries }}
-        <tr>
-            <td><input type="hidden" value={{GeoCode.Latitude}}>
-                <input type="hidden" value={{GeoCode.Longitude}}>
-                <button>Show On Map</button>
-            </td>
-            <td>
-                <h3>{{Name}}</h3>
-            </td>
-        </tr>
-        <tr>
-            <td><img src={{ImageUrl[0]}}></td>
-            <td>
-                <tr>
-                    <td>Rating:{{StarRating}}</td>
-                </tr>
-                <tr>
-                    <td>Amenities:{{#each Amenities}}{{this}}{{/each}}</td>
-                </tr>
-            </td>
-            <td>
-                Address:{{Address.AddressLine1}}{{Address.AddressLine2}}{{Address.City}}{{Address.State}}{{Address.ZipCode}}
-            </td>
-            <td>
-                <tr>
-                    <td>Price:{{Currency}}{{MinimumPrice}}</td>
-                </tr>
-                <tr>
-                    <td><button>Book Now</button></td>
-                </tr>
-            </td>
-        </tr>
+        {{#each this.itineraries }}
+        <tr class='itinerary'><td> Name :{{name}} </td>;
+                    <td> <img class='hero-image' src={{imageUrl[0]}}></td>;
+                    <td> ItineraryID :{{itineraryId}}</td>;
+                    <td> Latitude :{{geoCode.latitude}}</td>;
+                    <td> Longitude :{{geoCode.longitude}}</td>;
+                    <td> Star Rating {{starRating}}</td>;
+                    <td> Currency :{{currentItineraries.currency}}</td>;
+                    <td> Starting From :{{currentItineraries.minimumPrice}}</td></tr>
     </script>
 </body>
 

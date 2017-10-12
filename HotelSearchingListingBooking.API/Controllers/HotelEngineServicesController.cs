@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,7 @@ using System.Reflection;
 using HotelSearchingListingBooking.API.Models;
 using HotelSearchingListingBookingEngine.Core;
 using SystemContracts.ServiceContracts;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
 namespace HotelSearchingListingBooking.API.Controllers
 {
@@ -20,22 +21,37 @@ namespace HotelSearchingListingBooking.API.Controllers
             try
             {
                 var requestedServiceType = ServiceRequestResolver.GetServiceType(serviceRequest);
-                if (requestedServiceType == null)
-                    throw new NullReferenceException("Cannot resolve service request");
+                if(requestedServiceType==null)
+                    throw new InvalidServiceRequestException();
                 IEngineServiceRQ engineServiceRequest = (IEngineServiceRQ)JsonConvert.DeserializeObject(serviceRequest.JsonRequest, requestedServiceType);
                 if (engineServiceRequest == null)
-                    throw new JsonException("Unable to parse json string");
+                    throw new ParseException();
                 IEngineServiceProvider engineServiceProvider = APIServiceFactory.GetServiceProvider(requestedServiceType);
                 if (engineServiceProvider == null)
-                    throw new Exception("Unable to generate service provider");
+                    throw new ServiceProviderGenerationException();
                 IEngineServiceRS engineServiceRS = await engineServiceProvider.GetServiceRS(engineServiceRequest);
                 if (engineServiceRS == null)
-                    throw new Exception("Unable to generate response");
+                    throw new ResponseGenerationException();
                 return Ok(engineServiceRS);
             }
-            catch (JsonException jsonException)
+            catch(ServiceProviderException serviceProviderException)
             {
-                Logger.LogException(jsonException.ToString(), jsonException.StackTrace);
+                Logger.LogException(serviceProviderException.ToString(), serviceProviderException.StackTrace);
+                return NotFound();
+            }
+            catch(InvalidServiceRequestException invalidServiceRequested)
+            {
+                Logger.LogException(invalidServiceRequested.ToString(), invalidServiceRequested.StackTrace);
+                return BadRequest();
+            }
+            catch(ParseException parsingException)
+            {
+                Logger.LogException(parsingException.ToString(), parsingException.StackTrace);
+                return BadRequest();
+            }
+            catch (ServiceProviderGenerationException serviceProviderGenerationException)
+            {
+                Logger.LogException(serviceProviderGenerationException.ToString(), serviceProviderGenerationException.StackTrace);
                 return BadRequest();
             }
             catch (NullReferenceException nullRefExcep)
@@ -49,5 +65,6 @@ namespace HotelSearchingListingBooking.API.Controllers
                 return BadRequest();
             }
         }
+               
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using ExternalServices.HotelSearchEngine;
 using SystemContracts.ConsumerContracts;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
@@ -20,18 +22,38 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 };
                 parsedRQ.Itinerary = getRequiredItinerary(singleAvailRoomSearchRQ.CallerSessionId, singleAvailRoomSearchRQ.ItineraryId);
                 if (parsedRQ.Itinerary == null)
-                    throw new Exception("Cannot identify required itinerary");
+                    throw new InvalidObjectRequestException()
+                    {
+                        Source = parsedRQ.Itinerary.GetType().Name
+                    };
+                if (SelectedItineraryCache.IsPresent(parsedRQ.SessionId))
+                    SelectedItineraryCache.Remove(parsedRQ.SessionId);
+                SelectedItineraryCache.AddToCache(parsedRQ.SessionId, parsedRQ.Itinerary);
                 return parsedRQ;
+            }
+            catch(InvalidObjectRequestException invalidObjectRequestException)
+            {
+                Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
+                throw new ServiceRequestParserException()
+                {
+                    Source = invalidObjectRequestException.Source
+                };
             }
             catch(NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new ServiceRequestParserException()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch(Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                return null;
+                throw new ServiceRequestParserException()
+                {
+                    Source = baseException.Source
+                };
             }
         }
 
@@ -50,12 +72,12 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new Exception();
             }
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                return null;
+                throw new Exception();
             }
         }
     }

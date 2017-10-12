@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using ExternalServices.HotelSearchEngine;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.Attributes.HotelAttributes;
+using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Caches;
 
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
@@ -22,24 +24,55 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     {
                         parsedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
                         if (parsedResponse.Itinerary == null)
-                            throw new Exception("Unable to fill itinerary for single avail request");
+                            throw new InvalidObjectRequestException()
+                            {
+                                Source = parsedResponse.Itinerary.GetType().Name
+                            };
                         ItinerarySummary summary;
                         (new MultiAvailHotelSearchRSParser()).TryParseItinerary(itinerary, out summary, 10);
-                        parsedResponse.Itinerary.ItinerarySummary = summary ?? throw new Exception("Cannot parse unique itinerary");
+                        parsedResponse.Itinerary.ItinerarySummary = 
+                            summary 
+                            ?? 
+                            throw new ParseException()
+                            {
+                                Source = parsedResponse.Itinerary.ItinerarySummary.GetType().Name
+                            };
                         parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
                         return parsedResponse;
                     }
                 }
             }
+            catch(InvalidObjectRequestException invalidObjectRequestException)
+            {
+                Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = invalidObjectRequestException.Source
+                };
+            }
+            catch(ParseException parseException)
+            {
+                Logger.LogException(parseException.ToString(), parseException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = parseException.Source
+                };
+            }
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new ServiceResponseParserException()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                return null;
+                throw new ServiceResponseParserException()
+                {
+                    Source = baseExcep.Source
+                };
             }
             return null;
         }
@@ -52,32 +85,55 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 itinerary.CheckInDate = hotelRoomSearchRS.Itinerary.StayPeriod.Start;
                 itinerary.CheckOutDate = hotelRoomSearchRS.Itinerary.StayPeriod.End;
                 if (tryFillGuestsCount(hotelRoomSearchRS.SessionId, itinerary) == false)
-                    throw new Exception("Error in filling guests details");
+                    throw new ObjectInitializationException()
+                    {
+                        Source = "Guests Count"
+                    };
                 if (hotelRoomSearchRS.Itinerary.Rooms.Length > 0)
                 {
                     List<RoomSummary> roomsItinerarySummary;
                     if (tryFillRoomsSummary(hotelRoomSearchRS.Itinerary.HotelProperty.SupplierHotelId, hotelRoomSearchRS.Itinerary.Rooms, out roomsItinerarySummary) == false)
-                        throw new Exception("Error in filling rooms summary itinerary");
+                        throw new ObjectInitializationException()
+                        {
+                            Source = roomsItinerarySummary.GetType().Name
+                        };
                     itinerary.Rooms = roomsItinerarySummary;
                 }
                 if (hotelRoomSearchRS.Itinerary.HotelProperty.Reviews.Length > 0)
                 {
                     List<string> hotelItineraryReviews = null;
                     if (tryFillItineraryReviews(hotelRoomSearchRS.Itinerary.HotelProperty.Reviews, out hotelItineraryReviews))
-                        throw new Exception("Error in filling itinerary reviews");
+                        throw new ObjectInitializationException()
+                        {
+                            Source = hotelItineraryReviews.GetType().Name
+                        };
                     itinerary.Reviews = hotelItineraryReviews;
                 }
                 return itinerary;
             }
+            catch(ObjectInitializationException objectInitializationException)
+            {
+                Logger.LogException(objectInitializationException.ToString(), objectInitializationException.StackTrace);
+                throw new Exception()
+                {
+                    Source = objectInitializationException.Source
+                };
+            }
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return null;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                return null;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
@@ -98,13 +154,19 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 hotelItineraryReviews = null;
-                return false;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
                 hotelItineraryReviews = null;
-                return false;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
@@ -131,13 +193,19 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 roomsItinerarySummary = null;
-                return false;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
                 roomsItinerarySummary = null;
-                return false;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
 
@@ -167,12 +235,18 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                return false;
+                throw new Exception()
+                {
+                    Source = nullRefExcep.Source
+                };
             }
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                return false;
+                throw new Exception()
+                {
+                    Source = baseExcep.Source
+                };
             }
         }
     }
