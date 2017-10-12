@@ -1,6 +1,7 @@
 function listHotels(jsonObject){
     for(var hotel=0;hotel<jsonObject["resultsCount"];hotel++)
         {
+            $("##hotels-list-container").empty();
             var itinerariesCount=jsonObject['itineraries'].length;
             for(var itinerary=0;itinerary<itinerariesCount;itinerary++)
                 {
@@ -18,6 +19,11 @@ function listHotels(jsonObject){
                 }
         }
 }
+//function listHotels(jsonObject)
+//{
+//    var hotelListTemplate=$("#hotel-list-template").html();
+//    var hotelList
+//}
 $(document).ready(
 function (){
     var multiAvailHotelSearchRS=  {
@@ -98,7 +104,7 @@ function (){
           }
                             ]
     };
-    listHotels(multiAvailHotelSearchRS);
+//    listHotels(multiAvailHotelSearchRS);
     var placeSuggestions; var suggestionArray = new Array(); var multiAvailHotelSearchRS; var childrenAgeArray;
     {for(var index=1;index<18;index++)
         {
@@ -254,7 +260,7 @@ function (){
                                                url:"../padharojanab/value",
                                                 cache:false,
                                                data:JSON.stringify(IEngineServiceRQ),
-                                               success:function(response){console.log(response);},
+                                               success:function(response){console.log(response);listHotels(response);},
                                                error:function(response){console.log(response);},
                                                
                                            });
@@ -263,4 +269,5 @@ function (){
                     }
             }
         });    
+
 });
