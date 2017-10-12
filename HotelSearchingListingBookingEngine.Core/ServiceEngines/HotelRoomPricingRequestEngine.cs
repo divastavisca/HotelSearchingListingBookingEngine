@@ -52,6 +52,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = noResultsFoundException.Source
                 };
             }
+            catch(Exception baseException)
+            {
+                Logger.LogException(baseException.ToString(), baseException.StackTrace);
+                throw new PricingRequestEngineException()
+                {
+                    Source = baseException.Source
+                };
+            }
         }
     }
 }
