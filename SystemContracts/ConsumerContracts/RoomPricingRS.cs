@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SystemContracts.ServiceContracts;
 
 namespace SystemContracts.ConsumerContracts
 {
-    public class RoomPricingRS
+    public class RoomPricingRS : IEngineServiceRS
     {
         public string CallerSessionId { get; set; }
 

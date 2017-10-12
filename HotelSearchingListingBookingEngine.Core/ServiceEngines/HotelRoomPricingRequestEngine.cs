@@ -25,8 +25,9 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     {
                         Source = hotelRoomPriceRS.Itinerary.GetType().Name
                     };
-                
+                return (new RoomPricingRSParser()).Parse(hotelRoomPriceRS);
             }
+
             catch(ServiceRequestParserException serviceRequestParserException)
             {
                 Logger.LogException(serviceRequestParserException.ToString(), serviceRequestParserException.StackTrace);
@@ -35,7 +36,15 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = serviceRequestParserException.Source
                 };
             }
-            catch(NoResultsFoundException noResultsFoundException)
+            catch (ServiceResponseParserException serviceResponseParserException)
+            {
+                Logger.LogException(serviceResponseParserException.ToString(), serviceResponseParserException.StackTrace);
+                throw new PricingRequestEngineException()
+                {
+                    Source = serviceResponseParserException.Source
+                };
+            }
+            catch (NoResultsFoundException noResultsFoundException)
             {
                 Logger.LogException(noResultsFoundException.ToString(), noResultsFoundException.StackTrace);
                 throw new PricingRequestEngineException()
