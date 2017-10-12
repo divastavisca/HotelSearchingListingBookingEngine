@@ -190,7 +190,7 @@ function (){
             }
         $("#children-age-container").append(childrenAgeHtml);
     });
-    $("#search-hotels-button").click(function(){
+    $("#search-hotels-button").on("click",function(){
         var locationParts=($("#location").val().split('|'));
         var locationId=locationParts[2];
         var locationType=locationParts[locationParts.length-1];
@@ -225,8 +225,8 @@ function (){
                                                                                     'Type':jsonLocationObject.SearchType,
                                                                                     'GeoCode':
                                                                                         {
-                                                                                            'Latitude':jsonLocationObject.Latitude,
-                                                                                           'Longitude':jsonLocationObject.Longitude
+                                                                                            'Latitude':parseFloat(jsonLocationObject.Latitude).toFixed(4),
+                                                                                           'Longitude':parseFloat(jsonLocationObject.Longitude).toFixed(4)
                                                                                         },
                                                                                     
                                                                                 },
@@ -252,6 +252,7 @@ function (){
                                                     "Content-Type": "application/json"
                                                 },
                                                url:"../padharojanab/value",
+                                                cache:false,
                                                data:JSON.stringify(IEngineServiceRQ),
                                                success:function(response){console.log(response);},
                                                error:function(response){console.log(response);},

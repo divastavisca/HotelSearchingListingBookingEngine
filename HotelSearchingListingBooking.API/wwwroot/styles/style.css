@@ -3,8 +3,8 @@ body{
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: stretch;
-    background-image: url("../resources/Night-City-4K-Wallpaper.jpg");
     background-size: cover;
+    background-image: url("../resources/DarkWoodBackground2.jpg");
     background-attachment: fixed;
     margin:0px;
     overflow-x: hidden;
