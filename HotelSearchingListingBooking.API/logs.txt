@@ -3234,4 +3234,127 @@ Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.Mult
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:2b6360c7-c693-403f-9f85-bf7859abe62c
+Timestamp: 10/12/2017 2:26:27 PM
+Log Description: System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\bin\Debug\netcoreapp2.0\StateBagData\StateBagObjectData1.txt'.
+   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.InternalReadAllBytes(String path)
+   at System.IO.File.ReadAllBytes(String path)
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 317
+--------------------------------------------------Log ID:197327d7-123f-46f5-b13c-7f4552c6a59e
+Timestamp: 10/12/2017 2:26:27 PM
+Log Description: System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+--------------------------------------------------Log ID:e20cc5f6-6b9b-4d4f-82d2-8899f81bdcc0
+Timestamp: 10/12/2017 2:26:27 PM
+Log Description: Error in parsing Request
+Exception at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 172
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:123e3840-ab8e-443c-81d4-e4a8a24ee214
+Timestamp: 10/12/2017 2:26:27 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:f619a80f-6f47-42c0-8867-c147f1e5243f
+Timestamp: 10/12/2017 2:26:27 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:2debf2cb-8544-4200-ba88-891d4870fe0c
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\bin\Debug\netcoreapp2.0\StateBagData\StateBagObjectData1.txt'.
+   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.InternalReadAllBytes(String path)
+   at System.IO.File.ReadAllBytes(String path)
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 317
+--------------------------------------------------Log ID:8cf9edb5-986b-413e-af14-334cec342786
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+--------------------------------------------------Log ID:78df0a0b-f4b8-4689-98b4-291ba080c29c
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.getStateBags(String fileName) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 322
+   at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 58
+--------------------------------------------------Log ID:7e5573c1-e7a9-42f1-b4d8-3d19b12d0cc5
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: Error in parsing Request
+Exception at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 172
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:2916a181-6443-49ff-86ef-877686bdb5a4
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: Error in parsing Request
+Exception at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelSearchRQParser.Parse(MultiAvailHotelSearchRQ request) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelSearchRQParser.cs:line 172
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 21
+--------------------------------------------------Log ID:77da467f-7e02-4ebc-b9dc-00d555ac1d78
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:d8935011-3b12-4be9-9975-00bc1657fede
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:e0376433-fe44-4000-a2b1-b39b49af4153
+Timestamp: 10/12/2017 2:28:51 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:65fdd355-ece7-4413-919c-db0fed5d6b70
+Timestamp: 10/12/2017 2:35:10 PM
+Log Description: No Results were discovered or some exception occured at supplier end
+--------------------------------------------------Log ID:f0f8a7d6-a4b3-4aaf-b69f-b3d6e9904eeb
+Timestamp: 10/12/2017 2:35:10 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:cfbd9c6e-101f-4982-993a-98b3e1fbcdae
+Timestamp: 10/12/2017 2:35:11 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
 -------------------------
