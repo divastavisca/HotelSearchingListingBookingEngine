@@ -30,6 +30,9 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     };
                 parsedRQ.Itinerary = userSelectedItinerary;
                 parsedRQ.ResultRequested = ResponseType.Complete;
+                if (PricingRequestCache.IsPresent(parsedRQ.SessionId))
+                    PricingRequestCache.Remove(parsedRQ.SessionId);
+                PricingRequestCache.AddToCache(parsedRQ.SessionId, hotelRoomPricingRQ.RoomId);
                 return parsedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)

@@ -74,7 +74,6 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     Source = baseExcep.Source
                 };
             }
-            return null;
         }
 
         private Itinerary fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS)
