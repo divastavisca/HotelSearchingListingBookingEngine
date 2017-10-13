@@ -22,10 +22,10 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
                     throw new NoResultsFoundException();
-                updateCaches(hotelSearchRS.SessionId,hotelSearchRQ.HotelSearchCriterion,hotelSearchRS.Itineraries);
+                updateCaches(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion, hotelSearchRS.Itineraries);
                 return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
             }
-            catch(ServiceRequestParserException requestParserException)
+            catch (ServiceRequestParserException requestParserException)
             {
                 Logger.LogException(requestParserException.ToString(), requestParserException.StackTrace);
                 throw new SearchEngineException()
@@ -59,7 +59,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
             }
         }
 
-        private void updateCaches(string sessionId,HotelSearchCriterion hotelSearchCriterion, HotelItinerary[] itineraries)
+        private void updateCaches(string sessionId, HotelSearchCriterion hotelSearchCriterion, HotelItinerary[] itineraries)
         {
             if (ItineraryCache.IsPresent(sessionId))
             {
@@ -71,13 +71,15 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     if (PricingRequestCache.IsPresent(sessionId))
                     {
                         PricingRequestCache.Remove(sessionId);
+                        if (TripProductCache.IsPresent(sessionId))
+                            TripProductCache.Remove(sessionId);
                     }
                 }
             }
             else
             {
                 ItineraryCache.AddToCache(sessionId, itineraries);
-                SearchCriterionCache.AddToCache(sessionId,hotelSearchCriterion);
+                SearchCriterionCache.AddToCache(sessionId, hotelSearchCriterion);
             }
         }
     }

@@ -16,7 +16,7 @@ function listHotels(jsonObject) {
             htmlToAppend +=
                 "<td>Rating :" + currentItineraries['starRating'] + " Stars</td>";
             htmlToAppend += "<td> Starting From :" + currentItineraries['minimumPrice'] + currentItineraries['currency'] + "</td></tr>";
-            htmlToAppend += "<td><a class='view-deal-button' href='singleavail.html?cid=" + sessionId + "&iid=" + currentItineraries['itineraryId'] + "'>View Deal</a>";
+            htmlToAppend += "<td><a class='view-deal-button' target='_blank' href='singleavail.html?cid=" + sessionId + "&iid=" + currentItineraries['itineraryId'] + "'>View Deal</a>";
             $("#hotels-list-container").append(htmlToAppend);
         }
     }

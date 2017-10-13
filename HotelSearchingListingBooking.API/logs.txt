@@ -852,4 +852,264 @@ Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.Hote
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\apandey\Desktop\hotelAPi\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:06406fcf-c7b4-4a6a-9710-ff2d7ab4a7c3
+Timestamp: 10/13/2017 4:06:20 PM
+Log Description: Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Int32'. Path 'ChildrenAge[0]', line 1, position 222. ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 26
+Stack Trace:    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 26
+--------------------------------------------------Log ID:db70cdfb-e069-431a-be88-5284f647c5d5
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+--------------------------------------------------Log ID:ae8a3e6f-a3e6-4e9f-b1ec-49faf558be4c
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: Error in parsing Request
+Exception at NullReferenceException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 131
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getUpdatedItinerary(HotelItinerary userSelectedItinerary, String selectedRoomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 83
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 63
+--------------------------------------------------Log ID:e3c99894-09ed-40e8-86bb-317dd3261895
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 72
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 22
+--------------------------------------------------Log ID:d6533554-588e-4367-b85d-54a90ba56c03
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 52
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 21
+--------------------------------------------------Log ID:95c5ff86-31eb-456e-baea-65a910d90e14
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: Error in processing Price Request at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 21
+--------------------------------------------------Log ID:0f0ea898-4414-4c62-8cb5-af3556dd27de
+Timestamp: 10/13/2017 4:11:50 PM
+Log Description: Error in providing service ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:2e5ce465-6952-4491-a03a-5420351c474e
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+--------------------------------------------------Log ID:71473178-4d05-487e-98ce-1484a945720e
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: Error in parsing Request
+Exception at NullReferenceException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 131
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getUpdatedItinerary(HotelItinerary userSelectedItinerary, String selectedRoomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 83
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 63
+--------------------------------------------------Log ID:bf5d767a-215c-48e5-8b22-59cc16523ca8
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 72
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 22
+--------------------------------------------------Log ID:37d30d48-5aec-455a-abd7-67f87dc5f9b1
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 52
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 21
+--------------------------------------------------Log ID:c79c9713-44e1-4d25-a8da-0324c586db65
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: Error in processing Price Request at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 21
+--------------------------------------------------Log ID:3ffda2f6-b504-4628-86fe-d05db87f069e
+Timestamp: 10/13/2017 4:11:56 PM
+Log Description: Error in providing service ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:43da73db-6918-48f1-a194-773a99171e32
+Timestamp: 10/13/2017 4:15:15 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:f92bee24-4fde-4d4e-87f5-ba5ea92f12a2
+Timestamp: 10/13/2017 4:15:30 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:8fadf310-24dd-4ea2-9157-b4bb37c4d3f7
+Timestamp: 10/13/2017 4:15:33 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:f15ced82-5807-4979-8876-7a26a608e887
+Timestamp: 10/13/2017 4:16:38 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:f78911b6-ada7-4820-9f34-649d5d3d2d48
+Timestamp: 10/13/2017 4:16:41 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:d6b9d42c-8ce7-42c1-a80e-ecb20da53e00
+Timestamp: 10/13/2017 4:16:43 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:ed85d817-2776-4d38-9991-f7b60fd241ec
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+--------------------------------------------------Log ID:4a0bd118-3ab0-49e9-a39b-e66499ec5f40
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: Error in parsing Request
+Exception at NullReferenceException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 131
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getUpdatedItinerary(HotelItinerary userSelectedItinerary, String selectedRoomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 83
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 63
+--------------------------------------------------Log ID:0ade378e-94e5-4cdf-91a0-41cb9f9261a5
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 72
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 22
+--------------------------------------------------Log ID:070d7409-7a16-460c-a9eb-1219fdb867bd
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 52
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 21
+--------------------------------------------------Log ID:00cc6424-92ef-48d1-9954-1b9f5367c934
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: Error in processing Price Request at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 21
+--------------------------------------------------Log ID:6eed5f41-9ee2-4817-8a1e-ab9b7bfc4022
+Timestamp: 10/13/2017 4:19:49 PM
+Log Description: Error in providing service ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:9db1bd9f-39ff-4bf5-b4d2-694d49e1a456
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+--------------------------------------------------Log ID:af8a4838-ccd4-4053-bbff-efcdf100b735
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: Error in parsing Request
+Exception at NullReferenceException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 131
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getUpdatedItinerary(HotelItinerary userSelectedItinerary, String selectedRoomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 83
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 63
+--------------------------------------------------Log ID:660e6b8c-8886-4ae5-8d79-b6c740073b8d
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 72
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 22
+--------------------------------------------------Log ID:14b0a94b-58ee-4b6c-b227-817d1554a087
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 52
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 21
+--------------------------------------------------Log ID:106ee48a-8c2a-4315-b108-a8d7f7ac7fb9
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: Error in processing Price Request at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 21
+--------------------------------------------------Log ID:9ac663fc-80f9-4bb6-8149-9061b733f098
+Timestamp: 10/13/2017 4:20:03 PM
+Log Description: Error in providing service ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:38efdbd3-3319-466a-aa64-a6391c311f85
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 123
+--------------------------------------------------Log ID:dc9eb65f-040a-4128-be05-69a1b4b32d36
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: Error in parsing Request
+Exception at NullReferenceException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getRequestedRoom(Room[] rooms, String roomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 131
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getUpdatedItinerary(HotelItinerary userSelectedItinerary, String selectedRoomId) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 83
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 63
+--------------------------------------------------Log ID:b5fd2335-6406-47a7-b078-e7513922d599
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.getHotelProduct(RoomPricingRQ roomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 72
+   at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 22
+--------------------------------------------------Log ID:9d4cfd26-e419-4159-a7c4-d1a0af7aeef5
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: Error in parsing Request
+Exception at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.TripProductPriceRQParser.Parse(RoomPricingRQ hotelRoomPricingRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\TripProductPriceRQParser.cs:line 52
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 21
+--------------------------------------------------Log ID:9aaf4eec-824b-4a99-ab28-68ae91ad7900
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: Error in processing Price Request at ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.HotelRoomPricingRequestEngine.<RequestAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\HotelRoomPricingRequestEngine.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 21
+--------------------------------------------------Log ID:35ae1126-1032-4444-9b85-dba4cc14236d
+Timestamp: 10/13/2017 4:21:57 PM
+Log Description: Error in providing service ServiceRequestParserException
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.HotelRoomPricingRequestProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\HotelRoomPricingRequestProvider.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
 -------------------------
