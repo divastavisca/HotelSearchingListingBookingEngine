@@ -62,7 +62,7 @@
                     <div id="other-details">
                         <h4>Star Rating:</h4><span id="rating"></span>
                         <h4>Amenities:</h4><span id="amenities"></span>
-                        <button type="button">View On Map</button>
+                        <button type="button" id="show-on-map">View On Map</button>
                     </div>
                 </div>          
             </section>
@@ -100,9 +100,15 @@
         <footer id="reviews">
             
         </footer>
+        <div id="map-container">
+            
+        </div>
+        <script>function initMap() { }</script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABK2PpnRa8xpSBogGa1qHBkro3RDpDEvM&callback=initMap"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
         <script src="scripts/singleavail.js"></script>
+        
     </body>
 </html>

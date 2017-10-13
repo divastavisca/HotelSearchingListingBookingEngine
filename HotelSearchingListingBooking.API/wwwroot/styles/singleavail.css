@@ -16,7 +16,6 @@ main{
     justify-content: space-around;
     background-color: rgba(211,211,211,0.8);
 }
-
 #hotel-details,main>section,main>aside{
     display: flex;
     flex-flow: column wrap;
@@ -56,18 +55,17 @@ main>aside{
     align-items: center;
     min-height: 55px;
 }
-
 #logo-container img {
     height: 50px;
     width: 250px;
 }
-
 .rating-stars{
     background-color: black;
 }
+* {
+    box-sizing:border-box;
 
-* {box-sizing:border-box}
-
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -160,4 +158,18 @@ main>aside{
 }
 fieldset{
     border:0px;
+}
+
+#map-container {
+    position:absolute;
+    top:0;
+    left:0;
+    height: 0px;
+    width: 0px;
+    background: rgba(211,211,211,0.2);
+    
+}
+#map{
+    width:50%;
+    height:50%;
 }
