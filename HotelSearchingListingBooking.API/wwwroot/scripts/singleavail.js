@@ -37,22 +37,28 @@
     $("#check-out-date").text((checkOutDate.split("T"))[0]);
     $("#adult-count").text(adultsCount);
     $("#child-count").text(childrenCount);
-    var roomList = "<select name=\"roomType\" id=\"child-count\">";
+    var roomList = "<select name=\"roomType\" id=\"rooms\">";
     for (var roomCount = 0; roomCount < rooms.length; roomCount++)
     {
+        roomMapping[roomCount] = rooms[roomCount]['roomId'];
         roomList += "<option value=\""+roomCount + "\">" + roomCount + 1 + ". " + rooms[roomCount]['description']+"</option>";
     }
     roomList += "</select >";
     $("#rooms-field-set").append(roomList);
-    var reviewHtml="";
-    for (var reviewCount = 0; reviewCount < reviews.length; reviewCount++)
+
+    if(reviews!=null)
     {
-        reviewHtml+="<article class=\"reviews\">"+ review[reviewCount] + "</article>"
+        var reviewHtml = "";
+        for (var reviewCount = 0; reviewCount < reviews.length; reviewCount++) {
+            reviewHtml += "<article class=\"reviews\">" + review[reviewCount] + "</article>"
+        }
+        $("#reviews").append(reviewHtml);
     }
-    $("#reviews").append(reviewHtml);
 }
+var callerSessionId;
+var roomMapping = new Object();
 var slideIndex = 1;
-showSlides(slideIndex);
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -101,8 +107,30 @@ $(document).ready(function () {
 
             })
         }
+        showSlides(slideIndex);
         $("#get-current-price").on("click", function () {
-
+            var roomPricingRQ = {
+                "CallerSessionId": callerSessionId,
+                "RoomId": roomMapping[$("#rooms").val()]
+            };
+            var serviceRQ = {
+                "ServiceName": "HotelPricing",
+                "JsonRequest": JSON.stringify(roomPricingRQ)
+            };
+            $.ajax({
+                type: 'post',
+                headers:
+                {
+                    "Content-Type": "application/json"
+                },
+                url: "../padharojanab/value",
+                cache: false,
+                data: JSON.stringify(serviceRQ),
+                success: function (response)
+                {
+                    $("#price").text(response.roomPrice + response.currency);
+                }
+            });
         })
     }
 )
