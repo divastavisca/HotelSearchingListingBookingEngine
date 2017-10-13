@@ -1,4 +1,5 @@
 function listHotels(jsonObject) {
+    sessionId = jsonObject["callerSessionId"];
     for (var hotel = 0; hotel < jsonObject["resultsCount"]; hotel++) {
         $("#hotels-list-container").empty();
         var itinerariesCount = jsonObject['itineraries'].length;
@@ -7,26 +8,15 @@ function listHotels(jsonObject) {
             var htmlToAppend =
                 "<tr class='itinerary'><td> Name :" + currentItineraries['name'] + "</td>";
             htmlToAppend += "<td> <img class='hero-image' src=" + currentItineraries['imageUrl'][0] + "></td>";
-            htmlToAppend +=
-                "<td> <input type='hidden' value='"
-                + currentItineraries['itineraryId'] +
-                "' id='itinerary" +
-                currentItineraries['itineraryId'] +
-                "'></td>";
-            //htmlToAppend +=
-            //    "<td><input type='hidden' value='" + currentItineraries['geoCode']['latitude'] + "' id='itinerary" + currentItineraries['itineraryId']+"latitude'</td>";
-            //htmlToAppend +=
-            //    "<td><input type='hidden' value='" + currentItineraries['geoCode']['longitude'] + "' id='itinerary" + currentItineraries['itineraryId'] + "longitude'</td>";
+            htmlToAppend +="<td> <input type='hidden' value='"+ currentItineraries['itineraryId'] +"></td>";
             htmlToAppend += "<td>Address:<p>" + currentItineraries['address'] + "</p></td>";
-            htmlToAppend +=
-                "<td><button type='button' onclick='showOnMap(" +
-                currentItineraries['geoCode']['latitude'] +
-                "," +
+            htmlToAppend +="<td><button type='button' onclick='showOnMap(" +currentItineraries['geoCode']['latitude'] + "," +
                 currentItineraries['geoCode']['longitude'] +
                 ")' >View On Map</button></td>";
             htmlToAppend +=
                 "<td>Rating :" + currentItineraries['starRating'] + " Stars</td>";
             htmlToAppend += "<td> Starting From :" + currentItineraries['minimumPrice'] + currentItineraries['currency'] + "</td></tr>";
+            htmlToAppend += "<td><a class='view-deal-button' target='_blank' href='singleavail.html?cid=" + sessionId + "&iid=" + currentItineraries['itineraryId'] + "'>View Deal</a>";
             $("#hotels-list-container").append(htmlToAppend);
         }
     }
@@ -37,9 +27,9 @@ function listHotels(jsonObject) {
 //    $("#hotels-list-container").attr('min-height','120px');
 //    $("#hotels-list-container").html(loadingImageHtml);
 //}
-function hideLoadingImage() {
-    $("#hotels-list-container").empty();
-}
+//function hideLoadingImage() {
+//    $("#hotels-list-container").empty();
+//}
 
 //function listHotels(jsonObject)
 //{
@@ -50,6 +40,7 @@ function hideLoadingImage() {
 //}
 $(document).ready(
     function () {
+        var sessionId;
         var jsonResponseData;
         var placeSuggestions;
         var suggestionArray = new Array();

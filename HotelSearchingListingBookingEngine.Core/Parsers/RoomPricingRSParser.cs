@@ -10,13 +10,13 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class RoomPricingRSParser
     {
-        public RoomPricingRS Parse(HotelRoomPriceRS hotelRoomPriceRS)
+        public RoomPricingRS Parse(ExternalServices.PricingPolicyEngine.TripProductPriceRS hotelRoomPriceRS)
         {
             try
             {
                 RoomPricingRS parsedRS = new RoomPricingRS();
                 parsedRS.CallerSessionId = hotelRoomPriceRS.SessionId;
-                if (hotelRoomPriceRS.Itinerary == null)
+                if (hotelRoomPriceRS.TripProduct == null)
                     parsedRS.IsUpdated = false;
                 else parsedRS.IsUpdated = true;
                 if (PricingRequestCache.IsPresent(hotelRoomPriceRS.SessionId) == false)
@@ -24,22 +24,18 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     {
                         Source = typeof(HotelItinerary).Name
                     };
-                var roomId = PricingRequestCache.GetSelectedRoomId(hotelRoomPriceRS.SessionId);
-                foreach(Room hotelRoom in hotelRoomPriceRS.Itinerary.Rooms)
-                {
-                    if(hotelRoom.RoomId.ToString() == roomId)
-                    {
-                        parsedRS.Currency = hotelRoom.DisplayRoomRate.TotalFare.Currency;
-                        parsedRS.RoomPrice = hotelRoom.DisplayRoomRate.TotalFare.Amount;
-                        return parsedRS;
-                    }
-                }
+                parsedRS.Currency = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
+                parsedRS.RoomPrice = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+                if (TripProductCache.IsPresent(hotelRoomPriceRS.SessionId))
+                    TripProductCache.Remove(hotelRoomPriceRS.SessionId);
+                TripProductCache.AddToCache(hotelRoomPriceRS.SessionId, hotelRoomPriceRS.TripProduct);
+                return parsedRS;
                 throw new InvalidObjectRequestException()
                 {
-                    Source = typeof(Room).Name
+                    Source = typeof(ExternalServices.PricingPolicyEngine.Room).Name
                 };
             }
-            catch(InvalidObjectRequestException invalidObjectRequestException)
+            catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
                 throw new ServiceResponseParserException()
@@ -47,7 +43,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     Source = invalidObjectRequestException.Source
                 };
             }
-            catch(Exception baseException)
+            catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
                 throw new ServiceResponseParserException()

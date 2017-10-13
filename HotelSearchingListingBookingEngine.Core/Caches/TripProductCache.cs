@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using ExternalServices.PricingPolicyEngine;
 using System.Text;
 
 namespace HotelSearchingListingBookingEngine.Core.Caches
 {
-    public class PricingRequestCache
+    public class TripProductCache
     {
-        private static Dictionary<string, string> _cache;
+        private static Dictionary<string, TripProduct> _cache;
 
-        static PricingRequestCache()
+        static TripProductCache()
         {
-            _cache = new Dictionary<string, string>();
+            _cache = new Dictionary<string, TripProduct>();
         }
 
         public static bool IsPresent(string sessionId)
@@ -18,9 +19,9 @@ namespace HotelSearchingListingBookingEngine.Core.Caches
             return _cache.ContainsKey(sessionId);
         }
 
-        public static void AddToCache(string sessionId, string requestedRoomId)
+        public static void AddToCache(string sessionId, TripProduct searchResponse)
         {
-            _cache.Add(sessionId, requestedRoomId);
+            _cache.Add(sessionId, searchResponse);
         }
 
         public static void Remove(string sessionId)
@@ -29,7 +30,7 @@ namespace HotelSearchingListingBookingEngine.Core.Caches
                 _cache.Remove(sessionId);
         }
 
-        public static string GetSelectedRoomId(string sessionId)
+        public static TripProduct GetItineraries(string sessionId)
         {
             return IsPresent(sessionId) ? _cache[sessionId] : null;
         }
