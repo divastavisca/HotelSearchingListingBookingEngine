@@ -7,5 +7,6 @@ namespace HotelSearchingListingBookingEngine.Core.InternalEngineHandshakes
 {
     public class ProductStagingInfo : IEngineServiceRQ, IEngineServiceRS
     {
+
     }
 }
