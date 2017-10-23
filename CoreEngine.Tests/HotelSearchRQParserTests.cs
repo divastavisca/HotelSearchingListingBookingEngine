@@ -27,7 +27,7 @@ namespace CoreEngine.Tests
                 AdultsCount = 1,
                 CheckInDate = DateTime.Parse("2017-11-14"),
                 CheckOutDate = DateTime.Parse("2017-11-15"),
-                ChildrenAge = new System.Collections.Generic.List<int>() {12 },
+                ChildrenAge = new System.Collections.Generic.List<int>() { 12 },
                 ChildrenCount = 1,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
@@ -131,6 +131,10 @@ namespace CoreEngine.Tests
 
             var RS = (new TripFolderBookRQParser()).Parse(req);
             var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
+            var staginginfo = (new StagingRSParser()).Parse(mainRs);
+            var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
+            var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
+
         }
     }
 }
