@@ -12,6 +12,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class MultiAvailHotelSearchRSParser
     {
+        private readonly string _deafultSupplier = "HotelBeds";
+
         public MultiAvailHotelSearchRS Parse(HotelSearchRS hotelSearchRS)
         {
             try
@@ -107,7 +109,11 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 uniqueItinerary.StarRating = hotelItinerary.HotelProperty.HotelRating.Rating;
                 uniqueItinerary.Currency = hotelItinerary.Fare.BaseFare.Currency;
                 uniqueItinerary.MinimumPrice = hotelItinerary.Fare.BaseFare.Amount;
-                return true;
+                if (hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSupplier))
+                {
+                    return true;
+                }
+                return false;
             }
             catch(JsonException jsonException)
             {

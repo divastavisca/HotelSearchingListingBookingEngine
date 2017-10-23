@@ -1112,4 +1112,255 @@ Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.Hote
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:4499b296-4e93-4a99-bb4b-159ec354356b
+Timestamp: 10/23/2017 11:41:35 AM
+Log Description: System.ServiceModel.CommunicationException: An error occurred while sending the request. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.WinHttpException: The operation timed out
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Threading.Tasks.RendezvousAwaitable`1.GetResult()
+   at System.Net.Http.WinHttpHandler.<StartRequest>d__105.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.ServiceModelHttpMessageHandler.<SendAsync>d__41.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncUnbuffered>d__59.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.<SendRequestAsync>d__13.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+--------------------------------------------------Log ID:89ee1918-5418-4166-9f1f-d110e81060f2
+Timestamp: 10/23/2017 11:41:36 AM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:f76ebeee-6d85-49c6-94dc-ead32f7353d1
+Timestamp: 10/23/2017 11:41:36 AM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:355e3186-af84-485b-b538-3863ed217087
+Timestamp: 10/23/2017 11:41:36 AM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:c4900ed2-c907-4ff7-a23e-bad21045dce5
+Timestamp: 10/23/2017 11:42:39 AM
+Log Description: System.ServiceModel.CommunicationException: An error occurred while sending the request. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.WinHttpException: The operation timed out
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Threading.Tasks.RendezvousAwaitable`1.GetResult()
+   at System.Net.Http.WinHttpHandler.<StartRequest>d__105.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.ServiceModelHttpMessageHandler.<SendAsync>d__41.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncUnbuffered>d__59.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.<SendRequestAsync>d__13.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+--------------------------------------------------Log ID:3e870c6f-08a1-4831-9884-f1cf8ce06a8b
+Timestamp: 10/23/2017 11:42:39 AM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:622f12aa-b120-4431-adc2-966689b96a75
+Timestamp: 10/23/2017 11:42:39 AM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:388e958f-918f-48c0-aa92-bf49111546f7
+Timestamp: 10/23/2017 11:42:39 AM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:0f87195e-29d9-495a-9cb8-bce4350898e8
+Timestamp: 10/23/2017 11:45:22 AM
+Log Description: System.ServiceModel.CommunicationException: An error occurred while sending the request. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.WinHttpException: The operation timed out
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Threading.Tasks.RendezvousAwaitable`1.GetResult()
+   at System.Net.Http.WinHttpHandler.<StartRequest>d__105.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.ServiceModelHttpMessageHandler.<SendAsync>d__41.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncUnbuffered>d__59.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.<SendRequestAsync>d__13.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+--------------------------------------------------Log ID:0f79f0ad-7b9a-45df-a64a-d00470c13cac
+Timestamp: 10/23/2017 11:45:22 AM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:47465db3-f481-4323-84c3-334177e639e2
+Timestamp: 10/23/2017 11:45:23 AM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:13666ccf-8153-465c-984d-20f07e991cb1
+Timestamp: 10/23/2017 12:18:05 PM
+Log Description: System.ServiceModel.CommunicationException: An error occurred while sending the request. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.WinHttpException: The operation timed out
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Threading.Tasks.RendezvousAwaitable`1.GetResult()
+   at System.Net.Http.WinHttpHandler.<StartRequest>d__105.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.ServiceModelHttpMessageHandler.<SendAsync>d__41.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncUnbuffered>d__59.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.<SendRequestAsync>d__13.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 22
+--------------------------------------------------Log ID:8ef31bda-2c9b-40e8-96a6-c7590c25d8a7
+Timestamp: 10/23/2017 12:18:05 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:9fd4ea30-0aca-42b8-bf26-018422617da3
+Timestamp: 10/23/2017 12:18:05 PM
+Log Description: Error in processing request error occured at System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:85cdf6eb-1907-4760-a9fd-2012a5939ac6
+Timestamp: 10/23/2017 12:18:05 PM
+Log Description: Error in providing service System.Private.ServiceModel
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
 -------------------------
