@@ -62,6 +62,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 return new ExternalServices.PricingPolicyEngine.HotelTripProduct()
                 {
+                    Attributes = new ExternalServices.PricingPolicyEngine.StateBag[1] { new ExternalServices.PricingPolicyEngine.StateBag() { Name = "API_SESSION_ID", Value = roomPricingRQ.CallerSessionId } },
                     HotelItinerary = getUpdatedItinerary(SelectedItineraryCache.GetSelecetedItinerary(roomPricingRQ.CallerSessionId), roomPricingRQ.RoomId),
                     HotelSearchCriterion = JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelSearchCriterion>(JsonConvert.SerializeObject(SearchCriterionCache.GetSearchCriterion(roomPricingRQ.CallerSessionId)))
                 };

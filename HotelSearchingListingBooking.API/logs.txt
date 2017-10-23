@@ -1363,4 +1363,134 @@ Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.Mult
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:57049f94-9c1d-4f31-a978-1a47bb561ec7
+Timestamp: 10/23/2017 12:37:31 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:2f195cce-57c3-4df5-be76-2fb25e0c2a9d
+Timestamp: 10/23/2017 12:38:08 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:4dc4bc7b-3e1a-4c99-8cc2-80dc22b1a8bf
+Timestamp: 10/23/2017 12:44:53 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:c146f577-87cc-41da-96ef-217b5e5d64e8
+Timestamp: 10/23/2017 12:45:01 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:1c397f7f-5fc0-4347-91d5-3b855a4665e3
+Timestamp: 10/23/2017 12:45:19 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:8506d048-6e4a-4244-bef1-47120be402be
+Timestamp: 10/23/2017 12:46:45 PM
+Log Description: No Results were discovered or some exception occured at supplier end
+--------------------------------------------------Log ID:da2695b0-07a8-4ce1-af5e-6024835f1f2d
+Timestamp: 10/23/2017 12:46:45 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 47
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:8ce418ca-5239-4591-a214-5b17cb880916
+Timestamp: 10/23/2017 12:46:45 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:90131c26-f30a-40a5-8d27-73933d02efa3
+Timestamp: 10/23/2017 12:47:22 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:7b85d97a-61cb-4214-bcbf-a4352820556d
+Timestamp: 10/23/2017 12:47:26 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:f1e601fe-e0d0-49e4-a8ea-8414f2c1cbfd
+Timestamp: 10/23/2017 12:47:55 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:ad2d731b-9cce-4794-9993-bd215f3514a9
+Timestamp: 10/23/2017 1:06:02 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:b7b7bc8c-c1e0-492c-a05f-9b909561330a
+Timestamp: 10/23/2017 1:34:33 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:8d93d0ac-3bc4-465a-956f-29ad5ee3ef2f
+Timestamp: 10/23/2017 1:36:12 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:9e2388a4-6522-4dfd-899b-18ea0c180d97
+Timestamp: 10/23/2017 1:36:26 PM
+Log Description: No Results were discovered or some exception occured at supplier end
+--------------------------------------------------Log ID:16d68e0e-3d63-4bcf-8146-4e40c31d6989
+Timestamp: 10/23/2017 1:36:26 PM
+Log Description: Error in processing request error occured at HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 47
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:3e58a06f-ad22-4dcb-96b9-83e342146558
+Timestamp: 10/23/2017 1:36:26 PM
+Log Description: Error in providing service HotelSearchingListingBookingEngine.Core
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:d486d76f-bbbd-4a52-9a4f-206fc47b35c7
+Timestamp: 10/23/2017 1:36:47 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:0d307b48-cd7f-4243-b48c-53439f6482aa
+Timestamp: 10/23/2017 1:36:55 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:38253092-54f1-4e41-b6da-27636c28d6ef
+Timestamp: 10/23/2017 1:37:18 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:1a7b14ae-a9be-4f31-9fa9-812687796c9b
+Timestamp: 10/23/2017 1:37:22 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:d5cfebbe-0255-4e8d-a540-b3ed89a05cb0
+Timestamp: 10/23/2017 1:37:45 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:e3743e04-2125-48dc-8786-ff5f183ae73d
+Timestamp: 10/23/2017 1:38:37 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:2f6f602d-7b2e-4f7a-9a88-f07117e14c2d
+Timestamp: 10/23/2017 1:38:37 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:68f285d8-73fd-4124-9d84-dbc2e541aa94
+Timestamp: 10/23/2017 1:39:02 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:708cdcab-56b8-4305-b12c-1743b7794d73
+Timestamp: 10/23/2017 1:39:32 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:463e6f69-c363-48e1-83f0-aee77ce6ae20
+Timestamp: 10/23/2017 1:39:35 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
+--------------------------------------------------Log ID:e4c1dde0-0823-4229-9940-951bba41c190
+Timestamp: 10/23/2017 1:40:14 PM
+Log Description: Error in generating response
+Stack Trace:    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 35
 -------------------------

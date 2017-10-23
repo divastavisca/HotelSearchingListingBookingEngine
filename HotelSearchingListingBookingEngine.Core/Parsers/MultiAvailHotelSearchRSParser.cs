@@ -20,10 +20,14 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 MultiAvailHotelSearchRS multiAvailHotelSearchRS = new MultiAvailHotelSearchRS()
                 {
-                    CallerSessionId = hotelSearchRS.SessionId,
-                    ResultsCount = hotelSearchRS.Itineraries.Length
+                    CallerSessionId = hotelSearchRS.SessionId
                 };
                 multiAvailHotelSearchRS.Itineraries = parseItineraries(hotelSearchRS.Itineraries);
+                if (multiAvailHotelSearchRS.Itineraries != null)
+                {
+                    multiAvailHotelSearchRS.ResultsCount = multiAvailHotelSearchRS.Itineraries.Length;
+                }
+                else multiAvailHotelSearchRS = null;
                 return multiAvailHotelSearchRS;
             }
             catch (NullReferenceException nullRefExcep)
