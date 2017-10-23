@@ -23,7 +23,10 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         private readonly string _creatorTitle = "Mr";
         private readonly long _creatorUserId = 169050;
         private readonly string _creatorUserName = "3285301";
+        private readonly string _defaultKnownTravelerNumber = "789456";
         private readonly string _ownerAdditionalDataFile = @"StateBagData\StateBagDataOwnerAdditionalData.txt";
+        private readonly string _folderAdditionalDataFile = @"StateBagData\StateBagDataFolderAdditionalData.txt";
+        private readonly string _folderPassengerCustomData = @"StateBagData\StateBagCustomData.txt";
         private readonly Dictionary<string, ExternalServices.PricingPolicyEngine.PassengerType> _passengerTypeMap = new Dictionary<string, ExternalServices.PricingPolicyEngine.PassengerType>()
         {
             {"Adult",ExternalServices.PricingPolicyEngine.PassengerType.Adult },
@@ -41,14 +44,17 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             try
             {
                 TripFolderBookRQ parsedRQ = new TripFolderBookRQ();
+                parsedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
                 parsedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
                 if (parsedRQ.TripFolder == null)
                     throw new InvalidObjectRequestException()
                     {
                         Source = parsedRQ.TripFolder.GetType().Name
                     };
-                parsedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
+                parsedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Unknown;
                 parsedRQ.SessionId = hotelProductBookRQ.CallerSessionId;
+                parsedRQ.TripProcessingInfo = new TripProcessingInfo();
+                parsedRQ.TripProcessingInfo.TripProductRphs = new int[1] { 0 };
                 return parsedRQ;
             }
             catch (InvalidObjectRequestException invalidObjectRequestException)
@@ -82,6 +88,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             try
             {
                 TripFolder tripFolder = new TripFolder();
+                tripFolder.FolderName = "TripFolder"+DateTime.Now.ToString();
                 tripFolder.Creator = getUser(_creatorAdditionalInfoDataFile);
                 tripFolder.CreatedDate = DateTime.Now;
                 tripFolder.Owner = getUser(_ownerAdditionalDataFile);
@@ -105,14 +112,13 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 
         private TripProduct[] getProducts(TripFolder folder,string sessionId)
         {
-            return new TripProduct[1]
+            var tripProduct = new TripProduct[1];
+            tripProduct[0] = (HotelTripProduct)Caches.TripProductCache.GetItineraries(sessionId);
+            ((HotelTripProduct)tripProduct[0]).HotelItinerary.HotelCancellationPolicy.CancellationRules = new ExternalServices.PricingPolicyEngine.HotelCancellationRule[] { new ExternalServices.PricingPolicyEngine.HotelCancellationRule() };
+            tripProduct[0].LeadPassengerRph = 0;
+            tripProduct[0].Owner = folder.Owner;
+            tripProduct[0].PassengerSegments = new PassengerSegment[1]
             {
-                new HotelTripProduct()
-                {
-                    LeadPassengerRph = 0,
-                    Owner = folder.Owner,
-                    PassengerSegments = new PassengerSegment[1]
-                    {
                         new PassengerSegment()
                         {
                             BookingStatus = TripProductStatus.Planned,
@@ -121,25 +127,22 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                             PostBookingStatus = PostBookingTripStatus.None,
                             Rph = 0,
                         }
-                    },
-                    PaymentBreakups = new PaymentBreakup[1]
-                    {
+            };
+            tripProduct[0].PaymentBreakups = new PaymentBreakup[1]
+            {
                         new PaymentBreakup()
                         {
-                            Amount = folder.Payments[0].Amount,
+                            Amount = ((HotelTripProduct)tripProduct[0]).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare,
                             PassengerRph = 0,
-                            PaymentRph = 0
+                            PaymentRph = 0,
                         }
-                    },
-                    PaymentOptions = new PaymentType[1]
-                    {
-                        PaymentType.Credit
-                    },
-                    Rph = 0,
-                    HotelItinerary = JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelItinerary>(JsonConvert.SerializeObject((SelectedItineraryCache.GetSelecetedItinerary(sessionId)))),
-                    HotelSearchCriterion = JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelSearchCriterion>(JsonConvert.SerializeObject((SearchCriterionCache.GetSearchCriterion(sessionId)))),
-                }
             };
+            tripProduct[0].PaymentOptions = new PaymentType[1]
+            {
+                        PaymentType.Credit
+            };
+            tripProduct[0].Rph = 0;
+            return tripProduct;
         }
 
         private Payment[] getPayment(PaymentDetails paymentDetails, string sessionId)
@@ -150,6 +153,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 {
                     new CreditCardPayment()
                     {
+                        Attributes = new ExternalServices.PricingPolicyEngine.StateBag[1] { new ExternalServices.PricingPolicyEngine.StateBag() { Name = "API_SESSION_ID", Value = sessionId } },
                         Amount = new ExternalServices.PricingPolicyEngine.Money()
                         {
                             Amount = paymentDetails.Amount,
@@ -224,6 +228,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     passenger.LastName = guest.Name.LastName;
                     passenger.PassengerType = _passengerTypeMap[guest.Type];
                     passenger.Rph = 0;
+                    passenger.KnownTravelerNumber = _defaultKnownTravelerNumber;
+                    passenger.CustomFields = getStateBags(_folderPassengerCustomData);
                     guestList.Add(passenger);
                 }
                 return guestList.ToArray();

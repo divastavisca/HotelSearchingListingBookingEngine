@@ -15,7 +15,8 @@ namespace HotelSearchingListingBooking.API.Models
         {
             {typeof(MultiAvailHotelSearchRQ) ,typeof(MultiAvailHotelSearchProvider)},
             {typeof(SingleAvailRoomSearchRQ) , typeof(SingleAvailRoomSearchProvider)},
-            {typeof(RoomPricingRQ), typeof(HotelRoomPricingRequestProvider)}
+            {typeof(RoomPricingRQ), typeof(HotelRoomPricingRequestProvider)},
+            {typeof(HotelProductBookRQ),typeof(BookingServiceEngineProvider)}
         };
         
         public static IEngineServiceProvider GetServiceProvider(Type serviceRequestType)
