@@ -13,15 +13,37 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         {
             try
             {
-                throw new NotImplementedException();
+                ProductBookingRS productBookingRS = new ProductBookingRS();
+                productBookingRS.IsCompleted = checkCompletion(completeBookingRS);
+                if(productBookingRS.IsCompleted)
+                {
+                    if (completeBookingRS.TripFolder != null)
+                        productBookingRS.TransactionId = completeBookingRS.TripFolder.ConfirmationNumber;
+                    else productBookingRS.TransactionId = Guid.NewGuid().ToString();
+                }
+                return productBookingRS;
+            }
+            catch(NullReferenceException nullReferenceException)
+            {
+                Logger.LogException(nullReferenceException.ToString(), nullReferenceException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = nullReferenceException.Source
+                };
             }
             catch(Exception baseException)
             {
+                Logger.LogException(baseException.ToString(), baseException.StackTrace);
                 throw new ServiceResponseParserException()
                 {
                     Source = baseException.Source
                 };
             }
+        }
+
+        private bool checkCompletion(CompleteBookingRS completeBookingRS)
+        {
+            return completeBookingRS.ErrorInfoList == null;
         }
     }
 }

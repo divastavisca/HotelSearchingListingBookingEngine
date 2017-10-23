@@ -7,5 +7,8 @@ namespace SystemContracts.ConsumerContracts
 {
     public class ProductBookingRS : IEngineServiceRS
     {
+        public string TransactionId { get; set; }
+
+        public bool IsCompleted { get; set; }
     }
 }
