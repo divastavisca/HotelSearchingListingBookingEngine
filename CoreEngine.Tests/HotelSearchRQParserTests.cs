@@ -24,24 +24,24 @@ namespace CoreEngine.Tests
             parser = new HotelSearchRQParser();
             request = new MultiAvailHotelSearchRQ()
             {
-                AdultsCount = 2,
-                CheckInDate = DateTime.Parse("2017-10-23"),
-                CheckOutDate = DateTime.Parse("2017-10-24"),
+                AdultsCount = 1,
+                CheckInDate = DateTime.Parse("2017-11-14"),
+                CheckOutDate = DateTime.Parse("2017-11-15"),
                 ChildrenAge = new System.Collections.Generic.List<int>() { 12 },
                 ChildrenCount = 1,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
                     GeoCode = new SystemContracts.Attributes.GeoCoordinates()
                     {
-                        Latitude = 27.173891f,
-                        Longitude = 78.042068f
+                        Latitude = 12.9726f,
+                        Longitude = 77.6209f
                     },
                     Name = "Taj Mahal",
                     Type = "GeoCode"
                 }
             };
             engine = new MultiAvailHotelSearchEngine();
-           
+
         }
 
         [TestMethod]
@@ -51,15 +51,21 @@ namespace CoreEngine.Tests
             var itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId);
             var hotelroomavail = new HotelRoomAvailRQ();
             hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
-            hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[12];
+            hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[0];
             hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
             hotelroomavail.ResultRequested = ResponseType.Complete;
             HotelEngineClient client = new HotelEngineClient();
             var res = await client.HotelRoomAvailAsync(hotelroomavail);
-            //SelectedItineraryCache.AddToCache(res.SessionId, res.Itinerary);
-            //HotelRoomPriceRQ rq = new HotelRoomPriceRQ();
-            //var ghu = ItineraryCache.GetItineraries(hotelroomavail.SessionId);
-            //foreach(HotelItinerary iti in ghu)
+            SelectedItineraryCache.AddToCache(res.SessionId, res.Itinerary);
+            RoomPricingRQ pricingRQ = new RoomPricingRQ();
+            pricingRQ.CallerSessionId = res.SessionId;
+            pricingRQ.RoomId = res.Itinerary.Rooms[0].RoomId.ToString();
+            PricingRequestCache.AddToCache(pricingRQ.CallerSessionId, pricingRQ.RoomId);
+            ExternalServices.PricingPolicyEngine.TripProductPriceRQ tripProductPriceRQ = (new TripProductPriceRQParser()).Parse(pricingRQ);
+            var result = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).PriceTripProductAsync(tripProductPriceRQ);
+            TripProductCache.AddToCache(result.SessionId, result.TripProduct);
+            var ghu = ItineraryCache.GetItineraries(hotelroomavail.SessionId);
+            //foreach (HotelItinerary iti in ghu)
             //{
             //    hotelroomavail = new HotelRoomAvailRQ();
             //    hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
@@ -73,12 +79,13 @@ namespace CoreEngine.Tests
             //    rq.ResultRequested = ResponseType.Complete;
             //    rq.AdditionalInfo = rq.HotelSearchCriterion.Pos.AdditionalInfo;
             //    var res1 = await client.HotelRoomPriceAsync(rq);
+
             //}
             req = new HotelProductBookRQ()
             {
                 CallerSessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId,
                 Guests = new SystemContracts.Attributes.Guest[1]
-                {
+{
                     new SystemContracts.Attributes.Guest()
                     {
                         Name = new SystemContracts.Attributes.Name()
@@ -93,7 +100,7 @@ namespace CoreEngine.Tests
                         Gender = 'M',
                         Type = "Adult"
                     }
-                },
+},
                 PaymentDetails = new SystemContracts.Attributes.PaymentDetails()
                 {
                     Amount = itinerary[0].Fare.TotalFare.Amount,
@@ -115,7 +122,7 @@ namespace CoreEngine.Tests
                         CardNumber = "4444333322221111",
                         Cvv = "123",
                         Code = "VI",
-                        CardName = "Visa",
+                        CardName = "VISA",
                         Expiry = DateTime.Now.AddYears(2),
                         IsThreeDAuth = true
                     }
