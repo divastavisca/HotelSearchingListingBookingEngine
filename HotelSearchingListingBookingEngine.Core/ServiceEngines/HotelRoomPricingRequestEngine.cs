@@ -27,8 +27,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     };
                 return (new RoomPricingRSParser()).Parse(hotelRoomPriceRS);
             }
-
-            catch(ServiceRequestParserException serviceRequestParserException)
+            catch (ServiceRequestParserException serviceRequestParserException)
             {
                 Logger.LogException(serviceRequestParserException.ToString(), serviceRequestParserException.StackTrace);
                 throw new PricingRequestEngineException()
