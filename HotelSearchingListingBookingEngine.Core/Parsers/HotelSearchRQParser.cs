@@ -119,7 +119,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     };
                 parsedRQ.PagingInfo = new PagingInfo()
                 {
-                    Enabled = true,
+                    Enabled = false,
                     StartNumber = _defaultPagingInfoStartNumber,
                     EndNumber = _defaultPagingInfoEndNumber,
                     TotalRecordsBeforeFiltering = _defaultTotalRecordsBeforeFiltering,
@@ -255,6 +255,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[2];
                 PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
                 adultPassengers.PassengerType = PassengerType.Adult;
+                adultPassengers.Ages = getAges(adultsCount);
                 adultPassengers.Quantity = adultsCount;
                 PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
                 childPassengers.PassengerType = PassengerType.Child;
@@ -269,6 +270,15 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 throw new Exception();
             }
+        }
+
+        private int[] getAges(int adultsCount)
+        {
+            int[] ages = new int[adultsCount];
+            int i = 0;
+            while (i < adultsCount)
+                ages[i++] = 22;
+            return ages;
         }
 
         private Company getDefaultRequester()

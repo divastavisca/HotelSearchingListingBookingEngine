@@ -13,7 +13,8 @@ namespace HotelSearchingListingBooking.API.Models
         {
             {"MultiAvail", typeof(MultiAvailHotelSearchRQ)},
             {"SingleAvail", typeof(SingleAvailRoomSearchRQ)},
-            {"HotelPricing", typeof(RoomPricingRQ)}
+            {"HotelPricing", typeof(RoomPricingRQ)},
+            {"ProcessProductBooking", typeof(HotelProductBookRQ)}
         };
 
         public static Type GetServiceType(ServiceRequest serviceRequest)

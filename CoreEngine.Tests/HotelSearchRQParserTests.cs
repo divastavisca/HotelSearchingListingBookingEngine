@@ -128,9 +128,11 @@ namespace CoreEngine.Tests
                     }
                 }
             };
-
             var RS = (new TripFolderBookRQParser()).Parse(req);
             var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
+            var staginginfo = (new StagingRSParser()).Parse(mainRs);
+            var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
+            var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
         }
     }
 }
