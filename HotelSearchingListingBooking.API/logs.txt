@@ -1626,4 +1626,35 @@ Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.Mult
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:1f9e5edb-eb80-4e43-9675-4a931a9f1b14
+Timestamp: 10/24/2017 3:46:48 PM
+Log Description: System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at HotelSearchingListingBookingEngine.Core.Caches.ItineraryCache.AddToCache(String sessionId, HotelItinerary[] searchResponse) in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Caches\ItineraryCache.cs:line 24
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.updateCaches(String sessionId, HotelSearchCriterion hotelSearchCriterion, HotelItinerary[] itineraries) in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 81
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 25
+Stack Trace:    at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at HotelSearchingListingBookingEngine.Core.Caches.ItineraryCache.AddToCache(String sessionId, HotelItinerary[] searchResponse) in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Caches\ItineraryCache.cs:line 24
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.updateCaches(String sessionId, HotelSearchCriterion hotelSearchCriterion, HotelItinerary[] itineraries) in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 81
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 25
+--------------------------------------------------Log ID:2e23c7b6-ffdf-432a-b4d3-48c82c1b2e8f
+Timestamp: 10/24/2017 3:46:49 PM
+Log Description: Error in processing request error occured at System.Private.CoreLib
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.MultiAvailHotelSearchEngine.<SearchAsync>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\MultiAvailHotelSearchEngine.cs:line 39
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 20
+--------------------------------------------------Log ID:88ab3123-e445-4849-b43c-7460b53ad5dc
+Timestamp: 10/24/2017 3:46:49 PM
+Log Description: Error in providing service System.Private.CoreLib
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.MultiAvailHotelSearchProvider.<GetServiceRS>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\MultiAvailHotelSearchProvider.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in C:\Users\apandey\Desktop\New folder\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
 -------------------------
