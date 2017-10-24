@@ -259,8 +259,16 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 adultPassengers.Quantity = adultsCount;
                 PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
                 childPassengers.PassengerType = PassengerType.Child;
-                childPassengers.Quantity = childrenAges.Length;
-                childPassengers.Ages = childrenAges;
+                if (childrenAges.Length == 0)
+                {
+                    childPassengers.Ages = new int[1] { 0 };
+                    childPassengers.Quantity = 1;
+                }
+                else
+                {
+                    childPassengers.Quantity = childrenAges.Length;
+                    childPassengers.Ages = childrenAges;
+                }
                 passengerTypeQuantity[0] = adultPassengers;
                 passengerTypeQuantity[1] = childPassengers;
                 return passengerTypeQuantity;

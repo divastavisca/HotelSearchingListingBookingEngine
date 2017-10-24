@@ -68,6 +68,10 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {
+                if(SelectedItineraryCache.IsPresent(((SingleAvailRoomSearchRQ)serviceRequest).CallerSessionId))
+                {
+                    SelectedItineraryCache.Remove(((SingleAvailRoomSearchRQ)serviceRequest).CallerSessionId);
+                }
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
                 throw new SearchEngineException()
                 {
