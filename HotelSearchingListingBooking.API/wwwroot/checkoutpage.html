@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hotel Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/payment.css" />
+    <link rel="icon" href="resources/favicon.png" sizes="16x16" type="image/png">
+
+
+</head>
+
+<body>
+    <div id="logo-container">
+    <a href="index.html"><img src="resources/HQlogo.png"/> </a>
+    </div>
+    <section>
+        <fieldset id="details">
+            <h3 id="room">Room1</h3>
+            <label for ="Contact name">Contact name<span class="mandatory"><sup>*</sup></span></label>
+            <input type="text" name="Contact name" size="40" placeholder='First and last name' required>
+            <label for="Country name">Country name<span class="mandatory"><sup>*</sup></span></label>
+             <select required id="Country name">
+                        <option value="India">India</option>
+                        <option value="US">United States</option>
+                        
+             </select>
+            <label for="Contact number">Contact number<span class="mandatory"><sup>*</sup></span></label>
+            <input type="number" name="Contact number" size="40" placeholder='Mobile number' required>
+            
+        </fieldset>
+        
+        <fieldset id="payment">
+            <h3 id="payment-details">Payment</h3>
+           <div>
+              <img id="mastercard" src="resources/mastercard.png" />
+              <img id="visacard" src="resources/visa.png" />
+             </div>
+     
+            <label for="cardholder">Cardholder name<span class="mandatory"><sup>*</sup></span></label>
+            <input type="text" name="Cardholder name" size="40" placeholder='Name on the card' required>
+            <label for="Cardnumber">Credit/Debit card number<span class="mandatory"><sup>*</sup></span></label>
+            <input type="number" name="Card number" size="40" placeholder='Enter debit/credit number' required>
+            <label for="Expiration date">Expiration date<span class="mandatory"><sup>*</sup></span></label>
+         <select required id="Month">
+             <option value="January">January</option>
+             <option value="February">February</option>
+             <option value="March">March</option>
+             <option value="April">April</option>
+             <option value="May">May</option>
+             <option value="June">June</option>
+             <option value="July">July</option>
+             <option value="August">August</option>
+             <option value="September">September</option>
+             <option value="October">October</option>
+             <option value="November">November</option>
+         <option value="December">December</option>
+            </select>
+            <select required id="Year">
+                <option value="2017">2017</option>
+            </select>
+            <label for="security code">Security code<span class="mandatory"><sup>*</sup></span></label>
+            <input type="text" name="security code" size="10" required>
+        </fieldset>
+        
+      <article>
+          <div>
+         <img src="resources/mail.png"/>
+          <p>Please enter your email address where you would like to receive confirmation</p>
+        </div>
+          <label for="email">Enter Email address<span class="mandatory"><sup>*</sup></span></label>
+          <input type="email" name="email" size="70" placeholder="Enter your email address" required>
+        </article>
+            <button> Complete booking </button>
+    </section>
+   
+    
+    
+</body>
+</html>

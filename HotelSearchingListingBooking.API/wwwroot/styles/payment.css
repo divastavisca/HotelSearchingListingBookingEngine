@@ -1,0 +1,96 @@
+body{
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    align-items: center;
+}
+#logo-container
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    border-bottom: cadetblue 1px solid;
+    box-shadow: #37454d 0px 1px 1px;
+    align-items: center;
+    align-self: stretch;
+    min-height: 55px;
+}
+
+#logo-container img{
+    height: 50px;
+    width:250px;
+}
+section
+{
+    border: 0px;
+    margin-top: 40px;
+   
+}
+#details
+{
+    background-image:url('../resources/user.png');
+    background-repeat:no-repeat;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border:0px;
+   
+}
+#payment {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border: 0px;
+    margin-top: 30px;
+}
+#mastercard
+{
+    margin-bottom: 10px;
+}
+#payment-details 
+{
+	margin-top: 20px;
+}
+.mandatory
+{
+    color: crimson;
+}   
+
+#room {
+    padding: 10px;
+}
+article
+{
+     
+    margin-top: 30px;
+    background-color: white;
+    
+
+}
+
+button {
+  padding: 15px 25px;
+    margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: chocolate;
+  border: none;
+  box-shadow: 0 1px #999;
+}
+
+button:hover {background-color: burlywood}
+
+button:active {
+  background-color: darkorange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
