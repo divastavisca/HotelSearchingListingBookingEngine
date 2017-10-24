@@ -15,15 +15,27 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {
                 ProductBookingRS productBookingRS = new ProductBookingRS();
                 productBookingRS.IsCompleted = checkCompletion(completeBookingRS);
-                if(productBookingRS.IsCompleted)
+                if (productBookingRS.IsCompleted)
                 {
                     if (completeBookingRS.TripFolder != null)
                         productBookingRS.TransactionId = completeBookingRS.TripFolder.ConfirmationNumber;
                     else productBookingRS.TransactionId = Guid.NewGuid().ToString();
                 }
+                else throw new BookingFailedException()
+                {
+                    Source = typeof(CompleteBookingRS).Name
+                };
                 return productBookingRS;
             }
-            catch(NullReferenceException nullReferenceException)
+            catch (BookingFailedException bookingFailedException)
+            {
+                Logger.LogException(bookingFailedException.ToString(), bookingFailedException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = bookingFailedException.Source
+                };
+            }
+            catch (NullReferenceException nullReferenceException)
             {
                 Logger.LogException(nullReferenceException.ToString(), nullReferenceException.StackTrace);
                 throw new ServiceResponseParserException()
