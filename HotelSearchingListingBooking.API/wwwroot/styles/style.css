@@ -118,29 +118,32 @@ body
     justify-content: stretch;
     align-items: stretch;
 }
-section
-{
+section {
+    box-sizing: border-box;
+    padding: 10px 5px 10px 5px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    background-image:  url("../resources/city_scape.png");
+    background-image: url("../resources/city_scape.png");
     background-position: center;
     background-repeat: no-repeat;
-   
+    background-color: rgba(5,38,91,0.8);
 }
-header{
+header {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
-    margin-top: 200px;
 }
 #tag_line {
-	margin-left: auto;
+    font-style: italic;
+    font-family: 'Crete Round',serif;
+    margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    color:#37454d;
-    font-size:30px;
+    padding: 20px 0 40px 0;
+    color: #37454d;
+    font-size: larger;
     font-weight: bolder;
 }
 #logo-container

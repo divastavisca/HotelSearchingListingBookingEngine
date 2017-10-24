@@ -1,3 +1,12 @@
+var autoCompleteMapping = {};
+var sessionId;
+var jsonResponseData;
+var placeSuggestions;
+var suggestionArray = new Array();
+var multiAvailHotelSearchRS;
+var childrenAgeArray;
+var currentAutoCompleteRequest = $.ajax("", {});
+var currentMultiAvailRequest = $.ajax("", {});
 function getStars(stars)
 {
     var starHtml="<span class='rating'>";
@@ -63,16 +72,7 @@ function hideLoadingImage() {
     
 }
 $(document).ready(function ()
-{
-    var autoCompleteMapping = {};
-        var sessionId;
-        var jsonResponseData;
-        var placeSuggestions;
-        var suggestionArray = new Array();
-        var multiAvailHotelSearchRS;
-        var childrenAgeArray;
-        var currentAutoCompleteRequest = $.ajax("", {});
-        var currentMultiAvailRequest = $.ajax("", {});
+{    
         {
             $("#location").autocomplete(
                 {
@@ -201,76 +201,77 @@ $(document).ready(function ()
             }
             $("#children-age-container").append(childrenAgeHtml);
         });
-        $("#search-hotels-button").on('click', function () {
-            var locationId = autoCompleteMapping[$("#location").val()];
-            childrenAgeArray = new Array();
-            childrenAgeArray.pop();
-            for (var index = 0; index < $("#childrencount").val(); index++) {
-                var childAgeDivId = "#child" + (index) + "age";
-                childrenAgeArray.push($(childAgeDivId).val());
-            }
-            for (var counter = 0; counter < (jsonResponseData.length); counter++) {
-                {
-                    for (var innerCounter = 0; innerCounter < (jsonResponseData[counter].ItemList.length); innerCounter++) {
-                        if (jsonResponseData[counter].ItemList[innerCounter].Id == locationId) {
-                            var Date = ($('#checkindate').val()).split("-");
-                            var year = Date[2];
-                            Date[2] = Date[0];
-                            Date[0] = year;
-                            var checkInDate = Date;
-                            Date = ($('#checkoutdate').val()).split("-");
-                            year = Date[2];
-                            Date[2] = Date[0];
-                            Date[0] = year;
-                            var checkOutDate = Date;
-                            var jsonLocationObject = jsonResponseData[counter].ItemList[innerCounter];
-                            var multiAvailRQ = {
-                                "SearchLocation": {
-                                    'Name': jsonLocationObject.Name,
-                                    'Type': jsonLocationObject.SearchType,
-                                    'GeoCode':
-                                    {
-                                        'Latitude': parseFloat(jsonLocationObject.Latitude).toFixed(4),
-                                        'Longitude': parseFloat(jsonLocationObject.Longitude).toFixed(4)
-                                    },
+        
+        //(".itinerary").on('mouseover', function () { this.children('.slide-cover').css('width', '100%'); });
+        //$(".itinerary").on('', function () { });
+});
+$("#search-hotels-button").on('click', function () {
+    var locationId = autoCompleteMapping[$("#location").val()];
+    childrenAgeArray = new Array();
+    childrenAgeArray.pop();
+    for (var index = 0; index < $("#childrencount").val(); index++) {
+        var childAgeDivId = "#child" + (index) + "age";
+        childrenAgeArray.push($(childAgeDivId).val());
+    }
+    for (var counter = 0; counter < (jsonResponseData.length); counter++) {
+        {
+            for (var innerCounter = 0; innerCounter < (jsonResponseData[counter].ItemList.length); innerCounter++) {
+                if (jsonResponseData[counter].ItemList[innerCounter].Id == locationId) {
+                    var Date = ($('#checkindate').val()).split("-");
+                    var year = Date[2];
+                    Date[2] = Date[0];
+                    Date[0] = year;
+                    var checkInDate = Date;
+                    Date = ($('#checkoutdate').val()).split("-");
+                    year = Date[2];
+                    Date[2] = Date[0];
+                    Date[0] = year;
+                    var checkOutDate = Date;
+                    var jsonLocationObject = jsonResponseData[counter].ItemList[innerCounter];
+                    var multiAvailRQ = {
+                        "SearchLocation": {
+                            'Name': jsonLocationObject.Name,
+                            'Type': jsonLocationObject.SearchType,
+                            'GeoCode':
+                            {
+                                'Latitude': parseFloat(jsonLocationObject.Latitude).toFixed(4),
+                                'Longitude': parseFloat(jsonLocationObject.Longitude).toFixed(4)
+                            },
 
-                                },
-                                "CheckInDate": checkInDate[0] + '-' + checkInDate[1] + '-' + checkInDate[2],
-                                "CheckOutDate": checkOutDate[0] + '-' + checkOutDate[1] + '-' + checkOutDate[2],
-                                "AdultsCount": parseInt($('#adultcount').val()),
-                                "ChildrenCount": parseInt($('#childrencount').val()),
-                                "ChildrenAge": childrenAgeArray
-                            };
-                            var multiAvailRQString = JSON.stringify(multiAvailRQ);
-                            // multiAvailRQString=multiAvailRQString.replace('"',"'");
-                            var IEngineServiceRQ =
-                                {
-                                    "ServiceName": "MultiAvail",
-                                    "JsonRequest": multiAvailRQString
-                                };
-                            //                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"JsonRequest\":'+multiAvailRQString+'};';
-                            //                                       
-                            //currentMultiAvailRequest.abort();
-                            currentMultiAvailRequest = $.ajax({
-                                type: 'post',
-                                headers:
-                                {
-                                    "Content-Type": "application/json"
-                                },
-                                url: "../padharojanab/value",
-                                cache: false,
-                                data: JSON.stringify(IEngineServiceRQ),
-                                beforeSend: showLoadingImage,
-                                success: function (response) { $("#hotels-list-container").empty(); listHotels(response); location.href = "#hotels-list-container"; },
-                                error: function (response) { $("#hotels-list-container").html("No Results Found"); location.href = "#hotels-list-container"}
-                                //error: function (response) { window.alert("Sorry! Some error occured.Please Try Again"); console.log(response);},
-                                //complete:function(jqXHR,textStatus){console.log("multi avail request status:"+jqXHR.getResponseHeader());}
-                            });
-                        }
-                    }
+                        },
+                        "CheckInDate": checkInDate[0] + '-' + checkInDate[1] + '-' + checkInDate[2],
+                        "CheckOutDate": checkOutDate[0] + '-' + checkOutDate[1] + '-' + checkOutDate[2],
+                        "AdultsCount": parseInt($('#adultcount').val()),
+                        "ChildrenCount": parseInt($('#childrencount').val()),
+                        "ChildrenAge": childrenAgeArray
+                    };
+                    var multiAvailRQString = JSON.stringify(multiAvailRQ);
+                    // multiAvailRQString=multiAvailRQString.replace('"',"'");
+                    var IEngineServiceRQ =
+                        {
+                            "ServiceName": "MultiAvail",
+                            "JsonRequest": multiAvailRQString
+                        };
+                    //                                       var IEngineServiceRQ='{\"ServiceName\": "MultiAvail"' + '\"JsonRequest\":'+multiAvailRQString+'};';
+                    //                                       
+                    //currentMultiAvailRequest.abort();
+                    currentMultiAvailRequest = $.ajax({
+                        type: 'post',
+                        headers:
+                        {
+                            "Content-Type": "application/json"
+                        },
+                        url: "../padharojanab/value",
+                        cache: false,
+                        data: JSON.stringify(IEngineServiceRQ),
+                        beforeSend: showLoadingImage,
+                        success: function (response) { $("#hotels-list-container").empty(); listHotels(response); location.href = "#hotels-list-container"; },
+                        error: function (response) { $("#hotels-list-container").html("No Results Found"); location.href = "#hotels-list-container" }
+                        //error: function (response) { window.alert("Sorry! Some error occured.Please Try Again"); console.log(response);},
+                        //complete:function(jqXHR,textStatus){console.log("multi avail request status:"+jqXHR.getResponseHeader());}
+                    });
                 }
             }
-        });
-        $(".itinerary").on('mouseover', function () { this.children('.slide-cover').css('width', '100%'); });
-        //$(".itinerary").on('', function () { });
-    });
+        }
+    }
+});
