@@ -38,6 +38,11 @@ namespace HotelSearchingListingBooking.API
             builder.WithOrigins("http://localhost:51264/padharojanab/value"));
             app.UseMvc();
             app.UseStaticFiles();
+            app.Run(ctx =>
+            {
+                ctx.Response.Redirect("/index.html");
+                return Task.FromResult(0);
+            });
         }
     }
 }

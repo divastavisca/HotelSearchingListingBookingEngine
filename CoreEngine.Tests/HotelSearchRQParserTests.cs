@@ -25,8 +25,8 @@ namespace CoreEngine.Tests
             request = new MultiAvailHotelSearchRQ()
             {
                 AdultsCount = 1,
-                CheckInDate = DateTime.Parse("2017-11-01"),
-                CheckOutDate = DateTime.Parse("2017-11-02"),
+                CheckInDate = DateTime.Parse("2017-11-15"),
+                CheckOutDate = DateTime.Parse("2017-11-16"),
                 ChildrenAge = new System.Collections.Generic.List<int>() { 12 },
                 ChildrenCount = 1,
                 SearchLocation = new SystemContracts.Attributes.Destination()
@@ -51,21 +51,38 @@ namespace CoreEngine.Tests
             var itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId);
             var hotelroomavail = new HotelRoomAvailRQ();
             hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
-            foreach (HotelItinerary iti in itinerary)
-            {
-                if (iti.HotelFareSource.Name.StartsWith("HotelBeds") || iti.HotelFareSource.Name.StartsWith("Tour"))
-                    hotelroomavail.Itinerary = iti;
-            }
+            int i = 0;
+                foreach (HotelItinerary iti in itinerary)
+                {
+                    if (iti.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                    {
+                        i = 0;
+                        hotelroomavail.Itinerary = iti;
+                        foreach (Room ro in iti.Rooms)
+                        {
+                            if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                                break;
+                            i++;
+                        }
+                    }
+                }
+                // hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[192];
+                hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
+                hotelroomavail.ResultRequested = ResponseType.Complete;
+                HotelEngineClient client = new HotelEngineClient();
+                var res = await client.HotelRoomAvailAsync(hotelroomavail);
 
-           // hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[192];
-            hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
-            hotelroomavail.ResultRequested = ResponseType.Complete;
-            HotelEngineClient client = new HotelEngineClient();
-            var res = await client.HotelRoomAvailAsync(hotelroomavail);
             SelectedItineraryCache.AddToCache(res.SessionId, res.Itinerary);
+            i = 0;
+            foreach (Room ro in res.Itinerary.Rooms)
+            {
+                if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                    break;
+                i++;
+            }
             RoomPricingRQ pricingRQ = new RoomPricingRQ();
             pricingRQ.CallerSessionId = res.SessionId;
-            pricingRQ.RoomId = res.Itinerary.Rooms[0].RoomId.ToString();
+            pricingRQ.RoomId = res.Itinerary.Rooms[i].RoomId.ToString();
             SystemContracts.ServiceContracts.IEngineServiceRS roomPricingRS = await (new HotelRoomPricingRequestEngine()).RequestAsync(pricingRQ);
             //PricingRequestCache.AddToCache(pricingRQ.CallerSessionId, pricingRQ.RoomId);
             //ExternalServices.PricingPolicyEngine.TripProductPriceRQ tripProductPriceRQ = (new TripProductPriceRQParser()).Parse(pricingRQ);
