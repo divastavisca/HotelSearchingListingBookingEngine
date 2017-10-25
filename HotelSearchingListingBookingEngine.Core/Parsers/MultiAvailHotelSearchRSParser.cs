@@ -12,7 +12,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class MultiAvailHotelSearchRSParser
     {
-        private readonly string _deafultSupplier = "HotelBeds";
+        private readonly string _deafultSupplier = "Tour";
 
         public MultiAvailHotelSearchRS Parse(HotelSearchRS hotelSearchRS)
         {
