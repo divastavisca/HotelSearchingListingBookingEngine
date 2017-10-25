@@ -1,6 +1,14 @@
-﻿function listHotelDetails(jsonObject)
+﻿//function initMap(){
+//    var latLngObj = { lat: itineraryDetails['geoCode']['latitude'], lng: itineraryDetails['geoCode']['longitude'] };
+//    var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 4, center: latLngObj });
+//    var marker = new google.maps.marker({ position: latLngObj, map: map });
+//}
+function showMap() {
+    $("#map-container").css({ "height": "100%", "width": "100%" });
+}
+function listHotelDetails(jsonObject)
 {
-    var itineraryDetails = jsonObject['itinerary']['itinerarySummary'];
+    itineraryDetails = jsonObject['itinerary']['itinerarySummary'];
     var itineraryName = itineraryDetails['name'];
     var checkInDate = jsonObject['itinerary']['checkInDate'];
     var checkOutDate = jsonObject['itinerary']['checkOutDate'];
@@ -41,11 +49,10 @@
     for (var roomCount = 0; roomCount < rooms.length; roomCount++)
     {
         roomMapping[roomCount] = rooms[roomCount]['roomId'];
-        roomList += "<option value=\""+roomCount + "\">" + roomCount + 1 + ". " + rooms[roomCount]['description']+"</option>";
+        roomList += "<option value=\""+roomCount + "\">" + (parseInt(roomCount)+1) + ". " + rooms[roomCount]['description']+"</option>";
     }
     roomList += "</select >";
     $("#rooms-field-set").append(roomList);
-
     if(reviews!=null)
     {
         var reviewHtml = "";
@@ -55,10 +62,37 @@
         $("#reviews").append(reviewHtml);
     }
 }
-var callerSessionId;
-var roomMapping = new Object();
-var slideIndex = 1;
-
+{
+    var callerSessionId;
+    var roomMapping = new Object();
+    var slideIndex = 1;
+    var itineraryDetails;
+    var maps_API_key = "AIzaSyABK2PpnRa8xpSBogGa1qHBkro3RDpDEvM";
+}
+function updatePrice(selectedRoomIndex) {
+    $("#price").text("Loading ...");
+    var roomPricingRQ = {
+        "CallerSessionId": callerSessionId,
+        "RoomId": roomMapping[selectedRoomIndex]
+    };
+    var serviceRQ = {
+        "ServiceName": "HotelPricing",
+        "JsonRequest": JSON.stringify(roomPricingRQ)
+    };
+    $.ajax({
+        type: 'post',
+        headers:
+        {
+            "Content-Type": "application/json"
+        },
+        url: "../padharojanab/value",
+        cache: false,
+        data: JSON.stringify(serviceRQ),
+        success: function (response) {
+            $("#price").text(response.roomPrice + response.currency);
+        }
+    });
+}
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -103,34 +137,20 @@ $(document).ready(function () {
                 url: "../padharojanab/value",
                 cache: false,
                 data: JSON.stringify(serviceRequest),
-                success: function (response) { listHotelDetails(response); }
+                success: function (response) {
+                    listHotelDetails(response);
+                    updatePrice(0);
+                    $("#rooms").on('change', function () { var roomIndex = $("#rooms").val(); updatePrice(roomIndex); });
+                    //var latLngObj = { lat: itineraryDetails['geoCode']['latitude'], lng: itineraryDetails['geoCode']['longitude'] };
+                    //var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 20, center: latLngObj });
+                    //var marker = new google.maps.Marker({ position: latLngObj, map: map });
+                }
 
             })
         }
         showSlides(slideIndex);
-        $("#get-current-price").on("click", function () {
-            var roomPricingRQ = {
-                "CallerSessionId": callerSessionId,
-                "RoomId": roomMapping[$("#rooms").val()]
-            };
-            var serviceRQ = {
-                "ServiceName": "HotelPricing",
-                "JsonRequest": JSON.stringify(roomPricingRQ)
-            };
-            $.ajax({
-                type: 'post',
-                headers:
-                {
-                    "Content-Type": "application/json"
-                },
-                url: "../padharojanab/value",
-                cache: false,
-                data: JSON.stringify(serviceRQ),
-                success: function (response)
-                {
-                    $("#price").text(response.roomPrice + response.currency);
-                }
-            });
-        })
+        
+        $("#show-on-map").on("click", showMap);
+           
     }
 )

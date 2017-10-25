@@ -1,0 +1,1 @@
+$("input").on('change keyup', function(){$(this).siblings('p').css("display","block")});

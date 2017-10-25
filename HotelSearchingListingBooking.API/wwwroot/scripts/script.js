@@ -1,65 +1,89 @@
-function listHotels(jsonObject) {
-    sessionId = jsonObject["callerSessionId"];
-    for (var hotel = 0; hotel < jsonObject["resultsCount"]; hotel++) {
-        $("#hotels-list-container").empty();
-        var itinerariesCount = jsonObject['itineraries'].length;
-        for (var itinerary = 0; itinerary < itinerariesCount; itinerary++) {
-            var currentItineraries = jsonObject["itineraries"][itinerary];
-            var htmlToAppend =
-                "<tr class='itinerary'><td> Name :" + currentItineraries['name'] + "</td>";
-            htmlToAppend += "<td> <img class='hero-image' src=" + currentItineraries['imageUrl'][0] + "></td>";
-            htmlToAppend +="<td> <input type='hidden' value='"+ currentItineraries['itineraryId'] +"></td>";
-            htmlToAppend += "<td>Address:<p>" + currentItineraries['address'] + "</p></td>";
-            htmlToAppend +="<td><button type='button' onclick='showOnMap(" +currentItineraries['geoCode']['latitude'] + "," +
-                currentItineraries['geoCode']['longitude'] +
-                ")' >View On Map</button></td>";
-            htmlToAppend +=
-                "<td>Rating :" + currentItineraries['starRating'] + " Stars</td>";
-            htmlToAppend += "<td> Starting From :" + currentItineraries['minimumPrice'] + currentItineraries['currency'] + "</td></tr>";
-            htmlToAppend += "<td><a class='view-deal-button' target='_blank' href='singleavail.html?cid=" + sessionId + "&iid=" + currentItineraries['itineraryId'] + "'>View Deal</a>";
-            $("#hotels-list-container").append(htmlToAppend);
+var autoCompleteMapping = {};
+var sessionId;
+var jsonResponseData;
+var placeSuggestions;
+var suggestionArray = new Array();
+var multiAvailHotelSearchRS;
+var childrenAgeArray;
+var currentAutoCompleteRequest = $.ajax("", {});
+var currentMultiAvailRequest = $.ajax("", {});
+function getStars(stars)
+{
+    var starHtml="<span class='rating'>";
+    for (var starCount = 0; starCount < stars; starCount++)
+    {
+        if ((stars - starCount) % 1 == 0)
+        {
+            starHtml += "<img src='../resources/star.png'/>";
+        }
+        else
+        {
+            starHtml += "<img src='../resources/star-half-empty.png'/>"
         }
     }
+    starHtml += "</span>";
+    return starHtml;
 }
-//function showLoadingImage()
-//{
-//    var loadingImageHtml='<img src="../resources/loading1.gif">';
-//    $("#hotels-list-container").attr('min-height','120px');
-//    $("#hotels-list-container").html(loadingImageHtml);
-//}
-//function hideLoadingImage() {
-//    $("#hotels-list-container").empty();
-//}
+function getAmenities(itineraryAmenities)
+{
+    var amenitiesHtml="Amenities: ";
+    for (var amenitiesCount = 0; amenitiesCount < 5; amenitiesCount++)
+    {
+        if (itineraryAmenities[amenitiesCount])
+        {
+            amenitiesHtml += itineraryAmenities[amenitiesCount]+" ";
+        }
+        else
+        {
+            break;
+        }
+    }
+    return amenitiesHtml;
+}
+function listHotels(jsonObject) {
+    sessionId = jsonObject["callerSessionId"];
+    
+    for (var hotel = 0; hotel < jsonObject["resultsCount"]; hotel++)
+    {
+        $("#hotels-list-container").empty();
+        var itinerariesCount = jsonObject['itineraries'].length;
+        for (var itinerary = 0; itinerary < itinerariesCount; itinerary++)
+        {
+            var currentItineraries = jsonObject["itineraries"][itinerary];
+            var htmlToAppend = "<div class='itinerary'>";
+            htmlToAppend += "<img class ='hero-image' src=" + currentItineraries['imageUrl'][0] + ">";
+            htmlToAppend += "<div class='hotel-details'>";
+            htmlToAppend += "<div><h2>" + currentItineraries['name'] + "</h2>" + getStars(currentItineraries['starRating']) + "</div>";
+            htmlToAppend += "<div><div class='amenities'>" + getAmenities(currentItineraries['amenities']) + "</div><button class='view-on-map'>View On Map</button></div>";
+            htmlToAppend += "<div><div class='address'>Address:" + currentItineraries['address'] + "</div>";
+            htmlToAppend += "<a class='slide-cover' target='_blank' href='singleavail.html?cid=" + sessionId + "&iid=" + currentItineraries['itineraryId'] + "'> View Deal</a ></div>";
+            htmlToAppend += "</div>";
+            htmlToAppend += "</div>";
+            $("#hotels-list-container").append(htmlToAppend);
+        } 
+    }
+}
+function showLoadingImage()
+{
+    var loadingImageHtml ='<div class="loading-image-container"><img src="../resources/loading1.gif"><h3>Searching...</h3></div>';
+    $("#hotels-list-container").attr('min-height','120px');
+    $("#hotels-list-container").html(loadingImageHtml);
+}
 
-//function listHotels(jsonObject)
-//{
-//    var hotelListTemplate=$("#hotel-list-template").html();
-//    var hotelList=Handlebars.compile(hotelListTemplate);
-//    var htmlToBeAppended=hotelList(jsonObject);
-//    $("#hotels-list-container").html(htmlToBeAppended);
-//}
-$(document).ready(
-    function () {
-        var sessionId;
-        var jsonResponseData;
-        var placeSuggestions;
-        var suggestionArray = new Array();
-        var multiAvailHotelSearchRS;
-        var childrenAgeArray;
-        var currentAutoCompleteRequest = $.ajax("", {});
-        var currentMultiAvailRequest = $.ajax("", {});
+$(document).ready(function ()
+{    
         {
             $("#location").autocomplete(
                 {
                     source: suggestionArray
                 });
         }//initialising autocomplete widget to location
-
+        
+        $("#location").focus();
         $("#location").on('keyup input propertychange', function () {
-            currentAutoCompleteRequest.abort();
             $("#secondaryElementsContainer").css("display", "block");
             var locationtext = $("#location").val();
-            var autoSuggestRequestUrl = "http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=city|airport|poi&query=" + locationtext;
+            var autoSuggestRequestUrl = "http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=poi&query=" + locationtext;
             currentAutoCompleteRequest = $.ajax({
                 url: autoSuggestRequestUrl,
                 method: 'get',
@@ -69,23 +93,53 @@ $(document).ready(
                 success: function (json) {
                     if (json != null) {
                         jsonResponseData = json;
-                        for (var counter = 0; counter < json.length; counter++) {
+                        var culturedText;
+                        for (var counter = 0; counter < json.length; counter++) 
+                        {
                             var itemsList = json[counter].ItemList;
-                            for (var innercounter = 0; innercounter < itemsList.length; innercounter++) {
-                                if (counter == 0 && innercounter == 0) {
-                                    placeSuggestions = itemsList[innercounter].Name + '|' + itemsList[innercounter].CityName + '|' + itemsList[innercounter].Id + '|' + itemsList[innercounter].SearchType + ',';
+                            for (var innercounter = 0; innercounter < itemsList.length; innercounter++)
+                            {
+                                if (counter == 0 && innercounter == 0)
+                                {
+                                    if (itemsList[innercounter].SubItemList)
+                                    {
+                                        for (var SubItem = 0; SubItem < itemsList[innercounter].SubItemList.length; SubItem++)
+                                        {
+                                            culturedText = itemsList[innercounter].SubItemList[SubItem].CulturedText;
+                                            autoCompleteMapping[culturedText] = itemsList[innercounter].SubItemList[SubItem].Id;
+                                            placeSuggestions = itemsList[innercounter].CulturedText + "|";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        culturedText = itemsList[innercounter].CulturedText;
+                                        autoCompleteMapping[culturedText] = itemsList[innercounter].Id;
+                                        placeSuggestions = itemsList[innercounter].CulturedText + "|";
+                                    }
+                                    
                                 }
-                                else {
-                                    placeSuggestions += itemsList[innercounter].Name + '|' + itemsList[innercounter].CityName + '|' + itemsList[innercounter].Id + '|' + itemsList[innercounter].SearchType + ',';
+                                else
+                                {
+                                    if (itemsList[innercounter].SubItemList) {
+                                        for (var SubItem = 0; SubItem < itemsList[innercounter].SubItemList.length; SubItem++)
+                                        {
+                                            culturedText = itemsList[innercounter].SubItemList[SubItem].CulturedText;
+                                            autoCompleteMapping[culturedText] = itemsList[innercounter].SubItemList[SubItem].Id;
+                                            placeSuggestions += itemsList[innercounter].CulturedText + "|";
+                                        }
+                                    }
+                                    else {
+                                        culturedText = itemsList[innercounter].CulturedText;
+                                        autoCompleteMapping[culturedText] = itemsList[innercounter].Id;
+                                        placeSuggestions += itemsList[innercounter].CulturedText + "|";
+                                    }
                                 }
 
                             }
                         }
-                        suggestionArray = placeSuggestions.split(',');
-                        suggestionArray.pop();
+                        suggestionArray = placeSuggestions.split('|');
                         $("#location").autocomplete("option", "source", suggestionArray);
                     }
-
                 }
             });
         });
@@ -148,9 +202,7 @@ $(document).ready(
             $("#children-age-container").append(childrenAgeHtml);
         });
         $("#search-hotels-button").on('click', function () {
-            var locationParts = ($("#location").val().split('|'));
-            var locationId = locationParts[2];
-            var locationType = locationParts[locationParts.length - 1];
+            var locationId = autoCompleteMapping[$("#location").val()];
             childrenAgeArray = new Array();
             childrenAgeArray.pop();
             for (var index = 0; index < $("#childrencount").val(); index++) {
@@ -208,8 +260,10 @@ $(document).ready(
                                 url: "../padharojanab/value",
                                 cache: false,
                                 data: JSON.stringify(IEngineServiceRQ),
-                                success: function (response) { listHotels(response); },
-                                //error:function(response){console.log(response);},
+                                beforeSend: showLoadingImage,
+                                success: function (response) { $("#hotels-list-container").empty(); listHotels(response); location.href = "#hotels-list-container"; },
+                                error: function (response) { $("#hotels-list-container").html("No Results Found"); location.href = "#hotels-list-container" }
+                                //error: function (response) { window.alert("Sorry! Some error occured.Please Try Again"); console.log(response);},
                                 //complete:function(jqXHR,textStatus){console.log("multi avail request status:"+jqXHR.getResponseHeader());}
                             });
                         }
@@ -217,5 +271,6 @@ $(document).ready(
                 }
             }
         });
-
-    });
+        //(".itinerary").on('mouseover', function () { this.children('.slide-cover').css('width', '100%'); });
+        //$(".itinerary").on('', function () { });
+});
