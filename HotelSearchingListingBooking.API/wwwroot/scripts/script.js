@@ -42,6 +42,7 @@ function getAmenities(itineraryAmenities)
 }
 function listHotels(jsonObject) {
     sessionId = jsonObject["callerSessionId"];
+    
     for (var hotel = 0; hotel < jsonObject["resultsCount"]; hotel++)
     {
         $("#hotels-list-container").empty();

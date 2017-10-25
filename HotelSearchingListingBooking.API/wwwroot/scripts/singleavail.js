@@ -49,11 +49,10 @@ function listHotelDetails(jsonObject)
     for (var roomCount = 0; roomCount < rooms.length; roomCount++)
     {
         roomMapping[roomCount] = rooms[roomCount]['roomId'];
-        roomList += "<option value=\""+roomCount + "\">" + roomCount + 1 + ". " + rooms[roomCount]['description']+"</option>";
+        roomList += "<option value=\""+roomCount + "\">" + (parseInt(roomCount)+1) + ". " + rooms[roomCount]['description']+"</option>";
     }
     roomList += "</select >";
     $("#rooms-field-set").append(roomList);
-
     if(reviews!=null)
     {
         var reviewHtml = "";
@@ -69,6 +68,30 @@ function listHotelDetails(jsonObject)
     var slideIndex = 1;
     var itineraryDetails;
     var maps_API_key = "AIzaSyABK2PpnRa8xpSBogGa1qHBkro3RDpDEvM";
+}
+function updatePrice(selectedRoomIndex) {
+    $("#price").text("Loading ...");
+    var roomPricingRQ = {
+        "CallerSessionId": callerSessionId,
+        "RoomId": roomMapping[selectedRoomIndex]
+    };
+    var serviceRQ = {
+        "ServiceName": "HotelPricing",
+        "JsonRequest": JSON.stringify(roomPricingRQ)
+    };
+    $.ajax({
+        type: 'post',
+        headers:
+        {
+            "Content-Type": "application/json"
+        },
+        url: "../padharojanab/value",
+        cache: false,
+        data: JSON.stringify(serviceRQ),
+        success: function (response) {
+            $("#price").text(response.roomPrice + response.currency);
+        }
+    });
 }
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -116,38 +139,18 @@ $(document).ready(function () {
                 data: JSON.stringify(serviceRequest),
                 success: function (response) {
                     listHotelDetails(response);
-                    var latLngObj = { lat: itineraryDetails['geoCode']['latitude'], lng: itineraryDetails['geoCode']['longitude'] };
-                    var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 20, center: latLngObj });
-                    var marker = new google.maps.Marker({ position: latLngObj, map: map });
+                    updatePrice(0);
+                    $("#rooms").on('change', function () { var roomIndex = $("#rooms").val(); updatePrice(roomIndex); });
+                    //var latLngObj = { lat: itineraryDetails['geoCode']['latitude'], lng: itineraryDetails['geoCode']['longitude'] };
+                    //var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 20, center: latLngObj });
+                    //var marker = new google.maps.Marker({ position: latLngObj, map: map });
                 }
 
             })
         }
         showSlides(slideIndex);
-        $("#get-current-price").on("click", function () {
-            var roomPricingRQ = {
-                "CallerSessionId": callerSessionId,
-                "RoomId": roomMapping[$("#rooms").val()]
-            };
-            var serviceRQ = {
-                "ServiceName": "HotelPricing",
-                "JsonRequest": JSON.stringify(roomPricingRQ)
-            };
-            $.ajax({
-                type: 'post',
-                headers:
-                {
-                    "Content-Type": "application/json"
-                },
-                url: "../padharojanab/value",
-                cache: false,
-                data: JSON.stringify(serviceRQ),
-                success: function (response) {
-                    $("#price").text(response.roomPrice + response.currency);
-                }
-            });
-        });
-        $("#show-on-map").on("click", showMap);
         
+        $("#show-on-map").on("click", showMap);
+           
     }
 )
