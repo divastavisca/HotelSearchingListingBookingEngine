@@ -12,7 +12,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class MultiAvailHotelSearchRSParser
     {
-        private readonly string _deafultSupplier = "Tour";
+        //private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
 
         public MultiAvailHotelSearchRS Parse(HotelSearchRS hotelSearchRS)
         {
@@ -23,11 +23,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     CallerSessionId = hotelSearchRS.SessionId
                 };
                 multiAvailHotelSearchRS.Itineraries = parseItineraries(hotelSearchRS.Itineraries);
-                if (multiAvailHotelSearchRS.Itineraries != null)
-                {
-                    multiAvailHotelSearchRS.ResultsCount = multiAvailHotelSearchRS.Itineraries.Length;
-                }
-                else multiAvailHotelSearchRS = null;
+                multiAvailHotelSearchRS.ResultsCount = multiAvailHotelSearchRS.Itineraries.Length;
                 return multiAvailHotelSearchRS;
             }
             catch (NullReferenceException nullRefExcep)
@@ -113,11 +109,11 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 uniqueItinerary.StarRating = hotelItinerary.HotelProperty.HotelRating.Rating;
                 uniqueItinerary.Currency = hotelItinerary.Fare.BaseFare.Currency;
                 uniqueItinerary.MinimumPrice = hotelItinerary.Fare.BaseFare.Amount;
-                if (hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSupplier))
-                {
-                    return true;
-                }
-                return false;
+                //if (hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[0])|| hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[1]))
+                //{
+                //    return true;
+                //}
+                return true;
             }
             catch(JsonException jsonException)
             {
