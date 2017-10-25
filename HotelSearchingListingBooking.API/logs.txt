@@ -1,0 +1,113 @@
+-------------------------Log ID:b8f417b8-7487-4dce-9a30-3181abe69d9f
+Timestamp: 10/25/2017 9:08:26 AM
+Log Description: Error in finding object of type HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 29
+--------------------------------------------------Log ID:8e73e90e-bc56-471c-a25b-a240595f7560
+Timestamp: 10/25/2017 9:08:26 AM
+Log Description: Error in parsing Request
+Exception at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 37
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 23
+--------------------------------------------------Log ID:912ee4e9-ba54-4e27-90b8-db01425b8723
+Timestamp: 10/25/2017 9:08:27 AM
+Log Description: Error in processing request error occured at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 100
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 17
+--------------------------------------------------Log ID:4500f376-eb17-4f0a-9b4e-4f4a4ad372f0
+Timestamp: 10/25/2017 9:08:27 AM
+Log Description: Error in providing service HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:6174f314-1fca-43a7-ab0e-a971586a11f6
+Timestamp: 10/25/2017 9:08:51 AM
+Log Description: Error in finding object of type HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 29
+--------------------------------------------------Log ID:4a91a753-4e12-48be-aa73-aaded9db6312
+Timestamp: 10/25/2017 9:08:51 AM
+Log Description: Error in parsing Request
+Exception at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 37
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 23
+--------------------------------------------------Log ID:ec710bea-d470-40bf-ab45-d4c6ecd2f436
+Timestamp: 10/25/2017 9:08:51 AM
+Log Description: Error in processing request error occured at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 100
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 17
+--------------------------------------------------Log ID:7d2a626e-8ffb-4571-88cc-a0624d253a95
+Timestamp: 10/25/2017 9:08:51 AM
+Log Description: Error in providing service HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:bf36df7d-a00a-4479-a65c-fd01248097d3
+Timestamp: 10/25/2017 9:10:08 AM
+Log Description: Error in finding object of type HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 29
+--------------------------------------------------Log ID:028afc5d-a3d8-41cc-bddd-4966a8d3bbbd
+Timestamp: 10/25/2017 9:10:08 AM
+Log Description: Error in parsing Request
+Exception at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 37
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 23
+--------------------------------------------------Log ID:59bd189b-8c70-41fb-9d45-8954b3815991
+Timestamp: 10/25/2017 9:10:08 AM
+Log Description: Error in processing request error occured at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 100
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 17
+--------------------------------------------------Log ID:62904055-80de-4f01-897b-9d65158e340a
+Timestamp: 10/25/2017 9:10:08 AM
+Log Description: Error in providing service HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+--------------------------------------------------Log ID:551bd3be-a750-48dc-818d-aab7f9bca6c6
+Timestamp: 10/25/2017 9:11:25 AM
+Log Description: Error in finding object of type HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 29
+--------------------------------------------------Log ID:7a43751d-c70a-4a57-a4d0-7f04204321f4
+Timestamp: 10/25/2017 9:11:25 AM
+Log Description: Error in parsing Request
+Exception at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.HotelRoomAvailRQParser.Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\HotelRoomAvailRQParser.cs:line 37
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 23
+--------------------------------------------------Log ID:4cf3aab8-d847-4864-804b-7954da2d5c1b
+Timestamp: 10/25/2017 9:11:25 AM
+Log Description: Error in processing request error occured at HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 100
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 17
+--------------------------------------------------Log ID:52a76f4e-daa4-42b5-be4f-7fbaa02a7f81
+Timestamp: 10/25/2017 9:11:25 AM
+Log Description: Error in providing service HotelFareSource
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+-------------------------

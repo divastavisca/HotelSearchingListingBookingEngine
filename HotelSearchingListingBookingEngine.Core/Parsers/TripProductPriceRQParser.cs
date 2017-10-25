@@ -112,6 +112,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     if (room.RoomId.ToString() == roomId)
                     {
                         selectedRoom = room;
+                        break;
                     }
                 }
                 if (selectedRoom != null)
