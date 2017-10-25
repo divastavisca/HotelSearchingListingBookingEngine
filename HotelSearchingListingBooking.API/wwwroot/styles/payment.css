@@ -4,8 +4,9 @@ body{
     flex-flow: column wrap;
     justify-content: space-between;
     background-color: whitesmoke;
-    align-items: center;
+    align-items:center;
 }
+
 #logo-container
 {
     display: flex;
@@ -26,11 +27,12 @@ section
 {
     border: 0px;
     margin-top: 40px;
+    width: 70%;
    
 }
-#details
+#contact-details
 {
-    background-image:url('../resources/user.png');
+    background-image:url('../resources/contact-icon.png');
     background-repeat:no-repeat;
     display: flex;
     flex-flow: row;
@@ -38,9 +40,26 @@ section
     align-items: center;
     background-color: white;
     border:0px;
+
+ 
    
 }
-#payment {
+#contact
+{
+    padding-top: 20px;
+}
+#personal-details {
+	display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    background:white;
+    border:0px;
+    margin-top: 20px;
+    
+}
+#payment{
+   
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -49,31 +68,32 @@ section
     border: 0px;
     margin-top: 30px;
 }
-#mastercard
-{
+#mastercard{
     margin-bottom: 10px;
 }
-#payment-details 
-{
+#payment-details{
 	margin-top: 20px;
 }
-.mandatory
-{
+.mandatory{
     color: crimson;
-}   
-
-#room {
-    padding: 10px;
 }
-article
-{
+
+article{
      
     margin-top: 30px;
     background-color: white;
     
 
 }
-
+label{
+    margin-top: 30px;
+    display: block;
+}
+input{
+    height: 25px;
+    display: block;
+    margin-top:10px;
+}
 button {
   padding: 15px 25px;
     margin-top: 20px;
@@ -86,11 +106,32 @@ button {
   border: none;
   box-shadow: 0 1px #999;
 }
-
+.name-validation{
+    color: firebrick;
+    font-size: 12px;
+}
 button:hover {background-color: burlywood}
-
 button:active {
   background-color: darkorange;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+input:hover
+{
+    background-color:lightcyan;
+}
+.name-validation {
+    display: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.message {
+	color: green;
+}
+a
+{
+    padding: 25px;
 }
