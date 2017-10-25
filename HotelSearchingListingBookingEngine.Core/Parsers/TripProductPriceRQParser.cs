@@ -20,14 +20,14 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 parsedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
                 parsedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
                 parsedRQ.TripProduct = getHotelProduct(hotelRoomPricingRQ);
-                if (PricingRequestCache.IsPresent(parsedRQ.SessionId))
-                    PricingRequestCache.Remove(parsedRQ.SessionId);
-                PricingRequestCache.AddToCache(parsedRQ.SessionId, hotelRoomPricingRQ.RoomId);
                 if (parsedRQ.TripProduct == null)
                     throw new InvalidObjectRequestException()
                     {
                         Source = parsedRQ.TripProduct.GetType().Name
                     };
+                if (PricingRequestCache.IsPresent(parsedRQ.SessionId))
+                    PricingRequestCache.Remove(parsedRQ.SessionId);
+                PricingRequestCache.AddToCache(parsedRQ.SessionId, hotelRoomPricingRQ.RoomId);
                 return parsedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
@@ -63,7 +63,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 return new ExternalServices.PricingPolicyEngine.HotelTripProduct()
                 {
                     Attributes = new ExternalServices.PricingPolicyEngine.StateBag[1] { new ExternalServices.PricingPolicyEngine.StateBag() { Name = "API_SESSION_ID", Value = roomPricingRQ.CallerSessionId } },
-                    HotelItinerary = getUpdatedItinerary(SelectedItineraryCache.GetSelecetedItinerary(roomPricingRQ.CallerSessionId), roomPricingRQ.RoomId),
+                    HotelItinerary = getUpdatedItinerary(SelectedItineraryCache.GetSelecetedItinerary(roomPricingRQ.CallerSessionId), roomPricingRQ.RoomId,roomPricingRQ.CallerSessionId),
                     HotelSearchCriterion = JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelSearchCriterion>(JsonConvert.SerializeObject(SearchCriterionCache.GetSearchCriterion(roomPricingRQ.CallerSessionId)))
                 };
             }
@@ -77,12 +77,20 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             }
         }
 
-        private ExternalServices.PricingPolicyEngine.HotelItinerary getUpdatedItinerary(ExternalServices.HotelSearchEngine.HotelItinerary userSelectedItinerary, string selectedRoomId)
+        private ExternalServices.PricingPolicyEngine.HotelItinerary getUpdatedItinerary(ExternalServices.HotelSearchEngine.HotelItinerary userSelectedItinerary, string selectedRoomId,string sessionId)
         {
             try
             {
-                userSelectedItinerary.Rooms = getRequestedRoom(userSelectedItinerary.Rooms, selectedRoomId);
-                return JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelItinerary>(JsonConvert.SerializeObject(userSelectedItinerary));
+                if (SelectedItineraryRoomsCache.IsPresent(sessionId))
+                {
+                    userSelectedItinerary.Rooms = getRequestedRoom(SelectedItineraryRoomsCache.GetAllRooms(sessionId), selectedRoomId);
+                    if(userSelectedItinerary.Rooms!=null || userSelectedItinerary.Rooms.Length!=0)
+                        return JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.HotelItinerary>(JsonConvert.SerializeObject(userSelectedItinerary));
+                }
+                throw new InvalidObjectRequestException()
+                {
+                    Source = typeof(SelectedItineraryRoomsCache).Name
+                };
             }
             catch(JsonException jsonException)
             {
@@ -92,7 +100,15 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     Source = userSelectedItinerary.GetType().Name
                 };
             }
-            catch(NullReferenceException nullRefException)
+            catch (InvalidObjectRequestException invalidObjectRequestException)
+            {
+                Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
+                throw new ServiceRequestParserException()
+                {
+                    Source = invalidObjectRequestException.Source
+                };
+            }
+            catch (NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
                 throw new ServiceRequestParserException()

@@ -68,6 +68,8 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 if (SelectedItineraryCache.IsPresent(sessionId))
                 {
                     SelectedItineraryCache.Remove(sessionId);
+                    if (SelectedItineraryRoomsCache.IsPresent(sessionId))
+                        SelectedItineraryRoomsCache.Remove(sessionId);
                     if (PricingRequestCache.IsPresent(sessionId))
                     {
                         PricingRequestCache.Remove(sessionId);
