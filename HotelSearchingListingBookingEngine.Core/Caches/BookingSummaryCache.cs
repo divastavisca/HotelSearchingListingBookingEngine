@@ -14,25 +14,25 @@ namespace HotelSearchingListingBookingEngine.Core.Caches
             _cache = new Dictionary<string, BookingSummary>();
         }
 
-        public static bool IsPresent(string sessionId)
+        public static bool IsPresent(string tripId)
         {
-            return _cache.ContainsKey(sessionId);
+            return _cache.ContainsKey(tripId);
         }
 
-        public static void AddToCache(string sessionId, BookingSummary searchResponse)
+        public static void AddToCache(string tripId, BookingSummary bookingSummary)
         {
-            _cache.Add(sessionId, searchResponse);
+            _cache.Add(tripId, bookingSummary);
         }
 
-        public static void Remove(string sessionId)
+        public static void Remove(string tripId)
         {
-            if (IsPresent(sessionId))
-                _cache.Remove(sessionId);
+            if (IsPresent(tripId))
+                _cache.Remove(tripId);
         }
 
-        public static BookingSummary GetSummary(string sessionId)
+        public static BookingSummary GetSummary(string tripId)
         {
-            return IsPresent(sessionId) ? _cache[sessionId] : null;
+            return IsPresent(tripId) ? _cache[tripId] : null;
         }
     }
 }
