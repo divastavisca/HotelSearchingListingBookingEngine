@@ -19,7 +19,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
             try
             {
-                if(parsedResponse.Itinerary.Rooms==null || parsedResponse.Itinerary.Rooms.Count==0)
+                if(hotelRoomSearchRS.Itinerary.Rooms==null || hotelRoomSearchRS.Itinerary.Rooms.Count==0)
                 {
                     throw new NoResultsFoundException()
                     {
