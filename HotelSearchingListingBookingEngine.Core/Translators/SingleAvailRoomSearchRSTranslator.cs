@@ -44,6 +44,14 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
                 return parsedResponse;
             }
+            catch(NoResultsFoundException noResultsFoundException)
+            {
+                Logger.LogException(noResultsFoundException.ToString(), noResultsFoundException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = noResultsFoundException.Source
+                };
+            }
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
