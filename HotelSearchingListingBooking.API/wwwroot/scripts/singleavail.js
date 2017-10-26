@@ -3,21 +3,26 @@
 //    var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 4, center: latLngObj });
 //    var marker = new google.maps.marker({ position: latLngObj, map: map });
 //}
+var itineraryName;
+var itineraryAddress;
+{
 function showMap() {
     $("#map-container").css({ "height": "100%", "width": "100%" });
 }
 function listHotelDetails(jsonObject)
 {
     itineraryDetails = jsonObject['itinerary']['itinerarySummary'];
-    var itineraryName = itineraryDetails['name'];
+    itineraryName = itineraryDetails['name'];
     var checkInDate = jsonObject['itinerary']['checkInDate'];
     var checkOutDate = jsonObject['itinerary']['checkOutDate'];
     var adultsCount = jsonObject['itinerary']['adultCount'];
     var childrenCount = jsonObject['itinerary']['childrensCount'];
     var reviews= jsonObject['itinerary']['reviews'];
     var rooms = jsonObject['itinerary']['rooms'];
-    $("#hotel-name-address>h3").text(itineraryName);
-    $("#hotel-name-address>span").text(itineraryDetails["address"]);
+    itineraryAddress=itineraryDetails["address"];
+    $("#hotel-name-address>h1").text(itineraryName);
+
+    $("#hotel-address>p").text(itineraryAddress);
     var imageFrames = $(".mySlides img");
     for (var imageNumber = 0; imageNumber < imageFrames.length; imageNumber++)
     {
@@ -47,7 +52,7 @@ function listHotelDetails(jsonObject)
     $("#child-count").text(childrenCount);
     var proceedButtonHtml = "<button type='button' class='proceed-button'>Proceed To Book</button>";
     $("#booking-details>form>fieldset:last").append(proceedButtonHtml);
-    var roomList = "<select name=\"roomType\" id=\"rooms\">";
+    var roomList = "<select class='control-button' name=\"roomType\" id=\"rooms\">";
     for (var roomCount = 0; roomCount < rooms.length; roomCount++)
     {
         roomMapping[roomCount] = rooms[roomCount]['roomId'];
@@ -119,8 +124,8 @@ function showSlides(n) {
 function setSummaryCookies()
 {
     document.cookie = "sessionId=" + callerSessionId + ";path=/";
-    document.cookie = "hotelName=" + $("#hotel-name-address>h3").text() + ";path=/";
-    document.cookie = "hotelAddress=" + $("#hotel-name-address>span").text() + ";path=/";
+    document.cookie = "hotelName=" + itineraryName + ";path=/";
+    document.cookie = "hotelAddress=" + itineraryAddress + ";path=/";
     document.cookie = "adultCount=" + $("#adult-count").text() + ";path=/";
     document.cookie = "childCount=" + $("#child-count").text() + ";path=/";
     document.cookie = "checkInDate=" + $("#check-in-date").text() + ";path=/";
@@ -152,6 +157,7 @@ $(document).ready(function () {
                 url: "../padharojanab/value",
                 cache: false,
                 data: JSON.stringify(serviceRequest),
+                 error: function () { $(document).html("<h2>SORRY NO ROOMS AVAILABLE</h2>") },
                 success: function (response) {
                     listHotelDetails(response);
                     updatePrice(0);
@@ -169,3 +175,52 @@ $(document).ready(function () {
            
     }
 )
+}
+
+
+
+
+
+
+
+
+
+//{
+//    var callerSessionId;
+//    var ItineraryId;
+//}
+//function sendPriceRequest() {
+//    var urlParams = new URLSearchParams(window.location.search);
+//    if ((urlParams).has("cid") && (urlParams).has("iid")) {
+//        callerSessionId = urlParams.get("cid");
+//        ItineraryId = urlParams.get("iid");
+//        var singleAvailRoomSearchRQ = {
+//            "CallerSessionId": callerSessionId,
+//            "ItineraryId": ItineraryId
+//        };
+//        var serviceRQ = {
+//            "ServiceName": "SingleAvail",
+//            "JsonRequest": JSON.stringify(singleAvailRoomSearchRQ)
+//        };
+//        $.ajax({
+//            type: 'post',
+//            headers: { "Content-Type": "application/json" },
+//            url: "../padharojanab/value",
+//            cache: false,
+//            data: JSON.stringify(serviceRQ),
+//            success: function (response)
+//            {
+//                listHotelDetails(response);
+//                updatePrice(0);
+//                $("#rooms").on('change', function () { var roomIndex = $("#rooms").val(); updatePrice(roomIndex); });
+//                $(".proceed-button").on('click', function () { setSummaryCookies(); window.location.href = "checkoutpage.html"; });
+//            },
+//            error: function () { $(document).html("<h2>SORRY NO ROOMS AVAILABLE</h2>") }
+//        });
+//    }
+//}
+//function initialiser()
+//{
+//    sendPriceRequest();
+//}
+//$(document).ready(initialiser)
