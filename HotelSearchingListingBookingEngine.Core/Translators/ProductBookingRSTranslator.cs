@@ -4,6 +4,8 @@ using System.Text;
 using SystemContracts.ConsumerContracts;
 using ExternalServices.PricingPolicyEngine;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Caches;
+using SystemContracts.InternalContracts;
 
 namespace HotelSearchingListingBookingEngine.Core.Translators
 {
@@ -19,13 +21,30 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 {
                     if (completeBookingRS.TripFolder != null)
                         productBookingRS.TransactionId = completeBookingRS.TripFolder.ConfirmationNumber;
-                    else productBookingRS.TransactionId = Guid.NewGuid().ToString();
+                    productBookingRS.BookingSummary = BookingSummaryCache.GetSummary(completeBookingRS.TripFolder.Id.ToString());
+                    if (productBookingRS.BookingSummary == null)
+                        throw new InvalidObjectRequestException()
+                        {
+                            Source = typeof(BookingSummary).Name
+                        };
+                    //CLEAR CACHES
+                    BookingSummaryCache.Remove(completeBookingRS.TripFolder.Id.ToString());
+                    TripProductCache.Remove(completeBookingRS.TripFolder.Id.ToString());
+                    PricingRequestCache.Remove(completeBookingRS.TripFolder.Id.ToString());
                 }
                 else throw new BookingFailedException()
                 {
                     Source = typeof(CompleteBookingRS).Name
                 };
                 return productBookingRS;
+            }
+            catch (InvalidObjectRequestException invalidObjectRequestException)
+            {
+                Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = invalidObjectRequestException.Source
+                };
             }
             catch (BookingFailedException bookingFailedException)
             {
