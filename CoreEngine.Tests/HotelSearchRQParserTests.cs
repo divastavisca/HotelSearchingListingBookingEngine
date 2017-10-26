@@ -128,8 +128,7 @@ namespace CoreEngine.Tests
                 },
                 PaymentDetails = new SystemContracts.Attributes.PaymentDetails()
                 {
-                    Amount = itinerary[0].Fare.TotalFare.Amount,
-                    Currency = itinerary[0].Fare.TotalFare.Currency,
+                    Price = itinerary[0].Fare.TotalFare.Amount.ToString()+itinerary[0].Fare.TotalFare.Currency,
                     BillingAddress = new SystemContracts.Attributes.UserBillingAddress()
                     {
                         AddressLine1 = "Line 1",

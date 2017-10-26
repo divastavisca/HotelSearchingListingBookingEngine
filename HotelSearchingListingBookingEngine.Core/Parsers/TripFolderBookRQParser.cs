@@ -196,15 +196,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     new CreditCardPayment()
                     {
                         Attributes = new ExternalServices.PricingPolicyEngine.StateBag[1] { new ExternalServices.PricingPolicyEngine.StateBag() { Name = "API_SESSION_ID", Value = sessionId } },
-                        Amount = new ExternalServices.PricingPolicyEngine.Money()
-                        {
-                            Amount = paymentDetails.Amount,
-                            BaseEquivAmount =0,
-                            Currency = paymentDetails.Currency,
-                            DisplayAmount = paymentDetails.Amount,
-                            DisplayCurrency = paymentDetails.Currency,
-                            UsdEquivAmount = 0
-                        },
+                        Amount = fillAmount(paymentDetails.Price),
                         BillingAddress = getBillingAddress(paymentDetails),
                         PaymentType = PaymentType.Credit,
                         Rph = 0,
@@ -230,6 +222,39 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     Source = baseException.Source
                 };
             }
+        }
+
+
+        private ExternalServices.PricingPolicyEngine.Money fillAmount(string price)
+        {
+            int i = 0;
+            decimal amount = extractDecimal(price, out i);
+            string currency = price.Substring(i, price.Length - i);
+            return new ExternalServices.PricingPolicyEngine.Money()
+            {
+                Amount = amount,
+                BaseEquivAmount = 0,
+                Currency = currency,
+                DisplayAmount = amount,
+                DisplayCurrency = currency,
+                UsdEquivAmount = 0
+            };
+        }
+
+        private decimal extractDecimal(string price, out int i)
+        {
+            int j = 0;
+            while (j < price.Length)
+            {
+                if ((price[j] >= 48 && price[j] <= 57) || price[j] == 46)
+                {
+                    j++;
+                    continue;
+                }
+                else break;
+            }
+            i = j;
+            return decimal.Parse(price.Substring(0, i));
         }
 
         private ExternalServices.PricingPolicyEngine.Address getBillingAddress(PaymentDetails paymentDetails)
