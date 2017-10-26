@@ -7,6 +7,6 @@ namespace SystemContracts.ServiceContracts
 {
     public interface IEngineServiceProvider
     {
-        Task<IEngineServiceRS> GetServiceRS(IEngineServiceRQ serviceRQ);
+        Task<IEngineServiceRS> GetServiceRSAsync(IEngineServiceRQ serviceRQ);
     }
 }

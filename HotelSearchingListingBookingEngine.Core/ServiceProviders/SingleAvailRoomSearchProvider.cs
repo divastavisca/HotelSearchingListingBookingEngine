@@ -10,7 +10,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
 {
     public class SingleAvailRoomSearchProvider : IEngineServiceProvider
     {
-        public async Task<IEngineServiceRS> GetServiceRS(IEngineServiceRQ serviceRQ)
+        public async Task<IEngineServiceRS> GetServiceRSAsync(IEngineServiceRQ serviceRQ)
         {
             try
             {

@@ -14,7 +14,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceProviders
 {
     public class HotelRoomPricingRequestProvider : IEngineServiceProvider
     {
-        public async Task<IEngineServiceRS> GetServiceRS(IEngineServiceRQ serviceRQ)
+        public async Task<IEngineServiceRS> GetServiceRSAsync(IEngineServiceRQ serviceRQ)
         {
             try
             {

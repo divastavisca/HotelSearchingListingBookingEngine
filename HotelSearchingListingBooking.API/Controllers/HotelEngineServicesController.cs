@@ -29,7 +29,7 @@ namespace HotelSearchingListingBooking.API.Controllers
                 IEngineServiceProvider engineServiceProvider = APIServiceFactory.GetServiceProvider(requestedServiceType);
                 if (engineServiceProvider == null)
                     throw new ServiceProviderGenerationException();
-                IEngineServiceRS engineServiceRS = await engineServiceProvider.GetServiceRS(engineServiceRequest);
+                IEngineServiceRS engineServiceRS = await engineServiceProvider.GetServiceRSAsync(engineServiceRequest);
                 if (engineServiceRS == null)
                     throw new ResponseGenerationException();
                 return Ok(engineServiceRS);
