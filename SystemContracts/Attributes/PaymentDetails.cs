@@ -6,9 +6,7 @@ namespace SystemContracts.Attributes
 {
     public class PaymentDetails
     {
-        public decimal Amount { get; set; }
-
-        public string Currency { get; set; }
+        public string Price { get; set; }
 
         public UserBillingAddress BillingAddress { get; set; }
 
