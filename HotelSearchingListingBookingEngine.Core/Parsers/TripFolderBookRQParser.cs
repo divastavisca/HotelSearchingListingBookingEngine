@@ -90,7 +90,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             try
             {
                 TripFolder tripFolder = new TripFolder();
-                tripFolder.FolderName = "TripFolder"+DateTime.Now.ToString();
+                tripFolder.FolderName = "TripFolder" + DateTime.Now.ToString();
                 tripFolder.Creator = getUser(_creatorAdditionalInfoDataFile);
                 tripFolder.CreatedDate = DateTime.Now;
                 tripFolder.Owner = getUser(_ownerAdditionalDataFile);
@@ -98,7 +98,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 tripFolder.Type = TripFolderType.Personal;
                 tripFolder.Passengers = parsePassengers(hotelProductBookRQ.Guests);
                 tripFolder.Payments = getPayment(hotelProductBookRQ.PaymentDetails, hotelProductBookRQ.CallerSessionId);
-                tripFolder.Products = getProducts(tripFolder,hotelProductBookRQ.CallerSessionId);
+                tripFolder.Products = getProducts(tripFolder, hotelProductBookRQ.CallerSessionId);
                 updateDisplayRates((HotelTripProduct)tripFolder.Products[0]);
                 tripFolder.Status = TripStatus.Planned;
                 return tripFolder;
@@ -152,7 +152,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             hotelTripProduct.HotelItinerary.Fare.TotalTax.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalTax.Currency;
         }
 
-        private TripProduct[] getProducts(TripFolder folder,string sessionId)
+        private TripProduct[] getProducts(TripFolder folder, string sessionId)
         {
             var tripProduct = new TripProduct[1];
             tripProduct[0] = (HotelTripProduct)Caches.TripProductCache.GetItineraries(sessionId);
