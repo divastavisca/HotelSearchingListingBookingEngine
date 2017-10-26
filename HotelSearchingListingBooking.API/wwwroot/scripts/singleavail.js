@@ -45,6 +45,8 @@ function listHotelDetails(jsonObject)
     $("#check-out-date").text((checkOutDate.split("T"))[0]);
     $("#adult-count").text(adultsCount);
     $("#child-count").text(childrenCount);
+    var proceedButtonHtml = "<button type='button' class='proceed-button'>Proceed To Book</button>";
+    $("#booking-details>form>fieldset:last").append(proceedButtonHtml);
     var roomList = "<select name=\"roomType\" id=\"rooms\">";
     for (var roomCount = 0; roomCount < rooms.length; roomCount++)
     {
@@ -114,6 +116,19 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+function setSummaryCookies()
+{
+    document.cookie = "sessionId=" + callerSessionId + ";path=/";
+    document.cookie = "hotelName=" + $("#hotel-name-address>h3").text() + ";path=/";
+    document.cookie = "hotelAddress=" + $("#hotel-name-address>span").text() + ";path=/";
+    document.cookie = "adultCount=" + $("#adult-count").text() + ";path=/";
+    document.cookie = "childCount=" + $("#child-count").text() + ";path=/";
+    document.cookie = "checkInDate=" + $("#check-in-date").text() + ";path=/";
+    document.cookie = "checkOutDate=" + $("#check-out-date").text() + ";path=/";
+    document.cookie = "roomDescription=" + $("#rooms option:selected").text(); + ";path=/";
+    document.cookie = "amenities=" + $("#amenities").text() + ";path=/";
+    document.cookie = "roomPrice=" + $("#price").text() + ";path=/";
+}
 $(document).ready(function () {
         var urlParams = new URLSearchParams(window.location.search);
         if ((urlParams).has("cid") && (urlParams).has("iid"))
@@ -141,6 +156,7 @@ $(document).ready(function () {
                     listHotelDetails(response);
                     updatePrice(0);
                     $("#rooms").on('change', function () { var roomIndex = $("#rooms").val(); updatePrice(roomIndex); });
+                    $(".proceed-button").on('click', function () { setSummaryCookies(); window.location.href = "checkoutpage.html"; });
                     //var latLngObj = { lat: itineraryDetails['geoCode']['latitude'], lng: itineraryDetails['geoCode']['longitude'] };
                     //var map = new google.maps.Map(document.getElementById('map-container'), { zoom: 20, center: latLngObj });
                     //var marker = new google.maps.Marker({ position: latLngObj, map: map });
@@ -149,7 +165,6 @@ $(document).ready(function () {
             })
         }
         showSlides(slideIndex);
-        
         $("#show-on-map").on("click", showMap);
            
     }
