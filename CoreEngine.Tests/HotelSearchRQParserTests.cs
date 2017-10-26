@@ -81,6 +81,7 @@ namespace CoreEngine.Tests
                 i++;
             }
             RoomPricingRQ pricingRQ = new RoomPricingRQ();
+            SelectedItineraryRoomsCache.AddToCache(res.SessionId, res.Itinerary.Rooms);
             pricingRQ.CallerSessionId = res.SessionId;
             pricingRQ.RoomId = res.Itinerary.Rooms[i].RoomId.ToString();
             SystemContracts.ServiceContracts.IEngineServiceRS roomPricingRS = await (new HotelRoomPricingRequestEngine()).RequestAsync(pricingRQ);
@@ -115,10 +116,10 @@ namespace CoreEngine.Tests
                         Name = new SystemContracts.Attributes.Name()
                         {
                             FirstName = "Divas",
-                            MiddleName = "Kumar",
+                            MiddleName = null,
                             LastName = "Agarwal"
                         },
-                        DateOfBirth = DateTime.Parse("08-10-1995"),
+                        DateOfBirth = DateTime.Parse("1995-08-10"),
                         Age = 22,
                         Email = "dagarwal@tavisca.com",
                         Gender = 'M',
@@ -152,11 +153,12 @@ namespace CoreEngine.Tests
                     }
                 }
             };
-            var RS = (new TripFolderBookRQParser()).Parse(req);
-            var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
-            var staginginfo = (new StagingRSParser()).Parse(mainRs);
-            var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
-            var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
+            SystemContracts.ServiceContracts.IEngineServiceRS rsRes = await (new BookingServiceCoordinator()).RequestAsync(req);
+            //var RS = (new TripFolderBookRQParser()).Parse(req);
+            //var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
+            //var staginginfo = (new StagingRSParser()).Parse(mainRs);
+            //var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
+            //var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
         }
     }
 }
