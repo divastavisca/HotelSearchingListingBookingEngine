@@ -40,14 +40,19 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     if (SelectedItineraryCache.IsPresent(hotelRoomSearchRS.SessionId))
                     {
                         SelectedItineraryCache.Remove(hotelRoomSearchRS.SessionId);
-                        if (SelectedItineraryCache.IsPresent(hotelRoomSearchRS.SessionId))
+                        if (SelectedItineraryRoomsCache.IsPresent(hotelRoomSearchRS.SessionId))
                         {
-                            SelectedItineraryCache.Remove(hotelRoomSearchRS.SessionId);
-                            if (TripProductCache.IsPresent(hotelRoomSearchRS.SessionId))
-                                TripProductCache.Remove(hotelRoomSearchRS.SessionId);
+                            SelectedItineraryRoomsCache.Remove(hotelRoomSearchRS.SessionId);
+                            if (PricingRequestCache.IsPresent(hotelRoomSearchRS.SessionId))
+                            {
+                                PricingRequestCache.Remove(hotelRoomSearchRS.SessionId);
+                                if (TripProductCache.IsPresent(hotelRoomSearchRS.SessionId))
+                                    TripProductCache.Remove(hotelRoomSearchRS.SessionId);
+                            }
                         }
                     }
                     SelectedItineraryCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary);
+                    SelectedItineraryRoomsCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary.Rooms);
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
                     if (engineSearchRS == null)
                         throw new ParseException()

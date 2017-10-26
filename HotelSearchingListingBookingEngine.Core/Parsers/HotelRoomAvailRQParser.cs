@@ -9,9 +9,7 @@ using HotelSearchingListingBookingEngine.Core.Caches;
 namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class HotelRoomAvailRQParser
-    {
-        private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
-
+    { 
         public HotelRoomAvailRQ Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ)
         {
             try
@@ -28,12 +26,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                     {
                         Source = parsedRQ.Itinerary.GetType().Name
                     };
-                if (parsedRQ.Itinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[0]) || parsedRQ.Itinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[1]))
-                    return parsedRQ;
-                else throw new InvalidObjectRequestException()
-                {
-                    Source = typeof(HotelFareSource).Name
-                };
+                return parsedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {

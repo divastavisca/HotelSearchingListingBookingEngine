@@ -1,0 +1,35 @@
+-------------------------Log ID:c24f0862-1ffb-438d-8292-2865b9a4f8fb
+Timestamp: 10/25/2017 9:56:35 PM
+Log Description: Error in initilizing List`1
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 94
+--------------------------------------------------Log ID:645241b6-9130-4890-92bd-3429eb3e887a
+Timestamp: 10/25/2017 9:56:35 PM
+Log Description: System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 111
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 22
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.fillResponseItinerary(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 111
+   at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 22
+--------------------------------------------------Log ID:ffea3684-01b5-4977-9669-3aa2342d5588
+Timestamp: 10/25/2017 9:56:35 PM
+Log Description: Error in parsing response at List`1
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.Parsers.SingleAvailRoomSearchRSParser.Parse(HotelRoomAvailRS hotelRoomSearchRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\Parsers\SingleAvailRoomSearchRSParser.cs:line 67
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 56
+--------------------------------------------------Log ID:1581a1b9-45f4-4852-80a7-6db429613cfb
+Timestamp: 10/25/2017 9:56:36 PM
+Log Description: Error in processing request error occured at List`1
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.SingleAvailRoomSearchEngine.<SearchAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\SingleAvailRoomSearchEngine.cs:line 105
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 17
+--------------------------------------------------Log ID:531e1af6-e9df-43fd-a0eb-e364a457b42b
+Timestamp: 10/25/2017 9:56:36 PM
+Log Description: Error in providing service List`1
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.SingleAvailRoomSearchProvider.<GetServiceRS>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\SingleAvailRoomSearchProvider.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+-------------------------

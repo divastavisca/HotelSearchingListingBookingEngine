@@ -12,6 +12,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 {
     public class SingleAvailRoomSearchRSParser
     {
+        private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
+
         public SingleAvailRoomSearchRS Parse(HotelRoomAvailRS hotelRoomSearchRS)
         {
             SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
@@ -169,17 +171,22 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                 roomsItinerarySummary = new List<RoomSummary>();
                 foreach (Room hotelRoom in hotelRooms)
                 {
-                    RoomSummary roomSummary = new RoomSummary();
-                    roomSummary.HotelId = supplierHotelId;
-                    roomSummary.Description = hotelRoom.RoomDescription;
-                    roomSummary.RoomId = hotelRoom.RoomId.ToString();
-                    roomSummary.MaxOccupancy = hotelRoom.MaximumOccupancy;
-                    roomSummary.IsPrepaid = hotelRoom.Prepaid;
-                    roomSummary.Currency = hotelRoom.DisplayRoomRate.TotalFare.Currency;
-                    roomSummary.TotalFare = hotelRoom.DisplayRoomRate.TotalFare.Amount;
-                    roomsItinerarySummary.Add(roomSummary);
+                    if (hotelRoom.HotelFareSource.Name.StartsWith(_deafultSuppliers[0]) || hotelRoom.HotelFareSource.Name.StartsWith(_deafultSuppliers[1]))
+                    {
+                        RoomSummary roomSummary = new RoomSummary();
+                        roomSummary.HotelId = supplierHotelId;
+                        roomSummary.Description = hotelRoom.RoomDescription;
+                        roomSummary.RoomId = hotelRoom.RoomId.ToString();
+                        roomSummary.MaxOccupancy = hotelRoom.MaximumOccupancy;
+                        roomSummary.IsPrepaid = hotelRoom.Prepaid;
+                        roomSummary.Currency = hotelRoom.DisplayRoomRate.TotalFare.Currency;
+                        roomSummary.TotalFare = hotelRoom.DisplayRoomRate.TotalFare.Amount;
+                        roomsItinerarySummary.Add(roomSummary);
+                    }
                 }
-                return true;
+                if (roomsItinerarySummary.Count > 0)
+                    return true;
+                else return false;
             }
             catch (NullReferenceException nullRefExcep)
             {

@@ -33,8 +33,8 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         private readonly string _defaultCompanyDk = "3285301P";
         private readonly string _defaultCompanyName = "Rovia";
         private readonly int _defaultCompanyId = 0;
-        private readonly string _defaultPriceCurrencyCode = "INR";
-        private readonly float _deafultSearchRadius = 30;
+        private readonly string _defaultPriceCurrencyCode = "USD";
+        private readonly float _deafultSearchRadius = 50;
         private readonly int _defaultPagingInfoStartNumber = 100;
         private readonly int _defaultPagingInfoEndNumber = 120;
         private readonly int _defaultTotalRecordsBeforeFiltering = 0;

@@ -55,7 +55,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
 
         private bool checkCompletion(CompleteBookingRS completeBookingRS)
         {
-            return completeBookingRS.ErrorInfoList == null;
+            return completeBookingRS.ServiceStatus.Status == ServiceStatusType.Success;
         }
     }
 }

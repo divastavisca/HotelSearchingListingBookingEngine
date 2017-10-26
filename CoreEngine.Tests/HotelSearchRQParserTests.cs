@@ -25,16 +25,16 @@ namespace CoreEngine.Tests
             request = new MultiAvailHotelSearchRQ()
             {
                 AdultsCount = 1,
-                CheckInDate = DateTime.Parse("2017-11-14"),
-                CheckOutDate = DateTime.Parse("2017-11-15"),
+                CheckInDate = DateTime.Parse("2017-11-15"),
+                CheckOutDate = DateTime.Parse("2017-11-16"),
                 ChildrenAge = new System.Collections.Generic.List<int>() { 12 },
                 ChildrenCount = 1,
                 SearchLocation = new SystemContracts.Attributes.Destination()
                 {
                     GeoCode = new SystemContracts.Attributes.GeoCoordinates()
                     {
-                        Latitude = 12.9726f,
-                        Longitude = 77.6209f
+                        Latitude = 36.09965f,
+                        Longitude = -115.165222f
                     },
                     Name = "Taj Mahal",
                     Type = "GeoCode"
@@ -51,19 +51,44 @@ namespace CoreEngine.Tests
             var itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId);
             var hotelroomavail = new HotelRoomAvailRQ();
             hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
-            hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[0];
-            hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
-            hotelroomavail.ResultRequested = ResponseType.Complete;
-            HotelEngineClient client = new HotelEngineClient();
-            var res = await client.HotelRoomAvailAsync(hotelroomavail);
+            int i = 0;
+                foreach (HotelItinerary iti in itinerary)
+                {
+                    if (iti.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                    {
+                        i = 0;
+                        hotelroomavail.Itinerary = iti;
+                        foreach (Room ro in iti.Rooms)
+                        {
+                            if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                                break;
+                            i++;
+                        }
+                    }
+                }
+                // hotelroomavail.Itinerary = ItineraryCache.GetItineraries(((MultiAvailHotelSearchRS)response).CallerSessionId)[192];
+                hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
+                hotelroomavail.ResultRequested = ResponseType.Complete;
+                HotelEngineClient client = new HotelEngineClient();
+                var res = await client.HotelRoomAvailAsync(hotelroomavail);
+
             SelectedItineraryCache.AddToCache(res.SessionId, res.Itinerary);
+            i = 0;
+            foreach (Room ro in res.Itinerary.Rooms)
+            {
+                if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                    break;
+                i++;
+            }
             RoomPricingRQ pricingRQ = new RoomPricingRQ();
+            SelectedItineraryRoomsCache.AddToCache(res.SessionId, res.Itinerary.Rooms);
             pricingRQ.CallerSessionId = res.SessionId;
-            pricingRQ.RoomId = res.Itinerary.Rooms[0].RoomId.ToString();
-            PricingRequestCache.AddToCache(pricingRQ.CallerSessionId, pricingRQ.RoomId);
-            ExternalServices.PricingPolicyEngine.TripProductPriceRQ tripProductPriceRQ = (new TripProductPriceRQParser()).Parse(pricingRQ);
-            var result = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).PriceTripProductAsync(tripProductPriceRQ);
-            TripProductCache.AddToCache(result.SessionId, result.TripProduct);
+            pricingRQ.RoomId = res.Itinerary.Rooms[i].RoomId.ToString();
+            SystemContracts.ServiceContracts.IEngineServiceRS roomPricingRS = await (new HotelRoomPricingRequestEngine()).RequestAsync(pricingRQ);
+            //PricingRequestCache.AddToCache(pricingRQ.CallerSessionId, pricingRQ.RoomId);
+            //ExternalServices.PricingPolicyEngine.TripProductPriceRQ tripProductPriceRQ = (new TripProductPriceRQParser()).Parse(pricingRQ);
+            //var result = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).PriceTripProductAsync(tripProductPriceRQ);
+         //   TripProductCache.AddToCache(result.SessionId, result.TripProduct);
             var ghu = ItineraryCache.GetItineraries(hotelroomavail.SessionId);
             //foreach (HotelItinerary iti in ghu)
             //{
@@ -85,22 +110,22 @@ namespace CoreEngine.Tests
             {
                 CallerSessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId,
                 Guests = new SystemContracts.Attributes.Guest[1]
-{
+                {
                     new SystemContracts.Attributes.Guest()
                     {
                         Name = new SystemContracts.Attributes.Name()
                         {
                             FirstName = "Divas",
-                            MiddleName = "Kumar",
+                            MiddleName = null,
                             LastName = "Agarwal"
                         },
-                        DateOfBirth = DateTime.Parse("08-10-1995"),
+                        DateOfBirth = DateTime.Parse("1995-08-10"),
                         Age = 22,
                         Email = "dagarwal@tavisca.com",
                         Gender = 'M',
                         Type = "Adult"
                     }
-},
+                },
                 PaymentDetails = new SystemContracts.Attributes.PaymentDetails()
                 {
                     Price = itinerary[0].Fare.TotalFare.Amount.ToString()+itinerary[0].Fare.TotalFare.Currency,
@@ -127,11 +152,12 @@ namespace CoreEngine.Tests
                     }
                 }
             };
-            var RS = (new TripFolderBookRQParser()).Parse(req);
-            var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
-            var staginginfo = (new StagingRSParser()).Parse(mainRs);
-            var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
-            var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
+            SystemContracts.ServiceContracts.IEngineServiceRS rsRes = await (new BookingServiceCoordinator()).RequestAsync(req);
+            //var RS = (new TripFolderBookRQParser()).Parse(req);
+            //var mainRs = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).BookTripFolderAsync(RS);
+            //var staginginfo = (new StagingRSParser()).Parse(mainRs);
+            //var cRq = (new CompleteBookingRQParser()).Parse(staginginfo);
+            //var finalRS = await (new ExternalServices.PricingPolicyEngine.TripsEngineClient()).CompleteBookingAsync(cRq);
         }
     }
 }
