@@ -8,11 +8,11 @@ using HotelSearchingListingBookingEngine.Core.Caches;
 using ExternalServices.PricingPolicyEngine;
 using Newtonsoft.Json;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class TripProductPriceRQParser
+    public class TripProductPriceRQTranslator
     {
-        public ExternalServices.PricingPolicyEngine.TripProductPriceRQ Parse(RoomPricingRQ hotelRoomPricingRQ)
+        public ExternalServices.PricingPolicyEngine.TripProductPriceRQ Translate(RoomPricingRQ hotelRoomPricingRQ)
         {
             try
             {

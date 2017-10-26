@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
-using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core.Translators;
 using SystemContracts.ConsumerContracts;
 using ExternalServices.HotelSearchEngine;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
@@ -20,7 +20,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 var singleAvailRoomSearchRQ = (SingleAvailRoomSearchRQ)serviceRequest;
                 if (ItineraryCache.IsPresent(singleAvailRoomSearchRQ.CallerSessionId))
                 {
-                    HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQParser()).Parse(singleAvailRoomSearchRQ);
+                    HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQTranslator()).Translate(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
                         throw new ParseException()
                         {
@@ -53,7 +53,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     }
                     SelectedItineraryCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary);
                     SelectedItineraryRoomsCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary.Rooms);
-                    SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSParser()).Parse(hotelRoomSearchRS);
+                    SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSTranslator()).Translate(hotelRoomSearchRS);
                     if (engineSearchRS == null)
                         throw new ParseException()
                         {

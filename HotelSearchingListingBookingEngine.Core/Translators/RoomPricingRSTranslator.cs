@@ -6,11 +6,11 @@ using SystemContracts.ConsumerContracts;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class RoomPricingRSParser
+    public class RoomPricingRSTranslator
     {
-        public RoomPricingRS Parse(ExternalServices.PricingPolicyEngine.TripProductPriceRS hotelRoomPriceRS)
+        public RoomPricingRS Translate(ExternalServices.PricingPolicyEngine.TripProductPriceRS hotelRoomPriceRS)
         {
             try
             {

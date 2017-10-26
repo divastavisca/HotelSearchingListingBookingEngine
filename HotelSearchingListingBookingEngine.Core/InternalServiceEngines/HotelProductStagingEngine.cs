@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ExternalServices.PricingPolicyEngine;
-using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core.Translators;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
@@ -17,9 +17,9 @@ namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
         {
             try
             {
-                TripFolderBookRQ tripFolderBookRQ = (new TripFolderBookRQParser()).Parse((HotelProductBookRQ)productStagingRQ);
+                TripFolderBookRQ tripFolderBookRQ = (new TripFolderBookRQTranslator()).Translate((HotelProductBookRQ)productStagingRQ);
                 TripFolderBookRS tripFolderBookRS =  await (new TripsEngineClient()).BookTripFolderAsync(tripFolderBookRQ);
-                return (new StagingRSParser()).Parse(tripFolderBookRS);
+                return (new StagingRSTranslator()).Translate(tripFolderBookRS);
             }
             catch(ServiceRequestParserException serviceRequestParserException)
             {

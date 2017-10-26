@@ -5,11 +5,11 @@ using HotelSearchingListingBookingEngine.Core.InternalEngineHandshakes;
 using ExternalServices.PricingPolicyEngine;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class StagingRSParser
+    public class StagingRSTranslator
     {
-        public ProductStagingInfo Parse(TripFolderBookRS tripFolderBookRS)
+        public ProductStagingInfo Translate(TripFolderBookRS tripFolderBookRS)
         {
             try
             {

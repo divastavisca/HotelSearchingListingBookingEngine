@@ -6,7 +6,7 @@ using ExternalServices.PricingPolicyEngine;
 using SystemContracts.ServiceContracts;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.InternalEngineHandshakes;
-using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core.Translators;
 
 namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
 {
@@ -16,9 +16,9 @@ namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
         {
             try
             {
-                CompleteBookingRQ completeBookingRQ = (new CompleteBookingRQParser()).Parse((ProductStagingInfo)engineServiceRQ);
+                CompleteBookingRQ completeBookingRQ = (new CompleteBookingRQTranslator()).Translate((ProductStagingInfo)engineServiceRQ);
                 CompleteBookingRS completeBookingRS = await (new TripsEngineClient()).CompleteBookingAsync(completeBookingRQ);
-                return (new ProductBookingRSParser()).Parse(completeBookingRS);
+                return (new ProductBookingRSTranslator()).Translate(completeBookingRS);
             }
             catch (ServiceRequestParserException serviceRequestParserException)
             {

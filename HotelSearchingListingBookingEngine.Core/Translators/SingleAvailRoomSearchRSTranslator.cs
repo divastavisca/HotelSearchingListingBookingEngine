@@ -8,13 +8,13 @@ using SystemContracts.Attributes.HotelAttributes;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class SingleAvailRoomSearchRSParser
+    public class SingleAvailRoomSearchRSTranslator
     {
         private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
 
-        public SingleAvailRoomSearchRS Parse(HotelRoomAvailRS hotelRoomSearchRS)
+        public SingleAvailRoomSearchRS Translate(HotelRoomAvailRS hotelRoomSearchRS)
         {
             SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
             try
@@ -26,7 +26,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
                         Source = parsedResponse.Itinerary.GetType().Name
                     };
                 ItinerarySummary summary;
-                (new MultiAvailHotelSearchRSParser()).TryParseItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
+                (new MultiAvailHotelSearchRSTranslator()).TryParseItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
                 parsedResponse.Itinerary.ItinerarySummary =
                     summary
                     ??

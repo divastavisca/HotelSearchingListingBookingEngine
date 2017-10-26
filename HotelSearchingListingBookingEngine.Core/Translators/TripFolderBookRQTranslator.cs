@@ -11,9 +11,9 @@ using System.IO;
 using ExternalServices.HotelSearchEngine;
 using SystemContracts.Attributes;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class TripFolderBookRQParser
+    public class TripFolderBookRQTranslator
     {
         private readonly string _creatorAdditionalInfoDataFile = @"StateBagData\StateBagDataCreaterAdditionalInfo.txt";
         private readonly string _creatorEMail = "sbejugam@v-worldventures.com";
@@ -40,7 +40,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
             {"GeoCode", ExternalServices.PricingPolicyEngine.LocationCodeContext.GeoCode }
         };
 
-        public TripFolderBookRQ Parse(HotelProductBookRQ hotelProductBookRQ)
+        public TripFolderBookRQ Translate(HotelProductBookRQ hotelProductBookRQ)
         {
             try
             {

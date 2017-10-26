@@ -12,9 +12,9 @@ using System.IO;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Utilities;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class HotelSearchRQParser
+    public class HotelSearchRQTranslator
     {
         private readonly bool _returnOnlyAvailableItineraries = true;
         private readonly string _stateBagObjHscAttributes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "StateBagData", "StateBagObjectData1.txt");
@@ -40,7 +40,7 @@ namespace HotelSearchingListingBookingEngine.Core.Parsers
         private readonly int _defaultTotalRecordsBeforeFiltering = 0;
         private readonly int _defaultTotalResults = 0;
 
-        public HotelSearchRQ Parse(MultiAvailHotelSearchRQ request)
+        public HotelSearchRQ Translate(MultiAvailHotelSearchRQ request)
         {
             HotelSearchRQ parsedRQ = new HotelSearchRQ();
             try

@@ -6,11 +6,11 @@ using SystemContracts.ConsumerContracts;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class HotelRoomAvailRQParser
+    public class HotelRoomAvailRQTranslator
     { 
-        public HotelRoomAvailRQ Parse(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ)
+        public HotelRoomAvailRQ Translate(SingleAvailRoomSearchRQ singleAvailRoomSearchRQ)
         {
             try
             {

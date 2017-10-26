@@ -8,13 +8,13 @@ using Newtonsoft.Json;
 using SystemContracts.Attributes;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class MultiAvailHotelSearchRSParser
+    public class MultiAvailHotelSearchRSTranslator
     {
         //private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
 
-        public MultiAvailHotelSearchRS Parse(HotelSearchRS hotelSearchRS)
+        public MultiAvailHotelSearchRS Translate(HotelSearchRS hotelSearchRS)
         {
             try
             {

@@ -4,7 +4,7 @@ using System.Text;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.ServiceContracts;
 using ExternalServices.PricingPolicyEngine;
-using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core.Translators;
 using HotelSearchingListingBookingEngine.Core;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
@@ -18,14 +18,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
         {
             try
             {
-                TripProductPriceRQ hotelRoomPriceRQ = (new TripProductPriceRQParser()).Parse((RoomPricingRQ)engineServiceRQ);
+                TripProductPriceRQ hotelRoomPriceRQ = (new TripProductPriceRQTranslator()).Translate((RoomPricingRQ)engineServiceRQ);
                 TripProductPriceRS hotelRoomPriceRS = await (new TripsEngineClient()).PriceTripProductAsync(hotelRoomPriceRQ);
                 if (hotelRoomPriceRS.TripProduct == null)
                     throw new NoResultsFoundException()
                     {
                         Source = hotelRoomPriceRS.TripProduct.GetType().Name
                     };
-                return (new RoomPricingRSParser()).Parse(hotelRoomPriceRS);
+                return (new RoomPricingRSTranslator()).Translate(hotelRoomPriceRS);
             }
             catch (ServiceRequestParserException serviceRequestParserException)
             {

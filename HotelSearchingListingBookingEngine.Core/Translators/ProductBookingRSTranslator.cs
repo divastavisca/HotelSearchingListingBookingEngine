@@ -5,11 +5,11 @@ using SystemContracts.ConsumerContracts;
 using ExternalServices.PricingPolicyEngine;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 
-namespace HotelSearchingListingBookingEngine.Core.Parsers
+namespace HotelSearchingListingBookingEngine.Core.Translators
 {
-    public class ProductBookingRSParser
+    public class ProductBookingRSTranslator
     {
-        public ProductBookingRS Parse(CompleteBookingRS completeBookingRS)
+        public ProductBookingRS Translate(CompleteBookingRS completeBookingRS)
         {
             try
             {

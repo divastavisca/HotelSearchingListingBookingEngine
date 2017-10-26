@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.ServiceContracts;
 using ExternalServices.HotelSearchEngine;
-using HotelSearchingListingBookingEngine.Core.Parsers;
+using HotelSearchingListingBookingEngine.Core.Translators;
 using HotelSearchingListingBookingEngine.Core;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
@@ -18,12 +18,12 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
         {
             try
             {
-                HotelSearchRQ hotelSearchRQ = (new HotelSearchRQParser()).Parse((MultiAvailHotelSearchRQ)searchRQ);
+                HotelSearchRQ hotelSearchRQ = (new HotelSearchRQTranslator()).Translate((MultiAvailHotelSearchRQ)searchRQ);
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
                     throw new NoResultsFoundException();
                 updateCaches(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion, hotelSearchRS.Itineraries);
-                return (new MultiAvailHotelSearchRSParser()).Parse(hotelSearchRS);
+                return (new MultiAvailHotelSearchRSTranslator()).Translate(hotelSearchRS);
             }
             catch (ServiceRequestParserException requestParserException)
             {
