@@ -92,7 +92,8 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     CheckInDate = timePeriod.Start,
                     CheckOutDate = timePeriod.End,
                     RoomName = selectedRoom.RoomName, 
-                    TotalAmount = selectedRoom.DisplayRoomRate.TotalFare.Amount
+                    TotalAmount = selectedRoom.DisplayRoomRate.TotalFare.Amount,
+                    Currency = selectedRoom.DisplayRoomRate.TotalFare.Currency
                 }
             );
         }
