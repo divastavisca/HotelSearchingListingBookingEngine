@@ -19,6 +19,13 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
             try
             {
+                if(hotelRoomSearchRS.Itinerary.Rooms==null || hotelRoomSearchRS.Itinerary.Rooms.Length==0)
+                {
+                    throw new NoResultsFoundException()
+                    {
+                        Source = typeof(Room).Name
+                    };
+                }
                 parsedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
                 if (parsedResponse.Itinerary == null)
                     throw new InvalidObjectRequestException()
@@ -36,6 +43,14 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                     };
                 parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
                 return parsedResponse;
+            }
+            catch(NoResultsFoundException noResultsFoundException)
+            {
+                Logger.LogException(noResultsFoundException.ToString(), noResultsFoundException.StackTrace);
+                throw new ServiceResponseParserException()
+                {
+                    Source = noResultsFoundException.Source
+                };
             }
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {

@@ -19,9 +19,9 @@ namespace HotelSearchingListingBookingEngine.Core.Caches
             return _cache.ContainsKey(sessionId);
         }
 
-        public static void AddToCache(string sessionId, ExternalServices.HotelSearchEngine.Room[] selectedItinerary)
+        public static void AddToCache(string sessionId, ExternalServices.HotelSearchEngine.Room[] itineraryRooms)
         {
-            _cache.Add(sessionId, selectedItinerary);
+            _cache.Add(sessionId, itineraryRooms);
         }
 
         public static void Remove(string sessionId)

@@ -2,18 +2,21 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="styles/singleavail.css">
+    <!--<link rel="stylesheet" href="styles/singleavail.css">-->
+    <link rel="stylesheet" href="styles/singleavailstyle.css">
 </head>
     <body>
         <header id="logo-container">
         <a href="index.html"><img src="resources/HQlogo.png"> </a>
         </header>
         <main>
-        <section>
-            <section id="hotel-details">
+        <section id="hotel-details">
                 <div id="hotel-name-address">
-                <h3>Hotel Name</h3>
-                <span>Hotel Address</span>
+                <h1>Hotel Name</h1><div id="rating"></div>
+                </div>
+                <div id="hotel-address">
+                    <p></p>
+                    <button class="control-button" type="button" id="show-on-map">View On Map</button>
                 </div>
                 <div id="hotel-other-details">
                     <div id="image-slider">
@@ -60,13 +63,22 @@
                         </div>
                     </div>
                     <div id="other-details">
-                        <h4>Star Rating:</h4><span id="rating"></span>
+                        
                         <h4>Amenities:</h4><span id="amenities"></span>
-                        <button type="button" id="show-on-map">View On Map</button>
+                        
+                        
+                        <form>
+                            <fieldset id="rooms-field-set">
+                                <label>Room</label>
+                            </fieldset>
+                            <fieldset>
+                                <label>Price:<span id="price"></span></label>
+                            </fieldset>
+                            <button type="button" class="proceed-button control-button">Proceed To Book</button>
+                        </form>
                     </div>
                 </div>          
             </section>
-        </section>
         <aside id="booking-details">
             <form>
                 <fieldset>
@@ -86,26 +98,21 @@
                 <label id="child-count">                    
                 </label>
                 </fieldset>
-                <fieldset id="rooms-field-set">
-                <label>Room</label>
-                
-                </fieldset>
-                <fieldset>
-                    <label>Price:<span id="price"></span></label>
-                </fieldset>
             </form>
         </aside>
         </main>
         <footer id="reviews">
+
         </footer>
         <div id="map-container">
+
         </div>
+
         <script>function initMap() { }</script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABK2PpnRa8xpSBogGa1qHBkro3RDpDEvM&callback=initMap"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
         <script src="scripts/singleavail.js"></script>
-        
-    </body>
+     </body>
 </html>

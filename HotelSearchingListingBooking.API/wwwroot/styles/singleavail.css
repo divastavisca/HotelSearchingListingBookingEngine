@@ -1,9 +1,12 @@
+{
+    html, body {
+    height: 100%;
+}
 body{
     display: flex;
     flex-flow: column wrap;
     align-items: stretch;
     justify-content: space-between;
-    
 }
 header{
     flex: 1;
@@ -16,31 +19,31 @@ main{
     justify-content: space-around;
     background-color: rgba(211,211,211,0.8);
 }
-#hotel-details,main>section,main>aside{
+main>section {
+    flex: 3;
+}
+main>aside {
+    flex: 1;
+}
+#reviews {
+    flex:2;
+    overflow:scroll;
+}
+main>section,main>aside{
     display: flex;
     flex-flow: column wrap;
     align-items: stretch;
     justify-content: space-around;
 }
-main>section{
-    flex: 3;
-}
-main>aside{
-    flex: 1;
-}
-#reviews{
-    
-}
 #hotel-name-address{
+    flex:1;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
 }
-#hotel-name-address>span{
-    margin: 18.720px 0 18.720px 0;
-}
 #hotel-other-details{
+    flex:4;
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
@@ -54,6 +57,10 @@ main>aside{
     box-shadow: #37454d 0px 1px 1px;
     align-items: center;
     min-height: 55px;
+}
+.slideshow-container img {
+    height: 500px;
+    width: 500px;
 }
 #logo-container img {
     height: 50px;
@@ -72,11 +79,9 @@ main>aside{
   position: relative;
   margin: auto;
 }
-
 .mySlides {
     display: none;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -91,18 +96,15 @@ main>aside{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -113,7 +115,6 @@ main>aside{
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -122,7 +123,6 @@ main>aside{
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor:pointer;
@@ -134,11 +134,9 @@ main>aside{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -172,4 +170,5 @@ fieldset{
 #map{
     width:50%;
     height:50%;
+}
 }
