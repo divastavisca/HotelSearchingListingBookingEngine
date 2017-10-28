@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Reflection;
 using HotelSearchingListingBooking.API.Models;
 using HotelSearchingListingBookingEngine.Core;
 using SystemContracts.ServiceContracts;
@@ -39,7 +38,12 @@ namespace HotelSearchingListingBooking.API.Controllers
                 Logger.LogException(serviceProviderException.ToString(), serviceProviderException.StackTrace);
                 return NotFound();
             }
-            catch(InvalidServiceRequestException invalidServiceRequested)
+            catch (ResponseGenerationException responseGenerationException)
+            {
+                Logger.LogException(responseGenerationException.ToString(), responseGenerationException.StackTrace);
+                return NotFound();
+            }
+            catch (InvalidServiceRequestException invalidServiceRequested)
             {
                 Logger.LogException(invalidServiceRequested.ToString(), invalidServiceRequested.StackTrace);
                 return BadRequest();

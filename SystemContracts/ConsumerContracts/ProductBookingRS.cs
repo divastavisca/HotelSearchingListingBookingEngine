@@ -13,7 +13,5 @@ namespace SystemContracts.ConsumerContracts
         public bool IsCompleted { get; set; }
 
         public BookingSummary BookingSummary { get; set; }
-
-
     }
 }
