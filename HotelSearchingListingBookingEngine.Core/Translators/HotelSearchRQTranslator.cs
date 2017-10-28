@@ -252,25 +252,30 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[2];
+                PassengerTypeQuantity[] passengerTypeQuantity;
                 PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
                 adultPassengers.PassengerType = PassengerType.Adult;
                 adultPassengers.Ages = getAges(adultsCount);
                 adultPassengers.Quantity = adultsCount;
-                PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
-                childPassengers.PassengerType = PassengerType.Child;
-                if (childrenAges.Length == 0)
+                if (childrenAges.Length > 0)
                 {
-                    childPassengers.Ages = new int[1] { 0 };
-                    childPassengers.Quantity = 1;
+                    passengerTypeQuantity = new PassengerTypeQuantity[2];
+                    PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
+                    childPassengers.PassengerType = PassengerType.Child;
+                    if (childrenAges.Length == 0)
+                    {
+                        childPassengers.Ages = new int[1] { 0 };
+                        childPassengers.Quantity = 1;
+                    }
+                    else
+                    {
+                        childPassengers.Quantity = childrenAges.Length;
+                        childPassengers.Ages = childrenAges;
+                    }
+                    passengerTypeQuantity[1] = childPassengers ;
                 }
-                else
-                {
-                    childPassengers.Quantity = childrenAges.Length;
-                    childPassengers.Ages = childrenAges;
-                }
+                else passengerTypeQuantity = new PassengerTypeQuantity[1];
                 passengerTypeQuantity[0] = adultPassengers;
-                passengerTypeQuantity[1] = childPassengers;
                 return passengerTypeQuantity;
             }
             catch(NullReferenceException nullRefExcep)

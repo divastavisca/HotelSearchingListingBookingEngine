@@ -228,20 +228,36 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             try
             {
                 PassengerTypeQuantity[] guests = (SearchCriterionCache.GetSearchCriterion(sessionId)).Guests;
-                if (guests[0].PassengerType == PassengerType.Adult)
+                if (guests.Length > 1)
                 {
-                    itinerary.AdultCount = guests[0].Quantity;
-                    if (guests[1].PassengerType == PassengerType.Child)
+                    if (guests[0].PassengerType == PassengerType.Adult)
                     {
-                        itinerary.ChildrensCount = guests[1].Quantity;
+                        itinerary.AdultCount = guests[0].Quantity;
+                        if (guests[1].PassengerType == PassengerType.Child)
+                        {
+                            itinerary.ChildrensCount = guests[1].Quantity;
+                        }
+                    }
+                    else if (guests[0].PassengerType == PassengerType.Child)
+                    {
+                        itinerary.ChildrensCount = guests[0].Quantity;
+                        if (guests[1].PassengerType == PassengerType.Adult)
+                        {
+                            itinerary.AdultCount = guests[1].Quantity;
+                        }
                     }
                 }
-                else if (guests[0].PassengerType == PassengerType.Child)
+                else
                 {
-                    itinerary.ChildrensCount = guests[0].Quantity;
-                    if (guests[1].PassengerType == PassengerType.Adult)
+                    if (guests[0].PassengerType == PassengerType.Adult)
                     {
-                        itinerary.AdultCount = guests[1].Quantity;
+                        itinerary.AdultCount = guests[0].Quantity;
+                        itinerary.ChildrensCount = 0;
+                    }
+                    else
+                    {
+                        itinerary.AdultCount = 0;
+                        itinerary.ChildrensCount = guests[0].Quantity;
                     }
                 }
                 return true;

@@ -52,30 +52,29 @@ namespace CoreEngine.Tests
             var hotelroomavail = new HotelRoomAvailRQ();
             hotelroomavail.HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(((MultiAvailHotelSearchRS)response).CallerSessionId);
             int i = 0;
-                foreach (HotelItinerary iti in itinerary)
+            foreach (HotelItinerary iti in itinerary)
+            {
+                if (iti.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
                 {
-                    if (iti.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                    i = 0;
+                    hotelroomavail.Itinerary = iti;
+                    foreach (Room ro in iti.Rooms)
                     {
-                        i = 0;
-                        hotelroomavail.Itinerary = iti;
-                        foreach (Room ro in iti.Rooms)
-                        {
-                            if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
-                                break;
-                            i++;
-                        }
+                        if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                          break;
+                        i++;
                     }
                 }
-                hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
-                hotelroomavail.ResultRequested = ResponseType.Complete;
-                HotelEngineClient client = new HotelEngineClient();
-                var res = await client.HotelRoomAvailAsync(hotelroomavail);
-
+            }
+            hotelroomavail.SessionId = ((MultiAvailHotelSearchRS)response).CallerSessionId;
+            hotelroomavail.ResultRequested = ResponseType.Complete;
+            HotelEngineClient client = new HotelEngineClient();
+            var res = await client.HotelRoomAvailAsync(hotelroomavail);
             SelectedItineraryCache.AddToCache(res.SessionId, res.Itinerary);
             i = 0;
             foreach (Room ro in res.Itinerary.Rooms)
             {
-                if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest"))
+                if (ro.HotelFareSource.Name.StartsWith("TouricoTGSTest")|| ro.HotelFareSource.Name.StartsWith("HotelBeds"))
                     break;
                 i++;
             }
