@@ -41,7 +41,7 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
             {
                 throw new CacheManagerException()
                 {
-                    Source = "registering into cleaner"
+                    Source = "registering into manager"
                 };
             }
         }
