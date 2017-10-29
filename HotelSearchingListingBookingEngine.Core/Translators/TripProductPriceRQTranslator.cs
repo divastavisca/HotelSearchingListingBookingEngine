@@ -16,24 +16,24 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                ExternalServices.PricingPolicyEngine.TripProductPriceRQ parsedRQ = new ExternalServices.PricingPolicyEngine.TripProductPriceRQ();
-                parsedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
-                parsedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
-                parsedRQ.TripProduct = getHotelProduct(hotelRoomPricingRQ);
-                if (parsedRQ.TripProduct == null)
+                ExternalServices.PricingPolicyEngine.TripProductPriceRQ translatedRQ = new ExternalServices.PricingPolicyEngine.TripProductPriceRQ();
+                translatedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
+                translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
+                translatedRQ.TripProduct = getHotelProduct(hotelRoomPricingRQ);
+                if (translatedRQ.TripProduct == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = parsedRQ.TripProduct.GetType().Name
+                        Source = translatedRQ.TripProduct.GetType().Name
                     };
-                if (PricingRequestCache.IsPresent(parsedRQ.SessionId))
-                    PricingRequestCache.Remove(parsedRQ.SessionId);
-                PricingRequestCache.AddToCache(parsedRQ.SessionId, hotelRoomPricingRQ.RoomId);
-                return parsedRQ;
+                if (PricingRequestCache.IsPresent(translatedRQ.SessionId))
+                    PricingRequestCache.Remove(translatedRQ.SessionId);
+                PricingRequestCache.AddToCache(translatedRQ.SessionId, hotelRoomPricingRQ.RoomId);
+                return translatedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
@@ -41,7 +41,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = nullRefException.Source
                 };
@@ -49,7 +49,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };
@@ -70,7 +70,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.GetType().Name
                 };
@@ -95,7 +95,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(JsonException jsonException)
             {
                 Logger.LogException(jsonException.ToString(), jsonException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = userSelectedItinerary.GetType().Name
                 };
@@ -103,7 +103,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
@@ -111,7 +111,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = userSelectedItinerary.GetType().Name
                 };
@@ -146,7 +146,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.GetType().Name
                 };

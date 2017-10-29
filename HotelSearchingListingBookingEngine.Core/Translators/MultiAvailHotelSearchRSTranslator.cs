@@ -12,8 +12,6 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
 {
     public class MultiAvailHotelSearchRSTranslator
     {
-        //private readonly string[] _deafultSuppliers = { "HotelBeds", "TouricoTGSTest" };
-
         public MultiAvailHotelSearchRS Translate(HotelSearchRS hotelSearchRS)
         {
             try
@@ -22,7 +20,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 {
                     CallerSessionId = hotelSearchRS.SessionId
                 };
-                multiAvailHotelSearchRS.Itineraries = parseItineraries(hotelSearchRS.Itineraries);
+                multiAvailHotelSearchRS.Itineraries = translateItineraries(hotelSearchRS.Itineraries);
                 multiAvailHotelSearchRS.ResultsCount = multiAvailHotelSearchRS.Itineraries.Length;
                 return multiAvailHotelSearchRS;
             }
@@ -30,7 +28,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
                 Logger.StoreLog(_exceptionMap[0]);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = nullRefExcep.Source
                 };
@@ -39,14 +37,14 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.ToString());
                 Logger.StoreLog(_exceptionMap[0]);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = baseExcep.Source
                 };
             }
         }
 
-        private ItinerarySummary[] parseItineraries(HotelItinerary[] itineraries)
+        private ItinerarySummary[] translateItineraries(HotelItinerary[] itineraries)
         {
             try
             {
@@ -54,7 +52,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 foreach (HotelItinerary hotelItinerary in itineraries)
                 {
                     ItinerarySummary uniqueItinerary;
-                    if (TryParseItinerary(hotelItinerary, out uniqueItinerary,3) && uniqueItinerary != null)
+                    if (TryTranslateItinerary(hotelItinerary, out uniqueItinerary,3) && uniqueItinerary != null)
                         fetchedItineraries.Add(uniqueItinerary);
                 }
                 return fetchedItineraries.Count > 0 ? fetchedItineraries.ToArray() : null;
@@ -79,7 +77,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             }
         }
 
-        public bool TryParseItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary,int maxImagesCount)
+        public bool TryTranslateItinerary(HotelItinerary hotelItinerary, out ItinerarySummary uniqueItinerary,int maxImagesCount)
         {
             uniqueItinerary = new ItinerarySummary();
             try
@@ -109,10 +107,6 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 uniqueItinerary.StarRating = hotelItinerary.HotelProperty.HotelRating.Rating;
                 uniqueItinerary.Currency = hotelItinerary.Fare.BaseFare.Currency;
                 uniqueItinerary.MinimumPrice = hotelItinerary.Fare.BaseFare.Amount;
-                //if (hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[0])|| hotelItinerary.HotelFareSource.Name.StartsWith(_deafultSuppliers[1]))
-                //{
-                //    return true;
-                //}
                 return true;
             }
             catch(JsonException jsonException)
@@ -145,9 +139,9 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
 
         private readonly Dictionary<int, string> _exceptionMap = new Dictionary<int, string>()
         {
-            {0, "Unable to parse Response object" },
-            {1, "Unable to parse Itineraries object" },
-            {2, "Unable to parse unique Itinerary object"}
+            {0, "Unable to translate Response object" },
+            {1, "Unable to translate Itineraries object" },
+            {2, "Unable to translate unique Itinerary object"}
         };
     }
 }

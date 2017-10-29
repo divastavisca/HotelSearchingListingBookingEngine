@@ -23,7 +23,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };

@@ -22,7 +22,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 {
                     HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQTranslator()).Translate(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
-                        throw new ParseException()
+                        throw new TranslationException()
                         {
                             Source = parsedSingleAvailRQ.GetType().Name
                         };
@@ -55,7 +55,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     SelectedItineraryRoomsCache.AddToCache(hotelRoomSearchRS.SessionId, hotelRoomSearchRS.Itinerary.Rooms);
                     SingleAvailRoomSearchRS engineSearchRS = (new SingleAvailRoomSearchRSTranslator()).Translate(hotelRoomSearchRS);
                     if (engineSearchRS == null)
-                        throw new ParseException()
+                        throw new TranslationException()
                         {
                             Source = engineSearchRS.GetType().Name
                         };
@@ -83,7 +83,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = invalidObjectRequestException.Source
                 };
             }
-            catch(ParseException parseException)
+            catch(TranslationException parseException)
             {
                 Logger.LogException(parseException.ToString(), parseException.StackTrace);
                 throw new SearchEngineException()

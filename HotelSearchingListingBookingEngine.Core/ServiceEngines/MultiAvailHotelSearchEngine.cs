@@ -35,7 +35,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = cacheManagerException.Source
                 };
             }
-            catch (ServiceRequestParserException requestParserException)
+            catch (ServiceRequestTranslatorException requestParserException)
             {
                 Logger.LogException(requestParserException.ToString(), requestParserException.StackTrace);
                 throw new SearchEngineException()

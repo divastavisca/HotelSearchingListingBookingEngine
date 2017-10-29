@@ -27,7 +27,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     };
                 return (new RoomPricingRSTranslator()).Translate(hotelRoomPriceRS);
             }
-            catch (ServiceRequestParserException serviceRequestParserException)
+            catch (ServiceRequestTranslatorException serviceRequestParserException)
             {
                 Logger.LogException(serviceRequestParserException.ToString(), serviceRequestParserException.StackTrace);
                 throw new PricingRequestEngineException()
@@ -35,7 +35,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = serviceRequestParserException.Source
                 };
             }
-            catch (ServiceResponseParserException serviceResponseParserException)
+            catch (ServiceResponseTranslatorException serviceResponseParserException)
             {
                 Logger.LogException(serviceResponseParserException.ToString(), serviceResponseParserException.StackTrace);
                 throw new PricingRequestEngineException()

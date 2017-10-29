@@ -42,82 +42,82 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
 
         public HotelSearchRQ Translate(MultiAvailHotelSearchRQ request)
         {
-            HotelSearchRQ parsedRQ = new HotelSearchRQ();
+            HotelSearchRQ _translatedRQ = new HotelSearchRQ();
             try
             {
-                parsedRQ.ResultRequested = ResponseType.Complete;
-                parsedRQ.SessionId = Guid.NewGuid().ToString();
-                parsedRQ.Filters = new AvailabilityFilter[1]
+                _translatedRQ.ResultRequested = ResponseType.Complete;
+                _translatedRQ.SessionId = Guid.NewGuid().ToString();
+                _translatedRQ.Filters = new AvailabilityFilter[1]
                 {
                     new AvailabilityFilter()
                     {
                        ReturnOnlyAvailableItineraries = _returnOnlyAvailableItineraries
                     }
                 };
-                parsedRQ.HotelSearchCriterion = new HotelSearchCriterion();
-                parsedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
-                if (parsedRQ.HotelSearchCriterion.Attributes == null)
+                _translatedRQ.HotelSearchCriterion = new HotelSearchCriterion();
+                _translatedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
+                if (_translatedRQ.HotelSearchCriterion.Attributes == null)
                     throw new ObjectInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.Attributes.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.Attributes.GetType().Name
                     };
-                parsedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
-                parsedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
-                parsedRQ.HotelSearchCriterion.Pos = new PointOfSale();
-                parsedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
-                parsedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
-                parsedRQ.HotelSearchCriterion.Pos.AdditionalInfo = getStateBags(_stateBagObjAdditionalInfo);
-                foreach (StateBag stateBag in parsedRQ.HotelSearchCriterion.Pos.AdditionalInfo)
+                _translatedRQ.HotelSearchCriterion.MatrixResults = _matrixResults;
+                _translatedRQ.HotelSearchCriterion.MaximumResults = _maxResults;
+                _translatedRQ.HotelSearchCriterion.Pos = new PointOfSale();
+                _translatedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
+                _translatedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
+                _translatedRQ.HotelSearchCriterion.Pos.AdditionalInfo = getStateBags(_stateBagObjAdditionalInfo);
+                foreach (StateBag stateBag in _translatedRQ.HotelSearchCriterion.Pos.AdditionalInfo)
                 {
                     if (stateBag.Name == "API_SESSION_ID")
                     {
-                        stateBag.Value = parsedRQ.SessionId;
+                        stateBag.Value = _translatedRQ.SessionId;
                         break;
                     }
                 }
-                if (parsedRQ.HotelSearchCriterion.Pos.Requester == null)
+                if (_translatedRQ.HotelSearchCriterion.Pos.Requester == null)
                     throw new ObjectInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.Pos.Requester.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.Pos.Requester.GetType().Name
                     };
-                parsedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
-                parsedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAge.ToArray());
-                if (parsedRQ.HotelSearchCriterion.Guests == null)
+                _translatedRQ.HotelSearchCriterion.PriceCurrencyCode = _defaultPriceCurrencyCode;
+                _translatedRQ.HotelSearchCriterion.Guests = getGuestsDetails(request.AdultsCount, request.ChildrenAge.ToArray());
+                if (_translatedRQ.HotelSearchCriterion.Guests == null)
                     throw new ObjectInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.Guests.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.Guests.GetType().Name
                     };
-                parsedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
-                if (parsedRQ.HotelSearchCriterion.Location == null)
+                _translatedRQ.HotelSearchCriterion.Location = getLocation(request.SearchLocation.Name, request.SearchLocation.Type, request.SearchLocation.GeoCode);
+                if (_translatedRQ.HotelSearchCriterion.Location == null)
                     throw new ObjectInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.Location.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.Location.GetType().Name
                     };
-                parsedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAge.Count);
-                if (parsedRQ.HotelSearchCriterion.NoOfRooms <= 0)
+                _translatedRQ.HotelSearchCriterion.NoOfRooms = getMinimumRoomsRequired(request.AdultsCount, request.ChildrenAge.Count);
+                if (_translatedRQ.HotelSearchCriterion.NoOfRooms <= 0)
                     throw new InvalidValueInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.NoOfRooms.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.NoOfRooms.GetType().Name
                     };
-                parsedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
+                _translatedRQ.HotelSearchCriterion.ProcessingInfo = new HotelSearchProcessingInfo()
                 {
                     DisplayOrder = HotelDisplayOrder.ByRelevanceScoreDescending
                 };
-                parsedRQ.HotelSearchCriterion.RoomOccupancyTypes = new RoomOccupancyType[1]
+                _translatedRQ.HotelSearchCriterion.RoomOccupancyTypes = new RoomOccupancyType[1]
                 {
                     new RoomOccupancyType()
                     {
-                         PaxQuantities = parsedRQ.HotelSearchCriterion.Guests
+                         PaxQuantities = _translatedRQ.HotelSearchCriterion.Guests
                     }
                 };
-                parsedRQ.HotelSearchCriterion.SearchType = HotelSearchType.City;
-                parsedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
-                if (parsedRQ.HotelSearchCriterion.StayPeriod == null)
+                _translatedRQ.HotelSearchCriterion.SearchType = HotelSearchType.City;
+                _translatedRQ.HotelSearchCriterion.StayPeriod = getStayPeriod(request.CheckInDate, request.CheckOutDate);
+                if (_translatedRQ.HotelSearchCriterion.StayPeriod == null)
                     throw new ObjectInitializationException()
                     {
-                        Source = parsedRQ.HotelSearchCriterion.StayPeriod.GetType().Name
+                        Source = _translatedRQ.HotelSearchCriterion.StayPeriod.GetType().Name
                     };
-                parsedRQ.PagingInfo = new PagingInfo()
+                _translatedRQ.PagingInfo = new PagingInfo()
                 {
                     Enabled = false,
                     StartNumber = _defaultPagingInfoStartNumber,
@@ -129,7 +129,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(FilePathResolverError filePathResolverError)
             {
                 Logger.LogException(filePathResolverError.ToString(), filePathResolverError.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = filePathResolverError.Source
                 };
@@ -137,7 +137,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(ObjectInitializationException objectInitialisationException)
             {
                 Logger.LogException(objectInitialisationException.ToString(), objectInitialisationException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = objectInitialisationException.Source
                 };
@@ -145,7 +145,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(InvalidValueInitializationException invalidValueInitializationException)
             {
                 Logger.LogException(invalidValueInitializationException.ToString(), invalidValueInitializationException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = invalidValueInitializationException.Source
                 };
@@ -153,7 +153,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(NullReferenceException nullRefException)
             {
                 Logger.LogException(nullRefException.ToString(), nullRefException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = nullRefException.Source
                 };
@@ -161,7 +161,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(InvalidOperationException invalidOpExcep)
             {
                 Logger.LogException(invalidOpExcep.ToString(),invalidOpExcep.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = invalidOpExcep.Source
                 };
@@ -169,12 +169,12 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(),baseExcep.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseExcep.Source
                 };
             }
-            return parsedRQ;
+            return _translatedRQ;
         }
 
         private DateTimeSpan getStayPeriod(DateTime checkInDate, DateTime checkOutDate)

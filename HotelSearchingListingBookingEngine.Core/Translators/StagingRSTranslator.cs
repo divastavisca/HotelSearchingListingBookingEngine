@@ -30,7 +30,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
@@ -38,7 +38,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = baseException.Source
                 };

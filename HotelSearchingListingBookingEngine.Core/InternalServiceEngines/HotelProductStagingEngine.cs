@@ -21,7 +21,7 @@ namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
                 TripFolderBookRS tripFolderBookRS =  await (new TripsEngineClient()).BookTripFolderAsync(tripFolderBookRQ);
                 return (new StagingRSTranslator()).Translate(tripFolderBookRS);
             }
-            catch(ServiceRequestParserException serviceRequestParserException)
+            catch(ServiceRequestTranslatorException serviceRequestParserException)
             {
                 Logger.LogException(serviceRequestParserException.ToString(), serviceRequestParserException.StackTrace);
                 throw new SupportingEngineException()
@@ -29,7 +29,7 @@ namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
                     Source = serviceRequestParserException.Source
                 };
             }
-            catch (ServiceResponseParserException serviceResponseParserException)
+            catch (ServiceResponseTranslatorException serviceResponseParserException)
             {
                 Logger.LogException(serviceResponseParserException.ToString(), serviceResponseParserException.StackTrace);
                 throw new SupportingEngineException()

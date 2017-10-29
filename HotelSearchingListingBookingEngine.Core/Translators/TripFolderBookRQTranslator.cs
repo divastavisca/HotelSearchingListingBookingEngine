@@ -44,26 +44,26 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                TripFolderBookRQ parsedRQ = new TripFolderBookRQ();
-                parsedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
-                parsedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
-                if (parsedRQ.TripFolder == null)
+                TripFolderBookRQ translatedRQ = new TripFolderBookRQ();
+                translatedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
+                translatedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
+                if (translatedRQ.TripFolder == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = parsedRQ.TripFolder.GetType().Name
+                        Source = translatedRQ.TripFolder.GetType().Name
                     };
                 Caches.TripProductCache.Remove(hotelProductBookRQ.CallerSessionId);
-                Caches.TripProductCache.AddToCache(hotelProductBookRQ.CallerSessionId, parsedRQ.TripFolder.Products[0]);
-                parsedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Unknown;
-                parsedRQ.SessionId = hotelProductBookRQ.CallerSessionId;
-                parsedRQ.TripProcessingInfo = new TripProcessingInfo();
-                parsedRQ.TripProcessingInfo.TripProductRphs = new int[1] { 0 };
-                return parsedRQ;
+                Caches.TripProductCache.AddToCache(hotelProductBookRQ.CallerSessionId, translatedRQ.TripFolder.Products[0]);
+                translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Unknown;
+                translatedRQ.SessionId = hotelProductBookRQ.CallerSessionId;
+                translatedRQ.TripProcessingInfo = new TripProcessingInfo();
+                translatedRQ.TripProcessingInfo.TripProductRphs = new int[1] { 0 };
+                return translatedRQ;
             }
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
@@ -71,7 +71,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (NullReferenceException nullReferenceException)
             {
                 Logger.LogException(nullReferenceException.ToString(), nullReferenceException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = nullReferenceException.Source
                 };
@@ -79,7 +79,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };
@@ -97,7 +97,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 tripFolder.Owner = getUser(_ownerAdditionalDataFile);
                 tripFolder.Pos = getPos((SearchCriterionCache.GetSearchCriterion(hotelProductBookRQ.CallerSessionId)).Pos);
                 tripFolder.Type = TripFolderType.Personal;
-                tripFolder.Passengers = parsePassengers(hotelProductBookRQ.Guests);
+                tripFolder.Passengers = translatePassengerDetails(hotelProductBookRQ.Guests);
                 tripFolder.Payments = getPayment(hotelProductBookRQ.PaymentDetails, hotelProductBookRQ.CallerSessionId);
                 tripFolder.Products = getProducts(tripFolder, hotelProductBookRQ.CallerSessionId);
                 updateDisplayRates((HotelTripProduct)tripFolder.Products[0]);
@@ -107,7 +107,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };
@@ -218,7 +218,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };
@@ -280,7 +280,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             };
         }
 
-        private Passenger[] parsePassengers(Guest[] guests)
+        private Passenger[] translatePassengerDetails(Guest[] guests)
         {
             try
             {
@@ -305,7 +305,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseException)
             {
                 Logger.LogException(baseException.ToString(), baseException.StackTrace);
-                throw new ServiceRequestParserException()
+                throw new ServiceRequestTranslatorException()
                 {
                     Source = baseException.Source
                 };

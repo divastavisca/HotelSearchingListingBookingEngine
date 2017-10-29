@@ -24,7 +24,7 @@ namespace HotelSearchingListingBooking.API.Controllers
                     throw new InvalidServiceRequestException();
                 IEngineServiceRQ engineServiceRequest = (IEngineServiceRQ)JsonConvert.DeserializeObject(serviceRequest.JsonRequest, requestedServiceType);
                 if (engineServiceRequest == null)
-                    throw new ParseException();
+                    throw new TranslationException();
                 IEngineServiceProvider engineServiceProvider = APIServiceFactory.GetServiceProvider(requestedServiceType);
                 if (engineServiceProvider == null)
                     throw new ServiceProviderGenerationException();
@@ -48,7 +48,7 @@ namespace HotelSearchingListingBooking.API.Controllers
                 Logger.LogException(invalidServiceRequested.ToString(), invalidServiceRequested.StackTrace);
                 return BadRequest();
             }
-            catch(ParseException parsingException)
+            catch(TranslationException parsingException)
             {
                 Logger.LogException(parsingException.ToString(), parsingException.StackTrace);
                 return BadRequest();

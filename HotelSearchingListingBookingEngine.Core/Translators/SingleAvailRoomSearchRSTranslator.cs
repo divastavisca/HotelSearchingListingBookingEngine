@@ -16,7 +16,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
 
         public SingleAvailRoomSearchRS Translate(HotelRoomAvailRS hotelRoomSearchRS)
         {
-            SingleAvailRoomSearchRS parsedResponse = new SingleAvailRoomSearchRS();
+            SingleAvailRoomSearchRS translatedResponse = new SingleAvailRoomSearchRS();
             try
             {
                 if(hotelRoomSearchRS.Itinerary.Rooms==null || hotelRoomSearchRS.Itinerary.Rooms.Length==0)
@@ -26,28 +26,28 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                         Source = typeof(Room).Name
                     };
                 }
-                parsedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
-                if (parsedResponse.Itinerary == null)
+                translatedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
+                if (translatedResponse.Itinerary == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = parsedResponse.Itinerary.GetType().Name
+                        Source = translatedResponse.Itinerary.GetType().Name
                     };
                 ItinerarySummary summary;
-                (new MultiAvailHotelSearchRSTranslator()).TryParseItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
-                parsedResponse.Itinerary.ItinerarySummary =
+                (new MultiAvailHotelSearchRSTranslator()).TryTranslateItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
+                translatedResponse.Itinerary.ItinerarySummary =
                     summary
                     ??
-                    throw new ParseException()
+                    throw new TranslationException()
                     {
-                        Source = parsedResponse.Itinerary.ItinerarySummary.GetType().Name
+                        Source = translatedResponse.Itinerary.ItinerarySummary.GetType().Name
                     };
-                parsedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
-                return parsedResponse;
+                translatedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
+                return translatedResponse;
             }
             catch(NoResultsFoundException noResultsFoundException)
             {
                 Logger.LogException(noResultsFoundException.ToString(), noResultsFoundException.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = noResultsFoundException.Source
                 };
@@ -55,15 +55,15 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {
                 Logger.LogException(invalidObjectRequestException.ToString(), invalidObjectRequestException.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = invalidObjectRequestException.Source
                 };
             }
-            catch (ParseException parseException)
+            catch (TranslationException parseException)
             {
                 Logger.LogException(parseException.ToString(), parseException.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = parseException.Source
                 };
@@ -71,7 +71,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (NullReferenceException nullRefExcep)
             {
                 Logger.LogException(nullRefExcep.ToString(), nullRefExcep.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = nullRefExcep.Source
                 };
@@ -79,7 +79,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch (Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                throw new ServiceResponseParserException()
+                throw new ServiceResponseTranslatorException()
                 {
                     Source = baseExcep.Source
                 };

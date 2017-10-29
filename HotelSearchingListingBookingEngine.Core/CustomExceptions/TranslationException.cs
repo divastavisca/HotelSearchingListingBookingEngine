@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HotelSearchingListingBookingEngine.Core.CustomExceptions
 {
-    public class ParseException : Exception
+    public class TranslationException : Exception
     {
         public override string ToString()
         {

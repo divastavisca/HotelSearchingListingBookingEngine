@@ -4,11 +4,13 @@ using System.Text;
 
 namespace HotelSearchingListingBookingEngine.Core.CustomExceptions
 {
-    public class ServiceResponseParserException : Exception
+    public class ServiceRequestTranslatorException : Exception
     {
         public override string ToString()
         {
-            return (new StringBuilder()).Append("Error in parsing response at ")
+            return (new StringBuilder()).Append("Error in translating Request")
+                                        .AppendLine()
+                                        .Append("Exception at ")
                                         .Append(Source)
                                         .ToString();
         }
