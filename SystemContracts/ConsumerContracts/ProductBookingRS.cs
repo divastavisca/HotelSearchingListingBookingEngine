@@ -10,6 +10,8 @@ namespace SystemContracts.ConsumerContracts
     {
         public string TransactionId { get; set; }
 
+        public string ConfirmationId { get; set; }
+
         public bool IsCompleted { get; set; }
 
         public BookingSummary BookingSummary { get; set; }

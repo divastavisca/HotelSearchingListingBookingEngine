@@ -20,7 +20,10 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 if (productBookingRS.IsCompleted)
                 {
                     if (completeBookingRS.TripFolder != null)
-                        productBookingRS.TransactionId = completeBookingRS.TripFolder.ConfirmationNumber;
+                    {
+                        productBookingRS.ConfirmationId = completeBookingRS.TripFolder.ConfirmationNumber;
+                        productBookingRS.TransactionId = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].SupplierConfirmationNumber;
+                    }
                     productBookingRS.BookingSummary = BookingSummaryCache.GetSummary(completeBookingRS.TripFolder.Id.ToString());
                     if (productBookingRS.BookingSummary == null)
                         throw new InvalidObjectRequestException()

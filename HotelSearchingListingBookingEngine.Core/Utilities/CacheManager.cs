@@ -31,7 +31,7 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
         {
             try
             {
-                if(_sessionLogs.ContainsValue(sessionId) == false && _sessionLogs.Count == _maxCount)
+                if(_sessionLogs.Count == _maxCount)
                 {
                     optimizeAllCaches();
                 }
