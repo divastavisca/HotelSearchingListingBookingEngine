@@ -39,6 +39,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         private readonly int _defaultPagingInfoEndNumber = 120;
         private readonly int _defaultTotalRecordsBeforeFiltering = 0;
         private readonly int _defaultTotalResults = 0;
+        private StaticFilesHandler<StateBag[]> _staticFilesHandler = new StaticFilesHandler<StateBag[]>();
 
         public HotelSearchRQ Translate(MultiAvailHotelSearchRQ request)
         {
@@ -55,7 +56,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                     }
                 };
                 _translatedRQ.HotelSearchCriterion = new HotelSearchCriterion();
-                _translatedRQ.HotelSearchCriterion.Attributes = getStateBags(_stateBagObjHscAttributes);
+                _translatedRQ.HotelSearchCriterion.Attributes = _staticFilesHandler.ParseFileData(_stateBagObjHscAttributes);
                 if (_translatedRQ.HotelSearchCriterion.Attributes == null)
                     throw new ObjectInitializationException()
                     {
@@ -66,7 +67,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 _translatedRQ.HotelSearchCriterion.Pos = new PointOfSale();
                 _translatedRQ.HotelSearchCriterion.Pos.PosId = _defaultPosId;
                 _translatedRQ.HotelSearchCriterion.Pos.Requester = getDefaultRequester();
-                _translatedRQ.HotelSearchCriterion.Pos.AdditionalInfo = getStateBags(_stateBagObjAdditionalInfo);
+                _translatedRQ.HotelSearchCriterion.Pos.AdditionalInfo = _staticFilesHandler.ParseFileData(_stateBagObjAdditionalInfo);
                 foreach (StateBag stateBag in _translatedRQ.HotelSearchCriterion.Pos.AdditionalInfo)
                 {
                     if (stateBag.Name == "API_SESSION_ID")
@@ -328,36 +329,6 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             catch(Exception baseExcep)
             {
                 Logger.LogException(baseExcep.ToString(), baseExcep.StackTrace);
-                throw new Exception();
-            }
-        }
-
-        private StateBag[] getStateBags(string fileName)
-        {
-            byte[] fileData;
-            try
-            {
-                fileData = File.ReadAllBytes(fileName);
-            }
-            catch (IOException ioException)
-            {
-                Logger.StoreLog(ioException.ToString());
-                throw new Exception();
-            }
-            catch (Exception exception)
-            {
-                Logger.StoreLog(exception.ToString());
-                throw new Exception();
-            }
-            try
-            {
-                string data = ASCIIEncoding.ASCII.GetString(fileData);
-                data=data.TrimStart('?');
-                return (JsonConvert.DeserializeObject<StateBag[]>(data));
-            }
-            catch (Exception baseException)
-            {
-                Logger.StoreLog(baseException.ToString());
                 throw new Exception();
             }
         }

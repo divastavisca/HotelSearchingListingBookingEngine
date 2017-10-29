@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System.IO;
 using ExternalServices.HotelSearchEngine;
 using SystemContracts.Attributes;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 
 namespace HotelSearchingListingBookingEngine.Core.Translators
 {
@@ -39,13 +40,14 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
             {"Address", ExternalServices.PricingPolicyEngine.LocationCodeContext.Address },
             {"GeoCode", ExternalServices.PricingPolicyEngine.LocationCodeContext.GeoCode }
         };
+        private StaticFilesHandler<ExternalServices.PricingPolicyEngine.StateBag[]> staticFilesHandler = new StaticFilesHandler<ExternalServices.PricingPolicyEngine.StateBag[]>();
 
         public TripFolderBookRQ Translate(HotelProductBookRQ hotelProductBookRQ)
         {
             try
             {
                 TripFolderBookRQ _translatedRQ = new TripFolderBookRQ();
-                _translatedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
+                _translatedRQ.AdditionalInfo = staticFilesHandler.ParseFileData(_folderAdditionalDataFile);
                 _translatedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
                 if (_translatedRQ.TripFolder == null)
                     throw new InvalidObjectRequestException()
@@ -297,7 +299,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                     passenger.PassengerType = _passengerTypeMap[guest.Type];
                     passenger.Rph = 0;
                     passenger.KnownTravelerNumber = _defaultKnownTravelerNumber;
-                    passenger.CustomFields = getStateBags(_folderPassengerCustomData);
+                    passenger.CustomFields = staticFilesHandler.ParseFileData(_folderPassengerCustomData);
                     guestList.Add(passenger);
                 }
                 return guestList.ToArray();
@@ -321,7 +323,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             return new User()
             {
-                AdditionalInfo = getStateBags(_creatorAdditionalInfoDataFile),
+                AdditionalInfo = staticFilesHandler.ParseFileData(_creatorAdditionalInfoDataFile),
                 Email = _creatorEMail,
                 FirstName = _creatorFirstName,
                 MiddleName = _creatorMiddleName,
@@ -331,36 +333,6 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 UserId = _creatorUserId,
                 UserName = _creatorUserName
             };
-        }
-
-        private ExternalServices.PricingPolicyEngine.StateBag[] getStateBags(string fileName)
-        {
-            byte[] fileData;
-            try
-            {
-                fileData = File.ReadAllBytes(fileName);
-            }
-            catch (IOException ioException)
-            {
-                Logger.StoreLog(ioException.ToString());
-                throw new Exception();
-            }
-            catch (Exception exception)
-            {
-                Logger.StoreLog(exception.ToString());
-                throw new Exception();
-            }
-            try
-            {
-                string data = ASCIIEncoding.ASCII.GetString(fileData);
-                data = data.TrimStart('?');
-                return (JsonConvert.DeserializeObject<ExternalServices.PricingPolicyEngine.StateBag[]>(data));
-            }
-            catch (Exception baseException)
-            {
-                Logger.StoreLog(baseException.ToString());
-                throw new Exception();
-            }
         }
     }
 }
