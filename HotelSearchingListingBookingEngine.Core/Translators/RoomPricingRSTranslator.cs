@@ -14,22 +14,22 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                RoomPricingRS translatedRS = new RoomPricingRS();
-                translatedRS.CallerSessionId = hotelRoomPriceRS.SessionId;
+                RoomPricingRS _translatedRS = new RoomPricingRS();
+                _translatedRS.CallerSessionId = hotelRoomPriceRS.SessionId;
                 if (hotelRoomPriceRS.TripProduct == null)
-                    translatedRS.IsUpdated = false;
-                else translatedRS.IsUpdated = true;
+                    _translatedRS.IsUpdated = false;
+                else _translatedRS.IsUpdated = true;
                 if (PricingRequestCache.IsPresent(hotelRoomPriceRS.SessionId) == false)
                     throw new InvalidObjectRequestException()
                     {
                         Source = typeof(HotelItinerary).Name
                     };
-                translatedRS.Currency = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
-                translatedRS.RoomPrice = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+                _translatedRS.Currency = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
+                _translatedRS.RoomPrice = ((ExternalServices.PricingPolicyEngine.HotelTripProduct)hotelRoomPriceRS.TripProduct).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
                 if (TripProductCache.IsPresent(hotelRoomPriceRS.SessionId))
                     TripProductCache.Remove(hotelRoomPriceRS.SessionId);
                 TripProductCache.AddToCache(hotelRoomPriceRS.SessionId, hotelRoomPriceRS.TripProduct);
-                return translatedRS;
+                return _translatedRS;
                 throw new InvalidObjectRequestException()
                 {
                     Source = typeof(ExternalServices.PricingPolicyEngine.Room).Name

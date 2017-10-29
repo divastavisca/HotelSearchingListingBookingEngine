@@ -16,19 +16,19 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                ExternalServices.PricingPolicyEngine.TripProductPriceRQ translatedRQ = new ExternalServices.PricingPolicyEngine.TripProductPriceRQ();
-                translatedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
-                translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
-                translatedRQ.TripProduct = getHotelProduct(hotelRoomPricingRQ);
-                if (translatedRQ.TripProduct == null)
+                ExternalServices.PricingPolicyEngine.TripProductPriceRQ _translatedRQ = new ExternalServices.PricingPolicyEngine.TripProductPriceRQ();
+                _translatedRQ.SessionId = hotelRoomPricingRQ.CallerSessionId;
+                _translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Complete;
+                _translatedRQ.TripProduct = getHotelProduct(hotelRoomPricingRQ);
+                if (_translatedRQ.TripProduct == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = translatedRQ.TripProduct.GetType().Name
+                        Source = _translatedRQ.TripProduct.GetType().Name
                     };
-                if (PricingRequestCache.IsPresent(translatedRQ.SessionId))
-                    PricingRequestCache.Remove(translatedRQ.SessionId);
-                PricingRequestCache.AddToCache(translatedRQ.SessionId, hotelRoomPricingRQ.RoomId);
-                return translatedRQ;
+                if (PricingRequestCache.IsPresent(_translatedRQ.SessionId))
+                    PricingRequestCache.Remove(_translatedRQ.SessionId);
+                PricingRequestCache.AddToCache(_translatedRQ.SessionId, hotelRoomPricingRQ.RoomId);
+                return _translatedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {

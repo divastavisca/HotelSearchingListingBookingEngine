@@ -15,17 +15,17 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                ProductBookingRS productBookingRS = new ProductBookingRS();
-                productBookingRS.IsCompleted = checkCompletion(completeBookingRS);
-                if (productBookingRS.IsCompleted)
+                ProductBookingRS _productBookingRS = new ProductBookingRS();
+                _productBookingRS.IsCompleted = checkCompletion(completeBookingRS);
+                if (_productBookingRS.IsCompleted)
                 {
                     if (completeBookingRS.TripFolder != null)
                     {
-                        productBookingRS.ConfirmationId = completeBookingRS.TripFolder.ConfirmationNumber;
-                        productBookingRS.TransactionId = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].SupplierConfirmationNumber;
+                        _productBookingRS.ConfirmationId = completeBookingRS.TripFolder.ConfirmationNumber;
+                        _productBookingRS.TransactionId = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].SupplierConfirmationNumber;
                     }
-                    productBookingRS.BookingSummary = BookingSummaryCache.GetSummary(completeBookingRS.TripFolder.Id.ToString());
-                    if (productBookingRS.BookingSummary == null)
+                    _productBookingRS.BookingSummary = BookingSummaryCache.GetSummary(completeBookingRS.TripFolder.Id.ToString());
+                    if (_productBookingRS.BookingSummary == null)
                         throw new InvalidObjectRequestException()
                         {
                             Source = typeof(BookingSummary).Name
@@ -39,7 +39,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                 {
                     Source = typeof(CompleteBookingRS).Name
                 };
-                return productBookingRS;
+                return _productBookingRS;
             }
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {

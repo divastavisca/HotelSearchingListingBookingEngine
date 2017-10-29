@@ -16,7 +16,7 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
 
         public SingleAvailRoomSearchRS Translate(HotelRoomAvailRS hotelRoomSearchRS)
         {
-            SingleAvailRoomSearchRS translatedResponse = new SingleAvailRoomSearchRS();
+            SingleAvailRoomSearchRS _translatedResponse = new SingleAvailRoomSearchRS();
             try
             {
                 if(hotelRoomSearchRS.Itinerary.Rooms==null || hotelRoomSearchRS.Itinerary.Rooms.Length==0)
@@ -26,23 +26,23 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
                         Source = typeof(Room).Name
                     };
                 }
-                translatedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
-                if (translatedResponse.Itinerary == null)
+                _translatedResponse.Itinerary = fillResponseItinerary(hotelRoomSearchRS);
+                if (_translatedResponse.Itinerary == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = translatedResponse.Itinerary.GetType().Name
+                        Source = _translatedResponse.Itinerary.GetType().Name
                     };
                 ItinerarySummary summary;
                 (new MultiAvailHotelSearchRSTranslator()).TryTranslateItinerary(hotelRoomSearchRS.Itinerary, out summary, 10);
-                translatedResponse.Itinerary.ItinerarySummary =
+                _translatedResponse.Itinerary.ItinerarySummary =
                     summary
                     ??
                     throw new TranslationException()
                     {
-                        Source = translatedResponse.Itinerary.ItinerarySummary.GetType().Name
+                        Source = _translatedResponse.Itinerary.ItinerarySummary.GetType().Name
                     };
-                translatedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
-                return translatedResponse;
+                _translatedResponse.CallerSessionId = hotelRoomSearchRS.SessionId;
+                return _translatedResponse;
             }
             catch(NoResultsFoundException noResultsFoundException)
             {

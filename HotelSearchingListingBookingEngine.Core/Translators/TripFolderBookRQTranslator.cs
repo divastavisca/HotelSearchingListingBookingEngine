@@ -44,21 +44,21 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                TripFolderBookRQ translatedRQ = new TripFolderBookRQ();
-                translatedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
-                translatedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
-                if (translatedRQ.TripFolder == null)
+                TripFolderBookRQ _translatedRQ = new TripFolderBookRQ();
+                _translatedRQ.AdditionalInfo = getStateBags(_folderAdditionalDataFile);
+                _translatedRQ.TripFolder = constructTripFolder(hotelProductBookRQ);
+                if (_translatedRQ.TripFolder == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = translatedRQ.TripFolder.GetType().Name
+                        Source = _translatedRQ.TripFolder.GetType().Name
                     };
                 Caches.TripProductCache.Remove(hotelProductBookRQ.CallerSessionId);
-                Caches.TripProductCache.AddToCache(hotelProductBookRQ.CallerSessionId, translatedRQ.TripFolder.Products[0]);
-                translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Unknown;
-                translatedRQ.SessionId = hotelProductBookRQ.CallerSessionId;
-                translatedRQ.TripProcessingInfo = new TripProcessingInfo();
-                translatedRQ.TripProcessingInfo.TripProductRphs = new int[1] { 0 };
-                return translatedRQ;
+                Caches.TripProductCache.AddToCache(hotelProductBookRQ.CallerSessionId, _translatedRQ.TripFolder.Products[0]);
+                _translatedRQ.ResultRequested = ExternalServices.PricingPolicyEngine.ResponseType.Unknown;
+                _translatedRQ.SessionId = hotelProductBookRQ.CallerSessionId;
+                _translatedRQ.TripProcessingInfo = new TripProcessingInfo();
+                _translatedRQ.TripProcessingInfo.TripProductRphs = new int[1] { 0 };
+                return _translatedRQ;
             }
             catch (InvalidObjectRequestException invalidObjectRequestException)
             {

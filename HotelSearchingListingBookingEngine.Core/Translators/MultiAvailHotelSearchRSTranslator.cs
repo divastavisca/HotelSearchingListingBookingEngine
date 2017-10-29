@@ -16,13 +16,13 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                MultiAvailHotelSearchRS multiAvailHotelSearchRS = new MultiAvailHotelSearchRS()
+                MultiAvailHotelSearchRS _multiAvailHotelSearchRS = new MultiAvailHotelSearchRS()
                 {
                     CallerSessionId = hotelSearchRS.SessionId
                 };
-                multiAvailHotelSearchRS.Itineraries = translateItineraries(hotelSearchRS.Itineraries);
-                multiAvailHotelSearchRS.ResultsCount = multiAvailHotelSearchRS.Itineraries.Length;
-                return multiAvailHotelSearchRS;
+                _multiAvailHotelSearchRS.Itineraries = translateItineraries(hotelSearchRS.Itineraries);
+                _multiAvailHotelSearchRS.ResultsCount = _multiAvailHotelSearchRS.Itineraries.Length;
+                return _multiAvailHotelSearchRS;
             }
             catch (NullReferenceException nullRefExcep)
             {

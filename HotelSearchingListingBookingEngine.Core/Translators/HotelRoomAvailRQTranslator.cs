@@ -14,19 +14,19 @@ namespace HotelSearchingListingBookingEngine.Core.Translators
         {
             try
             {
-                HotelRoomAvailRQ translatedRQ = new HotelRoomAvailRQ()
+                HotelRoomAvailRQ _translatedRQ = new HotelRoomAvailRQ()
                 {
                     SessionId = singleAvailRoomSearchRQ.CallerSessionId,
                     ResultRequested = ResponseType.Complete,
                     HotelSearchCriterion = SearchCriterionCache.GetSearchCriterion(singleAvailRoomSearchRQ.CallerSessionId)
                 };
-                translatedRQ.Itinerary = getRequiredItinerary(singleAvailRoomSearchRQ.CallerSessionId, singleAvailRoomSearchRQ.ItineraryId);
-                if (translatedRQ.Itinerary == null)
+                _translatedRQ.Itinerary = getRequiredItinerary(singleAvailRoomSearchRQ.CallerSessionId, singleAvailRoomSearchRQ.ItineraryId);
+                if (_translatedRQ.Itinerary == null)
                     throw new InvalidObjectRequestException()
                     {
-                        Source = translatedRQ.Itinerary.GetType().Name
+                        Source = _translatedRQ.Itinerary.GetType().Name
                     };
-                return translatedRQ;
+                return _translatedRQ;
             }
             catch(InvalidObjectRequestException invalidObjectRequestException)
             {
