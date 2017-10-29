@@ -31,7 +31,7 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
         {
             try
             {
-                if(_sessionLogs.Count == _maxCount)
+                if(_sessionLogs.Count >= _maxCount)
                 {
                     optimizeAllCaches();
                 }
@@ -53,7 +53,7 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
                 List<DateTime> _removedLogs = new List<DateTime>();
                 foreach (KeyValuePair<DateTime, string> _uniqueSession in _sessionLogs)
                 {
-                    if (_removedLogs.Count == 2)
+                    if (_removedLogs.Count == _sessionLogs.Count - _maxCount)
                         break;
                     if (isTimedOut(_uniqueSession.Key))
                     {
