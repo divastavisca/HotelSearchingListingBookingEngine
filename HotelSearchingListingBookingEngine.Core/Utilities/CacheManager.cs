@@ -80,8 +80,9 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
 
         private static bool isTimedOut(DateTime timeInstance)
         {
-            DateTime currentTime = DateTime.Now;
-            return currentTime.Minute - timeInstance.Minute >= _timeOutMinutes;
+            if (DateTime.Now.Hour == timeInstance.Hour)
+                return DateTime.Now.Minute - timeInstance.Minute >= _timeOutMinutes;
+            else return true;
         }
     }
 }
