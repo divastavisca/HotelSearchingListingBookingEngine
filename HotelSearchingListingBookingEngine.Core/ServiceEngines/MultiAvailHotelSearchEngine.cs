@@ -20,7 +20,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
             try
             {
                 HotelSearchRQ hotelSearchRQ = (new HotelSearchRQTranslator()).Translate((MultiAvailHotelSearchRQ)searchRQ);
-                CacheManager.Register(hotelSearchRQ.SessionId);
+                CacheManager.RegisterSession(hotelSearchRQ.SessionId);
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
                     throw new NoResultsFoundException();

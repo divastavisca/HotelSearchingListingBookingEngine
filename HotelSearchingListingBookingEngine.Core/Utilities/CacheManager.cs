@@ -27,7 +27,7 @@ namespace HotelSearchingListingBookingEngine.Core.Utilities
             };
         }
 
-        public static void Register(string sessionId)
+        public static void RegisterSession(string sessionId)
         {
             try
             {
