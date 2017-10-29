@@ -9,6 +9,7 @@ using HotelSearchingListingBookingEngine.Core.Translators;
 using HotelSearchingListingBookingEngine.Core;
 using HotelSearchingListingBookingEngine.Core.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.Caches;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {
@@ -19,11 +20,20 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
             try
             {
                 HotelSearchRQ hotelSearchRQ = (new HotelSearchRQTranslator()).Translate((MultiAvailHotelSearchRQ)searchRQ);
+                CacheManager.Register(hotelSearchRQ.SessionId);
                 HotelSearchRS hotelSearchRS = await (new HotelEngineClient()).HotelAvailAsync(hotelSearchRQ);
                 if (hotelSearchRS.Itineraries == null || hotelSearchRS.Itineraries.Length == 0)
                     throw new NoResultsFoundException();
                 updateCaches(hotelSearchRS.SessionId, hotelSearchRQ.HotelSearchCriterion, hotelSearchRS.Itineraries);
                 return (new MultiAvailHotelSearchRSTranslator()).Translate(hotelSearchRS);
+            }
+            catch (CacheManagerException cacheManagerException)
+            {
+                Logger.LogException(cacheManagerException.ToString(), cacheManagerException.StackTrace);
+                throw new SearchEngineException()
+                {
+                    Source = cacheManagerException.Source
+                };
             }
             catch (ServiceRequestParserException requestParserException)
             {
