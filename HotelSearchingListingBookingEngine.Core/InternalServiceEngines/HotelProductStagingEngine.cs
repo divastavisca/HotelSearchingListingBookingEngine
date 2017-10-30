@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ExternalServices.PricingPolicyEngine;
-using HotelSearchingListingBookingEngine.Core.Translators;
+using HotelSearchingListingBooking.ExternalServices.PricingPolicyEngine;
+using HotelSearchingListingBooking.Translators;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using SystemContracts.CustomExceptions;
 using SystemContracts.ConsumerContracts;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 using HotelSearchingListingBookingEngine.Core.InternalEngineHandshakes;
 
 namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using ExternalServices.PricingPolicyEngine;
+using HotelSearchingListingBooking.ExternalServices.PricingPolicyEngine;
 using SystemContracts.ServiceContracts;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using SystemContracts.CustomExceptions;
 using HotelSearchingListingBookingEngine.Core.InternalEngineHandshakes;
-using HotelSearchingListingBookingEngine.Core.Translators;
+using HotelSearchingListingBookingEngine.Core.Utilities;
+using HotelSearchingListingBooking.Translators;
 
 namespace HotelSearchingListingBookingEngine.Core.InternalServiceEngines
 {

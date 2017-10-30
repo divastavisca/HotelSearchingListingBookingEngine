@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using SystemContracts.ConsumerContracts;
 using SystemContracts.ServiceContracts;
-using ExternalServices.PricingPolicyEngine;
-using HotelSearchingListingBookingEngine.Core.Translators;
+using HotelSearchingListingBooking.ExternalServices.PricingPolicyEngine;
+using HotelSearchingListingBooking.Translators;
 using HotelSearchingListingBookingEngine.Core;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
-using HotelSearchingListingBookingEngine.Core.Caches;
+using SystemContracts.CustomExceptions;
+using HotelSearchingListingBooking.Caches;
 using System.Threading.Tasks;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
 {

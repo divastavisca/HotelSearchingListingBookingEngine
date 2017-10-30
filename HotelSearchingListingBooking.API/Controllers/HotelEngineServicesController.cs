@@ -7,7 +7,8 @@ using Newtonsoft.Json;
 using HotelSearchingListingBooking.API.Models;
 using HotelSearchingListingBookingEngine.Core;
 using SystemContracts.ServiceContracts;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using SystemContracts.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 
 namespace HotelSearchingListingBooking.API.Controllers
 {

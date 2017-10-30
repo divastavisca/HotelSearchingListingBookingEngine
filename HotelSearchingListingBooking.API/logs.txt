@@ -1,0 +1,37 @@
+-------------------------Log ID:aaad1a96-6c18-4a5e-8741-ba08b30aeb96
+Timestamp: 10/30/2017 4:49:40 PM
+Log Description: Booking failed CompleteBookingRS
+Stack Trace:    at HotelSearchingListingBooking.Translators.ProductBookingRSTranslator.Translate(CompleteBookingRS completeBookingRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.Translators\ProductBookingRSTranslator.cs:line 43
+--------------------------------------------------Log ID:7e7769ac-6696-49a6-847b-bfbc2944a9e4
+Timestamp: 10/30/2017 4:49:41 PM
+Log Description: Error in translating response at CompleteBookingRS
+Stack Trace:    at HotelSearchingListingBooking.Translators.ProductBookingRSTranslator.Translate(CompleteBookingRS completeBookingRS) in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.Translators\ProductBookingRSTranslator.cs:line 56
+   at HotelSearchingListingBookingEngine.Core.InternalServiceEngines.HotelProductBookingEngine.<ProcessAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\InternalServiceEngines\HotelProductBookingEngine.cs:line 22
+--------------------------------------------------Log ID:b7f1071e-06a3-4647-bdbc-e513f603dc5c
+Timestamp: 10/30/2017 4:49:41 PM
+Log Description: Error in providing support for CompleteBookingRS
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.InternalServiceEngines.HotelProductBookingEngine.<ProcessAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\InternalServiceEngines\HotelProductBookingEngine.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceEngines.BookingServiceCoordinator.<RequestAsync>d__2.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\BookingServiceCoordinator.cs:line 32
+--------------------------------------------------Log ID:b0b33754-912b-45d6-9b22-da312f254893
+Timestamp: 10/30/2017 4:49:41 PM
+Log Description: Error in booking at CompleteBookingRS
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceEngines.BookingServiceCoordinator.<RequestAsync>d__2.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceEngines\BookingServiceCoordinator.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBookingEngine.Core.ServiceProviders.BookingServiceEngineProvider.<GetServiceRSAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\BookingServiceEngineProvider.cs:line 18
+--------------------------------------------------Log ID:08cc5453-0044-48a9-9c0f-b04129550831
+Timestamp: 10/30/2017 4:49:41 PM
+Log Description: Error in providing service CompleteBookingRS
+Stack Trace:    at HotelSearchingListingBookingEngine.Core.ServiceProviders.BookingServiceEngineProvider.<GetServiceRSAsync>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBookingEngine.Core\ServiceProviders\BookingServiceEngineProvider.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HotelSearchingListingBooking.API.Controllers.HotelEngineServicesController.<APIServiceRequestAction>d__0.MoveNext() in D:\PC.new\HotelSearchingListingBookingEngine\HotelSearchingListingBooking.API\Controllers\HotelEngineServicesController.cs:line 32
+-------------------------

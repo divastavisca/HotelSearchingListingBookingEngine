@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelDataServicesConnecters\HotelDataServicesConnecters.csproj" />
+    <ProjectReference Include="..\HotelSearchingListingBooking.Caches\HotelSearchingListingBooking.Caches.csproj" />
+    <ProjectReference Include="..\HotelSearchingListingBooking.Translators\HotelSearchingListingBooking.Translators.csproj" />
     <ProjectReference Include="..\SystemContracts\SystemContracts.csproj" />
   </ItemGroup>
 

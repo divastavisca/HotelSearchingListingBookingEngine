@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using SystemContracts.ServiceContracts;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using SystemContracts.CustomExceptions;
+using HotelSearchingListingBookingEngine.Core.Utilities;
 using HotelSearchingListingBookingEngine.Core.ServiceEngines;
 
 namespace HotelSearchingListingBookingEngine.Core.ServiceProviders

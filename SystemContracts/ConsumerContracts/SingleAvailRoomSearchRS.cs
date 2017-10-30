@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using ExternalServices.HotelSearchEngine;
 using SystemContracts.ServiceContracts;
 using SystemContracts.Attributes.HotelAttributes;
 

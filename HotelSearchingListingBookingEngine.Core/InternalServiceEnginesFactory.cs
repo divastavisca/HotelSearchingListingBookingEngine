@@ -4,7 +4,7 @@ using System.Text;
 using HotelSearchingListingBookingEngine.Core.InternalServiceEngines;
 using SystemContracts.ServiceContracts;
 using System.Reflection;
-using HotelSearchingListingBookingEngine.Core.CustomExceptions;
+using SystemContracts.CustomExceptions;
 
 namespace HotelSearchingListingBookingEngine.Core
 {
