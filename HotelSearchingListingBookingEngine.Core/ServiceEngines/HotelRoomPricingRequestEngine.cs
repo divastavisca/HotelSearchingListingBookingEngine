@@ -19,6 +19,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
         {
             try
             {
+                CacheManager.UpdateSession(((RoomPricingRQ)engineServiceRQ).CallerSessionId);
                 TripProductPriceRQ hotelRoomPriceRQ = (new TripProductPriceRQTranslator()).Translate((RoomPricingRQ)engineServiceRQ);
                 TripProductPriceRS hotelRoomPriceRS = await (new TripsEngineClient()).PriceTripProductAsync(hotelRoomPriceRQ);
                 if (hotelRoomPriceRS.TripProduct == null)
@@ -27,6 +28,14 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                         Source = hotelRoomPriceRS.TripProduct.GetType().Name
                     };
                 return (new RoomPricingRSTranslator()).Translate(hotelRoomPriceRS);
+            }
+            catch (CacheManagerException cacheManagerException)
+            {
+                Logger.LogException(cacheManagerException.ToString(), cacheManagerException.StackTrace);
+                throw new PricingRequestEngineException()
+                {
+                    Source = cacheManagerException.Source
+                };
             }
             catch (ServiceRequestTranslatorException serviceRequestParserException)
             {

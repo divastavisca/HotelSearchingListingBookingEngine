@@ -21,6 +21,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                 var singleAvailRoomSearchRQ = (SingleAvailRoomSearchRQ)serviceRequest;
                 if (ItineraryCache.IsPresent(singleAvailRoomSearchRQ.CallerSessionId))
                 {
+                    CacheManager.UpdateSession(singleAvailRoomSearchRQ.CallerSessionId);
                     HotelRoomAvailRQ parsedSingleAvailRQ = (new HotelRoomAvailRQTranslator()).Translate(singleAvailRoomSearchRQ);
                     if (parsedSingleAvailRQ == null)
                         throw new TranslationException()

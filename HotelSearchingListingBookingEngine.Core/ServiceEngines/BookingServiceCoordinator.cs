@@ -23,6 +23,7 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
         {
             try
             {
+                CacheManager.UpdateSession(((HotelProductBookRQ)engineServiceRQ).CallerSessionId);
                 IInternalServiceEngine stagingEngine = InternalServiceEnginesFactory.GetSupportEngine(_statgingSupportEngineAlias);
                 ProductStagingInfo productStagingInfo = (ProductStagingInfo)(await stagingEngine.ProcessAsync(engineServiceRQ));
                 if (productStagingInfo.TripFolderId != null)
@@ -36,7 +37,15 @@ namespace HotelSearchingListingBookingEngine.Core.ServiceEngines
                     Source = typeof(TripFolder).Name
                 };
             }
-            catch(FactoryException factoryException)
+            catch (CacheManagerException cacheManagerException)
+            {
+                Logger.LogException(cacheManagerException.ToString(), cacheManagerException.StackTrace);
+                throw new BookingCoordinatorEngineException()
+                {
+                    Source = cacheManagerException.Source
+                };
+            }
+            catch (FactoryException factoryException)
             {
                 Logger.LogException(factoryException.ToString(), factoryException.StackTrace);
                 throw new BookingCoordinatorEngineException()

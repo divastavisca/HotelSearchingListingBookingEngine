@@ -45,6 +45,34 @@ namespace HotelSearchingListingBooking.Caches
             }
         }
 
+        public static void UpdateSession(string callerSessionId)
+        {
+            try
+            {
+                DateTime key = DateTime.MaxValue;
+                foreach (KeyValuePair<DateTime, string> log in _sessionLogs)
+                {
+                    if (log.Value == callerSessionId)
+                    {
+                        key = log.Key;
+                        break;
+                    }
+                }
+                if (key != DateTime.MaxValue)
+                {
+                    _sessionLogs.Remove(key);
+                    RegisterSession(callerSessionId);
+                }
+            }
+            catch(Exception baseException)
+            {
+                throw new CacheManagerException()
+                {
+                    Source = "Updating session"
+                };
+            }
+        }
+
         private static void optimizeAllCaches()
         {
             try
