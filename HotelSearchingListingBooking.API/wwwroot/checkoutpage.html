@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles/payment.css" />
+    <link rel="icon" href="resources/favicon.png" sizes="16x16" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="logo-container">
+    <a href="index.html"><img src="resources/HQlogo.png"/> </a>
+    </div>
+    <section >
+        <form id="booking-summary">
+            <h1>Booking Summary</h1>
+            <label for="Hotel Name">Hotel Name</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Hotel Address">Hotel Address</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Guest Count (Adults)">Guest Count (Adults)</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Guest Count (Children)">Guest Count (Children)</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Check In Date">Check In Date</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Check Out Date">Check Out Date</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Room Description">Room Description</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Amenities">Amenities</label>
+            <input class="summary-field" type="text" disabled />
+            <label for="Price">Price</label>
+            <input class="summary-field" type="text" disabled />
+            <!--<button type="button">Select Different Room</button>-->
+        </form>
+    </section>
+    <section id="guest-details">
+
+    </section>
+    <section >
+        <form >
+            <div>
+                <h3>Billing Address:</h3>
+                <fieldset id='address-info' style='overflow: auto'>
+                    <label for='Address line 1'>Address line 1</label>
+                    <input type='text' name='Address line 1' placeholder='Address line 1 '>
+                    <label for='Address line 2'>Address line 2</label>
+                    <input type='text' name='Address line 2' placeholder='Address line 2 '>
+                    <label for='City'>City</label>
+                    <input type='text' name='city name' placeholder='city'>
+                    <label for='state'>State</label>
+                    <input type='text' name='state name' placeholder='state'>
+                    <label for='ZipCode'>Zip Code</label>
+                    <input type='number' name='ZipCode' placeholder='Zip Code'>
+                    <label for='Phone Number'>Phone Number</label>
+                    <input type='number' name='Phone Number' placeholder='Phone Number'>
+                    <p class='name-validation'>Please enter valid 6-digits Code </p>
+                </fieldset>
+            </div>
+         </form>
+        <fieldset id="payment">
+           <img id="payment-icon" src="resources/wallet.png"/>
+           <h2 id="payment-details">Payment</h2>
+           <div>
+                <span class="message"><img id="verified" src="resources/tick.png"/>We use secure transmission</span>
+               <span class="message"><img id="verified" src="resources/tick.png"/>We protect personal information</span>
+            </div>
+           <div>
+              <img id="mastercard" src="resources/mastercard.png" />
+              <img id="visacard" src="resources/visa.png" />
+              
+             </div>
+            <label for="cardholder">Cardholder name<span class="mandatory"><sup>*</sup></span></label>
+            <input type="text" name="Cardholder name"  placeholder='Name on the card' required>
+            <label for="Cardnumber">Credit/Debit card number<span class="mandatory"><sup>*</sup></span></label>
+            <input type="number" name="Card number" placeholder='Enter debit/credit number' required>
+            <label for="Cvv">Cvv<span class="mandatory"><sup>*</sup></span></label>
+            <input type="number" name="Cvv" placeholder='Enter Cvv' required>
+            <label for="Expiration date">Expiration date<span class="mandatory"><sup>*</sup></span></label>
+            <select required id="Month">
+             <option value="January">January</option>
+             <option value="February">February</option>
+             <option value="March">March</option>
+             <option value="April">April</option>
+             <option value="May">May</option>
+             <option value="June">June</option>
+             <option value="July">July</option>
+             <option value="August">August</option>
+             <option value="September">September</option>
+             <option value="October">October</option>
+             <option value="November">November</option>
+             <option value="December">December</option>
+            </select>
+            <select required id="Year">
+               <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+            </select>
+            <label for="security code">Security code<span class="mandatory"><sup>*</sup></span></label>
+            <input type="text" name="security code" required>
+        </fieldset>
+        <article>
+          <div>
+         <img src="resources/mail.png"/>
+          <p>Please enter your email address where you would like to receive confirmation</p>
+        </div>
+          <label for="email">Enter Email address<span class="mandatory"><sup>*</sup></span></label>
+          <input type="email" name="email" placeholder="Enter your email address" required>
+        </article>
+        <button id="complete-booking"> Book Now!</button>
+    </section>
+    <footer  class="site-footer">
+        
+        <img id="footer-image" src="resources/secure.png"/>
+            <div id="footer-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms Of Use</a>
+            </div>
+        <span id="copyright">    © 2017 HotelQuickly, Inc. All rights reserved</span> 
+        
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/payment.js"></script>
+</body>
+</html>
